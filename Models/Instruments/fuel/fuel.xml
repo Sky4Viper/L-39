@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>fuel.ac</path>
+
+  <!-- Internal instruments lighting -->
+  <animation>
+    <type>material</type>
+    <object-name>Needle1</object-name>
+    <emission>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>1.0</red>
+            <green>0.94</green>
+            <blue>0.74</blue>
+    </emission>
+        <condition>
+		    <property>/controls/electric/battery-switch</property>
+	    </condition>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>Face</object-name>
+    <emission>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>1.0</red>
+            <green>0.94</green>
+            <blue>0.74</blue>
+    </emission>
+        <condition>
+		    <property>/controls/electric/battery-switch</property>
+	    </condition>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Needle1</object-name>
+    <property>consumables/fuel/total-fuel-lbs</property>
+    <offset-deg>-189</offset-deg>
+	<factor>0.019</factor>	
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
+
+

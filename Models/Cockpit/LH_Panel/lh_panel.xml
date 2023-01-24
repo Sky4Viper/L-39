@@ -1,0 +1,583 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>lh_panel.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>chanels</object-name>
+    <emission>
+      <red>1.0</red>
+      <green>0.94</green>
+      <blue>0.75</blue>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+    <!-- <condition>
+      <property>/controls/electric/battery-switch</property>
+    </condition> -->
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>flaps_indicator.light.001</object-name>
+    <object-name>flaps_indicator.light.002</object-name>
+    <object-name>flaps_indicator.light.003</object-name>
+    <emission>
+      <red>0.1</red>
+      <green>1.0</green>
+      <blue>0.1</blue>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+    <condition>
+      <property>/controls/electric/battery-switch</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>light1</object-name>
+    <emission>
+      <red>0.1</red>
+      <green>0.7</green>
+      <blue>0.1</blue>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+    <condition>
+      <property>/controls/electric/battery-switch</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>knob01</object-name>
+    <emission>
+      <red>0.2</red>
+      <green>0.2</green>
+      <blue>0.2</blue>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+    <condition>
+      <property>/controls/electric/battery-switch</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <condition>
+      <property>/controls/electric/radio-switch</property>
+    </condition>
+    <object-name>chanels</object-name>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>light1</object-name>
+    <condition>
+      <property>/controls/electric/battery-switch</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+      <object-name>flaps_indicator.light.001</object-name>
+    <condition>
+      <equals>
+        <property>controls/flight/flaps</property>
+        <value>0.0</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+      <object-name>flaps_indicator.light.002</object-name>
+    <condition>
+      <equals>
+        <property>controls/flight/flaps</property>
+        <value>0.5</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+      <object-name>flaps_indicator.light.003</object-name>
+    <condition>
+      <equals>
+        <property>controls/flight/flaps</property>
+        <value>1.0</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>knob01</object-name>
+    <property>l-39za/instrumentation/ARK-19/channel</property>
+    <interpolation>
+            <entry><ind> 0</ind><dep>0.0</dep></entry>
+            <entry><ind> 9</ind><dep>405.0</dep></entry>
+    </interpolation>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0.00523</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>-1</z>
+    </axis>
+  </animation>
+
+  	<!-- Throttle -->
+	<animation>
+		<type>rotate</type>
+		<object-name>throttle_lever</object-name>
+    <object-name>throttle_rocker</object-name>
+		<property>controls/engines/engine[0]/throttle</property>
+		<interpolation>
+            <entry><ind> 0</ind><dep>-24.0</dep></entry>
+            <entry><ind> 1</ind><dep>24.0</dep></entry>
+    </interpolation>
+		<center>
+			<x-m>-0.13387</x-m>
+			<y-m>0.053308</y-m>
+			<z-m>-0.043526</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+    	<!-- Engine start button -->
+	<animation>
+		<type>rotate</type>
+		<object-name>engine_start_cover</object-name>
+		<property>l-39za/controls/enginebtncover</property>
+		<interpolation>
+            <entry><ind> 0</ind><dep>0.0</dep></entry>
+            <entry><ind> 1</ind><dep>95.0</dep></entry>
+    </interpolation>
+		<center>
+			<x-m>-0.33411</x-m>
+			<y-m>0.066405</y-m>
+			<z-m>0.00015</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+  <!-- Flaps buttons -->
+
+  <animation>
+    <type>translate</type>
+    <object-name>flaps_btn.001</object-name>
+    <property>controls/flight/flaps</property>
+    <interpolation>
+      <entry><ind>0</ind><dep>-0.005</dep></entry>
+      <entry><ind>0.5</ind><dep> 0</dep></entry>
+      <entry><ind>1</ind><dep> 0</dep></entry>
+    </interpolation>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>flaps_btn.002</object-name>
+    <property>controls/flight/flaps</property>
+    <interpolation>
+      <entry><ind>0</ind><dep> 0</dep></entry>
+      <entry><ind>0.5</ind><dep> -0.005</dep></entry>
+      <entry><ind>1</ind><dep> 0</dep></entry>
+    </interpolation>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>flaps_btn.003</object-name>
+    <property>controls/flight/flaps</property>
+    <interpolation>
+      <entry><ind>0</ind><dep> 0</dep></entry>
+      <entry><ind>0.5</ind><dep> 0</dep></entry>
+      <entry><ind>1</ind><dep> -0.005</dep></entry>
+    </interpolation>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>flaps_btn.001</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/flight/flaps</property>
+        <value type="double">0.0</value>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>flaps_btn.002</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/flight/flaps</property>
+        <value type="double">0.5</value>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>flaps_btn.003</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/flight/flaps</property>
+        <value type="double">1.0</value>
+      </binding>
+    </action>
+  </animation>
+
+  <!--     ARK-19 (ADF) chanels select    -->
+ <animation>
+  <type>pick</type>
+  <object-name>knob01</object-name>
+  <action>
+    <name>increase</name>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <!-- <binding>
+      <command>property-adjust</command>
+      <property>l-39za/instrumentation/ARK-19/channel</property>
+      <step>1</step>
+      <min>1</min>
+      <max>9</max>
+      <wrap>0</wrap>
+    </binding> -->
+    <binding>
+        <command>nasal</command>
+        <script>radiocfg.ARK_init()</script>
+    </binding>
+  </action>
+  <action>
+    <name>decrease</name>
+    <button>1</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>l-39za/instrumentation/ARK-19/channel</property>
+      <step>1</step>
+      <min>1</min>
+      <max>9</max>
+      <wrap>0</wrap>
+    </binding>
+    <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+    </binding>
+  </action>
+  <action>
+    <name>small increase (scrollwheel)</name>
+    <button>3</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>l-39za/instrumentation/ARK-19/channel</property>
+      <step>1</step>
+      <min>1</min>
+      <max>9</max>
+      <wrap>0</wrap>
+    </binding>
+    <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+    </binding>
+  </action>
+  <action>
+    <name>small decrease (scrollwheel)</name>
+    <button>4</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>l-39za/instrumentation/ARK-19/channel</property>
+      <step>-1</step>
+      <min>1</min>
+      <max>9</max>
+      <wrap>0</wrap>
+    </binding>
+    <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+    </binding>
+  </action>
+ </animation>
+
+  <!--<animation>
+    <type>pick</type>
+    <object-name>chnl_switches</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-adjust</command>
+          <property>l-39za/instrumentation/ARK-19/channel</property>
+          <step>1</step>
+          <min>1</min>
+          <max>5</max>
+          <wrap>true</wrap>
+        </binding>
+    </action>
+  </animation>-->
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>chanels</object-name>
+    <property>l-39za/instrumentation/ARK-19/channel</property>
+    <offset>-1</offset>
+    <factor>0.05</factor>
+    <step>1.0</step>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <!--<text>
+    <name>nav_id</name>
+    <font>lcd.txf</font>
+    <character-size type="double">0.005</character-size>
+    <offsets>
+      <x-m>-3.53105</x-m>
+      <y-m>-0.36825</y-m>
+      <z-m>0.520</z-m>
+      <heading-deg>90</heading-deg>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">text-value</type>
+    --><!--<format type="string">-&gt;%4s</format>--><!--
+    <format type="string">%4s</format>
+    <truncate type="bool">false</truncate>
+    <property>/instrumentation/gps/wp/wp[1]/ID</property>
+    <draw-text type="bool">true</draw-text>
+    <alignment>left-top</alignment>
+  </text>-->
+
+  <!--<text>
+    <name>nav_id</name>
+    <font>lcd.txf</font>
+    <character-size type="double">0.005</character-size>
+    <offsets>
+      <x-m>-3.53005</x-m>
+      <y-m>-0.36825</y-m>
+      <z-m>0.520</z-m>
+      <heading-deg>90</heading-deg>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    --><!--<format type="string">-&gt;%4s</format>--><!--
+    <format type="string">%3.3f</format>
+    <truncate type="bool">false</truncate>
+    <property>instrumentation/nav/frequencies/selected-mhz</property>
+    <draw-text type="bool">true</draw-text>
+    <alignment>left-top</alignment>
+  </text>-->
+
+  <!--<text>
+    <name>land_id</name>
+    <font>lcd.txf</font>
+    <character-size type="double">0.005</character-size>
+    <offsets>
+      <x-m>-3.56177</x-m>
+      <y-m>-0.36825</y-m>
+      <z-m>0.520</z-m>
+      <heading-deg>90</heading-deg>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%03.0f</format>
+    <truncate type="bool">false</truncate>
+    <property>/instrumentation/gps/wp/wp[1]/bearing-mag-deg</property>
+    <draw-text type="bool">true</draw-text>
+    <alignment>left-top</alignment>
+  </text>-->
+  
+  <!--<text>
+    <name>land_id</name>
+    <font>lcd.txf</font>
+    <character-size type="double">0.005</character-size>
+    <offsets>
+      <x-m>-3.55977</x-m>
+      <y-m>-0.36825</y-m>
+      <z-m>0.520</z-m>
+      <heading-deg>90</heading-deg>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%3.3f</format>
+    <truncate type="bool">false</truncate>
+    <property>instrumentation/nav[1]/frequencies/selected-mhz</property>
+    <draw-text type="bool">true</draw-text>
+    <alignment>left-top</alignment>
+  </text>-->
+
+  <text>
+    <name>LabelText</name>
+    <type type="string">literal</type>
+    <text type="string">Radio Panel</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.012</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.2</max-height>
+    <max-width>0.07</max-width>
+    <font-resolution>
+      <width type="int">32</width>
+      <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>-3.72179</x-m>
+      <y-m>0.31034</y-m>
+      <z-m>0.46526</z-m>
+      <heading-deg>-90</heading-deg>
+    </offsets>
+  </text>
+
+  <animation>
+    <type>material</type>
+    <object-name>LabelText</object-name>
+    <emission>
+      <red>1.0</red>
+      <green>0.8</green>
+      <blue>0.0</blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>LabelText</object-name>
+    <condition>
+      <property>/sim/panel-hotspots</property>
+    </condition>
+  </animation>
+
+  <animation>
+  <type>knob</type>
+  <object-name>throttle_lever</object-name>
+    <increase>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/engines/engine[0]/throttle</property>
+            <step>0.1</step>
+            <min>0.0</min>
+            <max>1.0</max>
+            <wrap>false</wrap>
+      </binding>
+    </increase>
+    <decrease>
+      <binding>
+          <command>property-adjust</command>
+          <property>controls/engines/engine[0]/throttle</property>
+            <step>-0.1</step>
+            <min>0.0</min>
+            <max>1.0</max>
+            <wrap>false</wrap>
+      </binding>
+    </decrease>
+    <hovered>
+      <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>engine-throttle-adj</tooltip-id>
+          <label>Throttle</label>
+      </binding>
+    </hovered>
+</animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>engine_start_cover</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>l-39za/controls/enginebtncover</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>engine_start_btn</object-name>
+    <visible>true</visible>
+      <action>
+        <button>0</button>
+        <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+          <property>l-39za/controls/eng_start_btn</property>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>switchclicksound.click("switch2")</script>
+        </binding>
+        <binding>
+          		<command>nasal</command>
+          		<script>engines.engine1.autostart();</script>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>property-toggle</command>
+            <property>l-39za/controls/eng_start_btn</property>
+          </binding>
+        </mod-up>
+      </action>
+      <hovered>
+        <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>engines-start-stop</tooltip-id>
+                <label>Engines start/stop</label>
+        </binding>
+      </hovered>
+  </animation>
+
+</PropertyList>

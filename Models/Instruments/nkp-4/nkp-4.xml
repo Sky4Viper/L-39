@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+ <path>nkp-4.ac</path>
+
+  <!-- Internal instruments lighting -->
+
+  <animation>
+    <type>material</type>
+    <object-name>Base</object-name>
+    <object-name>Ring</object-name>
+    <object-name>Center</object-name>
+    <emission>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>1.0</red>
+      <green>0.94</green>
+      <blue>0.74</blue>
+    </emission>
+        <condition>
+		    <property>/controls/electric/battery-switch</property>
+	    </condition>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>Needle1</object-name>
+    <object-name>Needle2</object-name>
+    <object-name>Localizer</object-name>
+    <object-name>LocalizerFlag</object-name>
+    <emission>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>1.0</red>
+      <green>0.94</green>
+      <blue>0.74</blue>
+    </emission>
+        <condition>
+		    <property>/controls/electric/battery-switch</property>
+	    </condition>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>Glideslope</object-name>
+    <object-name>GlideslopeFlag</object-name>
+    <emission>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>   1.0 </red>
+      <green> 0.5 </green>
+      <blue>  0.0 </blue>
+    </emission>
+        <condition>
+		    <property>/controls/electric/battery-switch</property>
+	    </condition>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>Glass</object-name>
+  </animation>
+  
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>Glass</object-name>
+  </animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>Ring</object-name>
+  <property>orientation/heading-magnetic-deg</property>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+    <condition>
+	    <property>/controls/electric/battery-switch</property>
+	</condition>
+</animation>
+
+  <animation>
+  <type>rotate</type>
+  <object-name>Localizer</object-name>
+  <property>instrumentation/nav[1]/heading-needle-deflection</property>
+  <interpolation>
+   <entry><ind> 4</ind><dep> 30</dep></entry> 
+   <entry><ind> 0</ind><dep>  0</dep></entry>
+   <entry><ind>-4</ind><dep>-30</dep></entry>
+  </interpolation>
+  <center>
+   <x-m>-0.03</x-m>
+   <y-m> 0.00</y-m>
+   <z-m> 0.00</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+    <condition>
+        <property>/controls/electric/battery-switch</property>
+    </condition>
+ </animation>
+
+  <animation>
+  <type>rotate</type>
+  <object-name>Glideslope</object-name>
+  <property>instrumentation/nav[1]/gs-needle-deflection</property>
+  <interpolation>
+   <entry><ind>-4</ind><dep> 30</dep></entry>
+   <entry><ind> 0</ind><dep>  0</dep></entry>
+   <entry><ind> 4</ind><dep>-30</dep></entry>
+  </interpolation>
+  <center>
+   <x-m>-0.03</x-m>
+   <y-m> 0.00</y-m>
+   <z-m> 0.00</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+    <condition>
+        <property>/controls/electric/battery-switch</property>
+    </condition>
+ </animation>
+ 
+  <animation>
+    <type>select</type>
+    <object-name>LocalizerFlag</object-name>
+    <condition>
+      <not>
+        <property>instrumentation/nav[1]/in-range</property>
+      </not>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>GlideslopeFlag</object-name>
+    <condition>
+      <not>
+        <property>instrumentation/nav[1]/has-gs</property>
+      </not>
+    </condition>
+  </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Needle1</object-name>
+  <expression>
+    <difference>
+      <!-- <property>instrumentation/nav/radials/selected-deg</property> -->
+      <property>instrumentation/nav/heading-deg</property>
+      <property>orientation/heading-magnetic-deg</property>
+    </difference>
+  </expression>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+    <condition>
+        <property>/controls/electric/battery-switch</property>
+    </condition>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Needle2</object-name>
+  <expression>
+    <difference>
+      <!-- <property>/autopilot/settings/heading-bug-deg</property> -->
+      <property>instrumentation/nav/radials/selected-deg</property>
+      <property>orientation/heading-magnetic-deg</property>
+    </difference>
+  </expression>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+    <condition>
+        <property>/controls/electric/battery-switch</property>
+    </condition>
+ </animation>
+
+<!--     Heading Bug control    -->
+  <animation>
+    <type>knob</type>
+    <object-name>Knob</object-name>
+    <increase>
+      <binding>
+        <command>property-adjust</command>
+        <!-- <property>/autopilot/settings/heading-bug-deg</property> -->
+        <property>instrumentation/nav/radials/selected-deg</property>
+        <step>1</step>
+        <min>0</min>
+        <max>360</max>
+        <wrap>1</wrap>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("adf-dial")</script>
+      </binding>
+    </increase>
+    <decrease>
+      <binding>
+        <command>property-adjust</command>
+        <!-- <property>/autopilot/settings/heading-bug-deg</property> -->
+        <property>instrumentation/nav/radials/selected-deg</property>
+        <step>-1</step>
+        <min>0</min>
+        <max>360</max>
+        <wrap>1</wrap>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("adf-dial")</script>
+      </binding>
+    </decrease>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>nkp-4-ca</tooltip-id>
+        <label>Adjust course</label>
+      </binding>
+    </hovered>
+  </animation>
+
+ </PropertyList>
+

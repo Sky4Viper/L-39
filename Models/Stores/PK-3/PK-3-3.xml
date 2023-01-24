@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>PK-3.ac</path>
+
+    <effect>
+        <inherits-from>Aircraft/L-39ZA/Models/Effects/ArmReflect</inherits-from>
+        <object-name>PK-3-Container</object-name>
+    </effect>
+
+	<model>
+		<name>flame1</name>
+		<path>Aircraft/L-39ZA/Models/Effects/Gun/Flame.xml</path>
+		<condition>
+			<equals>
+				<property>sim/multiplay/generic/int[12]</property>
+				<value type="bool">true</value>
+			</equals>
+		</condition>
+		<offsets>
+			<x-m>-1.06451</x-m>
+			<y-m> 0 </y-m>
+			<z-m>-0.068558</z-m>
+			<heading-deg>0</heading-deg>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>flame2</name>
+		<path>Aircraft/L-39ZA/Models/Effects/Gun/Flame.xml</path>
+		<condition>
+			<equals>
+				<property>sim/multiplay/generic/int[12]</property>
+				<value type="bool">true</value>
+			</equals>
+		</condition>
+		<offsets>
+			<x-m>-1.06451</x-m>
+			<y-m>-0.059204</y-m>
+			<z-m>0.034278</z-m>
+			<heading-deg>0</heading-deg>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>flame3</name>
+		<path>Aircraft/L-39ZA/Models/Effects/Gun/Flame.xml</path>
+		<condition>
+			<equals>
+				<property>sim/multiplay/generic/int[12]</property>
+				<value type="bool">true</value>
+			</equals>
+		</condition>
+		<offsets>
+			<x-m>-1.06451</x-m>
+			<y-m>0.059204</y-m>
+			<z-m>0.034278</z-m>
+			<heading-deg>0</heading-deg>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>PK-3-smoke</name>
+    	<path>Aircraft/L-39ZA/Models/Effects/Gun/Flack.xml</path>
+		<condition>
+			<equals>
+				<property>sim/multiplay/generic/int[12]</property>
+				<value type="bool">true</value>
+			</equals>
+		</condition>
+    	<offsets>
+      			<x-m>-0.438929</x-m>
+      			<y-m>0.0</y-m>
+      			<z-m>-0.089223</z-m>
+    	</offsets>
+  	</model>
+  	
+  	<model>
+  		<name>PK-3-smoke2</name>
+    		<path>Aircraft/L-39ZA/Models/Effects/Engine/L-39ZA-blur.xml</path>
+    		<offsets>
+    			<x-m>-0.438929</x-m>
+      			<y-m>0.0</y-m>
+      			<z-m>-0.089223</z-m>
+    		</offsets>
+    		<condition>
+			<equals>
+				<property>sim/multiplay/generic/int[12]</property>
+				<value type="bool">true</value>
+			</equals>
+		</condition>
+  	</model>
+
+</PropertyList>

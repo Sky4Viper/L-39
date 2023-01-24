@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Generic flight recorder configuration for jets (2 jet engines/4 tanks/3 retractable gear).
+
+     Note: The generic configurations are provided as an example and for convenience only.
+     No need to use a generic configuration. You can copy the settings below to your aircraft's
+     flight recorder configuration and include a better combination of recorder components, if
+     none of the pre-defined configurations fits your aircraft.
+ -->
+
+<PropertyList>
+    <name type="string">Generic Flight Recorder for Jets (1 jet engine/7 tanks/3 retractable gear)</name>
+    <signals include="/Aircraft/Generic/flightrecorder/components/environment.xml"/>
+    <signals include="/Aircraft/Generic/flightrecorder/components/position.xml"/>
+    <signals include="/Aircraft/Generic/flightrecorder/components/controls.xml"/>
+    <signals include="/Aircraft/Generic/flightrecorder/components/surfaces.xml"/>
+    <signals include="/Aircraft/Generic/flightrecorder/components/engine-jet.xml"/>
+    <signals include="/Aircraft/Generic/flightrecorder/components/faults-engines.xml">
+    </signals>
+    <signals include="/Aircraft/Generic/flightrecorder/components/tanks.xml">
+        <count type="int">7</count>
+    </signals>
+    <signals include="/Aircraft/Generic/flightrecorder/components/gear-retractable.xml">
+        <count type="int">3</count>
+    </signals>
+    <signals include="/Aircraft/L-39ZA/Flightrecorder/pylons.xml">
+        <count type="int">4</count>
+    </signals>
+
+    <!-- Add custom signals here -->
+
+	<signal>
+        <type>bool</type>
+        <property type="string">lightpack/landing-lights-intensity</property>
+    </signal>
+	<signal>
+        <type>bool</type>
+        <property type="string">lightpack/beacon-state/state</property>
+    </signal>
+	<signal>
+        <type>bool</type>
+        <property type="string">/controls/lighting/beacon-switch</property>
+    </signal>
+	<signal>
+        <type>bool</type>
+        <property type="string">lightpack/nav-lights-intensity</property>
+    </signal>
+
+    <signal>
+        <type>bool</type>
+        <property type="string">sim/multiplay/generic/int[1]</property>
+    </signal>
+    <signal>
+        <type>bool</type>
+        <property type="string">sim/multiplay/generic/int[2]</property>
+    </signal>
+    <signal>
+        <type>bool</type>
+        <property type="string">sim/multiplay/generic/int[4]</property>
+    </signal>
+
+	<signal>
+        <type>bool</type>
+        <property type="string">/controls/armament/trigger</property>
+    </signal>
+    <signal>
+        <type>bool</type>
+        <property type="string">/controls/armament/pickle</property>
+    </signal>
+    <signal>
+        <type>bool</type>
+        <property type="string">sim/multiplay/generic/int[8]</property>
+    </signal>
+    <signal>
+        <type>bool</type>
+        <property type="string">sim/multiplay/generic/int[9]</property>
+    </signal>
+    <signal>
+        <type>bool</type>
+        <property type="string">sim/multiplay/generic/int[10]</property>
+    </signal>
+    <signal>
+        <type>bool</type>
+        <property type="string">sim/multiplay/generic/int[11]</property>
+    </signal>
+    <signal>
+        <type>bool</type>
+        <property type="string">sim/multiplay/generic/int[12]</property>
+    </signal>
+    <signal>
+        <type>bool</type>
+        <property type="string">sim/multiplay/generic/int[13]</property>
+    </signal>
+    <signal>
+        <type>bool</type>
+        <property type="string">sim/multiplay/generic/int[14]</property>
+    </signal>
+
+    <signal>
+        <type>double</type>
+        <property type="string">sim/multiplay/generic/int[14]</property>
+    </signal>
+
+    
+</PropertyList>

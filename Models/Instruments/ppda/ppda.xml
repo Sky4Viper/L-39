@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!--
+    #############################################################################
+    #    (C) 2007 by Yurik V. Nikiforoff - port for FGFS,  FDM,		   	#
+    #	2d & 3d instruments, animations, systems and over.		   	#
+    #    	yurik@megasignal.com					   	#
+    #############################################################################	  
+    -->
+
+<!-- PPDA radial/dme indicator from RSBN
+3D instrument for Tu-154 -->
+<PropertyList>
+ <path>ppda.ac</path>
+<!-- Internal instruments lighting -->
+<animation>
+  <type>material</type>
+  <object-name>long_needle</object-name>
+    <emission>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>1.0</red>
+      <green>0.94</green>
+      <blue>0.74</blue>
+    </emission>
+        <condition>
+		    <property>/controls/electric/battery-switch</property>
+	    </condition>
+  </animation>
+
+  <animation>
+  <type>material</type>
+  <object-name>text</object-name>
+  <object-name>base</object-name>
+    <emission>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>1.0</red>
+      <green>0.95</green>
+      <blue>0.75</blue>
+    </emission>
+        <condition>
+		    <property>/controls/electric/battery-switch</property>
+	    </condition>
+  </animation>
+
+  <!-- <animation>
+    <type>noshadow</type>
+    <object-name>glass</object-name>
+  </animation>
+  
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>glass</object-name>
+  </animation> -->
+
+<!--Needle-->
+
+<animation>
+    <type>rotate</type>
+    <object-name>long_needle</object-name>
+    <property>/instrumentation/adf/indicated-bearing-deg</property>
+    <min>-360</min>
+    <max>360</max>
+    <axis>
+      <x>-1</x>
+      <y> 0</y>
+      <z> 0</z>
+    </axis>
+  </animation>
+
+</PropertyList>

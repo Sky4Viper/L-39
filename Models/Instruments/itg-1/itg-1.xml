@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>itg-1.ac</path>
+
+  <!-- Internal instruments lighting -->
+  <animation>
+    <type>material</type>
+    <object-name>Needle1</object-name>
+    <emission>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>1.0</red>
+            <green>0.94</green>
+            <blue>0.74</blue>
+    </emission>
+        <condition>
+		    <property>/controls/electric/battery-switch</property>
+	    </condition>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>Face</object-name>
+    <emission>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>1.0</red>
+            <green>0.94</green>
+            <blue>0.74</blue>
+    </emission>
+        <condition>
+		    <property>/controls/electric/battery-switch</property>
+	    </condition>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Needle1</object-name>
+    <property>/engines/engine[0]/egt-degf</property>
+    <interpolation>
+      <entry><ind> 32</ind><dep>  0</dep></entry>
+      <entry><ind>1652</ind><dep>245</dep></entry>
+    </interpolation>
+    <axis>
+      <x>-1</x>
+      <y> 0</y>
+      <z> 0</z>
+    </axis>
+  </animation>
+
+</PropertyList>
+
+

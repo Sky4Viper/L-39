@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+#############################################################################
+#    (C) 2007 by Yurik V. Nikiforoff                                        #
+#             yurik@megasignal.com                                          #
+#             Jul 2007                                                      #
+#                                                                           #
+# Updated by Helijah 2013                                                   #
+#                    August 2014                                            #
+#############################################################################
+-->
+<PropertyList>
+  <path>achs.ac</path>
+
+  <!-- Internal instruments lighting -->
+  <animation>
+    <type>material</type>
+    <object-name>base</object-name>
+    <object-name>sec_needle</object-name>
+    <object-name>min_needle</object-name>
+    <object-name>hour_needle</object-name>
+    <object-name>timer_min_needle</object-name>
+    <object-name>timer_hour_needle</object-name>
+    <object-name>secundomer_needle</object-name>
+    <emission>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>1.0</red>
+      <green>0.94</green>
+      <blue>0.75</blue>
+    </emission>
+        <condition>
+		    <property>/controls/electric/battery-switch</property>
+	    </condition>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>glass</object-name>
+  </animation>
+  
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/tu134a/Models/Effects/glass/glass_shader.png</texture>
+    <object-name>glass</object-name>
+  </animation>
+  
+  <!--Needles-->
+  <animation>
+    <type>rotate</type>
+    <object-name>hour_needle</object-name>
+    <property>/instrumentation/clock/indicated-min</property>
+    <factor> -0.5 </factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>hour_needle</object-name>
+    <property>/instrumentation/clock/local-hour</property>
+    <factor> -30 </factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>min_needle</object-name>
+    <property>/instrumentation/clock/indicated-sec</property>
+    <factor> -0.1 </factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>sec_needle</object-name>
+    <property>/instrumentation/clock/indicated-sec</property>
+    <factor> -6 </factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+</PropertyList>

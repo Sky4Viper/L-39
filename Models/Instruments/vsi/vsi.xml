@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>vsi.ac</path>
+
+ <animation>
+  <type>material</type>
+  <object-name>PointerCentre</object-name>
+  <object-name>PointerTip</object-name>
+  <object-name>Face</object-name>
+  <emission>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>1.0</red>
+            <green>0.94</green>
+            <blue>0.74</blue>
+  </emission>
+        <condition>
+		    <property>/controls/electric/battery-switch</property>
+	    </condition>
+</animation>
+
+ <animation> 
+  <type>rotate</type>
+  <object-name>PointerCentre</object-name>
+  <object-name>PointerTip</object-name>
+  <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+  <interpolation>
+   <entry><ind>-15748</ind><dep>-172</dep></entry>
+   <entry><ind>-9842</ind><dep>-151</dep></entry>
+   <entry><ind>-3937</ind><dep>-130</dep></entry>
+   <entry><ind>-1968</ind><dep>-75.5</dep></entry>
+   <entry><ind>0</ind><dep>0</dep></entry>
+   <entry><ind>1968</ind><dep>75.5</dep></entry>
+   <entry><ind>3937</ind><dep>130</dep></entry>
+   <entry><ind>9842</ind><dep>151</dep></entry>
+   <entry><ind>15748</ind><dep>172</dep></entry>
+  </interpolation>
+  <axis> 
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>  
+  </center>
+ </animation>         
+ 
+</PropertyList>

@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>Impact.ac</path>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>ShockWave</object-name>
+        <property>sim/time/elapsed-sec</property> 
+		<interpolation>
+		    <entry>
+		        <ind>0.0</ind>
+		        <dep>55.0</dep>
+		    </entry>
+        </interpolation>
+		<axis>
+		    <x>0</x>
+            <y>1</y>
+            <z>0</z>
+		</axis>
+    </animation>
+    
+    <animation>
+		<type>scale</type>
+		<object-name>ShockWave</object-name>
+            <property>sim/time/elapsed-sec</property> 
+		<interpolation>
+		    <entry>
+		    	<ind>0.0</ind>
+		    	<dep>0.0</dep>
+		    </entry>
+		    <entry>
+		    	<ind>0.2</ind>
+		    	<dep>0.5</dep>
+		    </entry>
+            <entry>
+            	<ind>0.4</ind>
+            	<dep>2.5</dep>
+            </entry>
+		    <entry>
+		    	<ind>0.8</ind>
+		    	<dep>6.0</dep>
+		    </entry>
+		    <entry>
+		    	<ind>0.85</ind>
+		    	<dep>0.0</dep>
+		    </entry>
+     	</interpolation>
+   </animation> 
+
+	<animation>
+		<enable-hot type="bool">false</enable-hot>
+	</animation>
+	
+	<animation>
+	  	<type>billboard</type> 
+		<object-name>Puff-Black</object-name>
+     		<spherical>true</spherical>
+	</animation>
+  
+	<animation>
+		<type>scale</type>
+		<object-name>Puff-Black</object-name>
+        <property>sim/time/elapsed-sec</property>
+		<x-min>0</x-min>
+		<y-min>0</y-min>
+		<z-min>0</z-min>
+		<x-max>4</x-max>
+		<y-max>4</y-max>
+		<z-max>6</z-max>
+		<x-factor>2</x-factor>
+		<y-factor>2</y-factor>
+		<z-factor>2</z-factor>
+	</animation>
+ 	
+	<animation>
+		<type>dist-scale</type>
+		<object-name>Puff-Black</object-name>
+		<interpolation>
+			<entry><ind>0</ind><dep>1</dep></entry>
+			<entry><ind>3000</ind><dep>4</dep></entry>
+		</interpolation>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>Puff-Black</object-name>
+     	<emission>
+			<red>0.5</red>
+			<green>0.5</green>
+			<blue>0.5</blue>
+		</emission>
+	</animation>
+
+	<model>
+		<path>Aircraft/L-39ZA/Models/Effects/Bomb/Fire.xml</path>
+		<offsets>
+		  <x-m> 2.00</x-m>
+		  <y-m> 0.00</y-m>
+		  <z-m> 0.00</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<path>Aircraft/L-39ZA/Models/Effects/Bomb/Fire.xml</path>
+		<offsets> 
+		  <x-m>-0.88</x-m>
+		  <y-m> 0.00</y-m>
+		  <z-m> 1.77</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<path>Aircraft/L-39ZA/Models/Effects/Bomb/Fire.xml</path>
+		<offsets>
+		  <x-m>-0.82</x-m>
+		  <y-m> 0.00</y-m>
+		  <z-m>-1.72</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<path>Aircraft/L-39ZA/Models/Effects/Crater/crater.xml</path>
+		<offsets>
+		  <x-m>0.0</x-m>
+		  <y-m>0.0</y-m>
+		  <z-m>0.0</z-m>
+		  <pitch-deg>45</pitch-deg>
+		</offsets>
+	</model>
+
+</PropertyList>

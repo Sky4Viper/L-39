@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  Note:
+  To be able to see the glossy effect the shininess value for the color of the
+  affected model parts must be somewhere high, at least 100 and preferable 128:
+  https://learnopengl.com/Lighting/Materials
+
+  Note:
+  Objects without a texture applied will cause a segmentation fault.
+
+
+  Parameters:
+  * Boolean to enable or disable the reflection.
+    Civilian aircraft are usually glossy but military aircraft are not.
+     sim/model/civilian
+
+  * Floating point value to specify the reflection factor.
+    The range is between -1.0 and 0.0
+     sim/model/livery/shininess
+
+  * Floating point value to specify the Fresnel factor.
+    The range is between 0.0 and 1.0
+     sim/model/livery/fresnel
+
+  These parameters can all be defined within a livery configuration file:
+  <PropertyList>
+    <sim>
+      <model>
+        <civilian type="bool">true</civilian>
+        <livery>
+          <name type="string">Factory Demonstrator</name>
+         <texture>Liveries/factory.png</texture>
+         <shininess type="float">-0.5</shininess>
+         <fresnel type="float">0.7</fresnel>
+        </livery>
+      </model>
+    </sim>
+  </PropertyList>
+
+
+  Usage:
+  Add one of the following examples to your model configuration file.
+
+  * Minimal configuration
+  <effect>
+    <name>Effects/normalmap-reflection</name>
+    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+    <object-name>fuselage</object-name>
+    <object-name>wing</object-name>
+  </effect>
+
+  * Adding a normal-map:
+  <effect>
+    <name>Effects/normalmap-reflection</name>
+    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+    <object-name>fuselage</object-name>
+    <object-name>wing</object-name>
+    <parameters>
+      <texture n="2">
+        <image>Aircraft/AircraftName/Models/normalmap.png</image>
+      </texture>
+    </parameters>
+  </effect>
+
+
+  Further reading:
+  https://wiki.flightgear.org/ALS_technical_notes
+-->
+
+<PropertyList>
+ <name>Aircraft/L-39ZA/Models/Effects/ArmReflect</name>
+ <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+ <parameters>
+  <rain-enabled type="int"> 2 </rain-enabled>
+  <normalmap-enabled type="int"> 1 </normalmap-enabled>
+  <normalmap-dds type="int"> 0 </normalmap-dds>
+  <normalmap-tiling type="float"> 1.0 </normalmap-tiling>
+  <lightmap-enabled type="int"> 0 </lightmap-enabled>
+  <ambient-correction type="float"> 0.1 </ambient-correction>
+  <reflection-enabled type="int"><use>sim/model/civilian</use></reflection-enabled>
+  <reflection-type type="int"> 1 </reflection-type>
+  <reflection-dynamic type="int"> 1 </reflection-dynamic>
+  <reflection-rainbow type="float"> 0.0 </reflection-rainbow>
+  <reflection-noise type="float"> 0.0 </reflection-noise>
+  <reflection-fresnel-factor type="float"> 0.1 </reflection-fresnel-factor>
+  <reflection-correction type="float">-0.1</reflection-correction>
+  <reflection-fresnel type="float">0.1</reflection-fresnel>
+ </parameters>
+
+</PropertyList>

@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>rpm.ac</path>
+  
+  <!-- <animation>
+    <type>rotate</type>
+    <object-name>Needle1</object-name>
+    <property>controls/engines/engine[0]/throttle</property>
+	<factor>230</factor>	
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation> -->
+
+  <animation>
+  <type>material</type>
+  <object-name>Needle1</object-name>
+  <object-name>Face</object-name>
+    <emission>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>1.0</red>
+            <green>0.94</green>
+            <blue>0.74</blue>
+    </emission>
+        <condition>
+		    <property>/controls/electric/battery-switch</property>
+	    </condition>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Needle1</object-name>
+    <property>/engines/engine[0]/rpm</property>
+    <interpolation>
+      <entry><ind>   0.0 </ind><dep>  50.0 </dep></entry>
+      <entry><ind>  20.0 </ind><dep> 113.0 </dep></entry>
+      <entry><ind>  60.0 </ind><dep> 174.0 </dep></entry>
+      <entry><ind> 100.0 </ind><dep> 360.0 </dep></entry>
+      <entry><ind> 106.0 </ind><dep> 379.0 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> -1.0 </x>
+      <y>  0.0 </y>
+      <z>  0.0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
+
+

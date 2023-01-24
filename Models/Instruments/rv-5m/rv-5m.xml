@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    #############################################################################
+    #    (C) 2007 by Yurik V. Nikiforoff			 	  	#
+    #    	yurik@megasignal.com					   	#
+    #    	Jul 2007						   	#
+    #############################################################################	  
+    -->
+
+<!-- Radio altimeter
+3D instrument for Tu-154 -->
+<PropertyList>
+ <path>rv-5m.ac</path>
+
+  <!-- Internal instruments lighting -->
+  <animation>
+    <type>material</type>
+    <object-name>needle</object-name>
+    <object-name>index</object-name>
+    <object-name>index_light</object-name>
+    <emission>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>1.0</red>
+      <green>0.94</green>
+      <blue>0.74</blue>
+    </emission>
+        <condition>
+		    <property>/controls/electric/battery-switch</property>
+	    </condition>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>lamp_light</object-name>
+    <emission>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>   2.0 </red>
+      <green> 1.8 </green>
+      <blue>  1.0 </blue>
+    </emission>
+        <condition>
+		    <property>/controls/electric/battery-switch</property>
+	    </condition>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>centre</object-name>
+    <emission>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>1.0</red>
+      <green>0.94</green>
+      <blue>0.74</blue>
+    </emission>
+        <condition>
+		    <property>/controls/electric/battery-switch</property>
+	    </condition>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>glass</object-name>
+  </animation>
+  
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>glass</object-name>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>lamp_light</object-name>
+    <condition>
+      <property>/controls/electric/ralt-switch</property>
+      <less-than>
+        <property>/position/altitude-agl-ft</property>
+        <property>controls/instrumentation/danger-altitude-ft</property>
+      </less-than>
+      <less-than>
+          <property>/gear/gear[0]/position-norm</property>
+          <value>1</value>
+      </less-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>index_light</object-name>
+    <condition>
+      <or>
+      <greater-than>
+        <property>/position/altitude-agl-ft</property>
+        <value>2625</value>
+      </greater-than>
+      <not>
+        <property>/controls/electric/ralt-switch</property>
+      </not>
+      </or>
+    </condition>
+  </animation>
+
+<!--Needles-->
+<animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+  <expression>
+    <table>
+      <product>
+          <sum>
+            <property>/position/altitude-agl-ft</property>
+            <value>-3</value>
+          </sum>
+        <value>0.3048</value>
+      </product>
+      <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
+      <entry><ind>	50.0</ind>	<dep>	75.0</dep></entry>
+      <entry><ind>	60.0</ind>	<dep>	91.5</dep></entry>
+      <entry><ind>	80.0</ind>	<dep>	123.0</dep></entry>
+      <entry><ind>	100.0</ind>	<dep>	155.0</dep></entry>
+      <entry><ind>	200.0</ind>	<dep>	179.0</dep></entry>
+      <entry><ind>	300.0</ind>	<dep>	203.0</dep></entry>
+      <entry><ind>	400.0</ind>	<dep>	226.0</dep></entry>
+      <entry><ind>	500.0</ind>	<dep>	251.0</dep></entry>
+      <entry><ind>	700.0</ind>	<dep>	300.0</dep></entry>
+      <entry><ind>	800.0</ind>	<dep>	325.0</dep></entry>
+    </table>
+  </expression>
+    <axis>
+      <x>-1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+    <condition>
+        <property>/controls/electric/ralt-switch</property>
+    </condition>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>index</object-name>
+  <property>controls/instrumentation/danger-altitude-ft</property>
+  <interpolation>
+   <entry><ind>0</ind><dep> 0</dep></entry>
+   <!-- 100 m -->
+   <entry><ind>328.1</ind><dep> 155</dep></entry>
+   <!-- 200 m -->
+   <entry><ind>656.2</ind><dep> 180</dep></entry>
+   <!-- 700 m -->
+   <entry><ind>2296.7</ind><dep>300</dep></entry>
+  </interpolation>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>knob_alt</object-name>
+  <property>controls/instrumentation/danger-altitude-ft</property>
+  <factor>1</factor>
+  <center>
+      <x-m>0</x-m>
+      <y-m>-0.039545</y-m>
+      <z-m>-0.045365</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+</animation>
+
+
+<!--     Danger altitude Bug control    -->
+ <!-- <animation>
+  <type>pick</type>
+  <object-name>knob_alt</object-name>
+  <action>
+    <name>small increase</name>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>controls/instrumentation/danger-altitude-ft</property>
+      <step>32.81</step>
+      <min>0</min>
+      <max>2296.7</max>
+      <wrap>0</wrap>
+    </binding>
+  </action>
+  <action>
+    <name>large increase</name>
+    <button>1</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>controls/instrumentation/danger-altitude-ft</property>
+      <step>328.1</step>
+      <min>0</min>
+      <max>2296.7</max>
+      <wrap>0</wrap>
+    </binding>
+  </action>
+  <action>
+    <name>small increase (scrollwheel)</name>
+    <button>3</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>controls/instrumentation/danger-altitude-ft</property>
+      <step>32.81</step>
+      <min>0</min>
+      <max>2296.7</max>
+      <wrap>0</wrap>
+    </binding>
+  </action>
+  <action>
+    <name>small decrease (scrollwheel)</name>
+    <button>4</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>controls/instrumentation/danger-altitude-ft</property>
+      <step>-32.81</step>
+      <min>0</min>
+      <max>2296.7</max>
+      <wrap>0</wrap>
+    </binding>
+  </action>
+ </animation> -->
+
+     <animation>
+        <type>knob</type>
+        <object-name>knob_alt</object-name>
+        <increase>
+          <binding>
+              <command>property-adjust</command>
+              <property>controls/instrumentation/danger-altitude-ft</property>
+              <step>32.81</step>
+              <min>0</min>
+              <max>2296.7</max>
+              <wrap>0</wrap>
+          </binding>
+          <binding>
+            <command>nasal</command>
+            <script>switchclicksound.click("adf-dial")</script>
+          </binding>
+        </increase>
+        <decrease>
+          <binding>
+              <command>property-adjust</command>
+              <property>controls/instrumentation/danger-altitude-ft</property>
+              <step>-32.81</step>
+              <min>0</min>
+              <max>2296.7</max>
+              <wrap>0</wrap>
+          </binding>
+          <binding>
+                <command>nasal</command>
+                <script>switchclicksound.click("adf-dial")</script>
+          </binding>
+        </decrease>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>rv-5m-dh</tooltip-id>
+                <label>Adjust danger altitude warning</label>
+            </binding>
+        </hovered>
+    </animation>
+
+</PropertyList>

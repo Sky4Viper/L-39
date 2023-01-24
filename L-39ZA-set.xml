@@ -1,0 +1,825 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+Aero Vodochody L-39ZA Albatros
+
+History:
+2023.01.24 - Initial version
+************************************************************************
+-->
+<PropertyList>
+<sim>
+	<description>Aero Vodochody L-39ZA Albatros</description>
+	<long-description>The L-39ZA Albatros is an upgraded variant of Czech high performance jet trainer aircraft used for armed training and light attack missions, 
+    employing sturdier landing gear, a higher payload (total 1,290 kg (2,844 lb)) on 4 hardpoints.
+	First flight of ZA model on 29 September 1976. 208 aircraft delivered. 
+    Armament includes: GSh-23L confrmal twin barrel 23mm canon, UB-16 rocket pods with S-5 unguided rockets, FAB-250 bombs, PK-3 machine gun pods and R-60M air to air missiles.
+	</long-description>
+	
+	<author>Sergei "Skydive" Solyshko</author>
+	<authors>
+		<author n="0">
+			<name>Sergei "Skydive" Solyshko</name>
+		</author>
+		<author n="1">
+			<name>Fabrice KAUFFMANN</name>
+		</author>
+	</authors>
+	
+	<urls>
+		<support>http://forum.flightgear.org</support>
+		<wikipedia>https://en.wikipedia.org/wiki/Aero_L-39_Albatros</wikipedia>
+		<code-repository>https://github.com/Sky4Viper/L-39ZA</code-repository>
+	</urls>
+	
+	<status>alpha</status>
+	<rating>
+		<FDM type="int">3</FDM>
+		<systems type="int">2</systems>
+		<cockpit type="int">3</cockpit>
+		<model type="int">3</model>
+	</rating>
+	
+	<flight-model>yasim</flight-model>
+	<aero>L-39ZA-yasim-t7</aero>	
+	
+	<tags>
+		<tag>trainer</tag>
+		<tag>1960s</tag>
+		<tag>1970s</tag>
+		<tag>1980s</tag>
+		<tag>1990s</tag>
+		<tag>low-wing</tag>
+		<tag>pressurised</tag>
+		<tag>retractable-gear</tag>
+		<tag>tricycle</tag>
+		<tag>jet</tag>
+		<tag>single-engine</tag>
+	</tags>
+
+	<startup>
+		<splash-texture>Aircraft/L-39ZA/l39-splash.png</splash-texture>
+	</startup>
+	
+	<previews>
+		<preview>
+			<type>exterior</type>
+			<splash type="bool">true</splash>
+			<path>Previews/external.png</path>
+		</preview>
+		<preview>
+			<type>exterior</type>
+			<splash type="bool">true</splash>
+			<path>Previews/external2.png</path>
+		</preview>
+		<preview>
+			<type>panel</type>
+			<splash type="bool">true</splash>
+			<path>Previews/cockpit.png</path>
+		</preview>
+	</previews>
+
+	<model>
+		<path>Aircraft/L-39ZA/Models/L-39ZA.xml</path>
+		<hide-lights type="int">1</hide-lights>
+        <show_gunsight type="int">1</show_gunsight>
+		<livery>
+        	<file type="string">default</file>
+            <shininess type="float">-0.52</shininess>
+      	</livery>
+	</model>
+
+	<submodels>
+		<serviceable type="bool">true</serviceable>
+		<path>Aircraft/L-39ZA/Models/Submodels.xml</path>
+	</submodels>
+
+  	<flaps>
+    	<setting> 0.00 </setting>
+    	<setting> 0.50 </setting>
+    	<setting> 1.00 </setting>
+  	</flaps>
+	
+	<fuel-fraction>1.0</fuel-fraction>
+
+	<flight-recorder>
+    		<replay-config type="int">0</replay-config>
+    		<config n="0" 
+        		include="Aircraft/L-39ZA/Flightrecorder/Flightrecorder.xml">
+      			<name type="string">L-39ZA Flight Recorder</name>
+      	<!-- Custom properties examples-->
+
+      			<!-- <signal>
+        			<type>float</type>
+        			<property type="string">/controls/gear/nosegear-steering-cmd-norm</property>
+        			<interpolation>linear</interpolation>
+      			</signal>
+        		<signal>
+          			<type>float</type>
+          			<property type="string">/controls/gear/nosegear-steering-cmd-norm</property>
+        		</signal>
+        		<signal>
+          			<type>double</type>
+          			<interpolation>rotational-deg</interpolation>
+          			<property type="string">/ai/model/carrier/alpha-angle-deg</property>
+        		</signal>
+				<signal>
+          			<type>bool</type>
+          			<property type="string">/controls/panel/custom-switch</property>
+        		</signal> -->
+    		</config>
+  	</flight-recorder>
+	
+	<sound>
+		<audible>true</audible>
+		<path>Aircraft/L-39ZA/Sounds/Sound.xml</path>
+	</sound>
+	
+	<hud>
+		<visibility>false</visibility>
+	</hud>
+	
+	<virtual-cockpit archive="y">true</virtual-cockpit>
+	
+	<chase-distance-m type="double" archive="y">-20.0</chase-distance-m>
+
+	<!-- External stores
+
+    -UB-l6-57U with rockets - 116kg (255.736lb), drag index: 15
+    -OFAB-100-120 -125kg (275.578lb), drag index: 17
+    -R-3S - 74kg (163.142lb), drag index: 5
+    -APU-l3M - 21kg (46.2971lb), drag index: 2
+
+ -->
+		
+		<weight n="0">
+			<name>Pylon 1 L</name>
+			<tank>3</tank>
+			<weight-lb>0</weight-lb>
+			<selected>none</selected>
+			<opt>
+				<name>none</name>
+				<lbs>0</lbs>
+			</opt>
+			<opt>
+				<name>R-60M</name>
+				<lbs>96</lbs>
+			</opt>
+			<opt>
+				<name>UB-16 rockets pod</name>
+				<lbs>304</lbs>
+			</opt>
+			<opt>
+				<name>PK-3 MG pod</name>
+				<lbs>280</lbs>
+			</opt>
+			<opt>
+				<name>FAB-250 bomb</name>
+				<lbs>590</lbs>
+			</opt>
+			<opt>
+				<name>150L fuel droptank</name>
+				<lbs>278.025</lbs>
+				<gals>41.25</gals>
+			</opt>
+		</weight>
+		
+		<weight n="1">
+			<name>Pylon 2 L</name>
+			<tank>4</tank>
+			<weight-lb>0</weight-lb>
+			<selected>none</selected>
+			<opt>
+				<name>none</name>
+				<lbs>0</lbs>
+			</opt>
+			<opt>
+				<name>R-60M</name>
+				<lbs>96</lbs>
+			</opt>
+			<opt>
+				<name>UB-16 rockets pod</name>
+				<lbs>304</lbs>
+			</opt>
+			<opt>
+				<name>PK-3 MG pod</name>
+				<lbs>280</lbs>
+			</opt>
+			<opt>
+				<name>FAB-250 bomb</name>
+				<lbs>590</lbs>
+			</opt>
+			<opt>
+				<name>150L fuel droptank</name>
+				<lbs>278.025</lbs>
+				<gals>41.25</gals>
+			</opt>
+		</weight>
+		
+		<weight n="2">
+			<name>Pylon 3 R</name>
+			<tank>5</tank>
+			<weight-lb>0</weight-lb>
+			<selected>none</selected>
+			<opt>
+				<name>none</name>
+				<lbs>0</lbs>
+			</opt>
+			<opt>
+				<name>R-60M</name>
+				<lbs>96</lbs>
+			</opt>
+			<opt>
+				<name>UB-16 rockets pod</name>
+				<lbs>304</lbs>
+			</opt>
+			<opt>
+				<name>PK-3 MG pod</name>
+				<lbs>280</lbs>
+			</opt>
+			<opt>
+				<name>FAB-250 bomb</name>
+				<lbs>590</lbs>
+			</opt>
+			<opt>
+				<name>150L fuel droptank</name>
+				<lbs>278.025</lbs>
+				<gals>41.25</gals>
+			</opt>
+		</weight>
+		
+		<weight n="3">
+			<name>Pylon 4 R</name>
+			<tank>6</tank>
+			<weight-lb>0</weight-lb>
+			<selected>none</selected>
+			<opt>
+				<name>none</name>
+				<lbs>0</lbs>
+			</opt>
+			<opt>
+				<name>R-60M</name>
+				<lbs>96</lbs>
+			</opt>
+			<opt>
+				<name>UB-16 rockets pod</name>
+				<lbs>304</lbs>
+			</opt>
+			<opt>
+				<name>PK-3 MG pod</name>
+				<lbs>280</lbs>
+			</opt>
+			<opt>
+				<name>FAB-250 bomb</name>
+				<lbs>590</lbs>
+			</opt>
+			<opt>
+				<name>150L fuel droptank</name>
+				<lbs>278.025</lbs>
+				<gals>41.25</gals>
+			</opt>
+		</weight>
+	
+	<menubar>
+		<default>
+			<menu n="99">
+				<label>Albatros</label>
+				<enabled type="bool">true</enabled>
+				<item>
+					<label>Select Livery</label>
+					<binding>
+						<command>nasal</command>
+						<script>aircraft.livery.dialog.toggle()</script>
+					</binding>
+				</item>
+				<item>
+					<label>Switch Landing Lights On/Off</label>
+					<binding>
+						<command>property-toggle</command>
+						<property>/controls/lighting/landing-lights-switch</property>
+					</binding>
+				</item>
+				<item>
+					<label>Nosewheel Lock toggle</label>
+					<binding>
+						<command>property-toggle</command>
+						<property>/controls/gear/nosewheel-lock</property>
+					</binding>
+				</item>
+				<item>
+					<label>Payload</label>
+					<binding>
+						<command>nasal</command>
+				 		<script>CanvasPylonsDlg.showPylonsDlg()</script>
+					</binding>
+				</item>
+				<item>
+					<label>Reload GSh-23L cannons</label>
+					<binding>
+						<command>nasal</command>
+						<script>cannon.reload()</script>
+					</binding>
+				</item>
+				<item>
+					<label>Reload PK-3 mg pods</label>
+					<binding>
+						<command>nasal</command>
+						<script>pk3pods.reload()</script>
+					</binding>
+				</item>
+				<item>
+					<label>Reload S-5 rockets</label>
+					<binding>
+						<command>nasal</command>
+						<script>rockets.reload()</script>
+					</binding>
+				</item>
+				<item>
+            		<label>ARK-19 setup</label>
+            		<name>config</name>
+            		<binding>
+              			<command>dialog-show</command>
+              			<dialog-name>ARK-19</dialog-name>
+            		</binding>
+          		</item>
+				<item>
+            		<label>RSBN setup</label>
+            		<name>config</name>
+            		<binding>
+              			<command>dialog-show</command>
+              			<dialog-name>RSBN</dialog-name>
+            		</binding>
+          		</item>
+				<item>
+            		<label>PRMG setup</label>
+            		<name>config</name>
+            		<binding>
+              			<command>dialog-show</command>
+              			<dialog-name>PRMG</dialog-name>
+            		</binding>
+          		</item>
+			</menu>
+		</default>
+	</menubar>
+
+	<!-- Multiplayer -->
+    
+	<multiplay>
+		<chat_display>1</chat_display>
+		<generic> 
+				<int n="0" alias="/sim/crashed" />
+				<!-- Beacon on -->
+				<int n="1" alias="/controls/lighting/beacon-switch" />
+				<!-- Landing lights on -->
+				<int n="2" alias="/controls/lighting/landing-lights-switch" />
+				<!-- Taxi light on -->
+				<int n="3" alias="/controls/lighting/taxi-light" />
+				<!-- Nav lights on -->
+				<int n="4" alias="/controls/lighting/nav-lights-switch" />
+				<!-- Engine status -->
+				<int n="5" alias="/engines/engine[0]/state" />
+				<!-- <int n="6" alias="/engines/engine[1]/state" /> -->
+				<int n="7" alias="/sim/crashed" />
+				<int n="8" alias="/controls/armament/trigger-GSh-23" />
+				<int n="9" alias="/controls/armament/trigger-S-5-L" />
+				<int n="10" alias="/controls/armament/trigger-S-5-R" />
+				<int n="11" alias="/controls/armament/trigger-PK3-out" />
+				<int n="12" alias="/controls/armament/trigger-PK3-in" />
+				<int n="13" alias="/controls/armament/trigger-FAB250-out" />
+				<int n="14" alias="/controls/armament/trigger-FAB250-in" />
+				<float n="0" alias="/surface-positions/left-taileron-pos-norm"/>
+				<float n="1" alias="/surface-positions/right-taileron-pos-norm"/>
+				<float n="2" alias="/surface-positions/left-flap-pos-norm"/>
+				<float n="3" alias="/surface-positions/right-flap-pos-norm"/>
+				<float n="4" alias="/sim/model/nozzle-animation"/>
+				<!-- <float n="8" alias="/engines/engine[0]/afterburner" /> Reheat left engine -->
+				<!-- <float n="9" alias="/engines/engine[1]/afterburner" />  Reheat right engine -->
+		</generic>
+	</multiplay>
+    
+	<mp-systems>
+		<combat-enabled type="bool">true</combat-enabled>
+	</mp-systems>
+	
+	<view n="0">
+		<internal archive="y">true</internal>
+		<config>
+			<x-offset-m archive="y">0.00</x-offset-m> <!-- left-right -->
+			<y-offset-m archive="y">-0.1778</y-offset-m> <!-- up-down -->
+			<z-offset-m archive="y">-2.79</z-offset-m> <!-- forward-backwards -->
+			<pitch-offset-deg>-12.5</pitch-offset-deg>
+			<default-field-of-view-deg>90</default-field-of-view-deg>
+		</config>
+	</view>
+
+		<view n="100">
+			<name>Co Pilot view</name>
+			<internal archive="y">true</internal>
+			<type>lookfrom</type>
+			<config>
+				<from-model type="bool">true</from-model>
+				<from-model-idx type="int">0</from-model-idx>
+				<x-offset-m archive="y">0.00</x-offset-m>
+				<y-offset-m archive="y">0.036572</y-offset-m>
+				<z-offset-m archive="y">-1.44</z-offset-m> 
+				<pitch-offset-deg>-15</pitch-offset-deg>
+				<default-field-of-view-deg>90</default-field-of-view-deg>
+				<limits>
+					<left>
+						<heading-max-deg>-100</heading-max-deg>
+						<x-offset-threshold-deg>0</x-offset-threshold-deg>
+						<x-offset-max-m>0</x-offset-max-m>
+					</left>
+					<right>
+						<heading-max-deg>100</heading-max-deg>
+						<x-offset-threshold-deg>0</x-offset-threshold-deg>
+						<x-offset-max-m>0</x-offset-max-m>
+					</right>
+					<enabled>1</enabled>
+				</limits>
+			</config>
+		</view>
+</sim>
+
+<aircraft>
+	<icao>
+		<wake-turbulence-category>L</wake-turbulence-category>
+		<type type="string">L39</type>
+		<equipment type="string">N</equipment>
+	</icao>
+	<performance>
+		<minimum>
+			<takeoff-length-ft type="int">1739</takeoff-length-ft>
+			<landing-length-ft type="int">2133</landing-length-ft>
+		</minimum>
+		<maximum>
+			<altitude-ft type="int">36000</altitude-ft>
+			<mach type="double">0.800</mach>
+			<airspeed-knots type="int">378</airspeed-knots>
+		</maximum>
+	</performance>
+</aircraft>
+
+<controls>
+	<lighting>
+		<strobe type="bool">true</strobe>
+		<instruments-norm>0.9</instruments-norm>
+	</lighting>
+
+	<ventilation>
+      		<windshield-antiice-lever type="bool">false</windshield-antiice-lever>
+      		<airconditioning-type type="int">0</airconditioning-type><!-- cold for 12s: -1 auto: 0 warm for 12s: 1 -->
+      		<airconditioning-enabled type="bool">true</airconditioning-enabled>
+      		<airconditioning-temperature type="double">16.0</airconditioning-temperature><!-- used for auto -->
+    </ventilation>
+
+	<!-- <lighting>
+			<instruments-norm>0.4</instruments-norm>
+			<panels-norm>0.1</panels-norm>
+			<sight-norm>0.85</sight-norm>
+			<nightmode type="bool">false</nightmode>
+			<strobe-switch type="bool">true</strobe-switch>
+			<beacon-switch type="bool">true</beacon-switch>
+			<landing-lights-switch type="bool">true</landing-lights-switch>
+			<taxi-lights-switch type="bool">true</taxi-lights-switch>
+			<nav-lights-switch type="bool">true</nav-lights-switch>
+	</lighting> -->
+
+	<!-- Power switches -->
+	<power>
+		<battery type="bool">true</battery>
+      	<fuelpump1 type="bool">false</fuelpump1>
+      	<fuelpump0 type="bool">true</fuelpump0>
+      	<rsbn type="bool">true</rsbn>
+	</power>
+
+	<electric>
+		<battery-switch type="bool">false</battery-switch>
+        
+        <engine>
+            <generator type="bool">false</generator>
+        </engine>
+	</electric>
+
+	<gear>
+		<brake-parking type="bool">true</brake-parking>
+	</gear>
+
+	<gunsight>
+		<gunsight-norm>0.8</gunsight-norm>
+        <gunsight-pos>1</gunsight-pos>
+	</gunsight>  
+
+	<armament>
+			<trigger>0</trigger>
+			<trigger1>0</trigger1>
+			<trigger2>0</trigger2>
+			<station n="0">
+				<release type="bool">false</release>
+			</station>
+			<station n="1">
+				<release type="bool">false</release>
+			</station>
+			<station n="2">
+				<release type="bool">false</release>
+			</station>
+			<station n="3">
+				<release type="bool">false</release>
+			</station>
+			<station n="4">
+				<release type="bool">false</release>
+			</station>
+	</armament>
+
+	<instrumentation>
+
+		<danger-altitude-ft type="double">0.0</danger-altitude-ft>
+		
+		<transponder>
+			<inputs>
+				<serviceable type="bool">true</serviceable>
+			</inputs>
+		</transponder>
+        
+		<nav n="0">
+			<serviceable type="bool">1</serviceable>
+		</nav>
+        
+		<comm n="0">
+			<serviceable type="bool">1</serviceable>
+		</comm>
+
+	</instrumentation>
+
+	<navigation>
+			<target-range type="double">0.0</target-range>
+	</navigation>
+		
+</controls>
+
+<consumables>
+	<fuel>
+		<tank n="0">
+			<tank-num type="int">0</tank-num>
+			<level-gal_us archive="y">290</level-gal_us>
+		</tank>
+
+		<tank n="1">
+			<tank-num type="int">0</tank-num>
+			<level-gal_us archive="y">26</level-gal_us>
+		</tank>
+
+		<tank n="2">
+			<tank-num type="int">0</tank-num>
+			<level-gal_us archive="y">26</level-gal_us>
+		</tank>
+
+		<tank n="3">
+			<name>Left Outer Tank</name>
+			<selected type="bool">false</selected>
+		</tank>
+			
+		<tank n="4">
+			<name>Left Inner Tank</name>
+			<selected type="bool">false</selected>
+		</tank>
+			
+		<tank n="5">
+			<name>Right Inner Tank</name>
+			<selected type="bool">false</selected>
+		</tank>
+			
+		<tank n="6">
+			<name>Right Outer Tank</name>
+			<selected type="bool">false</selected>
+		</tank>
+	</fuel>
+</consumables>
+
+<engines>
+  <engine n="0">
+    <running>false</running>
+  </engine>
+</engines>
+
+<input>
+		<keyboard>
+  
+			<!-- <key n="125">
+				<name>}</name>
+				<desc>Engine autostart</desc>
+				<binding>
+					<command>nasal</command>
+					<script>
+						#Yak-130.engines.engine1.autostart();
+						#settimer( func { Yak-130.engines.engine2.autostart(); }, 12 );
+						yasimengines.autostart();		 
+					</script>
+               
+				</binding>
+			</key> -->
+       
+			<key n="78">
+				<name>N</name>
+				<desc>Extend speedbrake</desc>
+				<binding>
+					<command>property-adjust</command>
+					<property>/controls/flight/speedbrake</property>
+					<step type="double">0.2</step>
+					<min type="double">0</min>
+					<max type="double">1</max>
+				</binding>
+			</key>
+
+			<key n="81">
+				<name>Shift-Q</name>
+				<desc>Fuel Cutoff Switch or Lever.</desc>
+				<binding>
+					<condition>
+						<property>/sim/input/selected/engine[0]</property>
+					</condition>
+					<command>property-toggle</command>
+					<property>/controls/engines/engine[0]/cutoff</property>
+				</binding>
+			</key>
+       
+			<key n="99">
+				<name>c</name>
+				<desc>Toggle canopy</desc>
+				<binding>
+					<command>nasal</command>
+					<script>canopy.canopy_switch(2)</script>
+				</binding>
+			</key>
+
+			<key n="100">
+				<name>d</name>
+				<desc>Drop bomb</desc>
+				<binding>
+					<condition>
+						<or>
+							<equals>
+								<property>sim/weight[0]/selected</property>
+								<value>FAB-250 bomb</value>
+							</equals>
+							<equals>
+								<property>sim/weight[1]/selected</property>
+								<value>FAB-250 bomb</value>
+							</equals>
+						</or>
+					</condition>
+      				<command>nasal</command>
+      				<script>weapons.drop_Bomb()</script>
+				</binding>
+				<mod-up>
+					<binding>
+        				<command>nasal</command>
+        				<script>weapons.stop_Bomb()</script>
+      				</binding>
+				</mod-up>				
+			</key>
+       
+			<key n="101">
+				<name>e</name>
+				<desc>Fire rockets</desc>
+				<binding>
+					<command>nasal</command>
+					<script>weapons.fire_Rocket()</script>
+				</binding>
+				<mod-up>
+					<binding>
+						<command>nasal</command>
+						<script>weapons.stop_Rocket()</script>
+					</binding>
+				</mod-up>
+			</key>
+       
+			<key n="102">
+				<name>f</name>
+				<desc>Fire gun</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>controls/armament/trigger</property>
+					<value>true</value>
+				</binding>
+				<mod-up>
+					<binding>
+						<command>property-assign</command>
+						<property>controls/armament/trigger</property>
+						<value>false</value>
+					</binding>
+				</mod-up>
+			</key>
+       
+			<key n="110">
+				<name>n</name>
+				<desc>Retract speedbrake</desc>
+				<binding>
+					<command>property-adjust</command>
+					<property>/controls/flight/speedbrake</property>
+					<step type="double">-0.2</step>
+					<min type="double">0</min>
+					<max type="double">1</max>
+				</binding>
+			</key>
+  
+   			<key n="125">
+     			<name>}</name>
+     			<desc>Engine Autostart</desc>
+    			<binding>
+        			<command>nasal</command>
+        			<script>emu.autostart();</script>
+    			</binding>
+  			</key>
+
+			<key n="125">
+        	<name>}</name>
+        	<desc>Engine Autostart</desc>
+        	<binding>
+          		<command>nasal</command>
+          		<script>engines.engine1.autostart();</script>
+        	</binding>
+      		</key>
+       
+			<!-- <key n="113">
+				<name>q</name>
+				<desc>Deploy countermeasures</desc>
+				<binding>
+					<command>nasal</command>
+					<script>guns.fire_FL()</script>
+				</binding>
+				<mod-up>
+					<binding>
+						<command>nasal</command>
+						<script>guns.stop_FL()</script>
+					</binding>
+				</mod-up>
+			</key> -->
+
+		</keyboard>
+</input>
+
+ <nasal>
+	<L-39ZA>
+		<file>Aircraft/L-39ZA/Nasal/strobe.nas</file>
+		<file>Aircraft/L-39ZA/Nasal/metric.nas</file>
+		<file>Aircraft/L-39ZA/Nasal/liveries.nas</file>
+	</L-39ZA>
+	<lights>
+	    	<file>Aircraft/L-39ZA/Nasal/lights.nas</file>
+	</lights>
+	<canopy>
+			<file>Aircraft/L-39ZA/Nasal/canopy.nas</file>
+	</canopy>
+	<fuel>
+      <file>Aircraft/L-39ZA/Nasal/fuel.nas</file>
+    </fuel>
+	<radiocfg>
+      <file>Aircraft/L-39ZA/Nasal/radiocfg.nas</file>
+    </radiocfg>
+	<switchclicksound>
+      <file>Aircraft/L-39ZA/Nasal/switchclicksound.nas</file>
+    </switchclicksound>
+    <gunsight>
+		<file>Aircraft/L-39ZA/Nasal/gunsight.nas</file>
+	</gunsight>
+	<payload>
+			<file>Aircraft/L-39ZA/Nasal/payload.nas</file>
+	</payload>
+	<weapons>
+			<file>Aircraft/L-39ZA/Nasal/weapons.nas</file>
+	</weapons>
+	<cannon>
+		<file>Aircraft/L-39ZA/Nasal/cannon.nas</file>
+	</cannon>
+	<rockets>
+		<file>Aircraft/L-39ZA/Nasal/rockets.nas</file>
+	</rockets>
+	<pk3pods>
+		<file>Aircraft/L-39ZA/Nasal/pk3pods.nas</file>
+	</pk3pods>
+	<low>
+		<file>Aircraft/L-39ZA/Nasal/low.nas</file>
+	</low>
+	<tyresmoke>
+		<file>Aircraft/L-39ZA/Nasal/tyresmoke.nas</file>
+	</tyresmoke>
+  	<!-- <emu>
+   		<file>Aircraft/L-39ZA/Nasal/emu.nas</file>
+  	</emu> -->
+	<engines>
+   		<file>Aircraft/L-39ZA/Nasal/generic-yasim-engine.nas</file>
+		<script>
+        var engine1 = engines.Jet.new(0, 0, 0.01, 5.21, 3, 5, 1, 23);
+        setlistener("sim/signals/fdm-initialized", func
+        {
+        engine1.init();
+        }, 0, 0);
+      </script>
+  	</engines>
+	<CanvasPylonsDlg>
+			<file>Aircraft/L-39ZA/Nasal/canvas-pylons-cfg.nas</file>
+	</CanvasPylonsDlg>
+</nasal>
+
+</PropertyList>

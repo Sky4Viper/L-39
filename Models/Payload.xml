@@ -1,0 +1,507 @@
+<PropertyList>
+
+	<!-- Pylon.1 L -->
+
+	<!-- R-60M missile 1 -->
+	
+	<model>
+		<name>P1-R60</name>
+		<path>Aircraft/L-39ZA/Models/Stores/R-60M/R-60M-1.xml</path>
+		<offsets>
+			<x-m> 0.005191</x-m>
+			<y-m>-2.36161</y-m>
+			<z-m>-1.08422</z-m>
+			<roll-deg>0</roll-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>P1-R60</object-name>
+		<condition>
+				<!-- <equals>
+					<property>sim/weight[0]/selected</property>
+					<value>R-60M</value>
+				</equals> -->
+				<equals>
+					<property>sim/weight[0]/payload-int</property>
+					<value>1</value>
+				</equals>
+		</condition>
+	</animation>
+	
+	<!-- UB-16 S-5 Rockets 1 -->
+
+	<model>
+		<name>P1-UB16</name>
+		<path>Aircraft/L-39ZA/Models/Stores/UB-16/UB-16-1.xml</path>
+		<offsets>
+			<x-m> 0.005191</x-m>
+			<y-m>-2.36161</y-m>
+			<z-m>-1.18422</z-m>
+			<roll-deg>0</roll-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>P1-UB16</object-name>
+		<condition>
+				<!-- <equals>
+                    <property>/sim/model/hide-rockets-outer</property>
+                    <value>0</value>
+				</equals> 
+				<equals>
+					<property>sim/weight[0]/selected</property>
+					<value>UB-16 rockets pod</value>
+				</equals> -->
+				<equals>
+					<property>sim/weight[0]/payload-int</property>
+					<value>2</value>
+				</equals>
+		</condition>
+	</animation>
+
+	<!-- FAB-250 bomb 1 -->
+
+	<model>
+		<name>P1-FAB-250</name>
+		<path>Aircraft/L-39ZA/Models/Stores/FAB-250/FAB-250-1.xml</path>
+		<offsets>
+			<x-m> 0.005191</x-m>
+			<y-m>-2.36161</y-m>
+			<z-m>-1.18422</z-m>
+			<roll-deg>0</roll-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>P1-FAB-250</object-name>
+		<condition>
+				<!-- <equals>
+                    <property>/sim/model/hide-bombs-outer</property>
+                    <value>0</value>
+				</equals> 
+				<equals>
+					<property>sim/weight[0]/selected</property>
+					<value>FAB-250 bomb</value>
+				</equals> -->
+				<equals>
+					<property>sim/weight[0]/payload-int</property>
+					<value>4</value>
+				</equals>
+		</condition>
+	</animation>
+
+	<!-- PK-3 machine gun pod 1 -->
+
+	<model>
+		<name>P1-PK-3</name>
+		<path>Aircraft/L-39ZA/Models/Stores/PK-3/PK-3-1.xml</path>
+		<offsets>
+			<x-m> 0.005191</x-m>
+			<y-m>-2.36161</y-m>
+			<z-m>-1.2167</z-m>
+			<roll-deg>0</roll-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>P1-PK-3</object-name>
+		<condition>
+				<!-- <equals>
+                    <property>/sim/model/hide-pk3-outer</property>
+                    <value>0</value>
+				</equals> 
+				<equals>
+					<property>sim/weight[0]/selected</property>
+					<value>PK-3 MG pod</value>
+				</equals> -->
+				<equals>
+					<property>sim/weight[0]/payload-int</property>
+					<value>3</value>
+				</equals>
+		</condition>
+	</animation>
+
+	<!-- Pylon.2 L -->
+	
+	<!-- R-60M missile 2 -->
+	
+	<model>
+		<name>P2-R60</name>
+		<path>Aircraft/L-39ZA/Models/Stores/R-60M/R-60M-2.xml</path>
+		<offsets>
+			<x-m> 0.005191</x-m>
+			<y-m>-1.80537</y-m>
+			<z-m>-1.08422</z-m>
+			<roll-deg>0</roll-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>P2-R60</object-name>
+		<condition>
+				<!-- <equals>
+					<property>sim/weight[1]/selected</property>
+					<value>R-60M</value>
+				</equals> -->
+				<equals>
+					<property>sim/weight[1]/payload-int</property>
+					<value>1</value>
+				</equals>
+		</condition>
+	</animation>
+
+	<!-- UB-16 S-5 Rockets pod 2 -->
+
+	<model>
+		<name>P2-UB16</name>
+		<path>Aircraft/L-39ZA/Models/Stores/UB-16/UB-16-2.xml</path>
+		<offsets>
+			<x-m> 0.005191</x-m>
+			<y-m>-1.80537</y-m>
+			<z-m>-1.18422</z-m>
+			<roll-deg>0</roll-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>P2-UB16</object-name>
+		<condition>
+				<!-- <equals>
+                    <property>/sim/model/hide-rockets-inner</property>
+                    <value>0</value>
+				</equals>
+				<equals>
+					<property>sim/weight[1]/selected</property>
+					<value>UB-16 rockets pod</value>
+				</equals> -->
+				<equals>
+					<property>sim/weight[1]/payload-int</property>
+					<value>2</value>
+				</equals>
+		</condition>
+	</animation>
+
+	<!-- FAB-250 bomb 2 -->
+
+	<model>
+		<name>P2-FAB-250</name>
+		<path>Aircraft/L-39ZA/Models/Stores/FAB-250/FAB-250-2.xml</path>
+		<offsets>
+			<x-m> 0.005191</x-m>
+			<y-m>-1.80537</y-m>
+			<z-m>-1.18422</z-m>
+			<roll-deg>0</roll-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>P2-FAB-250</object-name>
+		<condition>
+				<!-- <equals>
+                    <property>/sim/model/hide-bombs-inner</property>
+                    <value>0</value>
+				</equals>
+				<equals>
+					<property>sim/weight[1]/selected</property>
+					<value>FAB-250 bomb</value>
+				</equals> -->
+				<equals>
+					<property>sim/weight[1]/payload-int</property>
+					<value>4</value>
+				</equals>
+		</condition>
+	</animation>
+
+	<!-- PK-3 machine gun pod 2 -->
+
+	<model>
+		<name>P2-PK-3</name>
+		<path>Aircraft/L-39ZA/Models/Stores/PK-3/PK-3-2.xml</path>
+		<offsets>
+			<x-m> 0.005191</x-m>
+			<y-m>-1.80537</y-m>
+			<z-m>-1.2167</z-m>
+			<roll-deg>0</roll-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>P2-PK-3</object-name>
+		<condition>
+				<!-- <equals>
+                    <property>/sim/model/hide-pk3-inner</property>
+                    <value>0</value>
+				</equals>
+				<equals>
+					<property>sim/weight[1]/selected</property>
+					<value>PK-3 MG pod</value>
+				</equals>  -->
+				<equals>
+					<property>sim/weight[1]/payload-int</property>
+					<value>3</value>
+				</equals>
+		</condition>
+	</animation>
+
+	<!-- Pylon.3 R -->
+	
+	<!-- R-60M missile 3 -->
+	
+	<model>
+		<name>P3-R60</name>
+		<path>Aircraft/L-39ZA/Models/Stores/R-60M/R-60M-3.xml</path>
+		<offsets>
+			<x-m> 0.005191</x-m>
+			<y-m> 1.80537</y-m>
+			<z-m>-1.08422</z-m>
+			<roll-deg>0</roll-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>P3-R60</object-name>
+		<condition>
+				<!-- <equals>
+					<property>sim/weight[2]/selected</property>
+					<value>R-60M</value>
+				</equals> -->
+				<equals>
+					<property>sim/weight[2]/payload-int</property>
+					<value>1</value>
+				</equals>
+		</condition>
+	</animation>
+
+	<!-- UB-16 S-5 Rockets pod 3 -->
+
+	<model>
+		<name>P3-UB16</name>
+		<path>Aircraft/L-39ZA/Models/Stores/UB-16/UB-16-3.xml</path>
+		<offsets>
+			<x-m> 0.005191</x-m>
+			<y-m> 1.80537</y-m>
+			<z-m>-1.18422</z-m>
+			<roll-deg>0</roll-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>P3-UB16</object-name>
+		<condition>
+				<!-- <equals>
+                    <property>/sim/model/hide-rockets-inner</property>
+                    <value>0</value>
+				</equals> 
+				<equals>
+					<property>sim/weight[2]/selected</property>
+					<value>UB-16 rockets pod</value>
+				</equals> -->
+				<equals>
+					<property>sim/weight[2]/payload-int</property>
+					<value>2</value>
+				</equals>
+		</condition>
+	</animation>
+
+	<!-- FAB-250 bomb 2 -->
+
+	<model>
+		<name>P3-FAB-250</name>
+		<path>Aircraft/L-39ZA/Models/Stores/FAB-250/FAB-250-3.xml</path>
+		<offsets>
+			<x-m> 0.005191</x-m>
+			<y-m> 1.80537</y-m>
+			<z-m>-1.18422</z-m>
+			<roll-deg>0</roll-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>P3-FAB-250</object-name>
+		<condition>
+				<!-- <equals>
+                    <property>/sim/model/hide-bombs-inner</property>
+                    <value>0</value>
+				</equals>
+				<equals>
+					<property>sim/weight[2]/selected</property>
+					<value>FAB-250 bomb</value>
+				</equals> -->
+				<equals>
+					<property>sim/weight[2]/payload-int</property>
+					<value>4</value>
+				</equals>
+		</condition>
+	</animation>
+
+	<!-- PK-3 machine gun pod 3 -->
+
+	<model>
+		<name>P3-PK-3</name>
+		<path>Aircraft/L-39ZA/Models/Stores/PK-3/PK-3-3.xml</path>
+		<offsets>
+			<x-m> 0.005191</x-m>
+			<y-m> 1.80537</y-m>
+			<z-m>-1.2167</z-m>
+			<roll-deg>0</roll-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>P3-PK-3</object-name>
+		<condition>
+				<!-- <equals>
+                    <property>/sim/model/hide-pk3-inner</property>
+                    <value>0</value>
+				</equals>
+				<equals>
+					<property>sim/weight[2]/selected</property>
+					<value>PK-3 MG pod</value>
+				</equals> -->
+				<equals>
+					<property>sim/weight[2]/payload-int</property>
+					<value>3</value>
+				</equals>
+		</condition>
+	</animation>
+
+	<!-- Pylon.4 R -->
+	
+	<!-- R-60M missile 4 -->
+	
+	<model>
+		<name>P4-R60</name>
+		<path>Aircraft/L-39ZA/Models/Stores/R-60M/R-60M-4.xml</path>
+		<offsets>
+			<x-m> 0.005191</x-m>
+			<y-m> 2.36161</y-m>
+			<z-m>-1.08422</z-m>
+			<roll-deg>0</roll-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>P4-R60</object-name>
+		<condition>
+				<!-- <equals>
+					<property>sim/weight[3]/selected</property>
+					<value>R-60M</value>
+				</equals> -->
+				<equals>
+					<property>sim/weight[3]/payload-int</property>
+					<value>1</value>
+				</equals>
+		</condition>
+	</animation>
+
+	<!-- UB-16 S-5 Rockets pod 4 -->
+
+	<model>
+		<name>P4-UB16</name>
+		<path>Aircraft/L-39ZA/Models/Stores/UB-16/UB-16-4.xml</path>
+		<offsets>
+			<x-m> 0.005191</x-m>
+			<y-m> 2.36161</y-m>
+			<z-m>-1.18422</z-m>
+			<roll-deg>0</roll-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>P4-UB16</object-name>
+		<condition>
+				<!-- <equals>
+                    <property>/sim/model/hide-rockets-outer</property>
+                    <value>0</value>
+				</equals>
+				<equals>
+					<property>sim/weight[3]/selected</property>
+					<value>UB-16 rockets pod</value>
+				</equals> -->
+				<equals>
+					<property>sim/weight[3]/payload-int</property>
+					<value>2</value>
+				</equals>
+		</condition>
+	</animation>
+
+	<!-- FAB-250 bomb 4 -->
+
+	<model>
+		<name>P4-FAB-250</name>
+		<path>Aircraft/L-39ZA/Models/Stores/FAB-250/FAB-250-4.xml</path>
+		<offsets>
+			<x-m> 0.005191</x-m>
+			<y-m> 2.36161</y-m>
+			<z-m>-1.18422</z-m>
+			<roll-deg>0</roll-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>P4-FAB-250</object-name>
+		<condition>
+				<!-- <equals>
+                    <property>/sim/model/hide-bombs-outer</property>
+                    <value>0</value>
+				</equals>
+				<equals>
+					<property>sim/weight[3]/selected</property>
+					<value>FAB-250 bomb</value>
+				</equals>  -->
+				<equals>
+					<property>sim/weight[3]/payload-int</property>
+					<value>4</value>
+				</equals>
+		</condition>
+	</animation>
+
+	<!-- PK-3 machine gun pod 4 -->
+
+	<model>
+		<name>P4-PK-3</name>
+		<path>Aircraft/L-39ZA/Models/Stores/PK-3/PK-3-4.xml</path>
+		<offsets>
+			<x-m> 0.005191</x-m>
+			<y-m> 2.36161</y-m>
+			<z-m>-1.2167</z-m>
+			<roll-deg>0</roll-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>P4-PK-3</object-name>
+		<condition>
+				<!-- <equals>
+                    <property>/sim/model/hide-pk3-outer</property>
+                    <value>0</value>
+				</equals>
+				<equals>
+					<property>sim/weight[3]/selected</property>
+					<value>PK-3 MG pod</value>
+				</equals>  -->
+				<equals>
+					<property>sim/weight[3]/payload-int</property>
+					<value>3</value>
+				</equals>
+		</condition>
+	</animation>
+	
+</PropertyList>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+<sim>
+  <model>
+    <livery>
+      <name type="string">Private-C-GOZA</name>
+      <texture>Liveries/c-goza.png</texture>
+      <shininess>
+        <refl_correction type="float">-0.4</refl_correction>
+      </shininess>
+    </livery>
+    <livery-logo>
+      <texture>Liveries/c-goza.png</texture>
+    </livery-logo>
+    <pilotsuit>
+      <name type="string">GreyFlightsuit</name>
+      <texture>Liveries/pilot_grey.png</texture>
+    </pilotsuit>
+  </model>
+</sim>
+</PropertyList>

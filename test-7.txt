@@ -1,0 +1,45 @@
+g:\Games\FlightSim\FlightGear 2020.3\bin>yasim.exe "C:\Users\Sergei\FlightGear\Custom Aircraft\L-39ZA\L-39ZA-yasim-t7.xml"
+YASim warning: possible convergence problem.
+==========================
+= YASim solution results =
+==========================
+Iterations        : 1276
+Drag Coefficient  : 25.318
+Lift Ratio        : 126.843
+Cruise AoA        : 0.10 deg
+Tail Incidence    : -1.44 deg
+Approach Elevator : -0.864
+
+CG                : x:0.182, y:-0.000, z:-0.517
+Wing MAC          : (x:0.57, y:1.96), length:1.8
+hard limit CG-x   : 3.883 m
+soft limit CG-x   : 0.116 m
+CG-x              : 0.182 m
+CG-x rel. MAC     :  21%
+soft limit CG-x   : 0.024 m
+hard limit CG-x   : -0.450 m
+
+wing lever        : -0.066 m
+tail lever        : -4.338 m
+
+max thrust        : 3.56 kN
+thrust/empty      : 0.11
+thrust/mtow       : inf
+
+wing span         : 8.05 m
+sweep lead. edge  : 8.7 .. 8.7 deg
+wing area         : 12.49 m^2
+wing load empty   : 276.65 kg/m^2 (Empty 3455 kg)
+wing load MTOW    : 0.00 kg/m^2 (MTOW  0 kg)
+
+tail span         : 3.950 m
+tail area         : 3.485 m^2
+
+#wing sections: 1
+Section 0 base point: x="-0.424" y="0.413" z="-0.823" chord="2.470" incidence="2.0" (at section root in deg)
+
+Inertia tensor [kg*m^2], origo at CG:
+
+     7453,      -0,    4818
+       -0,   28653,       0
+     4818,       0,   33223

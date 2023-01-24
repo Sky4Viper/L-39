@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!--
+    #############################################################################
+    #    (C) 2006 by Yurik V. Nikiforoff - port for FGFS,  FDM,   	#
+    #	2d & 3d instruments, animations, systems and over.		   	#
+    #    	yurik@megasignal.com					   	#
+    #############################################################################	  
+    -->
+
+<!-- Hydro system pressure indicator
+3D instrument for Tu-154 -->
+<PropertyList>
+ <params>
+   <path>mano.ac</path>
+   <pressure>fdm/jsbsim/hs/hs1-pressure</pressure>
+ </params>
+
+ <path alias="../params/path"/>
+
+<!-- Internal instruments lighting -->
+<animation>
+  <type>material</type>
+  <object-name>needle</object-name>
+    <emission>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>1.0</red>
+      <green>0.94</green>
+      <blue>0.74</blue>
+    </emission>
+        <condition>
+		    <property>/controls/electric/battery-switch</property>
+	    </condition>
+  </animation>
+
+  <animation>
+  <type>material</type>
+  <object-name>base</object-name>
+  <object-name>face</object-name>
+    <emission>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>1.0</red>
+      <green>0.94</green>
+      <blue>0.74</blue>
+    </emission>
+    <condition>
+	    <property>/controls/electric/battery-switch</property>
+	</condition>
+  </animation>
+
+  
+<!--Needles-->
+<animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property alias="../../params/pressure"/>
+    <interpolation>
+      <entry><ind>	0.0</ind>	<dep>	-65.0</dep></entry>
+      <entry><ind>	120.0</ind>	<dep>	0.0</dep></entry>
+      <entry><ind>	240.0</ind>	<dep>	65.0</dep></entry>
+    </interpolation>
+    <center>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-0.00172</z-m>
+  </center>
+    <axis>
+      <x>-1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+</animation>
+
+
+
+</PropertyList>

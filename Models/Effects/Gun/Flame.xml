@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>Flame.ac</path>
+	
+	<animation>
+		<type>material</type>
+		<object-name>flame</object-name>
+		<emission>
+			<red>255</red>
+			<green>255</green>
+			<blue>254</blue>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>scale</type>
+		<object-name>flame</object-name>
+        <property>/controls/armament/trigger</property>
+        <x-min>0.5</x-min>
+        <y-min>0.5</y-min>
+        <z-min>0.5</z-min>
+        <x-factor>3.0</x-factor>
+        <y-factor>1.4</y-factor>
+        <z-factor>1.4</z-factor>
+	</animation>
+
+</PropertyList>

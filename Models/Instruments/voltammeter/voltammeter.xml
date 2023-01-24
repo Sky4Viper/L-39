@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!--
+    #############################################################################
+    #    (C) 2006 by Yurik V. Nikiforoff - port for FGFS,  FDM,   	#
+    #	2d & 3d instruments, animations, systems and over.		   	#
+    #    	yurik@megasignal.com					   	#
+    #############################################################################	  
+    -->
+
+<!-- 27 V direct current indicator
+3D instrument for Tu-154 -->
+<PropertyList>
+ <path>voltammeter.ac</path>
+<!-- Internal instruments lighting -->
+<animation>
+  <type>material</type>
+  <object-name>face</object-name>
+  <object-name>needle_a</object-name>
+  <object-name>needle_v</object-name>
+  <object-name>axels_va</object-name>
+  <emission>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>1.0</red>
+            <green>0.94</green>
+            <blue>0.74</blue>
+  </emission>
+        <condition>
+		    <property>/controls/electric/battery-switch</property>
+	    </condition>
+</animation>
+
+<animation>
+  <type>material</type>
+  <object-name>face</object-name>
+  <object-name>axels_va</object-name>
+  <emission>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>1.0</red>
+            <green>0.94</green>
+            <blue>0.74</blue>
+  </emission>
+        <condition>
+		    <property>/controls/electric/battery-switch</property>
+	    </condition>
+</animation>
+
+  
+<!--Needles-->
+<animation>
+    <type>rotate</type>
+    <object-name>needle_v</object-name>
+    <property>systems/electrical/volts</property>
+    <interpolation>
+      <entry><ind>	0.0</ind>	<dep>	190.0</dep></entry>
+      <entry><ind>	30.0</ind>	<dep>	42.2</dep></entry>
+      <entry><ind>	40.0</ind>	<dep>	0.0</dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 0.00</x-m>
+      <y-m> -0.002809</y-m>
+      <z-m> 0.00</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+</animation>
+
+<animation>
+    <type>rotate</type>
+    <object-name>needle_a</object-name>
+    <property>systems/electrical/amps</property>
+    <interpolation>
+      <entry><ind>	-30.0</ind>	<dep>	0.0</dep></entry>
+      <entry><ind>	0.0</ind>	<dep>	-134.0</dep></entry>
+      <entry><ind>	10.0</ind>	<dep>	-180</dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 0.00</x-m>
+      <y-m> 0.002809</y-m>
+      <z-m> 0.00</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+</animation>
+
+
+
+</PropertyList>

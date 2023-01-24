@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+<sim>
+  <model>
+    <livery>
+      <name type="string">Slovak-LowVis-4703</name>
+      <texture>Liveries/slovak.png</texture>
+      <shininess>
+        <refl_correction type="float">-0.8</refl_correction>
+      </shininess>
+    </livery>
+    <livery-logo>
+      <texture>Liveries/slovak.png</texture>
+    </livery-logo>
+    <pilotsuit>
+      <name type="string">GreenFlightsuit</name>
+      <texture>Liveries/pilot_green.png</texture>
+    </pilotsuit>
+  </model>
+</sim>
+</PropertyList>

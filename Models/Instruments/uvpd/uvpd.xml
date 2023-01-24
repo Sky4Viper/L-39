@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<PropertyList>
+ <path>uvpd.ac</path>
+
+<!-- Internal instruments lighting -->
+  <animation>
+    <type>material</type>
+    <object-name>needle_1</object-name>
+    <object-name>needle_2</object-name>
+    <emission>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>1.0</red>
+            <green>0.94</green>
+            <blue>0.74</blue>
+    </emission>
+        <condition>
+		    <property>/controls/electric/battery-switch</property>
+	    </condition>
+  </animation>
+  
+  <animation>
+    <type>material</type>
+    <object-name>base</object-name>
+    <emission>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>1.0</red>
+            <green>0.94</green>
+            <blue>0.74</blue>
+    </emission>
+        <condition>
+		    <property>/controls/electric/battery-switch</property>
+	    </condition>
+  </animation>
+
+   <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>glass</object-name>
+  </animation>
+  
+<!--Needles-->
+<animation>
+    <type>rotate</type>
+    <object-name>needle_1</object-name>
+    <property>instrumentation/altimeter/indicated-altitude-ft</property>
+    <factor>-0.00350199</factor>
+  <center>
+    <x-m>0.0</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.0</z-m>
+  </center>
+    <axis>
+      <x>-1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>needle_2</object-name>
+  <property>instrumentation/altimeter/indicated-altitude-ft</property>
+  <factor>-0.00350199</factor>
+  <offset-deg>137.0</offset-deg>
+  <center>
+    <x-m>0.0</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.0</z-m>
+  </center>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+
+</PropertyList>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>compas.ac</path>
+
+	<animation>
+        <type>material</type>
+        <object-name>compas</object-name>
+        <emission>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+            <red>1.0</red>
+            <green>0.94</green>
+            <blue>0.74</blue>
+        </emission>
+        <condition>
+		    <property>/controls/electric/battery-switch</property>
+	    </condition>
+    </animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>compas</object-name>
+		<property>orientation/heading-deg</property>
+		<axis>
+			<x1-m>-3.166</x1-m>
+			<y1-m>0.138</y1-m>
+			<z1-m>-0.108</z1-m>
+			<x2-m>-3.166</x2-m>
+			<y2-m>0.138</y2-m>
+			<z2-m>0.108</z2-m>
+		</axis>		
+	</animation>
+
+</PropertyList>
+
+

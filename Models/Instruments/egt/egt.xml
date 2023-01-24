@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+ <path>egt.ac</path>
+
+ <animation>
+        <type>material</type>
+        <object-name>Needle</object-name>
+        <object-name>Face</object-name>
+        <emission>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+            <red>1.0</red>
+            <green>0.94</green>
+            <blue>0.74</blue>
+        </emission>
+        <condition>
+		    <property>/controls/electric/battery-switch</property>
+	    </condition>
+    </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Needle</object-name>
+  <property>/engines/engine[0]/egt-degf</property>
+  <factor>0.06</factor>
+  <offset-deg>-45</offset-deg>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>-0.012</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+
+ </animation>
+
+</PropertyList>
+
+

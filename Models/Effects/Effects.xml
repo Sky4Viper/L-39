@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+
+<!-- Effects by Raptor and Petar Jedvaj -->
+
+<PropertyList>
+
+	<!-- Cannon muzzle flash -->
+	
+	<model>
+		<name>flameL</name>
+		<path>Aircraft/L-39ZA/Models/Effects/Gun/Flame.xml</path>
+		<condition>
+			<equals>
+				<property>sim/multiplay/generic/int[8]</property>
+				<value type="bool">true</value>
+			</equals>
+		</condition>
+		<offsets>
+			<x-m>-3.58277 </x-m>
+			<y-m>-0.0561 </y-m>
+			<z-m>-1.28454 </z-m>
+			<heading-deg>0</heading-deg>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>flameR</name>
+		<path>Aircraft/L-39ZA/Models/Effects/Gun/Flame.xml</path>
+		<condition>
+			<equals>
+				<property>sim/multiplay/generic/int[8]</property>
+				<value type="bool">true</value>
+			</equals>
+		</condition>
+		<offsets>
+			<x-m>-3.58277 </x-m>
+			<y-m> 0.0561 </y-m>
+			<z-m>-1.28454 </z-m>
+			<heading-deg>0</heading-deg>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+	
+	<!-- Engines effects -->
+
+	<model>
+		<name>fire</name>
+		<path>Aircraft/L-39ZA/Models/Effects/Engine/Fire.xml</path>
+		<condition>
+			<equals>
+				<property>sim/crashed</property>
+				<value type="bool">true</value>
+			</equals>
+		</condition>
+		<offsets>
+			<x-m>1.05</x-m>
+			<y-m>0.00</y-m>
+			<z-m>-0.144129</z-m>
+			<heading-deg>0</heading-deg>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+	<!-- Engine blur-->
+	
+	<model>
+		<name>blur</name>
+    	<path>Aircraft/L-39ZA/Models/Effects/Engine/L-39ZA-blur.xml</path>
+    	<offsets>
+    		<x-m>4.17343</x-m>
+    		<y-m>0.0</y-m>
+    		<z-m>-0.144129</z-m>
+    	</offsets>
+    	<condition>
+			<property>engines/engine[0]/running</property>
+    		<greater-than>
+    		<property>engines/engine/n1</property>
+    		<value>10</value>
+    		</greater-than>
+    	</condition>
+  	</model>
+	
+	<!-- Engine effects -->
+	
+	<model>
+		<name>contrail-main</name>
+		<path>Aircraft/L-39ZA/Models/Effects/Engine/Contrail.xml</path>
+		<offsets>
+			<x-m>4.60794</x-m>
+    		<y-m>0.0</y-m>
+    		<z-m>-0.144129</z-m>
+			<heading-deg>0</heading-deg>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+	
+	<!-- <model>
+		<name>contrail-right</name>
+		<path>Aircraft/L-39ZA/Models/Effects/Wing/Contrail.xml</path>
+		<offsets>
+			<x-m> 1.24582 </x-m>
+			<y-m> 4.12633 </y-m>
+			<z-m>-0.666765 </z-m>
+			<heading-deg>0</heading-deg>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model> -->
+
+	<model>
+		<name>tiptrail-left</name>
+		<path>Aircraft/L-39ZA/Models/Effects/Wing/Tiptrail.xml</path>
+		<offsets>
+			<x-m> 1.24582 </x-m>
+			<y-m>-4.12633 </y-m>
+			<z-m>-0.666765 </z-m>
+			<heading-deg>0</heading-deg>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>tiptrail-right</name>
+		<path>Aircraft/L-39ZA/Models/Effects/Wing/Tiptrail.xml</path>
+		<offsets>
+			<x-m> 1.24582 </x-m>
+			<y-m> 4.12633 </y-m>
+			<z-m>-0.666765 </z-m>
+			<heading-deg>0</heading-deg>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>wash-left</name>
+		<path>Aircraft/L-39ZA/Models/Effects/Wing/Wash.xml</path>
+		<offsets>
+			<x-m>-0.74736 </x-m>
+			<y-m>-1.74225 </y-m>
+			<z-m>-0.79951 </z-m>
+			<heading-deg>0</heading-deg>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>wash-right</name>
+		<path>Aircraft/L-39ZA/Models/Effects/Wing/Wash.xml</path>
+		<offsets>
+			<x-m>-0.74736 </x-m>
+			<y-m> 1.74225 </y-m>
+			<z-m>-0.79951 </z-m>
+			<heading-deg>0</heading-deg>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+	
+	<!-- Landing gear effects -->
+	
+    <model>
+        <path>Aircraft/Generic/Effects/tyre-smoke-nose.xml</path>
+        <name>NoseTyre</name>
+        <offsets>
+            <x-m>-3.6896 </x-m>
+            <y-m> 0.0 </y-m>
+            <z-m>-2.02106 </z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/Generic/Effects/tyre-smoke-port.xml</path>
+        <name>LeftTyre</name>
+        <offsets>
+            <x-m> 0.44911 </x-m>
+            <y-m>-1.13901 </y-m>
+            <z-m>-2.02381 </z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/Generic/Effects/tyre-smoke-stbd.xml</path>
+        <name>RightTyre</name>
+        <offsets>
+            <x-m> 0.44911 </x-m>
+            <y-m> 1.13901 </y-m>
+            <z-m>-2.02381 </z-m>
+        </offsets>
+    </model>
+
+</PropertyList>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- flight recorder configuration -->
+<!-- pylons  -->
+
+<PropertyList>
+
+    <signal>
+        <type>float</type>
+        <property type="string">sim/weight[%i]/payload-int</property>
+    </signal>
+
+    <signal>
+		<type>float</type>
+		<property>/sim/weight[%i]/weight-lb</property>
+	</signal>
+
+</PropertyList>

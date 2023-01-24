@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+    
+    <fx>
+        
+        <engine>
+            <name>start</name>
+            <path>Aircraft/L-39ZA/Sounds/samples/alpha/starter.wav</path>
+            <mode>once</mode>
+            <condition>
+                <property>/controls/engines/engine[0]/starter</property>
+            </condition>
+            <volume>
+                <property>engines/engine[0]/n2</property>
+                <factor> 0.09 </factor>
+                <min> 0.3 </min>
+                <max> 0.9 </max>
+            </volume>
+            <pitch>
+                <property>engines/engine[0]/n2</property>
+                <factor> 0.01 </factor>
+                <min> 0.0 </min>
+                <max> 0.9 </max>
+            </pitch>
+            <reference-dist>100</reference-dist>
+            <max-dist>1000</max-dist>
+        </engine>
+
+        <engine>
+            <name>engine</name>
+            <path>Aircraft/L-39ZA/Sounds/samples/alpha/running.wav</path>
+            <mode>looped</mode>
+            <condition>
+                <property>/engines/engine[0]/running</property>
+            </condition>
+            <volume>
+                <property>/engines/engine[0]/prop-thrust</property>
+                <factor type="double">0.00013</factor>
+            </volume>
+            <pitch>
+                <property>/engines/engine[0]/n1</property>
+                <factor>0.2</factor>
+            </pitch>
+        </engine>
+
+        <engine>
+            <name>whine</name>
+            <path>Sounds/turbojet_fan.wav</path>
+            <mode>looped</mode>
+            <condition>
+                <property>/engines/engine[0]/running</property>
+            </condition>
+            <volume>
+                <property>/engines/engine[0]/n2</property>
+                <factor type="double">0.0025</factor>
+            </volume>
+            <pitch>
+                <property>/engines/engine[0]/n2</property>
+                <factor>0.02</factor>
+                <offset>-0.1</offset>
+            </pitch>
+        </engine>
+        
+        <engine>
+            <name>shutdown</name>
+            <path>Aircraft/L-39ZA/Sounds/samples/alpha/shutdown.wav</path>
+            <mode>once</mode>
+            <condition>
+                <property>/controls/engines/engine[0]/cutoff</property> 
+            </condition>
+            <volume>
+                <property>/engines/engine[0]/n2</property>
+                <factor>0.09</factor>
+                <min>0.3</min>
+                <max>0.9</max>
+            </volume>
+            <reference-dist>100</reference-dist>
+            <max-dist>1000</max-dist>
+        </engine>
+        
+        <!-- Flyby -->
+        
+		<flyby>
+			<name>fly-by</name>
+			<mode>once</mode>
+			<path>Aircraft/L-39ZA/Sounds/flyby.wav</path>
+			<condition>
+                <and>
+                    <greater-than>
+                        <property>velocities/mach</property>
+                        <value>0.8</value>
+                    </greater-than>
+                    <equals>
+                        <property>sim/current-view/view-number</property>
+                        <value>6</value>
+                    </equals>
+				</and>
+				<not>
+                    <property>sim/current-view/internal</property>
+                </not>
+            </condition>
+			<volume>
+				<property>velocities/airspeed-kt</property>
+				<factor>0.001</factor>
+			</volume>
+		</flyby>
+		
+        <!-- Sonic Boom -->
+        
+        <sonicboom>
+            <name>Sonic Boom</name>
+            <mode>once</mode>
+            <path>Aircraft/L-39ZA/Sounds/sonicboom.wav</path>
+            <condition>
+                <and>
+                    <greater-than>
+                        <property>velocities/mach</property>
+                        <value>1.0</value>
+                    </greater-than>
+                    <equals>
+                        <property>sim/current-view/internal</property>
+                        <value>false</value>
+                    </equals>
+                </and>
+            </condition>
+        </sonicboom>
+        
+	</fx>
+</PropertyList>
