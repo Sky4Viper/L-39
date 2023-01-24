@@ -1,4 +1,3 @@
-g:\Games\FlightSim\FlightGear 2020.3\bin>yasim.exe "C:\Users\Sergei\FlightGear\Custom Aircraft\L-39ZA\L-39ZA-yasim-t7.xml"
 YASim warning: possible convergence problem.
 ==========================
 = YASim solution results =
