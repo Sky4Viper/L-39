@@ -73,6 +73,11 @@ History:
 			<path>Previews/external2.png</path>
 		</preview>
 		<preview>
+			<type>exterior</type>
+			<splash type="bool">true</splash>
+			<path>Previews/payload.png</path>
+		</preview>
+		<preview>
 			<type>panel</type>
 			<splash type="bool">true</splash>
 			<path>Previews/cockpit.png</path>
