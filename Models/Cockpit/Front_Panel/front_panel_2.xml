@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <path>f-panel-2.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>arm_panel_02.002</object-name>
+    <object-name>arm_panel_02.003</object-name>
+    <object-name>jet_switch_cover.001</object-name>
+    <object-name>jet_switch_cover.002</object-name>
+    <object-name>inst_panel_screws</object-name>
+    <object-name>inst_panel_screws.001</object-name>
+    <object-name>arm_panel_02.005</object-name>
+    <object-name>arm_panel_02.006</object-name>
+    <object-name>arm_switch.001</object-name>
+    <object-name>arm_switch.002</object-name>
+    <object-name>jet_switch.001</object-name>
+    <object-name>jet_switch.002</object-name>
+    <object-name>trim_pitch_index</object-name>
+    <emission>
+      <red>0.2</red>
+      <green>0.2</green>
+      <blue>0.2</blue>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+    <condition>
+        <property>/controls/electric/battery-switch</property>
+     </condition>
+  </animation>
+
+
+
+</PropertyList>
+

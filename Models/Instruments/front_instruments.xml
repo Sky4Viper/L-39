@@ -228,6 +228,19 @@
 			</animation>
     </overlay> -->
   </model>
+
+  <!-- Voltammeter 2-->
+  <model>
+    <path>Aircraft/L-39ZA/Models/Instruments/voltammeter/voltammeter.xml</path>
+    <offsets>
+      <x-m> -3.37900 </x-m>
+      <y-m>  0.043797 </y-m>
+      <z-m> -0.836182 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
   
   
   
