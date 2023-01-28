@@ -41,7 +41,7 @@ History:
 	</rating>
 	
 	<flight-model>yasim</flight-model>
-	<aero>L-39ZA-yasim-t7</aero>	
+	<aero>L-39ZA-yasim</aero>	
 	
 	<tags>
 		<tag>trainer</tag>
