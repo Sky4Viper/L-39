@@ -141,6 +141,8 @@ var TotalFuelKg = canvas.gui.widgets.Label.new(root, canvas.style, {} )
 
 #Vbox1C.addItem(TotalFuelKg);
 
+var OnGround = getprop("/gear/gear[0]/wow");
+
 var pylons_update = func{
 	Lbl_pyln1.setText("P1: "~getprop("sim/weight/selected"));
 	Lbl_pyln2.setText("P2: "~getprop("sim/weight[1]/selected"));
@@ -200,6 +202,8 @@ var btn_P1_empty = canvas.gui.widgets.Button.new(root, canvas.style, {})
 
 btn_P1_empty.listen("clicked", func {
         # add code here to react on click on button.
+        if (OnGround)
+        {
 		print("P1: none");
 		setprop("sim/weight/selected","none");
         setprop("sim/weight/weight-lb", 0.0);
@@ -207,6 +211,10 @@ btn_P1_empty.listen("clicked", func {
 		setprop("/consumables/fuel/tank[3]/capacity-gal_us", 0.0);
 		setprop("/consumables/fuel/tank[3]/level-gal_us", 0.0);
 		pylons_update();
+        }
+        else {
+            screen.log.write("You must be still on the ground to rearm! ", 1, 0.6, 0.1);
+        }
 		});
 P1Ctls.addItem(btn_P1_empty);
 
@@ -217,6 +225,8 @@ var btn_P1_R60 = canvas.gui.widgets.Button.new(root, canvas.style, {})
 
 btn_P1_R60.listen("clicked", func {
         # add code here to react on click on button.
+        if (OnGround)
+        {
 		print("P1: R-60M");
 		setprop("/consumables/fuel/tank[3]/selected", 0);
 		setprop("/consumables/fuel/tank[3]/capacity-gal_us", 0.0);
@@ -225,6 +235,10 @@ btn_P1_R60.listen("clicked", func {
 		setprop("sim/weight/weight-lb",96);
 		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs",96); # R-60 = 43.5 kg (96 lb)
 		pylons_update();
+        }
+        else {
+            screen.log.write("You must be still on the ground to rearm! ", 1, 0.6, 0.1);
+        }
 		});
 P1Ctls.addItem(btn_P1_R60);
 
@@ -235,6 +249,8 @@ var btn_P1_UB16 = canvas.gui.widgets.Button.new(root, canvas.style, {})
 
 btn_P1_UB16.listen("clicked", func {
         # add code here to react on click on button.
+        if (OnGround)
+        {
 		print("P1: UB-16");
 		setprop("/consumables/fuel/tank[3]/selected", 0);
 		setprop("/consumables/fuel/tank[3]/capacity-gal_us", 0.0);
@@ -244,6 +260,10 @@ btn_P1_UB16.listen("clicked", func {
 		setprop("/controls/armament/rocketsLeft", 16);
 		setprop("/controls/armament/rocketsCount", 16);
 		pylons_update();
+        }
+        else {
+            screen.log.write("You must be still on the ground to rearm! ", 1, 0.6, 0.1);
+        }
 		});
 P1Ctls.addItem(btn_P1_UB16);
 
@@ -254,6 +274,8 @@ var btn_P1_PK3 = canvas.gui.widgets.Button.new(root, canvas.style, {})
 
 btn_P1_PK3.listen("clicked", func {
         # add code here to react on click on button.
+        if (OnGround)
+        {
 		print("P1: PK-3 pod");
 		setprop("/consumables/fuel/tank[3]/selected", 0);
 		setprop("/consumables/fuel/tank[3]/capacity-gal_us", 0.0);
@@ -263,6 +285,10 @@ btn_P1_PK3.listen("clicked", func {
 		setprop("/controls/armament/PK3Left", 1500);
 		setprop("/controls/armament/PK3Count", 1500);
 		pylons_update();
+        }
+        else {
+            screen.log.write("You must be still on the ground to rearm! ", 1, 0.6, 0.1);
+        }
 		});
 P1Ctls.addItem(btn_P1_PK3);
 
@@ -273,6 +299,8 @@ var btn_P1_FAB250 = canvas.gui.widgets.Button.new(root, canvas.style, {})
 
 btn_P1_FAB250.listen("clicked", func {
         # add code here to react on click on button.
+        if (OnGround)
+        {
 		print("P1: FAB-250");
 		setprop("/consumables/fuel/tank[3]/selected", 0);
 		setprop("/consumables/fuel/tank[3]/capacity-gal_us", 0.0);
@@ -281,6 +309,10 @@ btn_P1_FAB250.listen("clicked", func {
 		setprop("sim/weight[0]/weight-lb",590);
 		setprop("controls/armament/station[0]/release",0);
 		pylons_update();
+        }
+        else {
+            screen.log.write("You must be still on the ground to rearm! ", 1, 0.6, 0.1);
+        }
 		});
 P1Ctls.addItem(btn_P1_FAB250);
 
@@ -297,6 +329,8 @@ var btn_P1_PTB150 = canvas.gui.widgets.Button.new(root, canvas.style, {})
 
 btn_P1_PTB150.listen("clicked", func {
         # add code here to react on click on button.
+        if (OnGround)
+        {
 		print("P1: 150L droptank");
 		setprop("/sim/weight[0]/selected","150L fuel droptank");
 		setprop("sim/weight[0]/weight-lb",278.025);
@@ -304,6 +338,10 @@ btn_P1_PTB150.listen("clicked", func {
 		setprop("/consumables/fuel/tank[3]/capacity-gal_us", 41.25);
 		setprop("/consumables/fuel/tank[3]/level-gal_us", 41.25);
 		pylons_update();
+        }
+        else {
+            screen.log.write("You must be still on the ground to rearm! ", 1, 0.6, 0.1);
+        }
 		});
 P1Ctls.addItem(btn_P1_PTB150);
 
@@ -335,6 +373,8 @@ var btn_P2_empty = canvas.gui.widgets.Button.new(root, canvas.style, {})
 
 btn_P2_empty.listen("clicked", func {
         # add code here to react on click on button.
+        if (OnGround)
+        {
 		print("P2: none");
 		setprop("sim/weight[1]/selected","none");
 		setprop("sim/weight[1]/weight-lb", 0.0);
@@ -342,6 +382,10 @@ btn_P2_empty.listen("clicked", func {
 		setprop("/consumables/fuel/tank[4]/capacity-gal_us", 0.0);
 		setprop("/consumables/fuel/tank[4]/level-gal_us", 0.0);
 		pylons_update();
+        }
+        else {
+            screen.log.write("You must be still on the ground to rearm! ", 1, 0.6, 0.1);
+        }
 		});
 P2Ctls.addItem(btn_P2_empty);
 
@@ -352,6 +396,8 @@ var btn_P2_R60 = canvas.gui.widgets.Button.new(root, canvas.style, {})
 
 btn_P2_R60.listen("clicked", func {
         # add code here to react on click on button.
+        if (OnGround)
+        {
 		print("P1: R-60M");
 		setprop("/consumables/fuel/tank[4]/selected", 0);
 		setprop("/consumables/fuel/tank[4]/capacity-gal_us", 0.0);
@@ -359,6 +405,10 @@ btn_P2_R60.listen("clicked", func {
 		setprop("sim/weight[1]/selected","R-60M");
 		setprop("sim/weight[1]/weight-lb",96);
 		pylons_update();
+        }
+        else {
+            screen.log.write("You must be still on the ground to rearm! ", 1, 0.6, 0.1);
+        }
 		});
 P2Ctls.addItem(btn_P2_R60);
 
@@ -370,6 +420,8 @@ var btn_P2_UB16 = canvas.gui.widgets.Button.new(root, canvas.style, {})
 
 btn_P2_UB16.listen("clicked", func {
         # add code here to react on click on button.
+        if (OnGround)
+        {
 		print("P2: UB-16");
 		setprop("/consumables/fuel/tank[4]/selected", 0);
 		setprop("/consumables/fuel/tank[4]/capacity-gal_us", 0.0);
@@ -379,6 +431,10 @@ btn_P2_UB16.listen("clicked", func {
 		setprop("/controls/armament/rocketsLeft", 16);
 		setprop("/controls/armament/rocketsCount", 16);
 		pylons_update();
+        }
+        else {
+            screen.log.write("You must be still on the ground to rearm! ", 1, 0.6, 0.1);
+        }
 		});
 P2Ctls.addItem(btn_P2_UB16);
 
@@ -389,6 +445,8 @@ var btn_P2_PK3 = canvas.gui.widgets.Button.new(root, canvas.style, {})
 
 btn_P2_PK3.listen("clicked", func {
         # add code here to react on click on button.
+        if (OnGround)
+        {
 		print("P2: PK-3 pod");
 		setprop("/consumables/fuel/tank[4]/selected", 0);
 		setprop("/consumables/fuel/tank[4]/capacity-gal_us", 0.0);
@@ -398,6 +456,10 @@ btn_P2_PK3.listen("clicked", func {
 		setprop("/controls/armament/PK3Left", 1500);
 		setprop("/controls/armament/PK3Count", 1500);
 		pylons_update();
+        }
+        else {
+            screen.log.write("You must be still on the ground to rearm! ", 1, 0.6, 0.1);
+        }
 		});
 P2Ctls.addItem(btn_P2_PK3);
 
@@ -408,6 +470,8 @@ var btn_P2_FAB250 = canvas.gui.widgets.Button.new(root, canvas.style, {})
 
 btn_P2_FAB250.listen("clicked", func {
         # add code here to react on click on button.
+        if (OnGround)
+        {
 		print("P2: FAB-250");
 		setprop("/consumables/fuel/tank[4]/selected", 0);
 		setprop("/consumables/fuel/tank[4]/capacity-gal_us", 0.0);
@@ -416,6 +480,10 @@ btn_P2_FAB250.listen("clicked", func {
 		setprop("sim/weight[1]/weight-lb",590);
 		setprop("controls/armament/station[1]/release",0);
 		pylons_update();
+        }
+        else {
+            screen.log.write("You must be still on the ground to rearm! ", 1, 0.6, 0.1);
+        }
 		});
 P2Ctls.addItem(btn_P2_FAB250);
 
@@ -432,6 +500,8 @@ var btn_P2_PTB150 = canvas.gui.widgets.Button.new(root, canvas.style, {})
 
 btn_P2_PTB150.listen("clicked", func {
         # add code here to react on click on button.
+        if (OnGround)
+        {
 		print("P2: 150L droptank");
 		setprop("/sim/weight[1]/selected","150L fuel droptank");
 		setprop("sim/weight[1]/weight-lb",278.025);
@@ -439,6 +509,10 @@ btn_P2_PTB150.listen("clicked", func {
 		setprop("/consumables/fuel/tank[4]/capacity-gal_us", 41.25);
 		setprop("/consumables/fuel/tank[4]/level-gal_us", 41.25);
 		pylons_update();
+        }
+        else {
+            screen.log.write("You must be still on the ground to rearm! ", 1, 0.6, 0.1);
+        }
 		});
 P2Ctls.addItem(btn_P2_PTB150);
 
@@ -469,6 +543,8 @@ var btn_P3_empty = canvas.gui.widgets.Button.new(root, canvas.style, {})
 
 btn_P3_empty.listen("clicked", func {
         # add code here to react on click on button.
+        if (OnGround)
+        {
 		print("P3: none");
 		setprop("sim/weight[2]/selected","none");
 		setprop("sim/weight[2]/weight-lb", 0.0);
@@ -476,6 +552,10 @@ btn_P3_empty.listen("clicked", func {
 		setprop("/consumables/fuel/tank[5]/capacity-gal_us", 0.0);
 		setprop("/consumables/fuel/tank[5]/level-gal_us", 0.0);
 		pylons_update();
+        }
+        else {
+            screen.log.write("You must be still on the ground to rearm! ", 1, 0.6, 0.1);
+        }
 		});
 P3Ctls.addItem(btn_P3_empty);
 
@@ -486,6 +566,8 @@ var btn_P3_R60 = canvas.gui.widgets.Button.new(root, canvas.style, {})
 
 btn_P3_R60.listen("clicked", func {
         # add code here to react on click on button.
+        if (OnGround)
+        {
 		print("P3: R-60M");
 		setprop("/consumables/fuel/tank[5]/selected", 0);
 		setprop("/consumables/fuel/tank[5]/capacity-gal_us", 0.0);
@@ -493,6 +575,10 @@ btn_P3_R60.listen("clicked", func {
 		setprop("sim/weight[2]/selected","R-60M");
 		setprop("sim/weight[2]/weight-lb",96);
 		pylons_update();
+        }
+        else {
+            screen.log.write("You must be still on the ground to rearm! ", 1, 0.6, 0.1);
+        }
 		});
 P3Ctls.addItem(btn_P3_R60);
 
@@ -503,6 +589,8 @@ var btn_P3_UB16 = canvas.gui.widgets.Button.new(root, canvas.style, {})
 
 btn_P3_UB16.listen("clicked", func {
         # add code here to react on click on button.
+        if (OnGround)
+        {
 		print("P3: UB-16");
 		setprop("/consumables/fuel/tank[5]/selected", 0);
 		setprop("/consumables/fuel/tank[5]/capacity-gal_us", 0.0);
@@ -512,6 +600,10 @@ btn_P3_UB16.listen("clicked", func {
 		setprop("/controls/armament/rocketsLeft", 16);
 		setprop("/controls/armament/rocketsCount", 16);
 		pylons_update();
+        }
+        else {
+            screen.log.write("You must be still on the ground to rearm! ", 1, 0.6, 0.1);
+        }
 		});
 P3Ctls.addItem(btn_P3_UB16);
 
@@ -522,6 +614,8 @@ var btn_P3_PK3 = canvas.gui.widgets.Button.new(root, canvas.style, {})
 
 btn_P3_PK3.listen("clicked", func {
         # add code here to react on click on button.
+        if (OnGround)
+        {
 		print("P3: PK-3 pod");
 		setprop("/consumables/fuel/tank[5]/selected", 0);
 		setprop("/consumables/fuel/tank[5]/capacity-gal_us", 0.0);
@@ -531,6 +625,10 @@ btn_P3_PK3.listen("clicked", func {
 		setprop("/controls/armament/PK3Left", 1500);
 		setprop("/controls/armament/PK3Count", 1500);
 		pylons_update();
+        }
+        else {
+            screen.log.write("You must be still on the ground to rearm! ", 1, 0.6, 0.1);
+        }
 		});
 P3Ctls.addItem(btn_P3_PK3);
 
@@ -541,6 +639,8 @@ var btn_P3_FAB250 = canvas.gui.widgets.Button.new(root, canvas.style, {})
 
 btn_P3_FAB250.listen("clicked", func {
         # add code here to react on click on button.
+        if (OnGround)
+        {
 		print("P3: FAB-250");
 		setprop("/consumables/fuel/tank[5]/selected", 0);
 		setprop("/consumables/fuel/tank[5]/capacity-gal_us", 0.0);
@@ -549,6 +649,10 @@ btn_P3_FAB250.listen("clicked", func {
 		setprop("sim/weight[2]/weight-lb",590);
 		setprop("controls/armament/station[2]/release",0);
 		pylons_update();
+        }
+        else {
+            screen.log.write("You must be still on the ground to rearm! ", 1, 0.6, 0.1);
+        }
 		});
 P3Ctls.addItem(btn_P3_FAB250);
 
@@ -565,6 +669,8 @@ var btn_P3_PTB150 = canvas.gui.widgets.Button.new(root, canvas.style, {})
 
 btn_P3_PTB150.listen("clicked", func {
         # add code here to react on click on button.
+        if (OnGround)
+        {
 		print("P3: 150L droptank");
 		setprop("/sim/weight[2]/selected","150L fuel droptank");
 		setprop("sim/weight[2]/weight-lb",278.025);
@@ -572,6 +678,10 @@ btn_P3_PTB150.listen("clicked", func {
 		setprop("/consumables/fuel/tank[5]/capacity-gal_us", 41.25);
 		setprop("/consumables/fuel/tank[5]/level-gal_us", 41.25);
 		pylons_update();
+        }
+        else {
+            screen.log.write("You must be still on the ground to rearm! ", 1, 0.6, 0.1);
+        }
 		});
 P3Ctls.addItem(btn_P3_PTB150);
 
@@ -602,6 +712,8 @@ var btn_P4_empty = canvas.gui.widgets.Button.new(root, canvas.style, {})
 
 btn_P4_empty.listen("clicked", func {
         # add code here to react on click on button.
+        if (OnGround)
+        {
 		print("P4: none");
 		setprop("sim/weight[3]/selected","none");
 		setprop("sim/weight[3]/weight-lb", 0.0);
@@ -609,6 +721,10 @@ btn_P4_empty.listen("clicked", func {
 		setprop("/consumables/fuel/tank[6]/capacity-gal_us", 0.0);
 		setprop("/consumables/fuel/tank[6]/level-gal_us", 0.0);
 		pylons_update();
+        }
+        else {
+            screen.log.write("You must be still on the ground to rearm! ", 1, 0.6, 0.1);
+        }
 		});
 P4Ctls.addItem(btn_P4_empty);
 
@@ -619,6 +735,8 @@ var btn_P4_R60 = canvas.gui.widgets.Button.new(root, canvas.style, {})
 
 btn_P4_R60.listen("clicked", func {
         # add code here to react on click on button.
+        if (OnGround)
+        {
 		print("4: R-60M");
 		setprop("/consumables/fuel/tank[6]/selected", 0);
 		setprop("/consumables/fuel/tank[6]/capacity-gal_us", 0.0);
@@ -626,6 +744,10 @@ btn_P4_R60.listen("clicked", func {
 		setprop("sim/weight[3]/selected","R-60M");
 		setprop("sim/weight[3]/weight-lb",96);
 		pylons_update();
+        }
+        else {
+            screen.log.write("You must be still on the ground to rearm! ", 1, 0.6, 0.1);
+        }
 		});
 P4Ctls.addItem(btn_P4_R60);
 
@@ -636,6 +758,8 @@ var btn_P4_UB16 = canvas.gui.widgets.Button.new(root, canvas.style, {})
 
 btn_P4_UB16.listen("clicked", func {
         # add code here to react on click on button.
+        if (OnGround)
+        {
 		print("P4: UB-16");
 		setprop("/consumables/fuel/tank[6]/selected", 0);
 		setprop("/consumables/fuel/tank[6]/capacity-gal_us", 0.0);
@@ -645,6 +769,10 @@ btn_P4_UB16.listen("clicked", func {
 		setprop("/controls/armament/rocketsLeft", 16);
 		setprop("/controls/armament/rocketsCount", 16);
 		pylons_update();
+        }
+        else {
+            screen.log.write("You must be still on the ground to rearm! ", 1, 0.6, 0.1);
+        }
 		});
 P4Ctls.addItem(btn_P4_UB16);
 
@@ -655,6 +783,8 @@ var btn_P4_PK3 = canvas.gui.widgets.Button.new(root, canvas.style, {})
 
 btn_P4_PK3.listen("clicked", func {
         # add code here to react on click on button.
+        if (OnGround)
+        {
 		print("P4: PK-3 pod");
 		setprop("/consumables/fuel/tank[6]/selected", 0);
 		setprop("/consumables/fuel/tank[6]/capacity-gal_us", 0.0);
@@ -664,6 +794,10 @@ btn_P4_PK3.listen("clicked", func {
 		setprop("/controls/armament/PK3Left", 1500);
 		setprop("/controls/armament/PK3Count", 1500);
 		pylons_update();
+        }
+        else {
+            screen.log.write("You must be still on the ground to rearm! ", 1, 0.6, 0.1);
+        }
 		});
 P4Ctls.addItem(btn_P4_PK3);
 
@@ -674,6 +808,8 @@ var btn_P4_FAB250 = canvas.gui.widgets.Button.new(root, canvas.style, {})
 
 btn_P4_FAB250.listen("clicked", func {
         # add code here to react on click on button.
+        if (OnGround)
+        {
 		print("P4: FAB-250");
 		setprop("/consumables/fuel/tank[6]/selected", 0);
 		setprop("/consumables/fuel/tank[6]/capacity-gal_us", 0.0);
@@ -682,6 +818,10 @@ btn_P4_FAB250.listen("clicked", func {
 		setprop("sim/weight[3]/weight-lb",590);
 		setprop("controls/armament/station[3]/release",0);
 		pylons_update();
+        }
+        else {
+            screen.log.write("You must be still on the ground to rearm! ", 1, 0.6, 0.1);
+        }
 		});
 P4Ctls.addItem(btn_P4_FAB250);
 
@@ -700,6 +840,8 @@ var btn_P4_PTB150 = canvas.gui.widgets.Button.new(root, canvas.style, {})
 
 btn_P4_PTB150.listen("clicked", func {
         # add code here to react on click on button.
+        if (OnGround)
+        {
 		print("P4: 150L droptank");
 		setprop("/sim/weight[3]/selected","150L fuel droptank");
 		setprop("sim/weight[3]/weight-lb",278.025);
@@ -707,6 +849,10 @@ btn_P4_PTB150.listen("clicked", func {
 		setprop("/consumables/fuel/tank[6]/capacity-gal_us", 41.25);
 		setprop("/consumables/fuel/tank[6]/level-gal_us", 41.25);
 		pylons_update();
+        }
+        else {
+            screen.log.write("You must be still on the ground to rearm! ", 1, 0.6, 0.1);
+        }
 		});
 P4Ctls.addItem(btn_P4_PTB150);
 

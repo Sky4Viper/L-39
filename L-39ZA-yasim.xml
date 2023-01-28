@@ -103,6 +103,8 @@ Inertia tensor [kg*m^2], origo at CG:
     <control-speed control="FLAP0" transition-time="3.0"/>
   </mstab>
 
+  <!-- NACA 64A012 -->
+
   <wing x="-0.423783" y="0.413" z="-0.8227"
         chord="2.47"
         incidence="2.0"
