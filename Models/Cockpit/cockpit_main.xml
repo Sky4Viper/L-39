@@ -52,6 +52,19 @@
     </offsets>
   </model>
 
+  <!-- Temp Rear cockpit panel -->
+  <model>
+    <path>Aircraft/L-39ZA/Models/Cockpit/Front_Panel/front_panel_rear.xml</path>
+    <offsets>
+      <x-m> 0.0 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0.0 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
   <!-- Front instruments -->
 
   <model>
