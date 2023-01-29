@@ -1,0 +1,286 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <!-- Rear Cockpit Air Speed Indicator -->
+  <model>
+    <path>Aircraft/L-39ZA/Models/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m> -1.98489 </x-m>
+      <y-m> -0.118368 </y-m>
+      <z-m> -0.360355 </z-m>	  
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Rear Cockpit Altimeter -->
+  <model>
+    <path>Aircraft/L-39ZA/Models/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m> -1.98489 </x-m>
+      <y-m> -0.117362 </y-m>
+      <z-m> -0.432458 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Rear Cockpit Radio altitude Indicator -->
+  <model>
+    <path>Aircraft/L-39ZA/Models/Instruments/rv-5m/rv-5m.xml</path>
+    <offsets>
+      <x-m> -1.98489 </x-m>
+      <y-m> -0.118368 </y-m>
+      <z-m> -0.506355 </z-m>	  
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+    <overlay>
+			<animation n="100">
+			<type>scale</type>
+			<property>constants/zero</property>
+			<x-offset>0.65</x-offset>
+			<y-offset>0.65</y-offset>
+			<z-offset>0.65</z-offset>
+			</animation>
+    </overlay>
+  </model>
+
+    <!-- Rear Cockpit Artificial Horizon -->
+  <model>
+    <path>Aircraft/L-39ZA/Models/Instruments/kpp/kpp.xml</path>
+    <offsets>
+      <x-m> -1.97914 </x-m>
+      <y-m> -0.018221 </y-m>
+      <z-m> -0.361537 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+    <overlay>
+			<animation n="100">
+			<type>scale</type>
+			<property>constants/zero</property>
+			<x-offset>1.0</x-offset>
+			<y-offset>1.1</y-offset>
+			<z-offset>1.1</z-offset>
+			</animation>
+    </overlay>
+  </model>
+
+  <!-- Rear Cockpit NAV VOR ILS-->
+  <model>
+    <path>Aircraft/L-39ZA/Models/Instruments/nkp-4/nkp-4.xml</path>
+    <offsets>
+      <x-m> -1.97914 </x-m>
+      <y-m>  -0.030814 </y-m>
+      <z-m> -0.452657 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+    <overlay>
+			<animation n="100">
+			<type>scale</type>
+			<property>constants/zero</property>
+			<x-offset>1.0</x-offset>
+			<y-offset>0.78</y-offset>
+			<z-offset>0.78</z-offset>
+			</animation>
+    </overlay>
+  </model>
+
+  <!-- Rear Cockpit Distance to VOR -->
+  <model>
+    <path>Aircraft/L-39ZA/Models/Instruments/ppd-2/ppd-2.xml</path>
+    <offsets>
+      <x-m> -1.98435 </x-m>
+      <y-m> -0.026714 </y-m>
+      <z-m> -0.535264 </z-m>	 
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Rear Cockpit Vertical Speed Indicator -->
+  <model>
+    <path>Aircraft/L-39ZA/Models/Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m> -1.97385 </x-m>
+      <y-m>  0.06973 </y-m>
+      <z-m> -0.359439 </z-m>	 
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Rear Cockpit ADF radiocompass -->
+  <model>
+    <path>Aircraft/L-39ZA/Models/Instruments/ppda/ppda.xml</path>
+    <offsets>
+      <x-m> -1.97425 </x-m>
+      <y-m>  0.06823 </y-m>
+      <z-m> -0.433544 </z-m>	 
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+    <overlay>
+			<animation n="100">
+			<type>scale</type>
+			<property>constants/zero</property>
+			<x-offset>0.62</x-offset>
+			<y-offset>0.62</y-offset>
+			<z-offset>0.62</z-offset>
+			</animation>
+    </overlay>
+  </model>
+
+  <!-- Rear Cockpit ACHS clock -->
+  <model>
+    <path>Aircraft/L-39ZA/Models/Instruments/achs/achs.xml</path>
+    <offsets>
+      <x-m> -1.98535 </x-m>
+      <y-m>  0.050686 </y-m>
+      <z-m> -0.522964 </z-m>	 
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+    <overlay>
+			<animation n="100">
+			<type>scale</type>
+			<property>constants/zero</property>
+			<x-offset>1.0</x-offset>
+			<y-offset>0.64</y-offset>
+			<z-offset>0.64</z-offset>
+			</animation>
+    </overlay>
+  </model>
+
+  <!-- Rear Cockpit Engine RPM -->
+  <model>
+    <path>Aircraft/L-39ZA/Models/Instruments/rpm/rpm.xml</path>
+    <offsets>
+      <x-m> -1.98289 </x-m>
+      <y-m>  0.154075 </y-m>
+      <z-m> -0.36477 </z-m> 
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Rear Cockpit Exhaust Gaz Temperature -->
+  <model>
+    <path>Aircraft/L-39ZA/Models/Instruments/uiz/uiz.xml</path>
+    <offsets>
+      <x-m> -1.98559 </x-m>
+      <y-m>  0.152984 </y-m>
+      <z-m> -0.441344 </z-m> 
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+    <overlay>
+			<animation n="100">
+			<type>scale</type>
+			<property>constants/zero</property>
+			<x-offset>0.64</x-offset>
+			<y-offset>0.64</y-offset>
+			<z-offset>0.64</z-offset>
+			</animation>
+    </overlay>
+  </model>
+
+  <!-- Rear Cockpit Air pressure indicator -->
+  <model>
+    <path>Aircraft/L-39ZA/Models/Instruments/uvpd/uvpd.xml</path>
+    <offsets>
+      <x-m> -1.98559 </x-m>
+      <y-m>  0.112984</y-m>
+      <z-m> -0.501344 </z-m> 
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+    <overlay>
+			<animation n="100">
+			<type>scale</type>
+			<property>constants/zero</property>
+			<x-offset>0.52</x-offset>
+			<y-offset>0.52</y-offset>
+			<z-offset>0.52</z-offset>
+			</animation>
+    </overlay>
+  </model>
+
+  <!-- Rear Cockpit Temp Manometer -should be engine vibration indicator -->
+  <model>
+    <path>Aircraft/L-39ZA/Models/Instruments/manometer/mano.xml</path>
+    <offsets>
+      <x-m> -1.98559 </x-m>
+      <y-m>  0.172669 </y-m>
+      <z-m> -0.507355 </z-m>	  
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+    <overlay>
+			<animation n="100">
+			<type>scale</type>
+			<property>constants/zero</property>
+			<x-offset>1.0</x-offset>
+			<y-offset>1.2</y-offset>
+			<z-offset>1.2</z-offset>
+			</animation>
+    </overlay>
+  </model>
+
+  <!-- Rear Cockpit Engine Temp -->
+  <model>
+    <path>Aircraft/L-39ZA/Models/Instruments/itg-1/itg-1.xml</path>
+    <offsets>
+      <x-m> -1.98359 </x-m>
+      <y-m>  0.219469 </y-m>
+      <z-m> -0.35757 </z-m> 
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Rear Cockpit Fuel % -->
+  <model>
+    <path>Aircraft/L-39ZA/Models/Instruments/fuel/fuel.xml</path>
+    <offsets>
+      <x-m> -1.98359 </x-m>
+      <y-m>  0.219669 </y-m>
+      <z-m> -0.416957 </z-m> 
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Rear Cockpit Voltammeter -->
+  <model>
+    <path>Aircraft/L-39ZA/Models/Instruments/voltammeter/voltammeter.xml</path>
+    <offsets>
+      <x-m> -1.98339 </x-m>
+      <y-m>  0.226469 </y-m>
+      <z-m> -0.476957 </z-m> 
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+   
+</PropertyList>
+

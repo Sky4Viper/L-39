@@ -288,7 +288,7 @@
     </overlay>
   </model>
   
-  <!-- Manometer -->
+  <!-- Temp Manometer -should be engine vibration indicator -->
   <model>
     <path>Aircraft/L-39ZA/Models/Instruments/manometer/mano.xml</path>
     <offsets>
