@@ -12,7 +12,7 @@ The L-39ZA Albatros is an upgraded variant of Czech high performance jet trainer
 First flight of ZA model on 29 September 1976. 208 aircraft delivered.
 <ul>
 Armament includes: 
-<li>-GSh-23L confrmal twin barrel 23mm canon;</li>
+<li>-GSh-23L conformal twin barrel 23mm canon;</li>
 <li>-UB-16 rocket pods with S-5 unguided rockets;</li>
 <li>-FAB-250 bombs;</li>
 <li>-PK-3 machine gun pods;</li>
