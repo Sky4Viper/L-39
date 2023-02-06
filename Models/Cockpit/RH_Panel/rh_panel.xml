@@ -1229,6 +1229,10 @@
         <property>/controls/electric/engine-switch</property>
       </binding>
       <binding>
+        <command>property-toggle</command>
+        <property>controls/power/fuelpump0</property>
+      </binding>
+      <binding>
         <command>nasal</command>
         <script>switchclicksound.click("switch3")</script>
       </binding>

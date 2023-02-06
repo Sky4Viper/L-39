@@ -52,10 +52,10 @@ Inertia tensor [kg*m^2], origo at CG:
 <airplane mass="7617">
 
   <!-- Approach configuration -->
-  <approach speed="100" aoa="5" fuel="0.3">
-    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.5"/>
+  <approach speed="108" aoa="6" fuel="0.3">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.7"/>
     <control-setting axis="/controls/flight/flaps" value="1.0"/>
-    <control-setting axis="/controls/flight/spoilers" value="0.0"/>
+    <control-setting axis="/controls/flight/speedbrake" value="0.0"/>
     <control-setting axis="/controls/gear/gear-down" value="1"/>
     <solve-weight idx="0" weight="0"/>
     <solve-weight idx="1" weight="0"/>
@@ -67,7 +67,7 @@ Inertia tensor [kg*m^2], origo at CG:
   <cruise speed="380" alt="38000" fuel="0.8"> 
   <cruise speed="464" alt="16400" fuel="0.8"> -->
   <cruise speed="430" alt="39000" fuel="0.8">
-    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.9"/>
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
     <control-setting axis="/controls/flight/flaps" value="0.0"/>
     <!--<control-setting axis="/controls/flight/elevator-trim" value="0.15"/>-->
     <control-setting axis="/controls/gear/gear-down" value="0"/>
@@ -97,7 +97,7 @@ Inertia tensor [kg*m^2], origo at CG:
         sweep="0"
         dihedral="0">
     <stall aoa="21" width="8" peak="1.3"/>
-    <flap0 start="0.0" end="0.15" lift="-2" drag="2.3"/>
+    <flap0 start="0.0" end="0.15" lift="-2" drag="2.5"/>
     <control-input axis="/controls/flight/speedbrake" control="FLAP0"/>
     <control-output control="FLAP0" prop="/surface-positions/speedbrake-pos-norm"/>
     <control-speed control="FLAP0" transition-time="3.0"/>
@@ -115,8 +115,8 @@ Inertia tensor [kg*m^2], origo at CG:
         camber="0.02"
         effectiveness="1.0"
         idrag="1.4">
-        <stall aoa="13" width="8" peak="1.5"/>
-        <flap0 start="0.08" end="0.628" lift="1.35" drag="2.2"/>
+        <stall aoa="13" width="12" peak="1.1"/>
+        <flap0 start="0.08" end="0.628" lift="1.36" drag="2.4"/>
         <flap1 start="0.629" end="0.99" lift="1.24" drag="1.34"/>
 
         <control-input axis="/controls/flight/flaps" control="FLAP0"/>
@@ -143,7 +143,7 @@ Inertia tensor [kg*m^2], origo at CG:
         dihedral="0.0"
         effectiveness="1.0"
         idrag="1.2">
-    <stall aoa="20.0" width="8.0" peak="1.05"/>
+    <stall aoa="20.0" width="10.0" peak="1.05"/>
     <flap0 start="0.1" end="1" lift="1.51" drag="1.41"/>
     <flap1 start="0.0" end="0.1" lift="1.1" drag="1.1"/>
 
@@ -162,8 +162,8 @@ Inertia tensor [kg*m^2], origo at CG:
          sweep="34"
          effectiveness="1.0"
          idrag="1.3">
-    <stall aoa="18.0" width="8.0" peak="1.05"/>
-    <flap0 start="0.2" end="0.86" lift="1.25" drag="1.37"/>
+    <stall aoa="19.0" width="8.0" peak="1.05"/>
+    <flap0 start="0.2" end="0.86" lift="1.4" drag="1.44"/>
 
     <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
     <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
@@ -194,8 +194,8 @@ Inertia tensor [kg*m^2], origo at CG:
   <!-- nose -->
   <gear x="3.88256" y="0.0" z="-2.115" 
         retract-time="7"
-        compression="0.25"
-        spring="0.8"
+        compression="0.3"
+        spring="0.7"
         sfric="0.6"
         dfric="0.8"
         damp="0.44"
@@ -210,9 +210,9 @@ Inertia tensor [kg*m^2], origo at CG:
  <!-- left main -->
   <gear x="-0.45" y="1.941" z="-2.045"
         retract-time="7"
-        compression="0.2"
+        compression="0.25"
         spring="0.4"
-        sfric="0.7"
+        sfric="1.0"
         dfric="0.8"
         damp="0.48">
         <control-input axis="/controls/gear/brake-left" control="BRAKE" split="true"/>
@@ -225,9 +225,9 @@ Inertia tensor [kg*m^2], origo at CG:
   <!-- right main -->
   <gear x="-0.45" y="-1.941" z="-2.045"  
         retract-time="7"  
-        compression="0.2" 
+        compression="0.25" 
         spring="0.4"
-        sfric="0.7"
+        sfric="1.0"
         dfric="0.8"
         damp="0.48">
         <control-input axis="/controls/gear/brake-right" control="BRAKE" split="true"/> 

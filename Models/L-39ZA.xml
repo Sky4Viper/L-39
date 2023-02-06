@@ -243,6 +243,30 @@
     	</offsets>
   	</model>
 
+  	<model>
+    	<name>TopRedBeacon</name>
+    	<path>Aircraft/L-39ZA/Models/Effects/Lights/StrobeRed.xml</path>
+    	<offsets>
+      		<x-m>1.4</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.286</z-m>
+      	<roll-deg>0</roll-deg>
+      	<pitch-deg>0</pitch-deg> <!-- due to roll, this tunes heading - I want it to point 5 deg more forward -->
+    	</offsets>
+  	</model>
+
+  	<model>
+    	<name>BottomRedBeacon</name>
+    	<path>Aircraft/L-39ZA/Models/Effects/Lights/StrobeRed.xml</path>
+    	<offsets>
+      		<x-m>2.601</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-0.9571</z-m>
+      	<roll-deg>180</roll-deg>
+      	<pitch-deg>-5</pitch-deg> <!-- due to roll, this tunes heading - I want it to point 5 deg more forward -->
+    	</offsets>
+  	</model>
+
 	<!-- Effects -->
 	
 	<model>
@@ -863,9 +887,9 @@
 		<property>/controls/flight/elevator</property>
 		<factor>-8</factor>
 		<center>
-			<x-m>-3.192</x-m>
+			<x-m>-3.1187</x-m>
 			<y-m>0.0</y-m>
-			<z-m>-0.923</z-m>
+			<z-m>-0.92363</z-m>
 		</center>
 		<axis>
 			<x>0.0</x>
@@ -881,9 +905,45 @@
 		<property>/controls/flight/aileron</property>
 		<factor>-8</factor>
 		<center>
-			<x-m>-3.192</x-m>
+			<x-m>-3.1187</x-m>
 			<y-m>0.0</y-m>
-			<z-m>-0.923</z-m>
+			<z-m>-0.92363</z-m>
+		</center>
+		<axis>
+			<x>1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+	<!-- Rear Stick animation on Y axis -->
+	<animation>
+		<type>rotate</type>
+		<object-name>stick_rear</object-name>
+		<property>/controls/flight/elevator</property>
+		<factor>-8</factor>
+		<center>
+			<x-m>-1.72346</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-0.891173</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+	
+	<!-- Rear Stick animation on X axis -->		
+	<animation>
+		<type>rotate</type>
+		<object-name>stick_rear</object-name>
+		<property>/controls/flight/aileron</property>
+		<factor>-8</factor>
+		<center>
+			<x-m>-1.72346</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-0.891173</z-m>
 		</center>
 		<axis>
 			<x>1.0</x>

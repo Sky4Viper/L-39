@@ -493,8 +493,8 @@ History:
 	<!-- Power switches -->
 	<power>
 		<battery type="bool">true</battery>
+      	<fuelpump0 type="bool">false</fuelpump0>
       	<fuelpump1 type="bool">false</fuelpump1>
-      	<fuelpump0 type="bool">true</fuelpump0>
       	<rsbn type="bool">true</rsbn>
 	</power>
 
