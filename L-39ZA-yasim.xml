@@ -1,29 +1,30 @@
 <?xml version="1.0"?>
 <!--
 ************************************************************************
-Aero Vodochody L-39ZA Albatros - YASIM FDM version 11.5
+Aero Vodochody L-39ZA Albatros - YASIM FDM version 16
 Compatible FGFS 2020.3.17
 
+==========================
 = YASim solution results =
 ==========================
-Iterations        : 1398
-Drag Coefficient  : 30.488
-Lift Ratio        : 95.308
-Cruise AoA        : 0.12 deg
-Tail Incidence    : -1.53 deg
-Approach Elevator : -0.803
+Iterations        : 1362
+Drag Coefficient  : 32.358
+Lift Ratio        : 91.897
+Cruise AoA        : 0.64 deg
+Tail Incidence    : -1.69 deg
+Approach Elevator : -0.662
 
-CG                : x:0.176, y:-0.000, z:-0.515
+CG                : x:0.077, y:-0.000, z:-0.496
 Wing MAC          : (x:0.57, y:1.96), length:1.8
 hard limit CG-x   : 3.883 m
 soft limit CG-x   : 0.116 m
-CG-x              : 0.176 m
-CG-x rel. MAC     :  22%
+CG-x              : 0.077 m
+CG-x rel. MAC     :  27%
 soft limit CG-x   : 0.024 m
 hard limit CG-x   : -0.450 m
 
-wing lever        : -0.060 m
-tail lever        : -4.332 m
+wing lever        : 0.039 m
+tail lever        : -4.233 m
 
 max thrust        : 3.56 kN
 thrust/empty      : 0.11
@@ -43,16 +44,16 @@ Section 0 base point: x="-0.424" y="0.413" z="-0.823" chord="2.470" incidence="2
 
 Inertia tensor [kg*m^2], origo at CG:
 
-     7987,      -0,    4678
-       -0,   26952,       0
-     4678,       0,   31993
+     8155,      -0,    4551
+       -0,   26281,       0
+     4551,       0,   31504
 ************************************************************************
 -->
 
 <airplane mass="7617">
 
   <!-- Approach configuration -->
-  <approach speed="108" aoa="6" fuel="0.3">
+  <approach speed="108" aoa="4.5" fuel="0.3">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.7"/>
     <control-setting axis="/controls/flight/flaps" value="1.0"/>
     <control-setting axis="/controls/flight/speedbrake" value="0.0"/>
@@ -63,13 +64,10 @@ Inertia tensor [kg*m^2], origo at CG:
     <solve-weight idx="3" weight="0"/>
   </approach>
 
-  <!-- Cruise configuration 
-  <cruise speed="380" alt="38000" fuel="0.8"> 
-  <cruise speed="464" alt="16400" fuel="0.8"> -->
+  <!-- Cruise configuration -->
   <cruise speed="430" alt="39000" fuel="0.8">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
     <control-setting axis="/controls/flight/flaps" value="0.0"/>
-    <!--<control-setting axis="/controls/flight/elevator-trim" value="0.15"/>-->
     <control-setting axis="/controls/gear/gear-down" value="0"/>
     <solve-weight idx="0" weight="0"/>
     <solve-weight idx="1" weight="0"/>
@@ -104,7 +102,6 @@ Inertia tensor [kg*m^2], origo at CG:
   </mstab>
 
   <!-- NACA 64A012 -->
-
   <wing x="-0.423783" y="0.413" z="-0.8227"
         chord="2.47"
         incidence="2.0"
@@ -161,9 +158,9 @@ Inertia tensor [kg*m^2], origo at CG:
          taper="0.35"
          sweep="34"
          effectiveness="1.0"
-         idrag="1.3">
+         idrag="1.4">
     <stall aoa="19.0" width="8.0" peak="1.05"/>
-    <flap0 start="0.2" end="0.86" lift="1.4" drag="1.44"/>
+    <flap0 start="0.2" end="0.86" lift="1.4" drag="1.43"/>
 
     <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
     <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
@@ -184,8 +181,8 @@ Inertia tensor [kg*m^2], origo at CG:
        <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE" src0="0" src1="1" dst0="0.07" dst1="1"/>
   </jet>
 
-  <!--guns recoil in 3000 Lbf = 2.5Tf negative angle of the gun : -2'-->
-  <thruster thrust="3000"
+  <!--guns recoil in 2000 Lbf = 2.5Tf negative angle of the gun : -2'-->
+  <thruster thrust="2000"
       x="3.2" y="0.0" z="-1.23"
       vx="-0.999390827" vy="0" vz="0.03489949">
       <control-input axis="sim/multiplay/generic/int[8]" control="THROTTLE" />
@@ -264,7 +261,7 @@ Inertia tensor [kg*m^2], origo at CG:
   <tank x="-0.016398" y="-1.80537" z="-1.17747" jet="true" capacity="278.025"/>
   <tank x="-0.016398" y="-2.3614" z="-1.17747" jet="true" capacity="278.025"/>
   
-  <ballast x="3.882" y="0.0" z="-1.2081" mass="1540"/>
+  <ballast x="3.882" y="0.0" z="-1.2081" mass="1500"/>
 
   <!-- External loads -->
 
