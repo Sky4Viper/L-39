@@ -18,6 +18,7 @@
     <object-name>BeaconRemb</object-name>
     <condition>
       <and>
+        <property>/controls/electric/battery-switch</property>
         <property>controls/lighting/beacon-switch</property>
         <not><property>sim/crashed</property></not>
       </and>

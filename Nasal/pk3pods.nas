@@ -47,16 +47,19 @@ outOfAmmo.singleShot = 1;
 #trigger control with ammo counting
 var triggerControl = func {
 	triggerState = getprop("controls/armament/trigger");
-	if(triggerState and getprop("/controls/armament/PK3Left") > 0) {
+    MasterArm = getprop("controls/armament/master-arm");
+	if(triggerState and MasterArm and getprop("/controls/armament/PK3Left") > 0) {
 		var PK3mounted1L = (getprop("sim/weight[0]/selected") == "PK-3 MG pod");
 		var PK3mounted2L = (getprop("sim/weight[1]/selected") == "PK-3 MG pod");
+        PK3OuterON = getprop("controls/armament/pk3-outer-sel");
+        PK3InnerON = getprop("controls/armament/pk3-inner-sel");
 		
 		if(PK3mounted1L or PK3mounted2L) {
 			var fireTime = 2.05714; #continuous fire for 3500 r/min
-			if(PK3mounted1L) {
+			if(PK3mounted1L and PK3OuterON) {
 				setprop("/controls/armament/trigger-PK3-out", 1);
 			}
-			if(PK3mounted2L) {
+			if(PK3mounted2L and PK3InnerON) {
 				setprop("/controls/armament/trigger-PK3-in", 1);
 			}
 			var PK3Left = getprop("/controls/armament/PK3Left");

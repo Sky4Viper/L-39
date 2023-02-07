@@ -43,7 +43,8 @@ outOfAmmo.singleShot = 1;
 #trigger control with ammo counting
 var triggerControl = func {
 	triggerState = getprop("controls/armament/trigger");
-	if(triggerState and getprop("/controls/armament/roundsLeft") > 0) {
+    MasterArm = getprop("controls/armament/master-arm");
+	if(triggerState and MasterArm and getprop("/controls/armament/roundsLeft") > 0) {
 			var fireTime = 2.05714; #continuous fire for 3500 r/min 
 			setprop("/controls/armament/trigger-GSh-23", 1);
 			setprop("/sim/multiplay/generic/int[8]", 1);

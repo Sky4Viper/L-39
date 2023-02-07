@@ -42,7 +42,9 @@ var flash_trigger2 = props.globals.getNode("controls/armament/trigger2", 0);
 drop_Bomb = func {
 				var FAB250mounted14 = (getprop("sim/weight[0]/selected") == "FAB-250 bomb");
 				var FAB250mounted23 = (getprop("sim/weight[1]/selected") == "FAB-250 bomb");
-				if(FAB250mounted14 or FAB250mounted23) {
+                MasterArm = getprop("controls/armament/master-arm");
+                BombsON = getprop("controls/armament/bombs-sel");
+				if(MasterArm and BombsON and (FAB250mounted14 or FAB250mounted23)) {
 				if(FAB250mounted14) {
 					#setprop("/sim/multiplay/generic/int[13]", 1);
 					#setprop("/sim/weight[0]/selected", "none");

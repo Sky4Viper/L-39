@@ -24,10 +24,7 @@
     <object-name>LandingLightCone</object-name> <!-- uncomment for fake non-rembrandt cones -->
     <condition>
       <and>
-        <!-- <equals>
-				  <property>sim/model/hide-lights</property>
-				  <value>0</value>
-			  </equals> -->
+        <property>/controls/electric/battery-switch</property>
         <property>controls/lighting/landing-lights-switch</property>
         <not><property>sim/crashed</property></not>
       </and>
