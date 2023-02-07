@@ -53,7 +53,7 @@ Inertia tensor [kg*m^2], origo at CG:
 <airplane mass="7617">
 
   <!-- Approach configuration -->
-  <approach speed="108" aoa="4.5" fuel="0.3">
+  <approach speed="107" aoa="4.5" fuel="0.3">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.7"/>
     <control-setting axis="/controls/flight/flaps" value="1.0"/>
     <control-setting axis="/controls/flight/speedbrake" value="0.0"/>
@@ -113,7 +113,7 @@ Inertia tensor [kg*m^2], origo at CG:
         effectiveness="1.0"
         idrag="1.4">
         <stall aoa="13" width="12" peak="1.1"/>
-        <flap0 start="0.08" end="0.628" lift="1.36" drag="2.4"/>
+        <flap0 start="0.08" end="0.628" lift="1.38" drag="2.4"/>
         <flap1 start="0.629" end="0.99" lift="1.24" drag="1.34"/>
 
         <control-input axis="/controls/flight/flaps" control="FLAP0"/>
