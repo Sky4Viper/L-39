@@ -47,7 +47,9 @@ outOfAmmo.singleShot = 1;
 #trigger control with ammo counting
 var triggerControl = func {
 	triggerState = getprop("controls/armament/pickle");
-	if(triggerState and getprop("/controls/armament/rocketsLeft") > 0) {
+    MasterArm = getprop("controls/armament/master-arm");
+    RocketsON = getprop("controls/armament/rockets-sel");
+	if(triggerState and MasterArm and RocketsON and getprop("/controls/armament/rocketsLeft") > 0) {
 		var mounted1L = (getprop("sim/weight[0]/selected") == "UB-16 rockets pod");
 		var mounted2L = (getprop("sim/weight[1]/selected") == "UB-16 rockets pod");
 		

@@ -19,6 +19,13 @@
     <object-name>inst_panel_screws.001</object-name>
     <object-name>arm_switch.001</object-name>
     <object-name>arm_switch.002</object-name>
+    <object-name>arm_switch.003</object-name>
+    <object-name>arm_switch.004</object-name>
+    <object-name>arm_switch.005</object-name>
+    <object-name>arm_switch.006</object-name>
+    <object-name>arm_switch.007</object-name>
+    <object-name>arm_switch.008</object-name>
+    <object-name>arm_switch.009</object-name>
     <object-name>jet_switch.001</object-name>
     <object-name>jet_switch.002</object-name>
     <object-name>trim_pitch_index</object-name>
@@ -214,6 +221,269 @@
 			</equals>
 		</condition>
 	</animation>
+
+  <!-- Armament control switches animation -->
+
+  <animation>
+      <type>rotate</type>
+      <object-name>arm_switch.001</object-name>
+      <property>/controls/armament/master-arm</property>
+      <offset-deg>-25</offset-deg>
+      <factor>50</factor>
+      <center>
+        <x-m>-3.37627</x-m>
+        <y-m>0.0</y-m>
+        <z-m>-0.707836</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>arm_switch.002</object-name>
+      <property>/controls/armament/gun-sight</property>
+      <offset-deg>-25</offset-deg>
+      <factor>50</factor>
+      <center>
+        <x-m>-3.37627</x-m>
+        <y-m>0.0</y-m>
+        <z-m>-0.707836</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>arm_switch.003</object-name>
+      <property>/controls/armament/rockets-sel</property>
+      <offset-deg>-25</offset-deg>
+      <factor>50</factor>
+      <center>
+        <x-m>-3.37627</x-m>
+        <y-m>0.0</y-m>
+        <z-m>-0.707836</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>arm_switch.004</object-name>
+      <property>/controls/armament/bombs-sel</property>
+      <offset-deg>-25</offset-deg>
+      <factor>50</factor>
+      <center>
+        <x-m>-3.37627</x-m>
+        <y-m>0.0</y-m>
+        <z-m>-0.707836</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>arm_switch.005</object-name>
+      <property>/controls/armament/pk3-outer-sel</property>
+      <offset-deg>-25</offset-deg>
+      <factor>50</factor>
+      <center>
+        <x-m>-3.37627</x-m>
+        <y-m>0.0</y-m>
+        <z-m>-0.707836</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>arm_switch.006</object-name>
+      <property>/controls/armament/pk3-inner-sel</property>
+      <offset-deg>-25</offset-deg>
+      <factor>50</factor>
+      <center>
+        <x-m>-3.37627</x-m>
+        <y-m>0.0</y-m>
+        <z-m>-0.707836</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+
+  <!-- Armament control switches -->
+
+  <animation>
+    <type>pick</type>
+    <object-name>arm_switch.001</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/armament/master-arm</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+      <command>set-tooltip</command>
+      <tooltip-id>master-arm-sw</tooltip-id>
+      <label>Master arm</label>
+      </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>arm_switch.002</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/armament/gun-sight</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+      <command>set-tooltip</command>
+      <tooltip-id>gun-sight-sw</tooltip-id>
+      <label>ASP gun sight</label>
+      </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>arm_switch.003</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/armament/rockets-sel</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+      <command>set-tooltip</command>
+      <tooltip-id>rockets-sw</tooltip-id>
+      <label>Rockets</label>
+      </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>arm_switch.004</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/armament/bombs-sel</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+      <command>set-tooltip</command>
+      <tooltip-id>bombs-sw</tooltip-id>
+      <label>Bombs</label>
+      </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>arm_switch.005</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/armament/pk3-outer-sel</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+      <command>set-tooltip</command>
+      <tooltip-id>pk3-outer-sw</tooltip-id>
+      <label>PK3 pods outer</label>
+      </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>arm_switch.006</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/armament/pk3-inner-sel</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+      <command>set-tooltip</command>
+      <tooltip-id>pk3-inner-sw</tooltip-id>
+      <label>PK3 pods inner</label>
+      </binding>
+    </hovered>
+  </animation>
 
 </PropertyList>
 
