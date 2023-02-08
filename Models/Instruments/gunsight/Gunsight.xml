@@ -651,6 +651,7 @@
       </equals>
       <property>controls/gunsight/gunsight-pos</property>
       <property>/controls/electric/battery-switch</property>
+      <property>/controls/armament/gun-sight</property>
     </condition>
   </animation>
 
