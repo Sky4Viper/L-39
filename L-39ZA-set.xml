@@ -825,6 +825,9 @@ History:
 	<CanvasPylonsDlg>
 			<file>Aircraft/L-39ZA/Nasal/canvas-pylons-cfg.nas</file>
 	</CanvasPylonsDlg>
+	<automation>
+		<file>Aircraft/L-39ZA/Nasal/automation.nas</file>
+	</automation>
 </nasal>
 
 </PropertyList>
