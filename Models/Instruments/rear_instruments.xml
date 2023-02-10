@@ -169,8 +169,8 @@
     <path>Aircraft/L-39ZA/Models/Instruments/rpm/rpm.xml</path>
     <offsets>
       <x-m> -1.98289 </x-m>
-      <y-m>  0.154075 </y-m>
-      <z-m> -0.36477 </z-m> 
+      <y-m>  0.152875 </y-m>
+      <z-m> -0.36497 </z-m> 
       <roll-deg>    0.000 </roll-deg>
       <pitch-deg>   0.000 </pitch-deg>
       <heading-deg> 0.000 </heading-deg>
@@ -248,7 +248,7 @@
     <path>Aircraft/L-39ZA/Models/Instruments/itg-1/itg-1.xml</path>
     <offsets>
       <x-m> -1.98359 </x-m>
-      <y-m>  0.219469 </y-m>
+      <y-m>  0.218669 </y-m>
       <z-m> -0.35757 </z-m> 
       <roll-deg>    0.000 </roll-deg>
       <pitch-deg>   0.000 </pitch-deg>
@@ -261,7 +261,7 @@
     <path>Aircraft/L-39ZA/Models/Instruments/fuel/fuel.xml</path>
     <offsets>
       <x-m> -1.98359 </x-m>
-      <y-m>  0.219669 </y-m>
+      <y-m>  0.218669 </y-m>
       <z-m> -0.416957 </z-m> 
       <roll-deg>    0.000 </roll-deg>
       <pitch-deg>   0.000 </pitch-deg>

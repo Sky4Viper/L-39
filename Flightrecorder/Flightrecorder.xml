@@ -30,6 +30,11 @@
     <!-- Add custom signals here -->
 
 	<signal>
+        <type>double</type>
+        <property type="string">/canopy/position-norm</property>
+    </signal>
+
+	<signal>
         <type>bool</type>
         <property type="string">lightpack/landing-lights-intensity</property>
     </signal>

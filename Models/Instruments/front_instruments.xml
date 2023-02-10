@@ -173,7 +173,7 @@
     <path>Aircraft/L-39ZA/Models/Instruments/rpm/rpm.xml</path>
     <offsets>
       <x-m> -3.36525 </x-m>
-      <y-m>  0.183389 </y-m>
+      <y-m>  0.182989 </y-m>
       <z-m> -0.458383 </z-m> 
       <roll-deg>    0.000 </roll-deg>
       <pitch-deg>   0.000 </pitch-deg>

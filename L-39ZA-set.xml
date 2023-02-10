@@ -607,6 +607,10 @@ History:
   </engine>
 </engines>
 
+<canopy>
+    <position-norm type="float">1.0</position-norm>
+</canopy>
+
 <input>
 		<keyboard>
   

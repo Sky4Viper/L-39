@@ -19,6 +19,7 @@
   <animation>
   <type>material</type>
   <object-name>Needle1</object-name>
+  <object-name>Needle2</object-name>
   <object-name>Face</object-name>
     <emission>
       <factor-prop>controls/lighting/instruments-norm</factor-prop>
@@ -36,11 +37,33 @@
     <object-name>Needle1</object-name>
     <property>/engines/engine[0]/rpm</property>
     <interpolation>
-      <entry><ind>   0.0 </ind><dep>  50.0 </dep></entry>
-      <entry><ind>  20.0 </ind><dep> 113.0 </dep></entry>
-      <entry><ind>  60.0 </ind><dep> 174.0 </dep></entry>
+      <entry><ind>   0.0 </ind><dep>  60.0 </dep></entry>
+      <entry><ind>  20.0 </ind><dep> 120.0 </dep></entry>
+      <entry><ind>  40.0 </ind><dep> 180.0 </dep></entry>
+      <entry><ind>  60.0 </ind><dep> 240.0 </dep></entry>
+      <entry><ind>  80.0 </ind><dep> 300.0 </dep></entry>
       <entry><ind> 100.0 </ind><dep> 360.0 </dep></entry>
-      <entry><ind> 106.0 </ind><dep> 379.0 </dep></entry>
+      <entry><ind> 107.0 </ind><dep> 381.0 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> -1.0 </x>
+      <y>  0.0 </y>
+      <z>  0.0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Needle2</object-name>
+    <property>/engines/engine[0]/rpm</property>
+    <interpolation>
+      <entry><ind>   0.0 </ind><dep>  60.0 </dep></entry>
+      <entry><ind>  20.0 </ind><dep> 105.0 </dep></entry>
+      <entry><ind>  40.0 </ind><dep> 167.0 </dep></entry>
+      <entry><ind>  60.0 </ind><dep> 228.0 </dep></entry>
+      <entry><ind>  80.0 </ind><dep> 289.0 </dep></entry>
+      <entry><ind> 100.0 </ind><dep> 360.0 </dep></entry>
+      <entry><ind> 107.0 </ind><dep> 381.0 </dep></entry>
     </interpolation>
     <axis>
       <x> -1.0 </x>
