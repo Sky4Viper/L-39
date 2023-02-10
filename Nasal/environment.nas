@@ -91,7 +91,7 @@ var splash_vec_loop = func
     setprop("/environment/aircraft-effects/splash-vector-y", splash_y);
     setprop("/environment/aircraft-effects/splash-vector-z", splash_z);
 	
-    ACRunning = getprop("controls/power/battery") == TRUE and getprop("controls/ventilation/airconditioning-enabled") == TRUE;
+    ACRunning = getprop("/controls/electric/battery-switch") == TRUE and getprop("controls/ventilation/airconditioning-enabled") == TRUE;
 	
 
 	
@@ -104,7 +104,7 @@ var splash_vec_loop = func
 	
 	
 	
-    hotAirOnWindshield = getprop("controls/power/battery")== TRUE?AntiIce:0;
+    hotAirOnWindshield = getprop("/controls/electric/battery-switch")== TRUE?AntiIce:0;
 	
 	#if (AntiIce > 0 and getprop("controls/power/dcgen")== TRUE) {
     #  hotAirOnWindshield = 1.0;
