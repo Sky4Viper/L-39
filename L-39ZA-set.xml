@@ -764,6 +764,66 @@ History:
 		</keyboard>
 </input>
 
+<environment>
+   		<damage type="bool">false</damage>
+    	<damage-smoke type="bool">false</damage-smoke>
+    	<turbulence>
+      		<use-cloud-turbulence>true</use-cloud-turbulence>
+    	</turbulence>
+
+    	<aircraft-effects>
+      		<splash-vector-x type="float" userarchive="n">0.0</splash-vector-x>
+      		<splash-vector-y type="float" userarchive="n">0.1</splash-vector-y>
+      		<splash-vector-z type="float" userarchive="n">1.0</splash-vector-z>
+      		<frost-level type="float" userarchive="n">0.0</frost-level>
+      		<fog-level type="float" userarchive="n">0.0</fog-level>
+      		<ground-splash-norm type="float" userarchive="n">0.0</ground-splash-norm>
+      		<use-wipers type="int" userarchive="n">0</use-wipers>
+      		<use-overlay type="int" userarchive="n">0</use-overlay>
+      		<overlay-alpha type="float" userarchive="n">1.0</overlay-alpha>
+      		<use-mask type="int" userarchive="n">0</use-mask>
+      		<dewpoint-inside-degC type="float" userarchive="n">0.0</dewpoint-inside-degC>
+      		<temperature-inside-degC type="float" userarchive="n">15.0</temperature-inside-degC>
+      		<temperature-glass-degC type="float" userarchive="n">15.0</temperature-glass-degC>
+      		<glass-temperature-index type="float" userarchive="n">0.51</glass-temperature-index>
+      		<fog-inside type="float" userarchive="n">0.0</fog-inside>
+      		<fog-outside type="float" userarchive="n">0.0</fog-outside>
+      		<frost-inside type="float" userarchive="n">0.0</frost-inside>
+      		<frost-outside type="float" userarchive="n">0.0</frost-outside>
+    	</aircraft-effects>
+
+    	<precipitation-control>
+      		<clip-distance type="double">1.75</clip-distance>
+    	</precipitation-control>
+    	<pressure-inhg type="double">30</pressure-inhg>
+    	<weather-scenarios>
+      	<scenario n="17">
+        	<description type="string">
+          		ISA standard atmosphere.
+          		Be sure to use basic weather for flight testing with this.
+        	</description>
+        	<metar type="string">XXXX 012345Z 00000KT 35SM 15/05 Q1013.25 NOSIG</metar>
+        	<name type="string">ISA</name>
+      	</scenario>
+      	<scenario n="18">
+        	<description type="string">
+          		ISA +10 standard atmosphere.
+          		Be sure to use basic weather for flight testing with this.
+        	</description>
+        	<metar type="string">XXXX 012345Z 00000KT 35SM 25/15 Q1013.25 NOSIG</metar>
+        	<name type="string">ISA +10</name>
+      	</scenario>
+      	<scenario n="19">
+        	<description type="string">
+          		ISA -15 standard atmosphere.
+          		Be sure to use basic weather for flight testing with this.
+        	</description>
+        	<metar type="string">XXXX 012345Z 00000KT 35SM 00/M10 Q1013.25 NOSIG</metar>
+        	<name type="string">ISA -15</name>
+      		</scenario>
+    	</weather-scenarios>
+  	</environment>
+
  <nasal>
 	<L-39ZA>
 		<file>Aircraft/L-39ZA/Nasal/strobe.nas</file>
@@ -788,6 +848,9 @@ History:
     <gunsight>
 		<file>Aircraft/L-39ZA/Nasal/gunsight.nas</file>
 	</gunsight>
+	<environment>
+      		<file>Aircraft/L-39ZA/Nasal/environment.nas</file>
+    </environment>
 	<payload>
 			<file>Aircraft/L-39ZA/Nasal/payload.nas</file>
 	</payload>

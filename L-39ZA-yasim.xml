@@ -7,12 +7,12 @@ Compatible FGFS 2020.3.17
 ==========================
 = YASim solution results =
 ==========================
-Iterations        : 1362
-Drag Coefficient  : 32.358
-Lift Ratio        : 91.897
+Iterations        : 1369
+Drag Coefficient  : 32.357
+Lift Ratio        : 92.022
 Cruise AoA        : 0.64 deg
-Tail Incidence    : -1.69 deg
-Approach Elevator : -0.662
+Tail Incidence    : -1.68 deg
+Approach Elevator : -0.681
 
 CG                : x:0.077, y:-0.000, z:-0.496
 Wing MAC          : (x:0.57, y:1.96), length:1.8
@@ -26,8 +26,8 @@ hard limit CG-x   : -0.450 m
 wing lever        : 0.039 m
 tail lever        : -4.233 m
 
-max thrust        : 3.56 kN
-thrust/empty      : 0.11
+max thrust        : 8.01 kN
+thrust/empty      : 0.24
 thrust/mtow       : inf
 
 wing span         : 8.05 m

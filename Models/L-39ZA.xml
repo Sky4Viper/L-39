@@ -141,6 +141,15 @@
 		<object-name>external_tank_right_2</object-name>
     </effect>
 
+	<effect>
+    	<inherits-from>Aircraft/L-39ZA/Models/Effects/Fx/FrostAndRain/glass</inherits-from>
+			<!-- normals face in -->
+    		<!-- material GlassMat-->
+    	<object-name>canopy-in</object-name>
+		<object-name>canopy-in.001</object-name>
+		<object-name>canopy-in.002</object-name>
+  	</effect>
+
 	<!-- landing lights -->
 	
 	<!-- a powerful front facing spotlight -->
@@ -849,6 +858,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>canopy.001</object-name>
+		<object-name>canopy-in.001</object-name>
 		<object-name>canopy_frame.001</object-name>
         <object-name>canopy_handle.001</object-name>
 		<property>/canopy/position-norm</property>
@@ -866,6 +876,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>canopy.002</object-name>
+		<object-name>canopy-in.002</object-name>
 		<object-name>canopy_frame.002</object-name>
         <object-name>canopy_handle.002</object-name>
 		<property>/canopy/position-norm</property>

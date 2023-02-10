@@ -653,8 +653,8 @@
       <condition>
         <property>/controls/electric/battery-switch</property>
         <less-than>
-          <property>/environment/temperature-degc</property>
-          <value>-5.0</value>
+          <property>/environment/aircraft-effects/temperature-glass-degC</property>
+          <value>-0.1</value>
         </less-than>
       </condition>
     </animation>

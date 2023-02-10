@@ -244,6 +244,36 @@
 
   <animation>
     <type>rotate</type>
+    <object-name>adf_knob_cond</object-name>
+    <property>controls/ventilation/airconditioning-temperature</property>
+    <interpolation>
+      <entry>
+        <ind>10</ind><dep>-175</dep>
+      </entry>
+      <entry>
+        <ind>15</ind><dep>-80</dep>
+      </entry>
+      <entry>
+        <ind>20</ind><dep>10</dep>
+      </entry>
+      <entry>
+        <ind>25</ind><dep>100</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-0.079727</x-m>
+      <y-m>-0.032829</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>-1</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
     <object-name>adf_knob_on</object-name>
     <property>instrumentation/adf/power-btn</property>
     <interpolation>
@@ -889,6 +919,46 @@
                 <command>set-tooltip</command>
                 <tooltip-id>instruments-lighting-adj</tooltip-id>
                 <label>Instruments lights</label>
+          </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+  <type>knob</type>
+  <object-name>adf_knob_cond</object-name>
+    <increase>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/ventilation/airconditioning-temperature</property>
+            <step>1.0</step>
+            <min>10.0</min>
+            <max>25.0</max>
+            <wrap>false</wrap>
+      </binding>
+      <binding>
+            <command>nasal</command>
+            <script>switchclicksound.click("adf-dial")</script>
+      </binding>
+      </increase>
+      <decrease>
+        <binding>
+          <command>property-adjust</command>
+          <property>controls/ventilation/airconditioning-temperature</property>
+            <step>-1.0</step>
+            <min>10.0</min>
+            <max>25.0</max>
+            <wrap>false</wrap>
+        </binding>
+        <binding>
+                <command>nasal</command>
+                <script>switchclicksound.click("adf-dial")</script>
+            </binding>
+        </decrease>
+        <hovered>
+          <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>instruments-actemp-adj</tooltip-id>
+                <label>Airconditioning temp</label>
           </binding>
         </hovered>
     </animation>
