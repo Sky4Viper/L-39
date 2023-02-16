@@ -396,7 +396,7 @@ History:
 				<float n="1" alias="/surface-positions/right-taileron-pos-norm"/>
 				<float n="2" alias="/surface-positions/left-flap-pos-norm"/>
 				<float n="3" alias="/surface-positions/right-flap-pos-norm"/>
-				<float n="4" alias="/sim/model/nozzle-animation"/>
+				<float n="4" alias="/position/gear-agl-m">0</float>
 				<!-- <float n="8" alias="/engines/engine[0]/afterburner" /> Reheat left engine -->
 				<!-- <float n="9" alias="/engines/engine[1]/afterburner" />  Reheat right engine -->
 		</generic>

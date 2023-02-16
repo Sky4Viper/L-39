@@ -60,7 +60,7 @@
     <condition>
       <property>/controls/electric/battery-switch</property>
     </condition>
-  </animation>
+ </animation>
 
   <animation>
     <type>material</type>
@@ -465,6 +465,42 @@
       <center>
         <x-m>-0.363576</x-m>
         <y-m>0.036724</y-m>
+        <z-m>0.00098</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>rh_p1_switch.006</object-name>
+      <property>/controls/electric/inverter-ac1-switch</property>
+      <offset-deg>-25</offset-deg>
+      <factor>50</factor>
+      <center>
+        <x-m>-0.315204</x-m>
+        <y-m>-0.044004</y-m>
+        <z-m>0.00098</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>rh_p1_switch.007</object-name>
+      <property>/controls/electric/inverter-ac2-switch</property>
+      <offset-deg>-25</offset-deg>
+      <factor>50</factor>
+      <center>
+        <x-m>-0.315204</x-m>
+        <y-m>-0.024586</y-m>
         <z-m>0.00098</z-m>
       </center>
       <axis>

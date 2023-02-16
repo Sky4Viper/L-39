@@ -1,0 +1,25 @@
+AC3Db
+MATERIAL "DefaultWhite" rgb 1.000 1.000 1.000  amb 1.000 1.000 1.000  emis 0.000 0.000 0.000  spec 0.500 0.500 0.500  shi 64 trans 0.000
+OBJECT world
+name "Blender_exporter_v3.3__shadow.ac"
+kids 1
+OBJECT poly
+name "shadow"
+data 10
+shadow.001
+crease 30.0
+texture "shadow.png"
+numvert 4
+-6.18712 -2.07448 -5.66429
+6.30691 -2.07448 -5.66429
+-6.18712 -2.07448 5.59609
+6.30691 -2.07448 5.59609
+numsurf 1
+SURF 0X0
+mat 0
+refs 4
+2 0.055188 0.100485
+3 0.975083 0.100485
+1 0.975083 0.906957
+0 0.055188 0.906957
+kids 0

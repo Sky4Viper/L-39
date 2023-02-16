@@ -281,6 +281,10 @@
 	<model>
 		<path>Aircraft/L-39ZA/Models/Effects/Effects.xml</path>
 	</model>
+
+	<model>
+		<path>Aircraft/L-39ZA/Models/Effects/Shadow/shadow.xml</path>
+	</model>
 	
 	<!-- Canopy reflection effect -->
 	<animation>

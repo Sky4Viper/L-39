@@ -541,6 +541,17 @@
 
     <animation>
       <type>select</type>
+      <object-name>warning_light.009</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <not>
+          <property>/controls/electric/generator-switch-aux</property>
+        </not>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
       <object-name>warning_light.010</object-name>
       <object-name>warning_light.off.010</object-name>
       <condition>
@@ -561,6 +572,20 @@
           <property>/environment/pressure-ingh</property>
           <value>60</value>
         </greater-than>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>warning_light.012</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <not>
+          <property>/controls/electric/inverter-ac1-switch</property>
+        </not>
+        <not>
+          <property>/controls/electric/inverter-ac2-switch</property>
+        </not>
       </condition>
     </animation>
 
