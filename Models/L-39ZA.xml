@@ -72,6 +72,7 @@
 		<object-name>doors_closed</object-name>
 		<object-name>vortex_generators</object-name>
 		<object-name>winglets</object-name>
+        <object-name>starter_exaust</object-name>
 
     	<property-base>sim/model/livery</property-base>
     	<texture-prop>texture</texture-prop>
@@ -285,6 +286,18 @@
 	<model>
 		<path>Aircraft/L-39ZA/Models/Effects/Shadow/shadow.xml</path>
 	</model>
+
+<!-- Turbo starter -->
+
+  <model>
+    <path>Aircraft/L-39ZA/Models/Effects/Cranking/cranking.xml</path>
+    <offsets>
+      <x-m> 2.19271 </x-m>
+      <y-m> -0.200294 </y-m>
+      <z-m> -0.989063 </z-m>
+      <pitch-deg> 90 </pitch-deg>
+    </offsets>
+  </model>
 	
 	<!-- Canopy reflection effect -->
 	<animation>
