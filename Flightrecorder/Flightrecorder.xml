@@ -64,6 +64,11 @@
         <property type="string">sim/multiplay/generic/int[4]</property>
     </signal>
 
+    <signal>
+        <type>bool</type>
+        <property type="string">sim/multiplay/generic/int[5]</property>
+    </signal>
+
 	<signal>
         <type>bool</type>
         <property type="string">/controls/armament/trigger</property>
@@ -97,14 +102,17 @@
         <property type="string">sim/multiplay/generic/int[13]</property>
     </signal>
     <signal>
-        <type>bool</type>
-        <property type="string">sim/multiplay/generic/int[14]</property>
-    </signal>
-
-    <signal>
         <type>double</type>
         <property type="string">sim/multiplay/generic/int[14]</property>
     </signal>
+    <signal>
+        <type>float</type>
+        <property type="string">sim/weight[%i]/payload-int</property>
+    </signal>
 
+    <signal>
+        <type>float</type>
+        <property type="string">sim/multiplay/generic/float[4]</property>
+    </signal>
     
 </PropertyList>
