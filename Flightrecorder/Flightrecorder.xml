@@ -102,7 +102,7 @@
         <property type="string">sim/multiplay/generic/int[13]</property>
     </signal>
     <signal>
-        <type>double</type>
+        <type>bool</type>
         <property type="string">sim/multiplay/generic/int[14]</property>
     </signal>
     <signal>
