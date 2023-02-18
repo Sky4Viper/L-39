@@ -15,4 +15,30 @@
 		<property>/sim/weight[%i]/weight-lb</property>
 	</signal>
 
+
+    <signal>
+		<type>float</type>
+		<property>/controls/armament/rocketsLeft</property>
+	</signal>
+    <signal>
+		<type>float</type>
+		<property>/controls/armament/rocketsCount</property>
+	</signal>
+    <signal>
+		<type>float</type>
+		<property>/controls/armament/PK3Left</property>
+	</signal>
+    <signal>
+		<type>float</type>
+		<property>/controls/armament/PK3Count</property>
+	</signal>
+    <signal>
+		<type>float</type>
+		<property>/controls/armament/roundsLeft</property>
+	</signal>
+    <signal>
+		<type>float</type>
+		<property>/controls/armament/roundsCount</property>
+	</signal>
+
 </PropertyList>

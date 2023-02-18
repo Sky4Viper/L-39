@@ -26,12 +26,47 @@
     <signals include="/Aircraft/L-39ZA/Flightrecorder/pylons.xml">
         <count type="int">4</count>
     </signals>
+    <signals include="/Aircraft/L-39ZA/Flightrecorder/cockpit.xml">
+    </signals>
+
 
     <!-- Add custom signals here -->
 
 	<signal>
         <type>double</type>
         <property type="string">/canopy/position-norm</property>
+    </signal>
+	<signal>
+        <type>bool</type>
+        <property>/engines/engine[0]/running</property>
+    </signal>
+	<signal>
+        <type>bool</type>
+        <property>/engines/engine[0]/out-of-fuel</property>
+    </signal>
+	<signal>
+        <type>float</type>
+        <property>/engines/engine[0]/rpm</property>
+    </signal>
+	<signal>
+        <type>float</type>
+        <property>/engines/engine[0]/n1</property>
+    </signal>
+	<signal>
+        <type>bool</type>
+        <property>/controls/engines/engine[0]/cutoff</property>
+    </signal>
+    <signal>
+        <type>float</type>
+        <property type="string">/controls/engines/engine[0]/throttle-lever</property>
+    </signal>
+	<signal>
+        <type>bool</type>
+        <property>/controls/electric/engine/generator</property>
+    </signal>
+	<signal>
+        <type>bool</type>
+        <property>/controls/hydraulic/system/engine-pump</property>
     </signal>
 
 	<signal>
@@ -113,6 +148,11 @@
     <signal>
         <type>float</type>
         <property type="string">sim/multiplay/generic/float[4]</property>
+    </signal>
+
+    <signal>
+        <type>float</type>
+        <property>gear/gear[0]/caster-angle-deg</property>
     </signal>
     
 </PropertyList>
