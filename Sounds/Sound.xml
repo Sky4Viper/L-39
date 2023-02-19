@@ -1011,6 +1011,22 @@
             <reference-dist>0.2</reference-dist>
             <max-dist>5.0</max-dist>
         </switch>
+
+        <switch>
+            <name>switch-click4</name>
+            <mode>once</mode>
+            <path>Aircraft/L-39ZA/Sounds/canopy_open.wav</path>
+            <condition>
+                <property>/controls/sound/click-switch4</property>
+            </condition>
+            <position>
+                <x>-3.06522</x>
+                <y>-0.290071</y>
+                <z>-0.651572</z>
+            </position>
+            <reference-dist>0.2</reference-dist>
+            <max-dist>5.0</max-dist>
+        </switch>
         
     </fx>
     
