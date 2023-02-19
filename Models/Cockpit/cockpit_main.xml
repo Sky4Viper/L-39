@@ -52,6 +52,19 @@
     </offsets>
   </model>
 
+  <!-- Canopy Lock-->
+  <model>
+    <path>Aircraft/L-39ZA/Models/Cockpit/Canopy_lock/canopy_lock.xml</path>
+    <offsets>
+      <x-m> -2.97024 </x-m>
+      <y-m> -0.328515 </y-m>
+      <z-m> -0.498471 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   -8.25163 </pitch-deg>
+      <heading-deg> -1.800 </heading-deg>
+    </offsets>
+  </model>
+
   <!-- Temp Rear cockpit panel -->
   <model>
     <path>Aircraft/L-39ZA/Models/Cockpit/Front_Panel/front_panel_rear.xml</path>

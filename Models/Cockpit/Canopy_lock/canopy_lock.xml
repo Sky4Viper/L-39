@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <path>canopy-lock.ac</path>
+
+  <animation>
+    <type>pick</type>
+    <object-name>canopy_lock_lever</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/canopy/lock</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+      <command>set-tooltip</command>
+      <tooltip-id>canopy-lock-lvr</tooltip-id>
+      <label>Canopy Lock</label>
+      </binding>
+    </hovered>
+  </animation>
+
+    <animation>
+    	<type>translate</type>
+    	<object-name>canopy_lock_lever</object-name>
+    	<property>/controls/canopy/lock</property>
+        <interpolation> 
+            <entry><ind>0</ind><dep>0.0</dep></entry>
+            <entry><ind>1</ind><dep>-0.1</dep></entry>
+        </interpolation>
+    	<axis>
+      		<x>1</x>
+      		<y>0</y>
+      		<z>0</z>
+    	</axis>
+  	</animation>
+
+	<animation>
+		<type>rotate</type>
+    	<object-name>canopy_lock_lever</object-name>
+    	<property>/controls/canopy/lock</property>
+		<interpolation>
+            <entry><ind>0</ind><dep>0</dep></entry>
+            <entry><ind>1</ind><dep>56</dep></entry>
+        </interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>	
+	</animation>
+
+</PropertyList>
+

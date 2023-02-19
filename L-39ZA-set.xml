@@ -658,6 +658,11 @@ History:
 				<binding>
 					<command>nasal</command>
 					<script>canopy.canopy_switch(2)</script>
+                    <condition>
+                        <not>
+                            <property>/controls/canopy/lock</property>
+                        </not>
+                    </condition>
 				</binding>
 			</key>
 
