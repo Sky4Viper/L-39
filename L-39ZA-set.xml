@@ -367,6 +367,47 @@ History:
 		</default>
 	</menubar>
 
+<!-- Help -->
+		
+		<help>
+			<key>
+				<name>c</name>
+				<desc>Toggle canopy</desc>
+			</key>
+
+			<key>
+				<name>}</name>
+				<desc>Engines start/stop</desc>
+			</key>
+			
+			<key>
+				<name>N/n</name>
+				<desc>Toggle speedbrakes</desc>
+			</key>
+			
+			<key>
+				<name>f</name>
+				<desc>Gun trigger</desc>
+			</key>
+			
+			<key>
+				<name>e</name>
+				<desc>Rockets trigger</desc>
+			</key>
+			
+			<key>
+				<name>d</name>
+				<desc>Release Bombs</desc>
+			</key>
+
+			<key>
+				<name>,/.</name>
+				<desc>Differential breaks</desc>
+			</key>
+			
+			<line>Parking brake is on</line>
+		</help>
+
 	<!-- Multiplayer -->
     
 	<multiplay>
