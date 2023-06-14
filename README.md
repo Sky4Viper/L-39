@@ -20,7 +20,7 @@ Armament includes:
 </ul>
 
 <ul>
-Other featurs: 
+Other features: 
 <li>-Clickable functional cockpit switches;</li>
 <li>-Multicoloured aerobatic smoke;</li>
 <li>-Various liveries;</li>
