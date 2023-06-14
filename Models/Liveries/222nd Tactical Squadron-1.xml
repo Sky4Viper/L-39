@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <sim>
+  <model>
+    <livery>
+      <name type="string">Czech-222nd Tactical Squadron</name>
+      <texture>Liveries/222nd Tactical Squadron-1.png</texture>
+      <shininess>
+        <refl_correction type="float">-0.4</refl_correction>
+      </shininess>
+    </livery>
+    <livery-logo>
+      <texture>Liveries/czech.png</texture>
+    </livery-logo>
+    <pilotsuit>
+      <name type="string">BlueFlightsuit</name>
+      <texture>Liveries/pilot_green.png</texture>
+    </pilotsuit>
+  </model>
+  </sim>
+
+</PropertyList>
