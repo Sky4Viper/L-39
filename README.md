@@ -19,6 +19,15 @@ Armament includes:
 <li>-R-60M air to air missiles.</li>
 </ul>
 
-# Release 0.70 (Alpha).
-<i>Tested on: FG v2020.3.17<br>
+<ul>
+Other featurs: 
+<li>-Clickable functional cockpit switches;</li>
+<li>-Multicoloured aerobatic smoke;</li>
+<li>-Various liveries;</li>
+<li>-Animated pilot models;</li>
+<li>-Rain and frost glass effects.</li>
+</ul>
+
+# Release 0.80 (Alpha).
+<i>Tested on: FG v2020.3.18<br>
 <i>FDM: yasim
