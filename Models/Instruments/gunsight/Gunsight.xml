@@ -140,6 +140,74 @@
   </animation>
 
   <animation>
+    <name>Gunsight_Pipper</name>
+    <object-name>HS_Cross</object-name>
+    
+    <object-name>HS_CCenter</object-name>
+    <object-name>HS_CDown</object-name>
+    <object-name>HS_CLDown</object-name>
+    <object-name>HS_CLeft</object-name>
+    <object-name>HS_CLUp</object-name>
+    <object-name>HS_CRDown</object-name>
+    <object-name>HS_CRight</object-name>
+    <object-name>HS_CRUp</object-name>
+    <object-name>HS_CUp</object-name>
+    <object-name>HS_CRDown</object-name>
+    <object-name>HS_CRDown</object-name>
+  </animation>
+
+  <!-- pipper depression with g-load -->
+  <animation> 
+   <type>translate</type>
+    <object-name>Gunsight_Pipper</object-name>
+    <property>accelerations/pilot-g</property>
+    <factor>-0.006</factor>
+    <min>0</min>
+    <axis> 
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+    <center>
+      <x-m>0.178236</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.171455</z-m>
+    </center>
+  </animation>
+
+  <animation> 
+   <type>translate</type>
+    <object-name>HS_Ring</object-name>
+    <property>accelerations/pilot-g</property>
+    <factor>-0.003</factor>
+    <min>0</min>
+    <axis> 
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+    <center>
+      <x-m>0.178236</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.171455</z-m>
+    </center>
+  </animation>
+
+  <!-- <animation>
+      <type>translate</type>
+      <object-name>Gunsight_Pipper</object-name>
+      <property>/controls/armament/pipperoffset</property>
+      <factor>-1.0</factor>
+      <min>0</min>
+      <max>0.06</max>
+      <axis> 
+        <x>0</x>
+        <y>0</y>
+        <z>1</z>
+      </axis>
+    </animation> -->
+
+  <animation>
     <type>rotate</type>
     <object-name>HS_Axle</object-name>
     <object-name>HS_BBox</object-name>
