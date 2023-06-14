@@ -8,7 +8,7 @@
       <name type="string">Breitling_1</name>
       <texture>Liveries/Breitling_1.png</texture>
       <shininess>
-        <refl_correction type="float">-0.4</refl_correction>
+        <refl_correction type="float">-0.3</refl_correction>
       </shininess>
     </livery>
     <livery-logo>
