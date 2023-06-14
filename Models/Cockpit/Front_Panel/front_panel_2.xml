@@ -420,6 +420,13 @@
         </script>
       </binding>
     </action>
+    <hovered>
+        <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>signal_flare_btns_w-lbl</tooltip-id>
+                <label>Signal White</label>
+        </binding>
+    </hovered>
   </animation>
 
   <animation>
@@ -437,6 +444,13 @@
         </script>
       </binding>
     </action>
+    <hovered>
+        <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>signal_flare_btns_r-lbl</tooltip-id>
+                <label>Signal Red</label>
+        </binding>
+    </hovered>
   </animation>
 
   <animation>
@@ -454,6 +468,13 @@
         </script>
       </binding>
     </action>
+    <hovered>
+        <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>signal_flare_btns_g-lbl</tooltip-id>
+                <label>Signal Green</label>
+        </binding>
+    </hovered>
   </animation>
 
   <animation>
@@ -471,6 +492,13 @@
         </script>
       </binding>
     </action>
+    <hovered>
+        <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>signal_flare_btns_y-lbl</tooltip-id>
+                <label>Signal Yellow</label>
+        </binding>
+    </hovered>
   </animation>
 
   <animation>
@@ -530,6 +558,19 @@
           <script>switchclicksound.click("switch")</script>
         </binding>
     </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>signal_flare_smoke-lbl</tooltip-id>
+                <label>Signal %s</label>
+                <property>sim/multiplay/generic/int[16]</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'FLARE', 'SMOKE'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
  </animation>
 
 
@@ -552,11 +593,17 @@
       </binding>
     </action>
     <hovered>
-      <binding>
-      <command>set-tooltip</command>
-      <tooltip-id>master-arm-sw</tooltip-id>
-      <label>Master arm</label>
-      </binding>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>master-arm-sw-lbl</tooltip-id>
+                <label>Master Arm %s</label>
+                <property>/controls/armament/master-arm</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'ON'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
     </hovered>
   </animation>
 
@@ -577,11 +624,17 @@
       </binding>
     </action>
     <hovered>
-      <binding>
-      <command>set-tooltip</command>
-      <tooltip-id>gun-sight-sw</tooltip-id>
-      <label>ASP gun sight</label>
-      </binding>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>gun-sight-sw-lbl</tooltip-id>
+                <label>ASP Sight %s</label>
+                <property>/controls/armament/gun-sight</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'ON'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
     </hovered>
   </animation>
 
@@ -602,11 +655,17 @@
       </binding>
     </action>
     <hovered>
-      <binding>
-      <command>set-tooltip</command>
-      <tooltip-id>rockets-sw</tooltip-id>
-      <label>Rockets</label>
-      </binding>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>rockets-sel-sw-lbl</tooltip-id>
+                <label>Rockets %s</label>
+                <property>/controls/armament/rockets-sel</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'ON'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
     </hovered>
   </animation>
 
@@ -627,11 +686,17 @@
       </binding>
     </action>
     <hovered>
-      <binding>
-      <command>set-tooltip</command>
-      <tooltip-id>bombs-sw</tooltip-id>
-      <label>Bombs</label>
-      </binding>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>bombs-sel-sw-lbl</tooltip-id>
+                <label>Bombs %s</label>
+                <property>/controls/armament/bombs-sel</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'ON'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
     </hovered>
   </animation>
 
@@ -652,11 +717,17 @@
       </binding>
     </action>
     <hovered>
-      <binding>
-      <command>set-tooltip</command>
-      <tooltip-id>pk3-outer-sw</tooltip-id>
-      <label>PK3 pods outer</label>
-      </binding>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>pk3-outer-sw-lbl</tooltip-id>
+                <label>PK3 Guns Outer %s</label>
+                <property>/controls/armament/pk3-outer-sel</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'ON'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
     </hovered>
   </animation>
 
@@ -677,11 +748,17 @@
       </binding>
     </action>
     <hovered>
-      <binding>
-      <command>set-tooltip</command>
-      <tooltip-id>pk3-inner-sw</tooltip-id>
-      <label>PK3 pods inner</label>
-      </binding>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>pk3-inner-sw-lbl</tooltip-id>
+                <label>PK3 Guns Inner %s</label>
+                <property>/controls/armament/pk3-inner-sel</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'ON'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
     </hovered>
   </animation>
 

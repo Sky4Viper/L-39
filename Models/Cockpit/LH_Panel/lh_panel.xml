@@ -237,6 +237,13 @@
         <value type="double">0.0</value>
       </binding>
     </action>
+    <hovered>
+        <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>flaps-retracted-lbl</tooltip-id>
+                <label>Flaps Retracted Pos</label>
+        </binding>
+    </hovered>
   </animation>
 
   <animation>
@@ -252,6 +259,13 @@
         <value type="double">0.5</value>
       </binding>
     </action>
+    <hovered>
+        <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>flaps-takeoff-lbl</tooltip-id>
+                <label>Flaps Takeoff Pos</label>
+        </binding>
+    </hovered>
   </animation>
 
   <animation>
@@ -267,6 +281,13 @@
         <value type="double">1.0</value>
       </binding>
     </action>
+    <hovered>
+        <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>flaps-landing-lbl</tooltip-id>
+                <label>Flaps Landing Pos</label>
+        </binding>
+    </hovered>
   </animation>
 
   <!--     ARK-19 (ADF) chanels select    -->

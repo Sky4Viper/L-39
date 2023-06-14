@@ -1249,6 +1249,19 @@
         <script>switchclicksound.click("switch3")</script>
       </binding>
     </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>nav-lights-lbl</tooltip-id>
+                <label>Nav Lights %s</label>
+                <property>controls/lighting/nav-lights-switch</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'ON'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
   </animation>
 
   <animation>
@@ -1267,6 +1280,19 @@
         <script>switchclicksound.click("switch3")</script>
       </binding>
     </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>beacon-switch-lbl</tooltip-id>
+                <label>Nav Lights Blink %s</label>
+                <property>controls/lighting/beacon-switch</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'ON'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
   </animation>
 
   <animation>
@@ -1285,6 +1311,19 @@
         <script>switchclicksound.click("switch3")</script>
       </binding>
     </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>battery-switch-lbl</tooltip-id>
+                <label>Battery %s</label>
+                <property>/controls/electric/battery-switch</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'ON'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
   </animation>
 
   <animation>
@@ -1303,6 +1342,19 @@
         <script>switchclicksound.click("switch3")</script>
       </binding>
     </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>generator-switch-main-lbl</tooltip-id>
+                <label>Main Generator %s</label>
+                <property>/controls/electric/generator-switch-main</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'ON'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
   </animation>
 
   <animation>
@@ -1321,6 +1373,19 @@
         <script>switchclicksound.click("switch3")</script>
       </binding>
     </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>generator-switch-aux-lbl</tooltip-id>
+                <label>Aux Generator %s</label>
+                <property>/controls/electric/generator-switch-aux</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'ON'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
   </animation>
 
   <animation>
@@ -1343,6 +1408,19 @@
         <script>switchclicksound.click("switch3")</script>
       </binding>
     </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>engine-switch-lbl</tooltip-id>
+                <label>Engine Power %s</label>
+                <property>/controls/electric/engine-switch</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'ON'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
   </animation>
 
   <animation>
@@ -1361,6 +1439,19 @@
         <script>switchclicksound.click("switch3")</script>
       </binding>
     </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>inverter-dc-switch-lbl</tooltip-id>
+                <label>Inverter DC %s</label>
+                <property>/controls/electric/inverter-dc-switch</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'ON'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
   </animation>
 
   <animation>
@@ -1379,6 +1470,19 @@
         <script>switchclicksound.click("switch3")</script>
       </binding>
     </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>inverter-ac1-switch-lbl</tooltip-id>
+                <label>Inverter AC1 %s</label>
+                <property>/controls/electric/inverter-ac1-switch</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'ON'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
   </animation>
 
   <animation>
@@ -1397,6 +1501,19 @@
         <script>switchclicksound.click("switch3")</script>
       </binding>
     </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>inverter-ac2-switch-lbl</tooltip-id>
+                <label>Inverter AC2 %s</label>
+                <property>/controls/electric/inverter-ac2-switch</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'ON'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
   </animation>
 
   <animation>
@@ -1419,6 +1536,19 @@
         <script>switchclicksound.click("switch3")</script>
       </binding>
     </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>radio-switch-lbl</tooltip-id>
+                <label>Radio %s</label>
+                <property>/controls/electric/radio-switch</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'ON'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
   </animation>
 
   <animation>
@@ -1437,6 +1567,19 @@
         <script>switchclicksound.click("switch3")</script>
       </binding>
     </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>ralt-switch-lbl</tooltip-id>
+                <label>Radio Altimeter %s</label>
+                <property>/controls/electric/ralt-switch</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'ON'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
   </animation>
 
   <animation>
@@ -1463,6 +1606,19 @@
         <script>switchclicksound.click("switch3")</script>
       </binding>
     </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>rsbn-switch-lbl</tooltip-id>
+                <label>RSBN %s</label>
+                <property>/controls/electric/rsbn-switch</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'ON'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
   </animation>
 
   <animation>
@@ -1481,6 +1637,19 @@
         <script>switchclicksound.click("switch3")</script>
       </binding>
     </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>sro-emer-switch-lbl</tooltip-id>
+                <label>SRO Emer %s</label>
+                <property>/controls/electric/sro-emer-switch</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'ON'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
   </animation>
 
   <animation>
@@ -1499,6 +1668,19 @@
         <script>switchclicksound.click("switch3")</script>
       </binding>
     </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>rsbn-emer-switch-lbl</tooltip-id>
+                <label>RSBN Emer %s</label>
+                <property>/controls/electric/rsbn-emer-switch</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'ON'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
   </animation>
 
   <animation>
@@ -1521,6 +1703,19 @@
         <script>switchclicksound.click("switch3")</script>
       </binding>
     </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>wing-tank-switch-lbl</tooltip-id>
+                <label>Wing tanks %s</label>
+                <property>/controls/electric/wing-tank-switch</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'ON'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
   </animation>
 
   <animation>
@@ -1543,6 +1738,19 @@
         <script>switchclicksound.click("switch3")</script>
       </binding>
     </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>wing-heat-switch-lbl</tooltip-id>
+                <label>Anti Ice %s</label>
+                <property>/controls/anti-ice/wing-heat</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'ON'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
   </animation>
 
   <animation>
@@ -1561,6 +1769,19 @@
         <script>switchclicksound.click("switch3")</script>
       </binding>
     </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>sdu-switch-lbl</tooltip-id>
+                <label>SDU %s</label>
+                <property>/controls/electric/sdu-switch</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'ON'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
   </animation>
 
 

@@ -20,11 +20,17 @@
       </binding>
     </action>
     <hovered>
-      <binding>
-      <command>set-tooltip</command>
-      <tooltip-id>canopy-lock-lvr</tooltip-id>
-      <label>Canopy Lock</label>
-      </binding>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>canopy-lock-lvr</tooltip-id>
+                <label>Canopy %s</label>
+                <property>/controls/canopy/lock</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['UNLOCKED', 'LOCKED'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
     </hovered>
   </animation>
 
