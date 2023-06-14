@@ -333,6 +333,205 @@
       </axis>
   </animation>
 
+  <!-- Signal Flares and smoke buttons -->
+
+  <animation>
+    <type>translate</type>
+    <object-name>signal_flare_btns_w</object-name>
+    <property>sim/multiplay/generic/int[17]</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0.000 </dep></entry>
+      <entry><ind> 1 </ind><dep> -0.0045 </dep></entry>
+      <entry><ind> 2 </ind><dep>  0.000 </dep></entry>
+      <entry><ind> 3 </ind><dep>  0.000 </dep></entry>
+      <entry><ind> 4 </ind><dep>  0.000 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>signal_flare_btns_r</object-name>
+    <property>sim/multiplay/generic/int[17]</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0.000 </dep></entry>
+      <entry><ind> 1 </ind><dep>  0.000 </dep></entry>
+      <entry><ind> 2 </ind><dep> -0.0045 </dep></entry>
+      <entry><ind> 3 </ind><dep>  0.000 </dep></entry>
+      <entry><ind> 4 </ind><dep>  0.000 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  <animation>
+    <type>translate</type>
+    <object-name>signal_flare_btns_g</object-name>
+    <property>sim/multiplay/generic/int[17]</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0.000 </dep></entry>
+      <entry><ind> 1 </ind><dep>  0.000 </dep></entry>
+      <entry><ind> 2 </ind><dep>  0.000 </dep></entry>
+      <entry><ind> 3 </ind><dep> -0.0045 </dep></entry>
+      <entry><ind> 4 </ind><dep>  0.000 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  <animation>
+    <type>translate</type>
+    <object-name>signal_flare_btns_y</object-name>
+    <property>sim/multiplay/generic/int[17]</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0.000 </dep></entry>
+      <entry><ind> 1 </ind><dep>  0.000 </dep></entry>
+      <entry><ind> 2 </ind><dep>  0.000 </dep></entry>
+      <entry><ind> 3 </ind><dep>  0.000 </dep></entry>
+      <entry><ind> 4 </ind><dep> -0.0045 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>signal_flare_btns_w</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>
+          var p = props.globals.getNode("sim/multiplay/generic/int[17]", 1);
+          p.setIntValue(1);
+        </script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>signal_flare_btns_r</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>
+          var p = props.globals.getNode("sim/multiplay/generic/int[17]", 1);
+          p.setIntValue(2);
+        </script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>signal_flare_btns_g</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>
+          var p = props.globals.getNode("sim/multiplay/generic/int[17]", 1);
+          p.setIntValue(3);
+        </script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>signal_flare_btns_y</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>
+          var p = props.globals.getNode("sim/multiplay/generic/int[17]", 1);
+          p.setIntValue(4);
+        </script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>arm_switch.007</object-name>
+    <property>sim/multiplay/generic/int[16]</property>
+   <interpolation>
+    <entry><ind>0</ind><dep>-25</dep></entry>
+    <entry><ind>1</ind><dep> 0</dep></entry>
+    <entry><ind>2</ind><dep> 25</dep></entry>
+   </interpolation>
+    <center>
+      <x-m> -3.37503 </x-m>
+      <y-m> -0.064666 </y-m>
+      <z-m> -0.789186 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+   <type>pick</type>
+   <object-name>arm_switch.007</object-name>
+   <visible>true</visible>
+   <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>sim/multiplay/generic/int[16]</property>
+        <step>1.0</step>
+        <min>0</min>
+        <max>3</max>
+        <wrap>true</wrap>
+      </binding>
+      <binding>
+          <command>nasal</command>
+          <script>switchclicksound.click("switch")</script>
+        </binding>
+    </action>
+    <action>
+      <button>1</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>sim/multiplay/generic/int[16]</property>
+        <step>-1.0</step>
+        <min>0</min>
+        <max>3</max>
+        <wrap>true</wrap>
+      </binding>
+      <binding>
+          <command>nasal</command>
+          <script>switchclicksound.click("switch")</script>
+        </binding>
+    </action>
+ </animation>
+
 
   <!-- Armament control switches -->
 

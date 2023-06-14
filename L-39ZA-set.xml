@@ -433,6 +433,8 @@ History:
 				<int n="12" alias="/controls/armament/trigger-PK3-in" />
 				<int n="13" alias="/controls/armament/trigger-FAB250-out" />
 				<int n="14" alias="/controls/armament/trigger-FAB250-in" />
+				<int n="16" type="int">0</int>
+        		<int n="17" type="int">0</int>
 				<float n="0" alias="/surface-positions/left-taileron-pos-norm"/>
 				<float n="1" alias="/surface-positions/right-taileron-pos-norm"/>
 				<float n="2" alias="/surface-positions/left-flap-pos-norm"/>

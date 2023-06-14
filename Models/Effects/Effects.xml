@@ -196,4 +196,65 @@
         </offsets>
     </model>
 
+	  <!-- Aerobtic Smoke -->
+  <model>
+    <path>Aircraft/L-39ZA/Models/Effects/Smoke/smokeW.xml</path>
+    <offsets>
+      <x-m>  3.025 </x-m>
+      <y-m> -0.641 </y-m>
+      <z-m> -0.923 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/L-39ZA/Models/Effects/Smoke/smokeR.xml</path>
+    <offsets>
+      <x-m>  3.025 </x-m>
+      <y-m> -0.641 </y-m>
+      <z-m> -0.923 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/L-39ZA/Models/Effects/Smoke/smokeG.xml</path>
+    <offsets>
+      <x-m>  3.025 </x-m>
+      <y-m> -0.641 </y-m>
+      <z-m> -0.923 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- <model>
+    <path>Aircraft/L-39ZA/Models/Effects/Smoke/smokeB.xml</path>
+    <offsets>
+      <x-m>  3.025 </x-m>
+      <y-m> -0.641 </y-m>
+      <z-m> -0.923 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model> -->
+
+  <model>
+    <path>Aircraft/L-39ZA/Models/Effects/Smoke/smokeY.xml</path>
+    <offsets>
+      <x-m>  3.025 </x-m>
+      <y-m> -0.641 </y-m>
+      <z-m> -0.923 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
 </PropertyList>
