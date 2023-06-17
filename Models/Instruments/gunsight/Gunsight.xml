@@ -91,6 +91,132 @@
     </emission>
   </animation>
 
+  <animation>
+    <name>Gunsight_Pipper</name>
+    <object-name>HS_Cross</object-name>
+    <object-name>HS_Ring</object-name>
+    <object-name>HS_CCenter</object-name>
+    <object-name>HS_CDown</object-name>
+    <object-name>HS_CLDown</object-name>
+    <object-name>HS_CLeft</object-name>
+    <object-name>HS_CLUp</object-name>
+    <object-name>HS_CRDown</object-name>
+    <object-name>HS_CRight</object-name>
+    <object-name>HS_CRUp</object-name>
+    <object-name>HS_CUp</object-name>
+    <object-name>HS_CRDown</object-name>
+    <object-name>HS_CRDown</object-name>
+  </animation>
+
+  <!-- pipper depression -->
+  <animation> 
+   <type>translate</type>
+    <object-name>Gunsight_Pipper</object-name>
+    <property>controls/gunsight/gunsight-dep</property>
+    <factor>0.003</factor>
+    <min>0</min>
+    <axis> 
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+    <center>
+      <x-m>0.178236</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.171455</z-m>
+    </center>
+  </animation>
+
+  <!-- pipper depression pitch -->
+  <animation> 
+   <type>translate</type>
+    <object-name>Gunsight_Pipper</object-name>
+    <property>/orientation/pitch-deg</property>
+    <factor>0.002</factor>
+    <!-- <min>-0.01</min>
+    <max>0.01</max> -->
+    <axis> 
+      <x>0</x>
+      <y>0</y>
+      <z>-1</z>
+    </axis>
+    <center>
+      <x-m>0.178236</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.171455</z-m>
+    </center>
+    <condition>
+      <!-- <greater-than>
+        <property>/orientation/pitch-deg</property>
+        <value>-5</value>
+      </greater-than> -->
+      <greater-than>
+        <property>/orientation/pitch-deg</property>
+        <property>controls/gunsight/gunsight-dep</property>
+      </greater-than>
+      <!-- <less-than>
+          <property>/orientation/pitch-deg</property>
+          <property>controls/gunsight/gunsight-dep</property>
+      </less-than> -->
+    </condition>
+  </animation> 
+
+  <!-- pipper side slip-->
+  <animation> 
+   <type>translate</type>
+    <object-name>Gunsight_Pipper</object-name>
+    <property>/orientation/side-slip-deg</property>
+    <factor>0.002</factor>
+    <min>-0.008</min>
+    <max>0.008</max>
+    <axis> 
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.178236</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.171455</z-m>
+    </center>
+    <condition>
+      <!-- <property>/controls/electric/ralt-switch</property> -->
+      <greater-than>
+        <property>/orientation/side-slip-deg</property>
+        <value>-5</value>
+      </greater-than>
+      <less-than>
+          <property>/orientation/side-slip-deg</property>
+          <value>5</value>
+      </less-than>
+      <greater-than>
+          <property>velocities/groundspeed-kt</property>
+          <value>5</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <!-- pipper depression with g-load -->
+  <animation> 
+   <type>translate</type>
+    <object-name>Gunsight_Pipper</object-name>
+    <property>accelerations/pilot-g</property>
+    <factor>-0.006</factor>
+    <offset-m>0.006</offset-m>
+    <min>0</min>
+    <max>0.03</max>
+    <axis> 
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+    <center>
+      <x-m>0.178236</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.171455</z-m>
+    </center>
+  </animation>
+
   <!-- <animation>
     <type>scale</type>
     <object-name>HS_Cross</object-name>
@@ -128,6 +254,23 @@
   </animation>
 
   <animation>
+    <type>rotate</type>
+    <object-name>HS_Box_Dial</object-name>
+    <property>controls/gunsight/gunsight-dep</property>
+    <factor>30</factor>
+    <center>
+      <x-m>0.156636</x-m>
+      <y-m>-0.044818</y-m>
+      <z-m>0.101611</z-m>
+    </center>  
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
     <type>material</type>
     <object-name>HS_Backplate</object-name>
     <emission>
@@ -138,74 +281,6 @@
       <blue>0.9</blue>
     </emission>
   </animation>
-
-  <animation>
-    <name>Gunsight_Pipper</name>
-    <object-name>HS_Cross</object-name>
-    
-    <object-name>HS_CCenter</object-name>
-    <object-name>HS_CDown</object-name>
-    <object-name>HS_CLDown</object-name>
-    <object-name>HS_CLeft</object-name>
-    <object-name>HS_CLUp</object-name>
-    <object-name>HS_CRDown</object-name>
-    <object-name>HS_CRight</object-name>
-    <object-name>HS_CRUp</object-name>
-    <object-name>HS_CUp</object-name>
-    <object-name>HS_CRDown</object-name>
-    <object-name>HS_CRDown</object-name>
-  </animation>
-
-  <!-- pipper depression with g-load -->
-  <animation> 
-   <type>translate</type>
-    <object-name>Gunsight_Pipper</object-name>
-    <property>accelerations/pilot-g</property>
-    <factor>-0.006</factor>
-    <min>0</min>
-    <axis> 
-      <x>0</x>
-      <y>0</y>
-      <z>1</z>
-    </axis>
-    <center>
-      <x-m>0.178236</x-m>
-      <y-m>0.0</y-m>
-      <z-m>0.171455</z-m>
-    </center>
-  </animation>
-
-  <animation> 
-   <type>translate</type>
-    <object-name>HS_Ring</object-name>
-    <property>accelerations/pilot-g</property>
-    <factor>-0.003</factor>
-    <min>0</min>
-    <axis> 
-      <x>0</x>
-      <y>0</y>
-      <z>1</z>
-    </axis>
-    <center>
-      <x-m>0.178236</x-m>
-      <y-m>0.0</y-m>
-      <z-m>0.171455</z-m>
-    </center>
-  </animation>
-
-  <!-- <animation>
-      <type>translate</type>
-      <object-name>Gunsight_Pipper</object-name>
-      <property>/controls/armament/pipperoffset</property>
-      <factor>-1.0</factor>
-      <min>0</min>
-      <max>0.06</max>
-      <axis> 
-        <x>0</x>
-        <y>0</y>
-        <z>1</z>
-      </axis>
-    </animation> -->
 
   <animation>
     <type>rotate</type>
@@ -336,6 +411,47 @@
       </binding>
     </action>
   </animation>
+
+  <animation>
+  <type>knob</type>
+  <object-name>HS_Box_Dial</object-name>
+    <increase>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/gunsight/gunsight-dep</property>
+            <step>-0.1</step>
+            <min>-13.0</min>
+            <max>0.0</max>
+            <wrap>false</wrap>
+      </binding>
+      <binding>
+            <command>nasal</command>
+            <script>switchclicksound.click("adf-dial")</script>
+      </binding>
+      </increase>
+      <decrease>
+        <binding>
+          <command>property-adjust</command>
+          <property>controls/gunsight/gunsight-dep</property>
+            <step>0.1</step>
+            <min>-13.0</min>
+            <max>0.0</max>
+            <wrap>false</wrap>
+        </binding>
+        <binding>
+                <command>nasal</command>
+                <script>switchclicksound.click("adf-dial")</script>
+            </binding>
+        </decrease>
+        <hovered>
+          <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>gunsight-depression-adj</tooltip-id>
+                <label>ASP Sight Depression %2.1f</label>
+                <property>controls/gunsight/gunsight-dep</property>
+          </binding>
+        </hovered>
+    </animation>
 
   <animation>
     <type>rotate</type>

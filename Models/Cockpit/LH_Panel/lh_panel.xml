@@ -543,7 +543,9 @@
       <binding>
           <command>set-tooltip</command>
           <tooltip-id>engine-throttle-adj</tooltip-id>
-          <label>Throttle</label>
+          <label>Throttle %4.2f</label>
+          <property>controls/engines/engine[0]/throttle</property>
+          <factor>10.0</factor>
       </binding>
     </hovered>
 </animation>

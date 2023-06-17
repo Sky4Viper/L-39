@@ -741,6 +741,44 @@
 
 	<animation>
     	<type>translate</type>
+    	<object-name>seat</object-name>
+		<!-- <object-name>Pilot</object-name> -->
+
+    	<offset-m>-0.11</offset-m>
+
+    	<axis>
+      		<x>0</x>
+      		<y>0</y>
+      		<z>1</z>
+    	</axis>
+  	</animation>
+
+	<animation>
+    	<type>translate</type>
+    	<object-name>seat</object-name>
+
+    	<offset-m>0.02</offset-m>
+
+    	<axis>
+      		<x>0</x>
+      		<y>1</y>
+      		<z>0</z>
+    	</axis>
+  	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>nav_light_red</object-name>
+		<offset-m>4.45</offset-m>
+		<axis>
+			<x>-0.788</x>
+			<y>-4.268</y>
+			<z>-0.666</z>
+		</axis>
+	</animation>
+
+	<animation>
+    	<type>translate</type>
 		<object-name>nose_wheel.003</object-name>
     	<property>gear/gear[0]/compression-norm</property>
     	<factor>0.2</factor>

@@ -994,7 +994,8 @@
           <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>instruments-actemp-adj</tooltip-id>
-                <label>Airconditioning temp</label>
+                <label>Airconditioning temp %2.0f</label>
+                <property>controls/ventilation/airconditioning-temperature</property>
           </binding>
         </hovered>
     </animation>
@@ -1037,12 +1038,24 @@
                 <command>nasal</command>
                 <script>switchclicksound.click("adf-dial")</script>
             </binding>
+            <binding>
+                <command>property-assign</command>
+                <property>instrumentation/adf[0]/frequencies/selected-khz</property>
+                <property>instrumentation/adf[0]/frequencies/standby-khz</property>
+                <condition>
+                  <equals>
+                    <property>l-39za/switches/adf_lr</property>
+                    <value>0</value>
+                  </equals>
+                </condition>
+            </binding>
         </action>
         <hovered>
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>adf-kHz</tooltip-id>
-                <label>Adjust ADF frequency by 1 kHz</label>
+                <label>Adjust ADF frequency by 1 kHz %4.1f</label>
+                <property>/instrumentation/adf[0]/frequencies/standby-khz</property>
             </binding>
         </hovered>
     </animation>
@@ -1085,12 +1098,24 @@
                 <command>nasal</command>
                 <script>switchclicksound.click("adf-dial")</script>
             </binding>
+            <binding>
+                <command>property-assign</command>
+                <property>instrumentation/adf[0]/frequencies/selected-khz</property>
+                <property>instrumentation/adf[0]/frequencies/standby-khz</property>
+                <condition>
+                  <equals>
+                    <property>l-39za/switches/adf_lr</property>
+                    <value>0</value>
+                  </equals>
+                </condition>
+            </binding>
         </action>
         <hovered>
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>adf-100kHz</tooltip-id>
-                <label>Adjust ADF frequency by 100 kHz</label>
+                <label>Adjust ADF frequency by 100 kHz %4.1f</label>
+                <property>/instrumentation/adf[0]/frequencies/standby-khz</property>
             </binding>
         </hovered>
     </animation>
@@ -1135,12 +1160,24 @@
                 <command>nasal</command>
                 <script>switchclicksound.click("adf-dial")</script>
             </binding>
+            <binding>
+                <command>property-assign</command>
+                <property>instrumentation/adf[0]/frequencies/selected-khz</property>
+                <property>instrumentation/adf[1]/frequencies/standby-khz</property>
+                <condition>
+                  <equals>
+                    <property>l-39za/switches/adf_lr</property>
+                    <value>1</value>
+                  </equals>
+                </condition>
+            </binding>
         </action>
         <hovered>
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>adf-kHz</tooltip-id>
-                <label>Adjust ADF frequency by 1 kHz</label>
+                <label>Adjust ADF frequency by 1 kHz %4.1f</label>
+                <property>/instrumentation/adf[1]/frequencies/standby-khz</property>
             </binding>
         </hovered>
     </animation>
@@ -1183,12 +1220,24 @@
                 <command>nasal</command>
                 <script>switchclicksound.click("adf-dial")</script>
             </binding>
+            <binding>
+                <command>property-assign</command>
+                <property>instrumentation/adf[0]/frequencies/selected-khz</property>
+                <property>instrumentation/adf[1]/frequencies/standby-khz</property>
+                <condition>
+                  <equals>
+                    <property>l-39za/switches/adf_lr</property>
+                    <value>1</value>
+                  </equals>
+                </condition>
+            </binding>
         </action>
         <hovered>
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>adf-100kHz</tooltip-id>
-                <label>Adjust ADF frequency by 100 kHz</label>
+                <label>Adjust ADF frequency by 100 kHz %4.1f</label>
+                <property>/instrumentation/adf[1]/frequencies/standby-khz</property>
             </binding>
         </hovered>
     </animation>
