@@ -319,6 +319,13 @@ History:
 					</binding>
 				</item>
 				<item>
+					<label>Kneepad</label>
+					<binding>
+						<command>nasal</command>
+				 		<script>CanvasKneepadDlg.showKneepadDlg()</script>
+					</binding>
+				</item>
+				<item>
 					<label>Reload GSh-23L cannons</label>
 					<binding>
 						<command>nasal</command>
@@ -980,6 +987,9 @@ History:
 	<CanvasPylonsDlg>
 			<file>Aircraft/L-39ZA/Nasal/canvas-pylons-cfg.nas</file>
 	</CanvasPylonsDlg>
+	<CanvasKneepadDlg>
+			<file>Aircraft/L-39ZA/Nasal/kneepad.nas</file>
+	</CanvasKneepadDlg>
 	<automation>
 		<file>Aircraft/L-39ZA/Nasal/automation.nas</file>
 	</automation>
