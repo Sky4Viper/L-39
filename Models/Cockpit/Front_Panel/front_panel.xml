@@ -822,6 +822,7 @@
       <object-name>arms_light.001</object-name>
       <condition>
         <property>/controls/electric/battery-switch</property>
+        <property>/controls/armament/master-arm</property>
         <greater-than>
             <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
             <value>170</value>

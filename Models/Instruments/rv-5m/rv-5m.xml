@@ -150,6 +150,8 @@
    <entry><ind>656.2</ind><dep> 180</dep></entry>
    <!-- 700 m -->
    <entry><ind>2296.7</ind><dep>300</dep></entry>
+   <!-- 750 m -->
+   <entry><ind>2460.75</ind><dep>312</dep></entry>
   </interpolation>
   <axis>
    <x>-1</x>
@@ -243,7 +245,7 @@
               <property>controls/instrumentation/danger-altitude-ft</property>
               <step>32.81</step>
               <min>0</min>
-              <max>2296.7</max>
+              <max>2460.75</max>
               <wrap>0</wrap>
           </binding>
           <binding>
@@ -257,7 +259,7 @@
               <property>controls/instrumentation/danger-altitude-ft</property>
               <step>-32.81</step>
               <min>0</min>
-              <max>2296.7</max>
+              <max>2460.75</max>
               <wrap>0</wrap>
           </binding>
           <binding>

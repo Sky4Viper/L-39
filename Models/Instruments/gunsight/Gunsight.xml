@@ -108,7 +108,7 @@
     <object-name>HS_CRDown</object-name>
   </animation>
 
-  <!-- pipper depression -->
+  <!-- pipper depression 
   <animation> 
    <type>translate</type>
     <object-name>Gunsight_Pipper</object-name>
@@ -125,39 +125,48 @@
       <y-m>0.0</y-m>
       <z-m>0.171455</z-m>
     </center>
+  </animation> -->
+
+  <animation> 
+   <type>rotate</type>
+    <object-name>Gunsight_Pipper</object-name>
+    <property>controls/gunsight/gunsight-dep</property>
+    <factor>0.05</factor>
+    <min>0</min>
+    <max>13</max>
+    <axis> 
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>-2.79</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.1778</z-m>
+    </center>
   </animation>
 
   <!-- pipper depression pitch -->
   <animation> 
-   <type>translate</type>
+   <type>rotate</type>
     <object-name>Gunsight_Pipper</object-name>
     <property>/orientation/pitch-deg</property>
-    <factor>0.002</factor>
-    <!-- <min>-0.01</min>
-    <max>0.01</max> -->
+    <factor>-0.05</factor>
     <axis> 
       <x>0</x>
-      <y>0</y>
-      <z>-1</z>
+      <y>-1</y>
+      <z>0</z>
     </axis>
     <center>
-      <x-m>0.178236</x-m>
+      <x-m>-2.79</x-m>
       <y-m>0.0</y-m>
-      <z-m>0.171455</z-m>
+      <z-m>0.1778</z-m>
     </center>
     <condition>
-      <!-- <greater-than>
-        <property>/orientation/pitch-deg</property>
-        <value>-5</value>
-      </greater-than> -->
       <greater-than>
         <property>/orientation/pitch-deg</property>
         <property>controls/gunsight/gunsight-dep</property>
       </greater-than>
-      <!-- <less-than>
-          <property>/orientation/pitch-deg</property>
-          <property>controls/gunsight/gunsight-dep</property>
-      </less-than> -->
     </condition>
   </animation> 
 
