@@ -612,28 +612,54 @@
       <condition>
         <property>/controls/electric/battery-switch</property>
         <or>
-        <equals>
-			<property>/controls/armament/rocketsLeft</property>
-			<value>0</value>
-		</equals>
-        <and>
-        <equals>
-			<property>sim/weight[0]/payload-int</property>
-			<value>0</value>
-		</equals>
-        <equals>
-			<property>sim/weight[1]/payload-int</property>
-			<value>0</value>
-		</equals>
-        <equals>
-			<property>sim/weight[2]/payload-int</property>
-			<value>0</value>
-		</equals>
-        <equals>
-			<property>sim/weight[3]/payload-int</property>
-			<value>0</value>
-		</equals>
-        </and>
+          <and>
+            <equals>
+			        <property>controls/armament/pylon-outer-sel</property>
+			        <value>1</value>
+		        </equals>
+            <equals>
+			        <property>/controls/armament/rocketsLeft1</property>
+			        <value>0</value>
+		        </equals>
+          </and>
+          <and>
+            <equals>
+			        <property>controls/armament/pylon-inner-sel</property>
+			        <value>1</value>
+		        </equals>
+            <equals>
+			        <property>/controls/armament/rocketsLeft2</property>
+			        <value>0</value>
+		        </equals>
+          </and>
+          <and>
+            <equals>
+			        <property>controls/armament/pylon-outer-sel</property>
+			        <value>1</value>
+		        </equals>
+            <equals>
+			        <property>sim/weight[0]/payload-int</property>
+			        <value>0</value>
+		        </equals>
+            <equals>
+			        <property>sim/weight[3]/payload-int</property>
+			        <value>0</value>
+		        </equals>
+          </and>
+          <and>
+            <equals>
+			        <property>controls/armament/pylon-inner-sel</property>
+			        <value>1</value>
+		        </equals>
+            <equals>
+			        <property>sim/weight[1]/payload-int</property>
+			        <value>0</value>
+		        </equals>
+            <equals>
+			        <property>sim/weight[2]/payload-int</property>
+			        <value>0</value>
+		        </equals>
+          </and>
         </or>
       </condition>
     </animation>
