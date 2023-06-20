@@ -1,12 +1,9 @@
 
 props.globals.initNode("/sim/is-MP-Aircraft", 0, "BOOL");
 
-#GSh-23 cannon trigger
-
 #initialize triggers
 props.globals.initNode("/controls/armament/pickle", 0, "BOOL");
 setprop("/controls/armament/pickle", 0);
-
 
 props.globals.initNode("/controls/armament/trigger-S-5-L", 0, "BOOL");
 props.globals.initNode("/controls/armament/trigger-S-5-R", 0, "BOOL");
@@ -15,12 +12,22 @@ props.globals.initNode("/sim/multiplay/generic/int[9]", 0, "INT");
 props.globals.initNode("/sim/multiplay/generic/int[10]", 0, "INT");
 
 #ammo counter
-props.globals.initNode("/controls/armament/rocketsLeft", 16, "INT");
-props.globals.initNode("/controls/armament/rocketsCount", 16, "DOUBLE");
+props.globals.initNode("/controls/armament/rocketsLeft1", 16, "INT");
+props.globals.initNode("/controls/armament/rocketsCount1", 16, "DOUBLE");
+
+props.globals.initNode("/controls/armament/rocketsLeft2", 16, "INT");
+props.globals.initNode("/controls/armament/rocketsCount2", 16, "DOUBLE");
+
+
 var reload = func {
 	if( getprop("/gear/gear[0]/wow") and getprop("/gear/gear[1]/wow") and getprop("/gear/gear[2]/wow") and (getprop("/velocities/groundspeed-kt") < 2) ) {
-		setprop("/controls/armament/rocketsLeft", 16);
-		setprop("/controls/armament/rocketsCount", 16);
+
+		setprop("/controls/armament/rocketsLeft1", 16);
+		setprop("/controls/armament/rocketsCount1", 16);
+
+		setprop("/controls/armament/rocketsLeft2", 16);
+		setprop("/controls/armament/rocketsCount2", 16);
+
 		screen.log.write("S-5 rockets reloaded (16 rockets per pod)", 1, 0.6, 0.1);
 	}
 	else {
@@ -30,59 +37,110 @@ var reload = func {
 
 #A resource friendly way of ammo counting: Instead of counting every bullet, I set an interpolate on float variant of ammo counter. But I need a timer to cut off fire when out of ammo. 
 
-var outOfAmmo = maketimer(1.0, 
+var outOfAmmo1 = maketimer(1.0, 
 	func { 
 		#print("Out of rockets! ");
-		screen.log.write("UB-16 out of rockets! ", 1, 0.6, 0.1);
+		screen.log.write("Outer UB-16 out of rockets! ", 1, 0.6, 0.1);
 		setprop("/controls/armament/trigger-S-5-L", 0);
-		setprop("/controls/armament/trigger-S-5-R", 0);
         setprop("/sim/multiplay/generic/int[9]", 0);
-        setprop("/sim/multiplay/generic/int[10]", 0);
-		setprop("/controls/armament/rocketsCount", 0);
-		setprop("/controls/armament/rocketsLeft", 0);
+		setprop("/controls/armament/rocketsCount1", 0);
+		setprop("/controls/armament/rocketsLeft1", 0);
 	}
 );
-outOfAmmo.singleShot = 1;
+outOfAmmo1.singleShot = 1;
+
+var outOfAmmo2 = maketimer(1.0, 
+	func { 
+		#print("Out of rockets! ");
+		screen.log.write("Inner UB-16 out of rockets! ", 1, 0.6, 0.1);
+		setprop("/controls/armament/trigger-S-5-R", 0);
+        setprop("/sim/multiplay/generic/int[10]", 0);
+		setprop("/controls/armament/rocketsCount2", 0);
+		setprop("/controls/armament/rocketsLeft2", 0);
+	}
+);
+outOfAmmo2.singleShot = 1;
 
 #trigger control with ammo counting
 var triggerControl = func {
 	triggerState = getprop("controls/armament/pickle");
     MasterArm = getprop("controls/armament/master-arm");
     RocketsON = getprop("controls/armament/rockets-sel");
-	if(triggerState and MasterArm and RocketsON and getprop("/controls/armament/rocketsLeft") > 0) {
+
+	if(triggerState and MasterArm and RocketsON) {
 		var mounted1L = (getprop("sim/weight[0]/selected") == "UB-16 rockets pod");
 		var mounted2L = (getprop("sim/weight[1]/selected") == "UB-16 rockets pod");
+		var PylonsOuter_ON = (getprop("controls/armament/pylon-outer-sel") == 1);
+		var PylonsInner_ON = (getprop("controls/armament/pylon-inner-sel") == 1);
 		
 		if(mounted1L or mounted2L) {
-			var fireTime = 0.75; #continuous fire for 0.15s intervals
-			if(mounted1L) {
+			var fireTime1 = 0.75; #continuous fire for 0.15s intervals
+			var fireTime2 = 0.75; #continuous fire for 0.15s intervals
+			if(PylonsOuter_ON and PylonsInner_ON and getprop("/controls/armament/rocketsLeft1") > 0 and getprop("/controls/armament/rocketsLeft2") > 0) {
 				setprop("/controls/armament/trigger-S-5-L", 1);
-			}
-			if(mounted2L) {
 				setprop("/controls/armament/trigger-S-5-R", 1);
+
+			    var rocketsLeft1 = getprop("/controls/armament/rocketsLeft1");
+			    var rocketsLeft2 = getprop("/controls/armament/rocketsLeft2");
+
+			    setprop("/controls/armament/rocketsCount1", rocketsLeft1);
+			    interpolate("/controls/armament/rocketsCount1", 0,
+				fireTime1*(rocketsLeft1/16)); 
+
+			    setprop("/controls/armament/rocketsCount2", rocketsLeft2);
+			    interpolate("/controls/armament/rocketsCount2", 0,
+				fireTime2*(rocketsLeft2/16));
+
+			    outOfAmmo1.restart(fireTime1*(rocketsLeft1/16)); 
+			    outOfAmmo2.restart(fireTime2*(rocketsLeft2/16));
 			}
-			var rocketsLeft = getprop("/controls/armament/rocketsLeft");
-			setprop("/controls/armament/rocketsCount", rocketsLeft);
-			interpolate("/controls/armament/rocketsCount", 0, 
-				fireTime*(rocketsLeft/16));
-			outOfAmmo.restart(fireTime*(rocketsLeft/16));
+
+			if(mounted1L and PylonsOuter_ON and getprop("/controls/armament/rocketsLeft1") > 0) {
+				setprop("/controls/armament/trigger-S-5-L", 1);
+			    var rocketsLeft1 = getprop("/controls/armament/rocketsLeft1");
+			    setprop("/controls/armament/rocketsCount1", rocketsLeft1);
+			    interpolate("/controls/armament/rocketsCount1", 0, 
+				fireTime1*(rocketsLeft1/16));
+			    outOfAmmo1.restart(fireTime1*(rocketsLeft1/16));
+			}
+
+			if(mounted2L and PylonsInner_ON and getprop("/controls/armament/rocketsLeft2") > 0) {
+				setprop("/controls/armament/trigger-S-5-R", 1);
+			    var rocketsLeft2 = getprop("/controls/armament/rocketsLeft2");
+			    setprop("/controls/armament/rocketsCount2", rocketsLeft2);
+			    interpolate("/controls/armament/rocketsCount2", 0, 
+				fireTime2*(rocketsLeft2/16));
+			    outOfAmmo2.restart(fireTime2*(rocketsLeft2/16));
+
+			}
+
 		}
 	}
 	else {
-		setprop("/controls/armament/trigger-S-5-L", 0);
-		setprop("/controls/armament/trigger-S-5-R", 0);
+		    setprop("/controls/armament/trigger-S-5-L", 0);
+		    setprop("/controls/armament/trigger-S-5-R", 0);
         	setprop("/sim/multiplay/generic/int[9]", 0);
         	setprop("/sim/multiplay/generic/int[10]", 0);
 		
-		setprop("/controls/armament/rocketsLeft", 
-			getprop("/controls/armament/rocketsCount"));#gets truncated
-		interpolate("/controls/armament/rocketsCount", 
-			getprop("/controls/armament/rocketsLeft"), 0);
-		outOfAmmo.stop();
-		#ammo count report on trigger release
-		if(getprop("/controls/armament/report-ammo"))
-			#screen.log.write("S-5 rockets left: " ~ getprop("/controls/armament/rocketsLeft") ~ ((getprop("/sim/weight[2]/payload-int") == 2 and  getprop("/sim/weight[6]/payload-int") == 2)?" x2":""), 1, 0.6, 0.1);
-			screen.log.write("S-5 rockets left: " ~ getprop("/controls/armament/rocketsLeft"), 1, 0.6, 0.1);
+		    setprop("/controls/armament/rocketsLeft1", 
+			getprop("/controls/armament/rocketsCount1"));#gets truncated
+		    interpolate("/controls/armament/rocketsCount1", 
+			getprop("/controls/armament/rocketsLeft1"), 0);
+
+            outOfAmmo1.stop();
+
+		    setprop("/controls/armament/rocketsLeft2", 
+			getprop("/controls/armament/rocketsCount2"));#gets truncated
+		    interpolate("/controls/armament/rocketsCount2", 
+			getprop("/controls/armament/rocketsLeft2"), 0);
+
+		    outOfAmmo2.stop();
+
+		    #ammo count report on trigger release
+		    if(getprop("/controls/armament/report-ammo")) {
+			screen.log.write("S-5 rockets Outer left: " ~ getprop("/controls/armament/rocketsLeft1"), 1, 0.6, 0.1);
+			screen.log.write("S-5 rockets Inner left: " ~ getprop("/controls/armament/rocketsLeft2"), 1, 0.6, 0.1);
+        }
 	}
 }
 

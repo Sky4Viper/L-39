@@ -257,8 +257,8 @@ btn_P1_UB16.listen("clicked", func {
 		setprop("/consumables/fuel/tank[3]/level-gal_us", 0.0);
 		setprop("sim/weight[0]/selected","UB-16 rockets pod");
 		setprop("sim/weight[0]/weight-lb",304);
-		setprop("/controls/armament/rocketsLeft", 16);
-		setprop("/controls/armament/rocketsCount", 16);
+		setprop("/controls/armament/rocketsLeft1", 16);
+		setprop("/controls/armament/rocketsCount1", 16);
 		pylons_update();
         }
         else {
@@ -428,8 +428,8 @@ btn_P2_UB16.listen("clicked", func {
 		setprop("/consumables/fuel/tank[4]/level-gal_us", 0.0);
 		setprop("sim/weight[1]/selected","UB-16 rockets pod");
 		setprop("sim/weight[1]/weight-lb",304);
-		setprop("/controls/armament/rocketsLeft", 16);
-		setprop("/controls/armament/rocketsCount", 16);
+		setprop("/controls/armament/rocketsLeft2", 16);
+		setprop("/controls/armament/rocketsCount2", 16);
 		pylons_update();
         }
         else {
@@ -597,8 +597,8 @@ btn_P3_UB16.listen("clicked", func {
 		setprop("/consumables/fuel/tank[5]/level-gal_us", 0.0);
 		setprop("sim/weight[2]/selected","UB-16 rockets pod");
 		setprop("sim/weight[2]/weight-lb",304);
-		setprop("/controls/armament/rocketsLeft", 16);
-		setprop("/controls/armament/rocketsCount", 16);
+		setprop("/controls/armament/rocketsLeft2", 16);
+		setprop("/controls/armament/rocketsCount2", 16);
 		pylons_update();
         }
         else {
@@ -766,8 +766,8 @@ btn_P4_UB16.listen("clicked", func {
 		setprop("/consumables/fuel/tank[6]/level-gal_us", 0.0);
 		setprop("sim/weight[3]/selected","UB-16 rockets pod");
 		setprop("sim/weight[3]/weight-lb",304);
-		setprop("/controls/armament/rocketsLeft", 16);
-		setprop("/controls/armament/rocketsCount", 16);
+		setprop("/controls/armament/rocketsLeft1", 16);
+		setprop("/controls/armament/rocketsCount1", 16);
 		pylons_update();
         }
         else {

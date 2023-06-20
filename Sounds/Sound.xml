@@ -816,19 +816,27 @@
 
         <!-- Bomb release -->
 		
-		<bomb>
-			<name>Bomb_on_hardpoints1234</name>
+		<bomb14>
+			<name>Bomb_on_hardpoints14</name>
 			<mode>once</mode>
 			
 			<condition>
-				<or>
 					<property>/sim/multiplay/generic/int[13]</property>
-					<property>/sim/multiplay/generic/int[14]</property>
-				</or>
 			</condition>
 				
 			<path>Aircraft/L-39ZA/Sounds/bomb.wav</path>
-		</bomb>
+		</bomb14>
+
+        <bomb23>
+			<name>Bomb_on_hardpoints23</name>
+			<mode>once</mode>
+			
+			<condition>
+					<property>/sim/multiplay/generic/int[14]</property>
+			</condition>
+				
+			<path>Aircraft/L-39ZA/Sounds/bomb.wav</path>
+		</bomb23>
         
         <low-fuel>
             <name>low-fuel</name>

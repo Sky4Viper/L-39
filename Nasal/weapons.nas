@@ -9,8 +9,6 @@ stop_Rocket = func {
 
 var flash_trigger1 = props.globals.getNode("controls/armament/pickle", 0);
 
-
-
 # for Gun
 fire_MG = func {
 	            setprop("/controls/armament/trigger", 1);
@@ -21,8 +19,6 @@ stop_MG = func {
 		   }
 
 var flash_trigger = props.globals.getNode("controls/armament/trigger", 0);
-
-
 
 # for Flares 
 fire_FL = func {
@@ -37,15 +33,20 @@ var flash_trigger2 = props.globals.getNode("controls/armament/trigger2", 0);
 
 
 
-# for Bombs
+# for Combine Bombs or Rockets release
 
-drop_Bomb = func {
+Pickle = func {
 				var FAB250mounted14 = (getprop("sim/weight[0]/selected") == "FAB-250 bomb");
 				var FAB250mounted23 = (getprop("sim/weight[1]/selected") == "FAB-250 bomb");
+				var S5mounted14 = (getprop("sim/weight[0]/selected") == "UB-16 rockets pod");
+				var S5mounted23 = (getprop("sim/weight[1]/selected") == "UB-16 rockets pod");
+				var Pylons14_ON = (getprop("controls/armament/pylon-outer-sel") == 1);
+				var Pylons23_ON = (getprop("controls/armament/pylon-inner-sel") == 1);
                 MasterArm = getprop("controls/armament/master-arm");
                 BombsON = getprop("controls/armament/bombs-sel");
+                S5RocketsON = getprop("controls/armament/rockets-sel");
 				if(MasterArm and BombsON and (FAB250mounted14 or FAB250mounted23)) {
-				if(FAB250mounted14) {
+				if(FAB250mounted14 and Pylons14_ON) {
 					#setprop("/sim/multiplay/generic/int[13]", 1);
 					#setprop("/sim/weight[0]/selected", "none");
 					#setprop("/sim/weight[3]/selected", "none");
@@ -54,7 +55,7 @@ drop_Bomb = func {
 					release250_1_4.singleShot = 1; # timer will only be run once
 					release250_1_4.start();
 				}
-				if(FAB250mounted23) {
+				if(FAB250mounted23 and Pylons23_ON) {
 					#setprop("/sim/multiplay/generic/int[14]", 1);
 					#setprop("/sim/weight[1]/selected", "none");
 					#setprop("/sim/weight[2]/selected", "none");
@@ -64,13 +65,18 @@ drop_Bomb = func {
 					release250_2_3.start();
 				}
 				}
+				if(MasterArm and S5RocketsON and (S5mounted14 or S5mounted23)) {
+                    setprop("/controls/armament/pickle", 1);
+				}
 		   }
 
-stop_Bomb = func {
+stop_Pickle = func {
 			setprop("/sim/multiplay/generic/int[13]", 0);
-			setprop("/sim/multiplay/generic/int[14]", 0); 
+			setprop("/sim/multiplay/generic/int[14]", 0);
+            setprop("/controls/armament/pickle", 0);  
 		   }
 
+var flash_trigger1 = props.globals.getNode("controls/armament/pickle", 0);
 var flash_trigger3 = props.globals.getNode("sim/multiplay/generic/int[13]", 0);
 var flash_trigger4 = props.globals.getNode("sim/multiplay/generic/int[14]", 0);
 

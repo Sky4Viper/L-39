@@ -266,7 +266,7 @@
     <type>rotate</type>
     <object-name>HS_Box_Dial</object-name>
     <property>controls/gunsight/gunsight-dep</property>
-    <factor>30</factor>
+    <factor>14.8</factor>
     <center>
       <x-m>0.156636</x-m>
       <y-m>-0.044818</y-m>
@@ -429,7 +429,7 @@
         <command>property-adjust</command>
         <property>controls/gunsight/gunsight-dep</property>
             <step>-0.1</step>
-            <min>-13.0</min>
+            <min>-20.0</min>
             <max>0.0</max>
             <wrap>false</wrap>
       </binding>
@@ -443,7 +443,7 @@
           <command>property-adjust</command>
           <property>controls/gunsight/gunsight-dep</property>
             <step>0.1</step>
-            <min>-13.0</min>
+            <min>-20.0</min>
             <max>0.0</max>
             <wrap>false</wrap>
         </binding>

@@ -397,20 +397,31 @@ History:
 				<desc>Gun trigger</desc>
 			</key>
 			
-			<key>
+			<!-- <key>
 				<name>e</name>
 				<desc>Rockets trigger</desc>
-			</key>
+			</key> -->
 			
 			<key>
 				<name>d</name>
-				<desc>Release Bombs</desc>
+				<desc>Weapon Release</desc>
 			</key>
 
 			<key>
 				<name>,/.</name>
 				<desc>Differential breaks</desc>
 			</key>
+
+			<key>
+				<name>&lt;</name>
+				<desc>Select Outer Pylons</desc>
+			</key>
+
+			<key>
+				<name>&gt;</name>
+				<desc>Select Inner Pylons</desc>
+			</key>
+
 			
 			<line>Parking brake is on</line>
 		</help>
@@ -570,6 +581,8 @@ History:
 			<trigger>0</trigger>
 			<trigger1>0</trigger1>
 			<trigger2>0</trigger2>
+			<pylon-outer-sel type="bool">false</pylon-outer-sel>
+			<pylon-inner-sel type="bool">false</pylon-inner-sel>
 			<station n="0">
 				<release type="bool">false</release>
 			</station>
@@ -678,6 +691,23 @@ History:
                
 				</binding>
 			</key> -->
+
+			<key n="60">
+        		<name>&lt;</name>
+        		<desc>Select Outer Pylons</desc>
+        		<binding>
+					<command>property-toggle</command>
+					<property>controls/armament/pylon-outer-sel</property>
+				</binding>
+    		</key>
+    		<key n="62">
+        		<name>&gt;</name>
+        		<desc>Select Inner Pylons</desc>
+        		<binding>
+					<command>property-toggle</command>
+					<property>controls/armament/pylon-inner-sel</property>
+				</binding>
+    		</key>
        
 			<key n="78">
 				<name>N</name>
@@ -717,7 +747,7 @@ History:
 				</binding>
 			</key>
 
-			<key n="100">
+			<!-- <key n="100">
 				<name>d</name>
 				<desc>Drop bomb</desc>
 				<binding>
@@ -742,9 +772,24 @@ History:
         				<script>weapons.stop_Bomb()</script>
       				</binding>
 				</mod-up>				
+			</key> -->
+
+			<key n="100">
+				<name>d</name>
+				<desc>Weapon Release</desc>
+				<binding>
+      				<command>nasal</command>
+      				<script>weapons.Pickle()</script>
+				</binding>
+				<mod-up>
+					<binding>
+        				<command>nasal</command>
+        				<script>weapons.stop_Pickle()</script>
+      				</binding>
+				</mod-up>				
 			</key>
        
-			<key n="101">
+			<!-- <key n="101">
 				<name>e</name>
 				<desc>Fire rockets</desc>
 				<binding>
@@ -757,7 +802,7 @@ History:
 						<script>weapons.stop_Rocket()</script>
 					</binding>
 				</mod-up>
-			</key>
+			</key> -->
        
 			<key n="102">
 				<name>f</name>

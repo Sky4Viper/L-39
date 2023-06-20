@@ -127,6 +127,21 @@
 
     <animation> 
         <type>material</type>
+        <object-name>btn_pylons_sel_lamp.001</object-name>
+        <object-name>btn_pylons_sel_lamp.002</object-name>
+        <emission> 
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+            <red>0</red>
+            <green>1.2</green>
+            <blue>0</blue>
+        </emission>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+      </condition>
+    </animation>
+
+    <animation> 
+        <type>material</type>
         <object-name>caution_light.001</object-name>
         <object-name>caution_light.011</object-name>
         <object-name>caution_light.015</object-name>
@@ -842,18 +857,18 @@
 						<value>14.8</value>
 					</greater-than>
 					<less-than>
-            			<!-- G load > 3.0 = -93.52215-->
-                        <!-- G load > 3.5 = -109.109175-->
-                        <!-- G load > 4.0 = -124.6962-->
-						<!-- G load > 5.0 = -155.87025-->
-            			<property>/accelerations/pilot/z-accel-fps_sec</property>
-            			<value>-101.3156625</value>
-          			</less-than>
-          			<greater-than>
-            			<!-- G load < -1.0 = 31.17405-->
-            			<property>/accelerations/pilot/z-accel-fps_sec</property>
-            			<value>30.17405</value>
-          			</greater-than>
+            	<!-- G load > 3.0 = -93.52215-->
+              <!-- G load > 3.5 = -109.109175-->
+              <!-- G load > 4.0 = -124.6962-->
+						  <!-- G load > 5.0 = -155.87025-->
+              <property>/accelerations/pilot/z-accel-fps_sec</property>
+              <value>-101.3156625</value>
+          </less-than>
+          <greater-than>
+            	<!-- G load < -1.0 = 31.17405-->
+              <property>/accelerations/pilot/z-accel-fps_sec</property>
+            	<value>30.17405</value>
+          		</greater-than>
 					</or>
 					<not>
 					    <property>/gear/gear[0]/wow</property>
@@ -889,6 +904,116 @@
         </or>
       </condition>
     </animation>
+
+    <animation>
+      <type>translate</type>
+      <object-name>btn_pylons_sel.001</object-name>
+      <property>/controls/armament/pylon-outer-sel</property>
+      <interpolation>
+        <entry><ind>0</ind><dep>0</dep></entry>
+        <entry><ind>1</ind><dep>0.019</dep></entry>
+      </interpolation>
+      <axis>
+        <x>-1</x>
+        <y>0</y>
+        <z>0</z>
+      </axis>
+    </animation>
+
+    <animation>
+      <type>translate</type>
+      <object-name>btn_pylons_sel.002</object-name>
+      <property>/controls/armament/pylon-inner-sel</property>
+      <interpolation>
+        <entry><ind>0</ind><dep>0</dep></entry>
+        <entry><ind>1</ind><dep>0.019</dep></entry>
+      </interpolation>
+      <axis>
+        <x>-1</x>
+        <y>0</y>
+        <z>0</z>
+      </axis>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>btn_pylons_sel_lamp.001</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <property>/controls/armament/pylon-outer-sel</property>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>btn_pylons_sel_lamp.002</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <property>/controls/armament/pylon-inner-sel</property>
+      </condition>
+    </animation>
+
+    <animation>
+    <type>pick</type>
+    <object-name>btn_pylons_sel.001</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/armament/pylon-outer-sel</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>pylon-outer-sw-lbl</tooltip-id>
+                <label>Pylons Outer %s</label>
+                <property>/controls/armament/pylon-outer-sel</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'ON'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>btn_pylons_sel.002</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/armament/pylon-inner-sel</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>pylon-inner-sw-lbl</tooltip-id>
+                <label>Pylons Inner %s</label>
+                <property>/controls/armament/pylon-inner-sel</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'ON'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
+  </animation>
 
 </PropertyList>
 
