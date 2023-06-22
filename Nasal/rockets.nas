@@ -77,24 +77,7 @@ var Rockets_Stop = maketimer(0.1,
 );
 Rockets_Stop.singleShot = 1;
 
-var Rockets_Ripple_1 = maketimer(0.1, 
-	func { 
-		#print("2x more rockets! ");
-		screen.log.write("2 Rockets fired! ", 1, 0.6, 0.1);
-		setprop("/controls/armament/trigger-S-5-L", 1);
-		setprop("/controls/armament/trigger-S-5-R", 1);
-
-	    var rocketsLeft1 = (getprop("/controls/armament/rocketsLeft1") -2);
-		var rocketsLeft2 = (getprop("/controls/armament/rocketsLeft2") -2);
-
-	    setprop("/controls/armament/rocketsCount1", rocketsLeft1);
-		setprop("/controls/armament/rocketsCount2", rocketsLeft2);
-        Rockets_Stop.start(0.1);
-	}
-);
-Rockets_Ripple_1.singleShot = 1;
-
-var Rockets_Ripple_1_OUT = maketimer(0.15, 
+var Rockets_Ripple_1_OUT = maketimer(0.1, 
 	func { 
 		#print("2x more rockets! ");
 		setprop("/controls/armament/trigger-S-5-L", 1);
@@ -107,7 +90,7 @@ var Rockets_Ripple_1_OUT = maketimer(0.15,
 );
 Rockets_Ripple_1_OUT.singleShot = 1;
 
-var Rockets_Ripple_1_IN = maketimer(0.15, 
+var Rockets_Ripple_1_IN = maketimer(0.1, 
 	func { 
 		#print("2x more rockets! ");
 		setprop("/controls/armament/trigger-S-5-R", 1);
@@ -119,32 +102,6 @@ var Rockets_Ripple_1_IN = maketimer(0.15,
 	}
 );
 Rockets_Ripple_1_IN.singleShot = 1;
-
-#######
-
-var Rockets_Ripple_2_OUT = maketimer(0.1, 
-	func {
-		        setprop("/controls/armament/trigger-S-5-L", 1);
-		        #var rocketsLeft3 = (getprop("/controls/armament/rocketsLeft1") -2);
-		        #setprop("/controls/armament/rocketsCount1", rocketsLeft3);
-		        #screen.log.write("2 Rockets fired! ", 1, 0.6, 0.1);
-                Rockets_Ripple_1_OUT.start();
-                Rockets_Ripple_2_OUT.stop();
-	      }
-);
-Rockets_Ripple_2_OUT.singleShot = 1;
-
-var Rockets_Ripple_2_IN = maketimer(0.1, 
-	func {
-		        setprop("/controls/armament/trigger-S-5-R", 1);
-		        #var rocketsLeft4 = (getprop("/controls/armament/rocketsLeft2") -2);
-		        #setprop("/controls/armament/rocketsCount2", rocketsLeft4);
-		        #screen.log.write("2 Rockets fired! ", 1, 0.6, 0.1);
-                Rockets_Ripple_1_OUT.start();
-                Rockets_Ripple_2_IN.stop();
-	      }
-);
-Rockets_Ripple_2_IN.singleShot = 1;
 
 #trigger control with ammo counting
 var triggerControl = func {
@@ -204,25 +161,29 @@ var triggerControl = func {
 			if(PylonsOuter_ON and getprop("/controls/armament/rocketsLeft1") > 0 and RippleType ==1) {
 		        var rocketsLeft1 = (getprop("/controls/armament/rocketsLeft1") -2);
 		        setprop("/controls/armament/rocketsCount1", rocketsLeft1);
-                Rockets_Ripple_1_OUT.start();
+		        setprop("/controls/armament/trigger-S-5-L", 1);
+                Rockets_Stop.start(0.1);
 			}
 
 			if(PylonsInner_ON and getprop("/controls/armament/rocketsLeft2") > 0 and RippleType ==1) {
                 var rocketsLeft2 = (getprop("/controls/armament/rocketsLeft2") -2);
 		        setprop("/controls/armament/rocketsCount2", rocketsLeft2);
-                Rockets_Ripple_1_IN.start();
+		        setprop("/controls/armament/trigger-S-5-R", 1);
+                Rockets_Stop.start(0.1);
 			}
 
 			if(PylonsOuter_ON and getprop("/controls/armament/rocketsLeft1") > 0 and RippleType ==2) {
 		        var rocketsLeft1 = (getprop("/controls/armament/rocketsLeft1") -4);
 		        setprop("/controls/armament/rocketsCount1", rocketsLeft1);
-                Rockets_Ripple_2_OUT.start();
+		        setprop("/controls/armament/trigger-S-5-L", 1);
+                Rockets_Ripple_1_OUT.start();
 			}
 
 			if(PylonsInner_ON and getprop("/controls/armament/rocketsLeft2") > 0 and RippleType ==2) {
                 var rocketsLeft2 = (getprop("/controls/armament/rocketsLeft2") -4);
 		        setprop("/controls/armament/rocketsCount2", rocketsLeft2);
-                Rockets_Ripple_2_IN.start();
+		        setprop("/controls/armament/trigger-S-5-R", 1);
+                Rockets_Ripple_1_IN.start();
 			}
 
 		}
@@ -249,8 +210,6 @@ var triggerControl = func {
 
             Rockets_Ripple_1_OUT.stop();
             Rockets_Ripple_1_IN.stop();
-            Rockets_Ripple_2_OUT.stop();
-            Rockets_Ripple_2_IN.stop();
 
 		    #ammo count report on trigger release
 		    if(getprop("/controls/armament/report-ammo")) {
