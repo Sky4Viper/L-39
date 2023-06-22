@@ -18,11 +18,19 @@
 
     <signal>
 		<type>float</type>
-		<property>/controls/armament/rocketsLeft</property>
+		<property>/controls/armament/rocketsLeft1</property>
 	</signal>
     <signal>
 		<type>float</type>
-		<property>/controls/armament/rocketsCount</property>
+		<property>/controls/armament/rocketsCount1</property>
+	</signal>
+    <signal>
+		<type>float</type>
+		<property>/controls/armament/rocketsLeft2</property>
+	</signal>
+    <signal>
+		<type>float</type>
+		<property>/controls/armament/rocketsCount2</property>
 	</signal>
     <signal>
 		<type>float</type>

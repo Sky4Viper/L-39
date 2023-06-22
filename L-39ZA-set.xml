@@ -583,6 +583,7 @@ History:
 			<trigger2>0</trigger2>
 			<pylon-outer-sel type="bool">false</pylon-outer-sel>
 			<pylon-inner-sel type="bool">false</pylon-inner-sel>
+			<salvo-ripple type="double">0</salvo-ripple>
 			<station n="0">
 				<release type="bool">false</release>
 			</station>
