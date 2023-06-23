@@ -15,6 +15,7 @@ var path7 = "Aircraft/L-39ZA/gui/dialogs/kneepad/L-39-Kneepad-7.png";
 var path8 = "Aircraft/L-39ZA/gui/dialogs/kneepad/L-39-Kneepad-8.png";
 var path9 = "Aircraft/L-39ZA/gui/dialogs/kneepad/L-39-Kneepad-9.png";
 var pathM = "Aircraft/L-39ZA/gui/dialogs/kneepad/L-39-Kneepad-M.png";
+var pathM1 = "Aircraft/L-39ZA/gui/dialogs/kneepad/L-39-Kneepad-M1.png";
  
 # create a new window, dimensions are WIDTH x HEIGHT, using the dialog decoration (i.e. titlebar)
 var window = canvas.Window.new([width,height],"dialog").set('title',title);
@@ -56,6 +57,35 @@ g.hide();
 var zoom = 10;
 var type = "intl";
 
+var map_root = g.getCanvas().createGroup();
+var map_vbox = canvas.HBoxLayout.new();
+window.setLayout(map_vbox);
+
+
+var button_in = canvas.gui.widgets.Button.new(map_root, canvas.style, {}).setText("+").listen("clicked", func changeZoom(1));
+var button_out = canvas.gui.widgets.Button.new(map_root, canvas.style, {}).setText("-").listen("clicked", func changeZoom(-1));
+button_in.setSizeHint([32, 32]);
+button_out.setSizeHint([32, 32]);
+
+var label_zoom = canvas.gui.widgets.Label.new(map_root, canvas.style, {});
+label_zoom.setSizeHint([32, 32]);
+
+var map_button_box = canvas.VBoxLayout.new();
+map_button_box.addStretch(1);
+map_button_box.addItem(button_in);
+map_button_box.addSpacing(30);
+map_button_box.addItem(label_zoom);
+map_button_box.addItem(button_out);
+map_button_box.addSpacing(60);
+
+
+map_vbox.addSpacing(115);
+map_vbox.addItem(map_button_box);
+map_vbox.addStretch(1);
+
+map_root.hide();
+
+
 var changeZoom = func(d)
 {
   zoom = math.max(2, math.min(19, zoom + d));
@@ -73,7 +103,8 @@ var maps_base = getprop("/sim/fg-home") ~ '/cache/maps';
 # http://otile1.mqcdn.com/tiles/1.0.0/sat
 # (also see http://wiki.openstreetmap.org/wiki/Tile_usage_policy)
 var makeUrl =
-string.compileTemplate('https://maps.wikimedia.org/osm-{type}/{z}/{x}/{y}.png');
+#string.compileTemplate('https://maps.wikimedia.org/osm-{type}/{z}/{x}/{y}.png');
+string.compileTemplate('https://b.tile.openstreetmap.org/{z}/{x}/{y}.png');
   #https://maps.wikimedia.org/osm-intl/${z}/${x}/${y}.png
   var makePath =
   string.compileTemplate(maps_base ~ '/osm-{type}/{z}/{x}/{y}.png');
@@ -204,7 +235,7 @@ var updateTiles = func()
 
 ##
 # set up a timer that will invoke updateTiles at 2-second intervals
-var update_timer = maketimer(2, updateTiles);
+var update_timer = maketimer(1, updateTiles);
 # actually start the timer
 update_timer.start();
 
@@ -227,16 +258,16 @@ var hbox = canvas.HBoxLayout.new();
 window.setLayout(hbox);
 
 
-var page_button_1 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("1").listen("clicked", func {kneepad_page.setFile(path1); g.hide();});
-var page_button_2 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("2").listen("clicked", func {kneepad_page.setFile(path2); g.hide();});
-var page_button_3 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("3").listen("clicked", func {kneepad_page.setFile(path3); g.hide();});
-var page_button_4 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("4").listen("clicked", func {kneepad_page.setFile(path4); g.hide();});
-var page_button_5 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("5").listen("clicked", func {kneepad_page.setFile(path5); g.hide();});
-var page_button_6 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("6").listen("clicked", func {kneepad_page.setFile(path6); g.hide();});
-var page_button_7 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("7").listen("clicked", func {kneepad_page.setFile(path7); g.hide();});
-var page_button_8 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("8").listen("clicked", func {kneepad_page.setFile(path8); g.hide();});
-var page_button_9 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("9").listen("clicked", func {kneepad_page.setFile(path9); g.hide();});
-var page_button_M = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("M").listen("clicked", func {g.show();});
+var page_button_1 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("1").listen("clicked", func {kneepad_page.setFile(path1); g.hide(); map_root.hide();});
+var page_button_2 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("2").listen("clicked", func {kneepad_page.setFile(path2); g.hide(); map_root.hide();});
+var page_button_3 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("3").listen("clicked", func {kneepad_page.setFile(path3); g.hide(); map_root.hide();});
+var page_button_4 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("4").listen("clicked", func {kneepad_page.setFile(path4); g.hide(); map_root.hide();});
+var page_button_5 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("5").listen("clicked", func {kneepad_page.setFile(path5); g.hide(); map_root.hide();});
+var page_button_6 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("6").listen("clicked", func {kneepad_page.setFile(path6); g.hide(); map_root.hide();});
+var page_button_7 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("7").listen("clicked", func {kneepad_page.setFile(path7); g.hide(); map_root.hide();});
+var page_button_8 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("8").listen("clicked", func {kneepad_page.setFile(path8); g.hide(); map_root.hide();});
+var page_button_9 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("9").listen("clicked", func {kneepad_page.setFile(path9); g.hide(); map_root.hide();});
+var page_button_M = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("M").listen("clicked", func {kneepad_page.setFile(pathM1); g.show(); map_root.show();});
 
 page_button_1.setSizeHint([40, 32]);
 page_button_2.setSizeHint([40, 32]);
@@ -252,7 +283,7 @@ page_button_M.setSizeHint([40, 32]);
 #var label_zoom = canvas.gui.widgets.Label.new(ui_root, canvas.style, {});
 
 var button_box = canvas.VBoxLayout.new();
-button_box.addSpacing(20);
+button_box.addSpacing(23);
 button_box.addItem(page_button_1);
 button_box.addItem(page_button_2);
 button_box.addItem(page_button_3);
@@ -263,7 +294,7 @@ button_box.addItem(page_button_7);
 button_box.addItem(page_button_8);
 button_box.addItem(page_button_9);
 button_box.addItem(page_button_M);
-button_box.addSpacing(20);
+button_box.addSpacing(23);
 
 hbox.addStretch(1);
 hbox.addItem(button_box);
