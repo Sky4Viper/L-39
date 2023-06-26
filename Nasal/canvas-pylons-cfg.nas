@@ -4,6 +4,11 @@ var title = 'L-39ZA Payload:';
 setprop("/sim/menubar/visibility",0);
 setprop("/controls/armament/roundsLeft", 150);
 setprop("/controls/armament/roundsCount", 150);
+var flash_trigger1 = props.globals.getNode("controls/armament/pickle", 0);
+var flash_trigger3 = props.globals.getNode("sim/multiplay/generic/int[13]", 0);
+var flash_trigger4 = props.globals.getNode("sim/multiplay/generic/int[14]", 0);
+var flash_trigger3 = props.globals.getNode("sim/multiplay/generic/int[18]", 0);
+var flash_trigger4 = props.globals.getNode("sim/multiplay/generic/int[19]", 0);
  
 # create a new window, dimensions are WIDTH x HEIGHT, using the dialog decoration (i.e. titlebar)
 var window = canvas.Window.new([width,height],"dialog").set('title',title);

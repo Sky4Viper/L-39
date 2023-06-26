@@ -122,6 +122,10 @@
 		<object-name>canopy_frame</object-name>
 		<object-name>canopy_frame.001</object-name>
 		<object-name>canopy_frame.002</object-name>
+		<object-name>rivets.001</object-name>
+		<object-name>rivets.002</object-name>
+		<object-name>rivets.003</object-name>
+		<object-name>rivets.004</object-name>
 		<object-name>tank_left</object-name>
 		<object-name>tank_right</object-name>
 		<object-name>aileron_left</object-name>
@@ -320,6 +324,10 @@
 		<object-name>canopy</object-name>
 		<object-name>canopy.001</object-name>
 		<object-name>canopy.002</object-name>
+		<object-name>rivets.001</object-name>
+		<object-name>rivets.002</object-name>
+		<object-name>rivets.003</object-name>
+		<object-name>rivets.004</object-name>
 		<object-name>light_left_glass</object-name>
 		<object-name>light_right_glass</object-name>
 		<object-name>nav_light_glass.001</object-name>
@@ -916,6 +924,8 @@
 		<object-name>canopy-in.001</object-name>
 		<object-name>canopy_frame.001</object-name>
         <object-name>canopy_handle.001</object-name>
+		<object-name>rivets.001</object-name>
+		<object-name>rivets.002</object-name>
 		<property>/canopy/position-norm</property>
 		<factor>95</factor>
 		<axis>
@@ -934,6 +944,8 @@
 		<object-name>canopy-in.002</object-name>
 		<object-name>canopy_frame.002</object-name>
         <object-name>canopy_handle.002</object-name>
+		<object-name>rivets.003</object-name>
+		<object-name>rivets.004</object-name>
 		<property>/canopy/position-norm</property>
 		<factor>95</factor>
 		<axis>

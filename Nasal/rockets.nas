@@ -120,7 +120,7 @@ var triggerControl = func {
 			var fireTime1 = 0.75; #continuous fire for 0.15s intervals
 			var fireTime2 = 0.75; #continuous fire for 0.15s intervals
 
-			if(PylonsOuter_ON and PylonsInner_ON and getprop("/controls/armament/rocketsLeft1") > 0 and getprop("/controls/armament/rocketsLeft2") > 0  and RippleType ==0) {
+			if(mounted1L and mounted2L and PylonsOuter_ON and PylonsInner_ON and getprop("/controls/armament/rocketsLeft1") > 0 and getprop("/controls/armament/rocketsLeft2") > 0  and RippleType ==0) {
 				setprop("/controls/armament/trigger-S-5-L", 1);
 				setprop("/controls/armament/trigger-S-5-R", 1);
 
@@ -158,28 +158,28 @@ var triggerControl = func {
 
 			}
 
-			if(PylonsOuter_ON and getprop("/controls/armament/rocketsLeft1") > 0 and RippleType ==1) {
+			if(mounted1L and PylonsOuter_ON and getprop("/controls/armament/rocketsLeft1") > 0 and RippleType ==1) {
 		        var rocketsLeft1 = (getprop("/controls/armament/rocketsLeft1") -2);
 		        setprop("/controls/armament/rocketsCount1", rocketsLeft1);
 		        setprop("/controls/armament/trigger-S-5-L", 1);
                 Rockets_Stop.start(0.1);
 			}
 
-			if(PylonsInner_ON and getprop("/controls/armament/rocketsLeft2") > 0 and RippleType ==1) {
+			if(mounted2L and PylonsInner_ON and getprop("/controls/armament/rocketsLeft2") > 0 and RippleType ==1) {
                 var rocketsLeft2 = (getprop("/controls/armament/rocketsLeft2") -2);
 		        setprop("/controls/armament/rocketsCount2", rocketsLeft2);
 		        setprop("/controls/armament/trigger-S-5-R", 1);
                 Rockets_Stop.start(0.1);
 			}
 
-			if(PylonsOuter_ON and getprop("/controls/armament/rocketsLeft1") > 0 and RippleType ==2) {
+			if(mounted1L and PylonsOuter_ON and getprop("/controls/armament/rocketsLeft1") > 0 and RippleType ==2) {
 		        var rocketsLeft1 = (getprop("/controls/armament/rocketsLeft1") -4);
 		        setprop("/controls/armament/rocketsCount1", rocketsLeft1);
 		        setprop("/controls/armament/trigger-S-5-L", 1);
                 Rockets_Ripple_1_OUT.start();
 			}
 
-			if(PylonsInner_ON and getprop("/controls/armament/rocketsLeft2") > 0 and RippleType ==2) {
+			if(mounted2L and PylonsInner_ON and getprop("/controls/armament/rocketsLeft2") > 0 and RippleType ==2) {
                 var rocketsLeft2 = (getprop("/controls/armament/rocketsLeft2") -4);
 		        setprop("/controls/armament/rocketsCount2", rocketsLeft2);
 		        setprop("/controls/armament/trigger-S-5-R", 1);

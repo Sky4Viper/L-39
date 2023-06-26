@@ -130,7 +130,7 @@ var release250_2_3 = maketimer(0.2, func(){
 
 ################################################################
 
-var release250_1 = maketimer(0.2, func(){
+var release250_1 = maketimer(0.3, func(){
 	setprop("/sim/multiplay/generic/int[13]", 1);
 	print("Released FAB-250 from pylon 1" );
     setprop("/sim/weight[0]/payload-int", "0");
@@ -147,7 +147,7 @@ var release250_1 = maketimer(0.2, func(){
 	#screen.log.write("Pylons 1 and 4 released! ", 1, 0.6, 0.1);
 });
 
-var release250_2 = maketimer(0.2, func(){
+var release250_2 = maketimer(0.3, func(){
 	setprop("/sim/multiplay/generic/int[14]", 1);
 	print("Released FAB-250 from pylon 2" );
     setprop("/sim/weight[1]/payload-int", "0");
@@ -164,7 +164,7 @@ var release250_2 = maketimer(0.2, func(){
 	#screen.log.write("Pylons 1 and 4 released! ", 1, 0.6, 0.1);
 });
 
-var release250_3 = maketimer(0.2, func(){
+var release250_3 = maketimer(0.3, func(){
 	setprop("/sim/multiplay/generic/int[18]", 1);
 	print("Released FAB-250 from pylon 3" );
     setprop("/sim/weight[2]/payload-int", "0");
@@ -175,7 +175,7 @@ var release250_3 = maketimer(0.2, func(){
 	#screen.log.write("Pylons 1 and 4 released! ", 1, 0.6, 0.1);
 });
 
-var release250_4 = maketimer(0.2, func(){
+var release250_4 = maketimer(0.4, func(){
 	setprop("/sim/multiplay/generic/int[19]", 1);
 	print("Released FAB-250 from pylon 4" );
     setprop("/sim/weight[3]/payload-int", "0");

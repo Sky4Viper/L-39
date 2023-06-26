@@ -131,7 +131,7 @@
    <type>rotate</type>
     <object-name>Gunsight_Pipper</object-name>
     <property>controls/gunsight/gunsight-dep</property>
-    <factor>0.05</factor>
+    <factor>0.07</factor>
     <min>0</min>
     <max>13</max>
     <axis> 

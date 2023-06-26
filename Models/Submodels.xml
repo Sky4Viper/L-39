@@ -166,7 +166,7 @@
 		<y-offset>-7.7480</y-offset>
 		<z-offset>-4.1852</z-offset>
 		<yaw-offset>0.0</yaw-offset>
-		<pitch-offset>-3</pitch-offset>
+		<pitch-offset>-2</pitch-offset>
 		<eda>1</eda>
 		<weight>1100</weight>
 		<cd>0.3</cd>
@@ -287,7 +287,7 @@
 		<y-offset>-5.9231</y-offset>
 		<z-offset>-4.1852</z-offset>
 		<yaw-offset>0.0</yaw-offset>
-		<pitch-offset>-3</pitch-offset>
+		<pitch-offset>-2</pitch-offset>
 		<eda>1</eda>
 		<weight>1100</weight>
 		<cd>0.3</cd>
@@ -408,7 +408,7 @@
 		<y-offset>5.9231</y-offset>
 		<z-offset>-4.1852</z-offset>
 		<yaw-offset>0.0</yaw-offset>
-		<pitch-offset>-3</pitch-offset>
+		<pitch-offset>-2</pitch-offset>
 		<eda>1</eda>
 		<weight>1100</weight>
 		<cd>0.3</cd>
@@ -529,7 +529,7 @@
 		<y-offset>7.7480</y-offset>
 		<z-offset>-4.1852</z-offset>
 		<yaw-offset>0.0</yaw-offset>
-		<pitch-offset>-3</pitch-offset>
+		<pitch-offset>-2</pitch-offset>
 		<eda>1</eda>
 		<weight>1100</weight>
 		<cd>0.3</cd>

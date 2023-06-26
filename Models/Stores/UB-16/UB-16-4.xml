@@ -42,7 +42,7 @@
 
 	<model>
     	<name>S5flameL1</name>
-    	<path>Aircraft/L-39ZA/Models/Effects/S-5/Flame.xml</path>
+    	<path>Aircraft/L-39ZA/Models/Effects/S-5/Flame1.xml</path>
     	<condition>
 			<equals>
 				<property>sim/multiplay/generic/int[9]</property>
