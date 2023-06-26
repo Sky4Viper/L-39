@@ -11,8 +11,19 @@
     <object-name>gear_base</object-name>
     <object-name>landing_gear_lever</object-name>
     <object-name>landing_gear_switch</object-name>
-    <object-name>arm_switch.001</object-name>
-    <object-name>arm_switch_cover.001</object-name>
+    <object-name>arm_ctrl_switch.001</object-name>
+    <object-name>arm_ctrl_switch.002</object-name>
+    <object-name>arm_ctrl_switch.003</object-name>
+    <object-name>arm_ctrl_switch.004</object-name>
+    <object-name>arm_ctrl_switch.005</object-name>
+    <object-name>arm_ctrl_switch.006</object-name>
+    <object-name>arm_ctrl_switch.007</object-name>
+    <object-name>arm_jet_switch.001</object-name>
+    <object-name>arm_jet_switch.002</object-name>
+    <object-name>arm_jet_switch.003</object-name>
+    <object-name>arm_jet_switch.001_cover</object-name>
+    <object-name>arm_jet_switch.002_cover</object-name>
+    <object-name>arm_jet_switch.003_cover</object-name>
     <object-name>landing_gear_support</object-name>
     <emission>
       <red>0.2</red>
@@ -1004,6 +1015,27 @@
     </animation>
 
     <animation>
+      <type>rotate</type>
+      <object-name>arm_ctrl_switch.007</object-name>
+      <property>/controls/armament/bomb-mode</property>
+      <interpolation>
+        <entry><ind>0</ind><dep>-25</dep></entry>
+        <entry><ind>1</ind><dep>0</dep></entry>
+        <entry><ind>2</ind><dep>25</dep></entry>
+      </interpolation>
+      <center>
+        <x-m>-3.34297</x-m>
+        <y-m>-0.245356</y-m>
+        <z-m>-0.442816</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+    </animation>
+
+    <animation>
       <type>select</type>
       <object-name>btn_pylons_sel_lamp.001</object-name>
       <condition>
@@ -1123,11 +1155,62 @@
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>sw-salvo-ripple</tooltip-id>
-                <label>Ripple %s</label>
+                <label>Ripple: %s</label>
                 <property>/controls/armament/salvo-ripple</property>
                 <mapping>nasal</mapping>
                 <script>
                     var modes = ['SALVO', '2', '4'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
+ </animation>
+
+ <animation>
+   <type>pick</type>
+   <object-name>arm_ctrl_switch.007</object-name>
+   <visible>true</visible>
+   <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+         <property>/controls/armament/bomb-mode</property>
+        <step>1.0</step>
+        <min>0</min>
+        <max>3</max>
+        <wrap>true</wrap>
+      </binding>
+      <binding>
+          <command>nasal</command>
+          <script>switchclicksound.click("switch")</script>
+        </binding>
+    </action>
+    <action>
+      <button>1</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+         <property>/controls/armament/bomb-mode</property>
+        <step>-1.0</step>
+        <min>0</min>
+        <max>3</max>
+        <wrap>true</wrap>
+      </binding>
+      <binding>
+          <command>nasal</command>
+          <script>switchclicksound.click("switch")</script>
+        </binding>
+    </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>sw-bomb-mode</tooltip-id>
+                <label>Bomb Mode: %s</label>
+                <property>/controls/armament/bomb-mode</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['SALVO', '1', 'TRAIN'];
                     return modes[arg[0]];
                 </script>
             </binding>

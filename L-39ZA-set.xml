@@ -78,6 +78,11 @@ History:
 			<path>Previews/payload.png</path>
 		</preview>
 		<preview>
+			<type>exterior</type>
+			<splash type="bool">true</splash>
+			<path>Previews/kneepad.png</path>
+		</preview>
+		<preview>
 			<type>panel</type>
 			<splash type="bool">true</splash>
 			<path>Previews/cockpit.png</path>
@@ -449,10 +454,12 @@ History:
 				<int n="10" alias="/controls/armament/trigger-S-5-R" />
 				<int n="11" alias="/controls/armament/trigger-PK3-out" />
 				<int n="12" alias="/controls/armament/trigger-PK3-in" />
-				<int n="13" alias="/controls/armament/trigger-FAB250-out" />
-				<int n="14" alias="/controls/armament/trigger-FAB250-in" />
+				<int n="13" alias="/controls/armament/trigger-FAB250-1" />
+				<int n="14" alias="/controls/armament/trigger-FAB250-2" />
 				<int n="16" type="int">0</int>
         		<int n="17" type="int">0</int>
+				<int n="18" alias="/controls/armament/trigger-FAB250-3" />
+				<int n="19" alias="/controls/armament/trigger-FAB250-4" />
 				<float n="0" alias="/surface-positions/left-taileron-pos-norm"/>
 				<float n="1" alias="/surface-positions/right-taileron-pos-norm"/>
 				<float n="2" alias="/surface-positions/left-flap-pos-norm"/>
@@ -584,6 +591,7 @@ History:
 			<pylon-outer-sel type="bool">false</pylon-outer-sel>
 			<pylon-inner-sel type="bool">false</pylon-inner-sel>
 			<salvo-ripple type="double">0</salvo-ripple>
+			<bomb-mode type="double">0</bomb-mode>
 			<station n="0">
 				<release type="bool">false</release>
 			</station>

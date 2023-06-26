@@ -816,8 +816,8 @@
 
         <!-- Bomb release -->
 		
-		<bomb14>
-			<name>Bomb_on_hardpoints14</name>
+		<bomb1>
+			<name>Bomb_on_hardpoint1</name>
 			<mode>once</mode>
 			
 			<condition>
@@ -825,10 +825,10 @@
 			</condition>
 				
 			<path>Aircraft/L-39ZA/Sounds/bomb.wav</path>
-		</bomb14>
+		</bomb1>
 
-        <bomb23>
-			<name>Bomb_on_hardpoints23</name>
+        <bomb2>
+			<name>Bomb_on_hardpoint2</name>
 			<mode>once</mode>
 			
 			<condition>
@@ -836,7 +836,29 @@
 			</condition>
 				
 			<path>Aircraft/L-39ZA/Sounds/bomb.wav</path>
-		</bomb23>
+		</bomb2>
+
+		<bomb3>
+			<name>Bomb_on_hardpoint3</name>
+			<mode>once</mode>
+			
+			<condition>
+					<property>/sim/multiplay/generic/int[18]</property>
+			</condition>
+				
+			<path>Aircraft/L-39ZA/Sounds/bomb.wav</path>
+		</bomb3>
+
+        <bomb4>
+			<name>Bomb_on_hardpoint4</name>
+			<mode>once</mode>
+			
+			<condition>
+					<property>/sim/multiplay/generic/int[19]</property>
+			</condition>
+				
+			<path>Aircraft/L-39ZA/Sounds/bomb.wav</path>
+		</bomb4>
         
         <low-fuel>
             <name>low-fuel</name>

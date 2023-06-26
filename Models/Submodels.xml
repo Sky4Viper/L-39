@@ -398,7 +398,7 @@
 	<submodel>
 		<name>pylon-3-bomb</name>
 		<model>Aircraft/L-39ZA/Models/Stores/FAB-250/FAB-250.xml</model>
-		<trigger>sim/multiplay/generic/int[14]</trigger>
+		<trigger>sim/multiplay/generic/int[18]</trigger>
 		<!-- <trigger-once>false</trigger-once>
 		<repeat>true</repeat> -->
 		<trigger-once>true</trigger-once>
@@ -519,7 +519,7 @@
 	<submodel>
 		<name>pylon-four-bomb</name>
 		<model>Aircraft/L-39ZA/Models/Stores/FAB-250/FAB-250.xml</model>
-		<trigger>sim/multiplay/generic/int[13]</trigger>
+		<trigger>sim/multiplay/generic/int[19]</trigger>
 		<!-- <trigger-once>false</trigger-once>
 		<repeat>true</repeat> -->
 		<trigger-once>true</trigger-once>
