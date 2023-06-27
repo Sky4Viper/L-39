@@ -1053,7 +1053,103 @@
       </condition>
     </animation>
 
-    <animation>
+    <!-- Pylons jettison buttons -->
+
+	<animation>
+		<type>rotate</type>
+		<object-name>arm_jet_switch.001_cover</object-name>
+		<property>l-39za/controls/jett1swcover</property>
+		<interpolation>
+            <entry><ind> 0</ind><dep>0.0</dep></entry>
+            <entry><ind> 1</ind><dep>106.0</dep></entry>
+    </interpolation>
+		<center>
+			<x-m>-3.34296</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.48307</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+  <animation>
+		<type>rotate</type>
+		<object-name>arm_jet_switch.002_cover</object-name>
+		<property>l-39za/controls/jett2swcover</property>
+		<interpolation>
+            <entry><ind> 0</ind><dep>0.0</dep></entry>
+            <entry><ind> 1</ind><dep>106.0</dep></entry>
+    </interpolation>
+		<center>
+			<x-m>-3.34296</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.48307</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+  <animation>
+		<type>rotate</type>
+		<object-name>arm_jet_switch.003_cover</object-name>
+		<property>l-39za/controls/jett3swcover</property>
+		<interpolation>
+            <entry><ind> 0</ind><dep>0.0</dep></entry>
+            <entry><ind> 1</ind><dep>106.0</dep></entry>
+    </interpolation>
+		<center>
+			<x-m>-3.34296</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.48307</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>arm_jet_switch.002</object-name>
+      <property>/sim/multiplay/generic/int[20]</property>
+      <factor>90</factor>
+      <center>
+        <x-m>-3.34264</x-m>
+        <y-m>0</y-m>
+        <z-m>-0.50137</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>arm_jet_switch.003</object-name>
+      <property>/sim/multiplay/generic/int[21]</property>
+      <factor>90</factor>
+      <center>
+        <x-m>-3.34264</x-m>
+        <y-m>0</y-m>
+        <z-m>-0.50137</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
     <type>pick</type>
     <object-name>btn_pylons_sel.001</object-name>
     <visible>true</visible>
@@ -1216,6 +1312,116 @@
             </binding>
     </hovered>
  </animation>
+
+ <animation>
+    <type>pick</type>
+    <object-name>arm_jet_switch.001_cover</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>l-39za/controls/jett1swcover</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>arm_jet_switch.002_cover</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>l-39za/controls/jett2swcover</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>arm_jet_switch.003_cover</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>l-39za/controls/jett3swcover</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>arm_jet_switch.002</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+      				<command>nasal</command>
+      				<script>weapons.jettison_outer()</script>
+              <condition>
+                <property>l-39za/controls/jett2swcover</property>
+              </condition>
+			</binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>jett-outer-sw-lbl</tooltip-id>
+                <label>Jettison Pylons 1-4</label>
+            </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>arm_jet_switch.003</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+      				<command>nasal</command>
+      				<script>weapons.jettison_inner()</script>
+              <condition>
+                <property>l-39za/controls/jett3swcover</property>
+              </condition>
+			</binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>jett-inner-sw-lbl</tooltip-id>
+                <label>Jettison Pylons 2-3</label>
+            </binding>
+    </hovered>
+  </animation>
 
 </PropertyList>
 

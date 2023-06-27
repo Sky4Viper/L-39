@@ -16,7 +16,7 @@
     </livery-logo>
     <pilotsuit>
       <name type="string">GreyFlightsuit</name>
-      <texture>Liveries/pilot_grey.png</texture>
+      <texture>Liveries/pilot_yellow.png</texture>
     </pilotsuit>
   </model>
   </sim>

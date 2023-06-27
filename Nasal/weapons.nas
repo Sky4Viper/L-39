@@ -91,6 +91,16 @@ stop_Pickle = func {
             setprop("/controls/armament/pickle", 0);  
 		   }
 
+jettison_outer = func {
+			jettison_1_4.singleShot = 1; # timer will only be run once
+			jettison_1_4.start(); 
+		   }
+
+jettison_inner = func {
+			jettison_2_3.singleShot = 1; # timer will only be run once
+			jettison_2_3.start(); 
+		   }
+
 var flash_trigger1 = props.globals.getNode("controls/armament/pickle", 0);
 var flash_trigger3 = props.globals.getNode("sim/multiplay/generic/int[13]", 0);
 var flash_trigger4 = props.globals.getNode("sim/multiplay/generic/int[14]", 0);
@@ -187,4 +197,103 @@ var release250_4 = maketimer(0.4, func(){
 			release250_4.stop();
 		}
 	#screen.log.write("Pylons 1 and 4 released! ", 1, 0.6, 0.1);
+});
+
+var jettison_1_4 = maketimer(0.2, func(){
+	print("Jettison pylons 1 and 4" );
+	if (getprop("/sim/weight[0]/selected") != "none" or getprop("/sim/weight[3]/selected") != "none") {
+
+	setprop("/sim/multiplay/generic/int[20]", 1);
+
+	# jettison rocket pods
+	 if (getprop("/sim/weight[0]/selected") == "UB-16 rockets pod") {
+		setprop("/controls/armament/jett-1-r", 1);
+	 }
+	 if (getprop("/sim/weight[3]/selected") == "UB-16 rockets pod") {
+		setprop("/controls/armament/jett-4-r", 1); 
+	 }
+	 # jettison PK3 pods
+	 if (getprop("/sim/weight[0]/selected") == "PK-3 MG pod") {
+		setprop("/controls/armament/jett-1-p", 1);
+	 }
+	 if (getprop("/sim/weight[3]/selected") == "PK-3 MG pod") {
+		setprop("/controls/armament/jett-4-p", 1);
+	 }
+	 # jettison fuel tanks
+	 if (getprop("/sim/weight[0]/selected") == "150L fuel droptank") {
+		setprop("/controls/armament/jett-1-t", 1);
+		setprop("/consumables/fuel/tank[3]/capacity-gal_us", 0.0);
+		setprop("/consumables/fuel/tank[3]/level-gal_us", 0.0);
+	 }
+	 if (getprop("/sim/weight[3]/selected") == "150L fuel droptank") {
+		setprop("/controls/armament/jett-4-t", 1);
+		setprop("/consumables/fuel/tank[6]/capacity-gal_us", 0.0);
+		setprop("/consumables/fuel/tank[4]/level-gal_us", 0.0);
+		
+	 }
+
+	setprop("/sim/weight[0]/payload-int", "0");
+	setprop("/sim/weight[0]/selected", "none");
+	setprop("sim/weight[0]/weight-lb", 0);
+	setprop("/sim/weight[3]/payload-int", "0");
+	setprop("/sim/weight[3]/selected", "none");
+	setprop("sim/weight[3]/weight-lb", 0);
+
+	jettison_stop.singleShot = 1; # timer will only be run once
+	jettison_stop.start();
+	}
+});
+
+var jettison_2_3 = maketimer(0.2, func(){
+	print("Jettison pylons 2 and 3" );
+	if (getprop("/sim/weight[1]/selected") != "none" or getprop("/sim/weight[2]/selected") != "none") {
+	
+	setprop("/sim/multiplay/generic/int[21]", 1);
+	
+	# jettison rocket pods
+	 if (getprop("/sim/weight[1]/selected") == "UB-16 rockets pod") {
+		setprop("/controls/armament/jett-2-r", 1);
+	 }
+	 if (getprop("/sim/weight[2]/selected") == "UB-16 rockets pod") {
+		setprop("/controls/armament/jett-3-r", 1);
+	 }
+	 # jettison PK3 pods
+	 if (getprop("/sim/weight[1]/selected") == "PK-3 MG pod") {
+		setprop("/controls/armament/jett-2-p", 1);
+	 }
+	 if (getprop("/sim/weight[2]/selected") == "PK-3 MG pod") {
+		setprop("/controls/armament/jett-3-p", 1); 
+	 }
+	 # jettison fuel tanks
+	 if (getprop("/sim/weight[1]/selected") == "150L fuel droptank") {
+		setprop("/controls/armament/jett-2-t", 1);
+		setprop("/consumables/fuel/tank[4]/capacity-gal_us", 0.0);
+		setprop("/consumables/fuel/tank[4]/level-gal_us", 0.0);
+	 }
+	 if (getprop("/sim/weight[2]/selected") == "150L fuel droptank") {
+		setprop("/controls/armament/jett-3-t", 1);
+		setprop("/consumables/fuel/tank[5]/capacity-gal_us", 0.0);
+		setprop("/consumables/fuel/tank[5]/level-gal_us", 0.0);
+	 }
+
+	setprop("/sim/weight[1]/payload-int", "0");
+	setprop("/sim/weight[1]/selected", "none");
+	setprop("sim/weight[1]/weight-lb", 0);
+	setprop("/sim/weight[2]/payload-int", "0");
+	setprop("/sim/weight[2]/selected", "none");
+	setprop("sim/weight[2]/weight-lb", 0);
+	
+	jettison_stop.singleShot = 1; # timer will only be run once
+	jettison_stop.start();
+	}
+});
+
+var jettison_stop = maketimer(0.2, func(){
+	print("Jettison stop" );
+	setprop("/controls/armament/jett-1-r", 0);
+	setprop("/controls/armament/jett-2-r", 0);
+	setprop("/controls/armament/jett-3-r", 0);
+	setprop("/controls/armament/jett-4-r", 0);
+	setprop("/sim/multiplay/generic/int[20]", 0);
+	setprop("/sim/multiplay/generic/int[21]", 0);
 });

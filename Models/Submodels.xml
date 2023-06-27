@@ -177,6 +177,72 @@
 		<submodel-path>Aircraft/L-39ZA/Models/Effects/Bomb/Bomb-Submodel.xml</submodel-path>
 	</submodel>
 
+	<!-- Jettison Rockets from Pylon 1 -->
+
+	<submodel>
+    	<name>Jettison-1-R</name>
+    	<model>Aircraft/L-39ZA/Models/Stores/UB-16/UB-16-jet.xml</model>
+    	<trigger>/controls/armament/jett-1-r</trigger>
+    	<speed>0</speed>
+    	<repeat>false</repeat>
+    	<count>-1</count>
+    	<x-offset>1.2895</x-offset>
+		<y-offset>-7.7480</y-offset>
+		<z-offset>-4.1852</z-offset>
+    	<yaw-offset>0.0</yaw-offset>
+    	<pitch-offset>3.2</pitch-offset>
+    	<wind>false</wind>
+    	<eda>2.8</eda>
+    	<weight>250</weight>
+    	<cd>0.035</cd>
+    	<impact>true</impact>
+    	<impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+  	</submodel>
+
+	<!-- Jettison PK3 pod from Pylon 1 -->
+
+	<submodel>
+    	<name>Jettison-1-P</name>
+    	<model>Aircraft/L-39ZA/Models/Stores/PK-3/PK-3-jet.xml</model>
+    	<trigger>/controls/armament/jett-1-p</trigger>
+    	<speed>0</speed>
+    	<repeat>false</repeat>
+    	<count>-1</count>
+    	<x-offset>1.2895</x-offset>
+		<y-offset>-7.7480</y-offset>
+		<z-offset>-4.1852</z-offset>
+    	<yaw-offset>0.0</yaw-offset>
+    	<pitch-offset>3.2</pitch-offset>
+    	<wind>false</wind>
+    	<eda>2.8</eda>
+    	<weight>250</weight>
+    	<cd>0.035</cd>
+    	<impact>true</impact>
+    	<impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+  	</submodel>
+
+	<!-- Jettison Drop Tank from Pylon 2 -->
+
+	<submodel>
+    	<name>Jettison-1-T</name>
+    	<model>Aircraft/L-39ZA/Models/Stores/DropTank150/DropTank150.xml</model>
+    	<trigger>/controls/armament/jett-1-t</trigger>
+    	<speed>0</speed>
+    	<repeat>false</repeat>
+    	<count>-1</count>
+    	<x-offset>1.2895</x-offset>
+		<y-offset>-7.7480</y-offset>
+		<z-offset>-4.1852</z-offset>
+    	<yaw-offset>0.0</yaw-offset>
+    	<pitch-offset>3.2</pitch-offset>
+    	<wind>false</wind>
+    	<eda>2.8</eda>
+    	<weight>250</weight>
+    	<cd>0.035</cd>
+    	<impact>true</impact>
+    	<impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+  	</submodel>
+
 	<!-- Pylon-2 -->
 	
 	<submodel>
@@ -297,6 +363,72 @@
 		<impact-report>sim/ai/aircraft/impact/bomb</impact-report>
 		<submodel-path>Aircraft/L-39ZA/Models/Effects/Bomb/Bomb-Submodel.xml</submodel-path>
 	</submodel>
+
+	<!-- Jettison Rockets from Pylon 2 -->
+
+	<submodel>
+    	<name>Jettison-2-R</name>
+    	<model>Aircraft/L-39ZA/Models/Stores/UB-16/UB-16-jet.xml</model>
+    	<trigger>/controls/armament/jett-2-r</trigger>
+    	<speed>0</speed>
+    	<repeat>false</repeat>
+    	<count>-1</count>
+    	<x-offset>1.2895</x-offset>
+		<y-offset>-5.9231</y-offset>
+		<z-offset>-4.1852</z-offset>
+    	<yaw-offset>0.0</yaw-offset>
+    	<pitch-offset>3.2</pitch-offset>
+    	<wind>false</wind>
+    	<eda>2.8</eda>
+    	<weight>250</weight>
+    	<cd>0.035</cd>
+    	<impact>true</impact>
+    	<impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+  	</submodel>
+
+	<!-- Jettison PK3 pod from Pylon 2 -->
+
+	<submodel>
+    	<name>Jettison-2-P</name>
+    	<model>Aircraft/L-39ZA/Models/Stores/PK-3/PK-3-jet.xml</model>
+    	<trigger>/controls/armament/jett-2-p</trigger>
+    	<speed>0</speed>
+    	<repeat>false</repeat>
+    	<count>-1</count>
+    	<x-offset>1.2895</x-offset>
+		<y-offset>-5.9231</y-offset>
+		<z-offset>-4.1852</z-offset>
+    	<yaw-offset>0.0</yaw-offset>
+    	<pitch-offset>3.2</pitch-offset>
+    	<wind>false</wind>
+    	<eda>2.8</eda>
+    	<weight>250</weight>
+    	<cd>0.035</cd>
+    	<impact>true</impact>
+    	<impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+  	</submodel>
+
+	<!-- Jettison Drop Tank from Pylon 2 -->
+
+	<submodel>
+    	<name>Jettison-2-T</name>
+    	<model>Aircraft/L-39ZA/Models/Stores/DropTank150/DropTank150.xml</model>
+    	<trigger>/controls/armament/jett-2-t</trigger>
+    	<speed>0</speed>
+    	<repeat>false</repeat>
+    	<count>-1</count>
+    	<x-offset>1.2895</x-offset>
+		<y-offset>-5.9231</y-offset>
+		<z-offset>-4.1852</z-offset>
+    	<yaw-offset>0.0</yaw-offset>
+    	<pitch-offset>3.2</pitch-offset>
+    	<wind>false</wind>
+    	<eda>2.8</eda>
+    	<weight>250</weight>
+    	<cd>0.035</cd>
+    	<impact>true</impact>
+    	<impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+  	</submodel>
 
 	<!-- Pylon-3 -->
 	
@@ -419,6 +551,74 @@
 		<submodel-path>Aircraft/L-39ZA/Models/Effects/Bomb/Bomb-Submodel.xml</submodel-path>
 	</submodel>
 
+	<!-- Jettison Rockets from Pylon 3 -->
+
+	<submodel>
+    	<name>Jettison-3-R</name>
+    	<model>Aircraft/L-39ZA/Models/Stores/UB-16/UB-16-jet.xml</model>
+    	<trigger>/controls/armament/jett-3-r</trigger>
+    	<speed>0</speed>
+    	<repeat>false</repeat>
+    	<count>-1</count>
+    	<x-offset>1.2895</x-offset>
+		<y-offset>5.9231</y-offset>
+		<z-offset>-4.1852</z-offset>
+    	<yaw-offset>0.0</yaw-offset>
+    	<pitch-offset>3.2</pitch-offset>
+    	<wind>false</wind>
+    	<eda>2.8</eda>
+    	<weight>250</weight>
+    	<cd>0.035</cd>
+    	<impact>true</impact>
+    	<impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+  	</submodel>
+
+	<!-- Jettison PK3 pod from Pylon 3 -->
+
+	<submodel>
+    	<name>Jettison-3-P</name>
+    	<model>Aircraft/L-39ZA/Models/Stores/PK-3/PK-3-jet.xml</model>
+    	<trigger>/controls/armament/jett-3-p</trigger>
+    	<speed>0</speed>
+    	<repeat>false</repeat>
+    	<count>-1</count>
+    	<x-offset>1.2895</x-offset>
+		<y-offset>5.9231</y-offset>
+		<z-offset>-4.1852</z-offset>
+    	<yaw-offset>0.0</yaw-offset>
+    	<pitch-offset>3.2</pitch-offset>
+    	<wind>false</wind>
+    	<eda>2.8</eda>
+    	<weight>250</weight>
+    	<cd>0.035</cd>
+    	<impact>true</impact>
+    	<impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+  	</submodel>
+
+	<!-- Jettison Drop Tank from Pylon 3 -->
+
+	<submodel>
+    	<name>Jettison-3-T</name>
+    	<model>Aircraft/L-39ZA/Models/Stores/DropTank150/DropTank150.xml</model>
+    	<trigger>/controls/armament/jett-3-t</trigger>
+    	<speed>0</speed>
+    	<repeat>false</repeat>
+    	<count>-1</count>
+    	<x-offset>1.2895</x-offset>
+		<y-offset>5.9231</y-offset>
+		<z-offset>-4.1852</z-offset>
+    	<yaw-offset>0.0</yaw-offset>
+    	<pitch-offset>3.2</pitch-offset>
+    	<wind>false</wind>
+    	<eda>2.8</eda>
+    	<weight>250</weight>
+    	<cd>0.035</cd>
+    	<impact>true</impact>
+    	<impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+  	</submodel>
+
+	
+
 	<!-- Pylon-4 -->
 	
 	<submodel>
@@ -539,6 +739,72 @@
 		<impact-report>sim/ai/aircraft/impact/bomb</impact-report>
 		<submodel-path>Aircraft/L-39ZA/Models/Effects/Bomb/Bomb-Submodel.xml</submodel-path>
 	</submodel>
+
+	<!-- Jettison Rockets from Pylon 4 -->
+
+	<submodel>
+    	<name>Jettison-4-R</name>
+    	<model>Aircraft/L-39ZA/Models/Stores/UB-16/UB-16-jet.xml</model>
+    	<trigger>/controls/armament/jett-4-r</trigger>
+    	<speed>0</speed>
+    	<repeat>false</repeat>
+    	<count>-1</count>
+    	<x-offset>1.2895</x-offset>
+		<y-offset>7.7480</y-offset>
+		<z-offset>-4.1852</z-offset>
+    	<yaw-offset>0.0</yaw-offset>
+    	<pitch-offset>3.2</pitch-offset>
+    	<wind>false</wind>
+    	<eda>2.8</eda>
+    	<weight>250</weight>
+    	<cd>0.035</cd>
+    	<impact>true</impact>
+    	<impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+  	</submodel>
+
+	<!-- Jettison PK3 pod from Pylon 4 -->
+
+	<submodel>
+    	<name>Jettison-4-P</name>
+    	<model>Aircraft/L-39ZA/Models/Stores/PK-3/PK-3-jet.xml</model>
+    	<trigger>/controls/armament/jett-4-p</trigger>
+    	<speed>0</speed>
+    	<repeat>false</repeat>
+    	<count>-1</count>
+    	<x-offset>1.2895</x-offset>
+		<y-offset>7.7480</y-offset>
+		<z-offset>-4.1852</z-offset>
+    	<yaw-offset>0.0</yaw-offset>
+    	<pitch-offset>3.2</pitch-offset>
+    	<wind>false</wind>
+    	<eda>2.8</eda>
+    	<weight>250</weight>
+    	<cd>0.035</cd>
+    	<impact>true</impact>
+    	<impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+  	</submodel>
+
+	<!-- Jettison Drop Tank from Pylon 4 -->
+
+	<submodel>
+    	<name>Jettison-4-T</name>
+    	<model>Aircraft/L-39ZA/Models/Stores/DropTank150/DropTank150.xml</model>
+    	<trigger>/controls/armament/jett-4-t</trigger>
+    	<speed>0</speed>
+    	<repeat>false</repeat>
+    	<count>-1</count>
+    	<x-offset>1.2895</x-offset>
+		<y-offset>7.7480</y-offset>
+		<z-offset>-4.1852</z-offset>
+    	<yaw-offset>0.0</yaw-offset>
+    	<pitch-offset>3.2</pitch-offset>
+    	<wind>false</wind>
+    	<eda>2.8</eda>
+    	<weight>250</weight>
+    	<cd>0.035</cd>
+    	<impact>true</impact>
+    	<impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+  	</submodel>
 
 	
 </PropertyList>

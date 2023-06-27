@@ -460,6 +460,8 @@ History:
         		<int n="17" type="int">0</int>
 				<int n="18" alias="/controls/armament/trigger-FAB250-3" />
 				<int n="19" alias="/controls/armament/trigger-FAB250-4" />
+				<int n="20" alias="/controls/armament/jettison-outer" />
+				<int n="21" alias="/controls/armament/jettison-inner" />
 				<float n="0" alias="/surface-positions/left-taileron-pos-norm"/>
 				<float n="1" alias="/surface-positions/right-taileron-pos-norm"/>
 				<float n="2" alias="/surface-positions/left-flap-pos-norm"/>
@@ -798,20 +800,24 @@ History:
 				</mod-up>				
 			</key>
        
-			<!-- <key n="101">
+			<key n="101">
 				<name>e</name>
-				<desc>Fire rockets</desc>
+				<desc>Jettison Pylons</desc>
 				<binding>
-					<command>nasal</command>
-					<script>weapons.fire_Rocket()</script>
+      				<command>nasal</command>
+      				<script>weapons.jettison_outer()</script>
+              		<condition>
+                		<property>l-39za/controls/jett2swcover</property>
+              		</condition>
 				</binding>
-				<mod-up>
-					<binding>
-						<command>nasal</command>
-						<script>weapons.stop_Rocket()</script>
-					</binding>
-				</mod-up>
-			</key> -->
+				<binding>
+      				<command>nasal</command>
+      				<script>weapons.jettison_inner()</script>
+              		<condition>
+                		<property>l-39za/controls/jett3swcover</property>
+              		</condition>
+				</binding>
+			</key>
        
 			<key n="102">
 				<name>f</name>
