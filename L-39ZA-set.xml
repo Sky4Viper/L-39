@@ -396,25 +396,20 @@ History:
 				<name>N/n</name>
 				<desc>Toggle speedbrakes</desc>
 			</key>
+
+			<key>
+				<name>,/.</name>
+				<desc>Differential breaks</desc>
+			</key>
 			
 			<key>
 				<name>f</name>
 				<desc>Gun trigger</desc>
 			</key>
 			
-			<!-- <key>
-				<name>e</name>
-				<desc>Rockets trigger</desc>
-			</key> -->
-			
 			<key>
 				<name>d</name>
 				<desc>Weapon Release</desc>
-			</key>
-
-			<key>
-				<name>,/.</name>
-				<desc>Differential breaks</desc>
 			</key>
 
 			<key>
@@ -425,6 +420,16 @@ History:
 			<key>
 				<name>&gt;</name>
 				<desc>Select Inner Pylons</desc>
+			</key>
+
+			<key>
+				<name>e</name>
+				<desc>Pylons jettison (open switch cover first)</desc>
+			</key>
+
+			<key>
+				<name>q</name>
+				<desc>Deploy Signal Flare/ Aerobatic Smoke</desc>
 			</key>
 
 			
@@ -592,6 +597,7 @@ History:
 			<trigger2>0</trigger2>
 			<pylon-outer-sel type="bool">false</pylon-outer-sel>
 			<pylon-inner-sel type="bool">false</pylon-inner-sel>
+			<guns-sel type="bool">false</guns-sel>
 			<salvo-ripple type="double">0</salvo-ripple>
 			<bomb-mode type="double">0</bomb-mode>
 			<station n="0">
@@ -826,6 +832,9 @@ History:
 					<command>property-assign</command>
 					<property>controls/armament/trigger</property>
 					<value>true</value>
+					<condition>
+            			<property>/controls/armament/guns-sel</property>
+        			</condition>
 				</binding>
 				<mod-up>
 					<binding>
@@ -882,8 +891,9 @@ History:
 				<binding>
             		<command>nasal</command>
             		<script><![CDATA[
-                	screen.log.write("Signal "~(getprop("sim/multiplay/generic/int[16]")==0?"OFF":"ON"), 0.5, 0.5, 1);
-                	]]></script>
+							screen.log.write("Signal: "~getprop("sim/multiplay/generic/int[16]"), 0.5, 0.5, 1);
+							]]>
+					</script>
         		</binding>
     		</key>
   
@@ -897,12 +907,12 @@ History:
   			</key> -->
 
 			<key n="125">
-        	<name>}</name>
-        	<desc>Engine Autostart</desc>
-        	<binding>
-          		<command>nasal</command>
-          		<script>engines.engine1.autostart();</script>
-        	</binding>
+        		<name>}</name>
+        		<desc>Engine Autostart</desc>
+        		<binding>
+          			<command>nasal</command>
+          			<script>engines.engine1.autostart();</script>
+        		</binding>
       		</key>
        
 			<!-- <key n="113">

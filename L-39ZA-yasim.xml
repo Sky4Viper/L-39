@@ -261,7 +261,7 @@ Inertia tensor [kg*m^2], origo at CG:
   <tank x="-0.016398" y="-1.80537" z="-1.17747" jet="true" capacity="278.025"/>
   <tank x="-0.016398" y="-2.3614" z="-1.17747" jet="true" capacity="278.025"/>
   
-  <ballast x="3.882" y="0.0" z="-1.2081" mass="1580"/>
+  <ballast x="3.882" y="0.0" z="-1.2081" mass="1620"/>
 
   <!-- External loads -->
 
