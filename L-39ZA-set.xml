@@ -404,13 +404,13 @@ History:
 			
 			<key>
 				<name>f</name>
-				<desc>Gun trigger</desc>
+				<desc>Weapons trigger</desc>
 			</key>
 			
-			<key>
+			<!-- <key>
 				<name>d</name>
 				<desc>Weapon Release</desc>
-			</key>
+			</key> -->
 
 			<key>
 				<name>&lt;</name>
@@ -454,7 +454,7 @@ History:
 				<int n="5" alias="/engines/engine[0]/state" />
 				<!-- <int n="6" alias="/engines/engine[1]/state" /> -->
 				<int n="7" alias="/sim/crashed" />
-				<int n="8" alias="/controls/armament/trigger-GSh-23" />
+				<int n="8" alias="/controls/armament/fire_gsh" />
 				<int n="9" alias="/controls/armament/trigger-S-5-L" />
 				<int n="10" alias="/controls/armament/trigger-S-5-R" />
 				<int n="11" alias="/controls/armament/trigger-PK3-out" />
@@ -592,12 +592,13 @@ History:
 	</gunsight>  
 
 	<armament>
-			<trigger>0</trigger>
-			<trigger1>0</trigger1>
-			<trigger2>0</trigger2>
+			<trigger type="bool">false</trigger>
+			<trigger1 type="bool">false</trigger1>
+			<trigger2 type="bool">false</trigger2>
 			<pylon-outer-sel type="bool">false</pylon-outer-sel>
 			<pylon-inner-sel type="bool">false</pylon-inner-sel>
 			<guns-sel type="bool">false</guns-sel>
+			<master-arm type="bool">false</master-arm>
 			<salvo-ripple type="double">0</salvo-ripple>
 			<bomb-mode type="double">0</bomb-mode>
 			<station n="0">
@@ -791,7 +792,7 @@ History:
 				</mod-up>				
 			</key> -->
 
-			<key n="100">
+			<!-- <key n="100">
 				<name>d</name>
 				<desc>Weapon Release</desc>
 				<binding>
@@ -804,7 +805,7 @@ History:
         				<script>weapons.stop_Pickle()</script>
       				</binding>
 				</mod-up>				
-			</key>
+			</key> -->
        
 			<key n="101">
 				<name>e</name>
@@ -827,14 +828,14 @@ History:
        
 			<key n="102">
 				<name>f</name>
-				<desc>Fire gun</desc>
+				<desc>Fire selected weapons</desc>
 				<binding>
 					<command>property-assign</command>
 					<property>controls/armament/trigger</property>
 					<value>true</value>
-					<condition>
+					<!-- <condition>
             			<property>/controls/armament/guns-sel</property>
-        			</condition>
+        			</condition> -->
 				</binding>
 				<mod-up>
 					<binding>

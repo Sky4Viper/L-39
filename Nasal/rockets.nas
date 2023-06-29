@@ -2,8 +2,8 @@
 props.globals.initNode("/sim/is-MP-Aircraft", 0, "BOOL");
 
 #initialize triggers
-props.globals.initNode("/controls/armament/pickle", 0, "BOOL");
-setprop("/controls/armament/pickle", 0);
+props.globals.initNode("/controls/armament/fire_rockets", 0, "BOOL");
+setprop("/controls/armament/fire_rockets", 0);
 
 props.globals.initNode("/controls/armament/trigger-S-5-L", 0, "BOOL");
 props.globals.initNode("/controls/armament/trigger-S-5-R", 0, "BOOL");
@@ -17,7 +17,6 @@ props.globals.initNode("/controls/armament/rocketsCount1", 16, "DOUBLE");
 
 props.globals.initNode("/controls/armament/rocketsLeft2", 16, "INT");
 props.globals.initNode("/controls/armament/rocketsCount2", 16, "DOUBLE");
-
 
 var reload = func {
 	if( getprop("/gear/gear[0]/wow") and getprop("/gear/gear[1]/wow") and getprop("/gear/gear[2]/wow") and (getprop("/velocities/groundspeed-kt") < 2) ) {
@@ -64,11 +63,11 @@ outOfAmmo2.singleShot = 1;
 var Rockets_Stop = maketimer(0.1, 
 	func { 
 		#print("Rockets Stopped! ");
+		setprop("controls/armament/fire_rockets", 0);
 		setprop("/controls/armament/trigger-S-5-L", 0);
         setprop("/sim/multiplay/generic/int[9]", 0);
 		setprop("/controls/armament/trigger-S-5-R", 0);
         setprop("/sim/multiplay/generic/int[10]", 0);
-        setprop("controls/armament/pickle", 0);
         if(getprop("/controls/armament/report-ammo")) {
 			screen.log.write("S-5 rockets Outer left: " ~ getprop("/controls/armament/rocketsLeft1"), 1, 0.6, 0.1);
 			screen.log.write("S-5 rockets Inner left: " ~ getprop("/controls/armament/rocketsLeft2"), 1, 0.6, 0.1);
@@ -105,7 +104,7 @@ Rockets_Ripple_1_IN.singleShot = 1;
 
 #trigger control with ammo counting
 var triggerControl = func {
-	triggerState = getprop("controls/armament/pickle");
+	triggerState = getprop("controls/armament/fire_rockets");
     MasterArm = getprop("controls/armament/master-arm");
     RocketsON = getprop("controls/armament/rockets-sel");
     RippleType = getprop("controls/armament/salvo-ripple");
@@ -219,5 +218,5 @@ var triggerControl = func {
 	}
 }
 
-setlistener("controls/armament/pickle", triggerControl);
+setlistener("controls/armament/fire_rockets", triggerControl);
 

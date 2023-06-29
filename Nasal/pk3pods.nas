@@ -4,8 +4,8 @@ props.globals.initNode("/sim/is-MP-Aircraft", 0, "BOOL");
 #GSh-23 cannon trigger
 
 #initialize triggers
-props.globals.initNode("/controls/armament/trigger", 0, "BOOL");
-setprop("/controls/armament/trigger", 0);
+props.globals.initNode("/controls/armament/fire_pk3", 0, "BOOL");
+setprop("/controls/armament/fire_pk3", 0);
 
 
 props.globals.initNode("/controls/armament/trigger-PK3-out", 0, "BOOL");
@@ -17,6 +17,7 @@ props.globals.initNode("/sim/multiplay/generic/int[12]", 0, "INT");
 #ammo counter
 props.globals.initNode("/controls/armament/PK3Left", 1500, "INT");
 props.globals.initNode("/controls/armament/PK3Count", 1500, "DOUBLE");
+
 var reload = func {
 	if( getprop("/gear/gear[0]/wow") and getprop("/gear/gear[1]/wow") and getprop("/gear/gear[2]/wow") and (getprop("/velocities/groundspeed-kt") < 2) ) {
 		setprop("/controls/armament/PK3Left", 1500);
@@ -32,8 +33,9 @@ var reload = func {
 
 var outOfAmmo = maketimer(1.0, 
 	func { 
-		#print("Out of rockets! ");
+		#print("PK3 Out of ammo! ");
 		screen.log.write("PK-3 out of ammo! ", 1, 0.6, 0.1);
+		setprop("/controls/armament/fire_pk3", 0);
 		setprop("/controls/armament/trigger-PK3-out", 0);
 		setprop("/controls/armament/trigger-PK3-in", 0);
         setprop("/sim/multiplay/generic/int[11]", 0);
@@ -46,7 +48,7 @@ outOfAmmo.singleShot = 1;
 
 #trigger control with ammo counting
 var triggerControl = func {
-	triggerState = getprop("controls/armament/trigger");
+	triggerState = getprop("controls/armament/fire_pk3");
     MasterArm = getprop("controls/armament/master-arm");
 	if(triggerState and MasterArm and getprop("/controls/armament/PK3Left") > 0) {
 		var PK3mounted1L = (getprop("sim/weight[0]/selected") == "PK-3 MG pod");
@@ -70,6 +72,7 @@ var triggerControl = func {
 		}
 	}
 	else {
+		setprop("/controls/armament/fire_pk3", 0);
 		setprop("/controls/armament/trigger-PK3-out", 0);
 		setprop("/controls/armament/trigger-PK3-in", 0);
         setprop("/sim/multiplay/generic/int[11]", 0);
@@ -86,5 +89,5 @@ var triggerControl = func {
 	}
 }
 
-setlistener("controls/armament/trigger", triggerControl);
+setlistener("controls/armament/fire_pk3", triggerControl);
 
