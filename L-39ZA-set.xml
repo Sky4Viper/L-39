@@ -302,7 +302,7 @@ History:
 						<script>aircraft.livery.dialog.toggle()</script>
 					</binding>
 				</item>
-				<item>
+				<!-- <item>
 					<label>Switch Landing Lights On/Off</label>
 					<binding>
 						<command>property-toggle</command>
@@ -315,7 +315,7 @@ History:
 						<command>property-toggle</command>
 						<property>/controls/gear/nosewheel-lock</property>
 					</binding>
-				</item>
+				</item> -->
 				<item>
 					<label>Payload</label>
 					<binding>

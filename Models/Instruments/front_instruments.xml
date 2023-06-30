@@ -159,9 +159,12 @@
   <model>
     <path>Aircraft/L-39ZA/Models/Instruments/rivets/rivets.xml</path>
     <offsets>
-      <x-m>  -0.020 </x-m>
+      <!-- <x-m>  -0.020 </x-m>
       <y-m>  0.000 </y-m>
-      <z-m>  -0.010 </z-m>
+      <z-m>  -0.010 </z-m> -->
+      <x-m>  0.000 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.000 </z-m>
       <roll-deg>    0.000 </roll-deg>
       <pitch-deg>   0.000 </pitch-deg>
       <heading-deg> 0.000 </heading-deg>

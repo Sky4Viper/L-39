@@ -174,6 +174,27 @@
 		</axis>
 	</animation>
 
+  <!-- Parking brake -->
+	<animation>
+		<type>rotate</type>
+		<object-name>brake_lever</object-name>
+		<property>/controls/gear/brake-parking</property>
+		<interpolation>
+            <entry><ind> 0</ind><dep>0.0</dep></entry>
+            <entry><ind> 1</ind><dep>55.0</dep></entry>
+    </interpolation>
+		<center>
+			<x-m>-0.33671</x-m>
+			<y-m>0.08968</y-m>
+			<z-m>-0.000811</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
   <!-- Flaps buttons -->
 
   <animation>
@@ -601,6 +622,37 @@
                 <label>Engines start/stop</label>
         </binding>
       </hovered>
+  </animation>
+
+   <animation>
+    <type>pick</type>
+    <object-name>brake_lever</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/gear/brake-parking</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>park-brake-lvl-lbl</tooltip-id>
+          <label>Parking Brake: %s</label>
+          <property>/controls/gear/brake-parking</property>
+          <mapping>nasal</mapping>
+          <script>
+              var modes = ['OFF', 'ON'];
+              return modes[arg[0]];
+          </script>
+      </binding>
+    </hovered>
   </animation>
 
 </PropertyList>
