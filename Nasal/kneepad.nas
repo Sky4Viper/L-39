@@ -16,6 +16,7 @@ var path8 = "Aircraft/L-39ZA/gui/dialogs/kneepad/L-39-Kneepad-8.png";
 var path9 = "Aircraft/L-39ZA/gui/dialogs/kneepad/L-39-Kneepad-9.png";
 var pathM = "Aircraft/L-39ZA/gui/dialogs/kneepad/L-39-Kneepad-M.png";
 var pathM1 = "Aircraft/L-39ZA/gui/dialogs/kneepad/L-39-Kneepad-M1.png";
+
  
 # create a new window, dimensions are WIDTH x HEIGHT, using the dialog decoration (i.e. titlebar)
 var window = canvas.Window.new([width,height],"dialog").set('title',title);
@@ -41,10 +42,8 @@ mainHBox.addItem(VboxLeft);
 var VboxRight = canvas.VBoxLayout.new(); # Select Page Buttons
 mainHBox.addItem(VboxRight);
 
-
 #########################################
 
-#var (width,height) = (768,512);
 var tile_size = 256;
 
 #var window = canvas.Window.new([width, height],"dialog").set('title', "Tile map demo");
@@ -52,15 +51,14 @@ var g = window.getCanvas(1).createGroup();
 
 g.hide();
 
-
 # Simple user interface (Buttons for zoom and label for displaying it)
 var zoom = 10;
 var type = "intl";
 
-var map_root = g.getCanvas().createGroup();
+var map_root = g.getCanvas().createGroup()
+.set("z-index", 4);
 var map_vbox = canvas.HBoxLayout.new();
 window.setLayout(map_vbox);
-
 
 var button_in = canvas.gui.widgets.Button.new(map_root, canvas.style, {}).setText("+").listen("clicked", func changeZoom(1));
 var button_out = canvas.gui.widgets.Button.new(map_root, canvas.style, {}).setText("-").listen("clicked", func changeZoom(-1));
@@ -73,18 +71,16 @@ label_zoom.setSizeHint([32, 32]);
 var map_button_box = canvas.VBoxLayout.new();
 map_button_box.addStretch(1);
 map_button_box.addItem(button_in);
-map_button_box.addSpacing(30);
+#map_button_box.addSpacing(30);
 map_button_box.addItem(label_zoom);
 map_button_box.addItem(button_out);
 map_button_box.addSpacing(60);
-
 
 map_vbox.addSpacing(115);
 map_vbox.addItem(map_button_box);
 map_vbox.addStretch(1);
 
 map_root.hide();
-
 
 var changeZoom = func(d)
 {
@@ -115,39 +111,26 @@ string.compileTemplate('https://b.tile.openstreetmap.org/{z}/{x}/{y}.png');
   (num_tiles[1] - 1) / 2
   ];
 
+MyPosCenter = g.createChild("group")
+			.setTranslation(tile_size * center_tile_offset[0] - 1, tile_size * center_tile_offset[1])
+      .set("z-index",  1);
+      #.setTranslation(width/2,height/2);
 # simple aircraft icon at current position/center of the map
-g.createChild("path")
-.moveTo( tile_size * center_tile_offset[0] - 1,
-  tile_size * center_tile_offset[1] )
-#.horiz(20)
-#.move(-10,-10)
-#.vert(20)
-
-			#.horiz(2)
-			#.move(-1, -1)
-			#.vert(2)
-      #.move(0, 7)
-      #.line(-8, -16)
-      #.horiz(16)
-      #.line(-8, 16)
-      #.vert(5)
-      #.move(0, -21)
-      #.vert(-5)
-      #.move(-2, 2)
-      #.horiz(4)
-
+selfSymbol = MyPosCenter.createChild("path")
+#g.createChild("path")
+      .moveTo(-10, 0)
       .horiz(20)
       .move(-10, 14)
       .vert(-22)
       .move(-4, 22)
       .horiz(8)
-
-
-
+      .move(-4, -26)
+      .vert(-800)
 
 .set("stroke", "red")
 .set("stroke-width", 2)
-.set("z-index", 1);
+.set("z-index", 2);
+
 
 
 ##
@@ -166,16 +149,21 @@ var kneepad_frame = g.createChild("image", "map_frame")
     .setFile(pathM)
     .setTranslation(0, 0)
     #.setSize(842, 1000);
-    .setSize(891, 1000);
+    .setSize(888, 1000)
+    .set("z-index", 3);
 
 var last_tile = [-1,-1];
 var last_type = type;
 
 ##
 # this is the callback that will be regularly called by the timer
+
 # to update the map
 var updateTiles = func()
 {
+
+  var my_heading = getprop('/orientation/heading-deg');
+  MyPosCenter.setRotation(my_heading*D2R);
   # get current position
   var lat = getprop('/position/latitude-deg');
   var lon = getprop('/position/longitude-deg');
@@ -215,14 +203,14 @@ var updateTiles = func()
         if( io.stat(img_path) == nil )
         { # image not found, save in $FG_HOME
           var img_url = makeUrl(pos);
-          print('requesting ' ~ img_url);
+          #print('requesting ' ~ img_url);
           http.save(img_url, img_path)
           .done(func {print('received image ' ~ img_path); tile.set("src", img_path);})
           .fail(func (r) print('Failed to get image ' ~ img_path ~ ' ' ~ r.status ~ ': ' ~ r.reason));
         }
         else # cached image found, reusing
         {
-          print('loading ' ~ img_path);
+          #print('loading ' ~ img_path);
           tile.set("src", img_path)
         }
         })();
@@ -235,39 +223,47 @@ var updateTiles = func()
 
 ##
 # set up a timer that will invoke updateTiles at 2-second intervals
-var update_timer = maketimer(1, updateTiles);
+var map_update_timer = maketimer(1, updateTiles);
 # actually start the timer
-update_timer.start();
+map_update_timer.start();
+
+##
+# set up default zoom level
+changeZoom(0);
+
+###
+# The following lines were recently added and have not yet been tested
+# (if in doubt, remove them)
+window.del = func()
+{
+  print("Cleaning up window:", ,"\n");
+  map_update_timer.stop();
+# explanation for the call() technique at: http://wiki.flightgear.org/Object_oriented_programming_in_Nasal#Making_safer_base-class_calls
+call(canvas.Window.del, [], me);
+};
 
 #########################################
-
-#var bgimage = root.createChild("image")
-     #.setFile("Aircraft/L-39ZA/gui/dialogs/kneepad/L-39-Kneepad-9.png")
-	 #.setTranslation(100, 10)
-     #.setSize(826,1000);
 
 # create an image child for the texture
 var kneepad_page = root.createChild("image")
     .setFile(path0)
     .setTranslation(0, 0)
-    .setSize(891, 1000);
+    .setSize(888, 1000);
 
 var ui_root = window.getCanvas().createGroup();
 var hbox = canvas.HBoxLayout.new();
-#.setTranslation(30, 30);
 window.setLayout(hbox);
 
-
-var page_button_1 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("1").listen("clicked", func {kneepad_page.setFile(path1); g.hide(); map_root.hide();});
-var page_button_2 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("2").listen("clicked", func {kneepad_page.setFile(path2); g.hide(); map_root.hide();});
-var page_button_3 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("3").listen("clicked", func {kneepad_page.setFile(path3); g.hide(); map_root.hide();});
-var page_button_4 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("4").listen("clicked", func {kneepad_page.setFile(path4); g.hide(); map_root.hide();});
-var page_button_5 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("5").listen("clicked", func {kneepad_page.setFile(path5); g.hide(); map_root.hide();});
-var page_button_6 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("6").listen("clicked", func {kneepad_page.setFile(path6); g.hide(); map_root.hide();});
-var page_button_7 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("7").listen("clicked", func {kneepad_page.setFile(path7); g.hide(); map_root.hide();});
-var page_button_8 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("8").listen("clicked", func {kneepad_page.setFile(path8); g.hide(); map_root.hide();});
-var page_button_9 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("9").listen("clicked", func {kneepad_page.setFile(path9); g.hide(); map_root.hide();});
-var page_button_M = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("M").listen("clicked", func {kneepad_page.setFile(pathM1); g.show(); map_root.show();});
+var page_button_1 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("1").listen("clicked", func {kneepad_page.setFile(path1); g.hide(); map_root.hide(); map_update_timer.stop();});
+var page_button_2 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("2").listen("clicked", func {kneepad_page.setFile(path2); g.hide(); map_root.hide(); map_update_timer.stop();});
+var page_button_3 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("3").listen("clicked", func {kneepad_page.setFile(path3); g.hide(); map_root.hide(); map_update_timer.stop();});
+var page_button_4 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("4").listen("clicked", func {kneepad_page.setFile(path4); g.hide(); map_root.hide(); map_update_timer.stop();});
+var page_button_5 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("5").listen("clicked", func {kneepad_page.setFile(path5); g.hide(); map_root.hide(); map_update_timer.stop();});
+var page_button_6 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("6").listen("clicked", func {kneepad_page.setFile(path6); g.hide(); map_root.hide(); map_update_timer.stop();});
+var page_button_7 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("7").listen("clicked", func {kneepad_page.setFile(path7); g.hide(); map_root.hide(); map_update_timer.stop();});
+var page_button_8 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("8").listen("clicked", func {kneepad_page.setFile(path8); g.hide(); map_root.hide(); map_update_timer.stop();});
+var page_button_9 = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("9").listen("clicked", func {kneepad_page.setFile(path9); g.hide(); map_root.hide(); map_update_timer.stop();});
+var page_button_M = canvas.gui.widgets.Button.new(ui_root, canvas.style, {}).setText("M").listen("clicked", func {kneepad_page.setFile(pathM1); g.show(); map_root.show(); map_update_timer.start();});
 
 page_button_1.setSizeHint([40, 32]);
 page_button_2.setSizeHint([40, 32]);
@@ -298,16 +294,8 @@ button_box.addSpacing(23);
 
 hbox.addStretch(1);
 hbox.addItem(button_box);
-hbox.addSpacing(4);
+hbox.addSpacing(6);
 #hbox.addStretch(1);
-
-var changePage = func()
-{
-  kneepad_page.setFile(path9);
-  g.hide();
-};
-
-
 
 #var AircraftDeveloper=canvas.gui.widgets.Label.new(root, canvas.style, {wordWrap: 0});
 #AircraftDeveloper.setText("                  Sergei Solyshko, 2023");
