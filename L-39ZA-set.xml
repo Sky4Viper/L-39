@@ -75,6 +75,16 @@ History:
 		<preview>
 			<type>exterior</type>
 			<splash type="bool">true</splash>
+			<path>Previews/external3.png</path>
+		</preview>
+		<preview>
+			<type>exterior</type>
+			<splash type="bool">true</splash>
+			<path>Previews/external4.png</path>
+		</preview>
+		<preview>
+			<type>exterior</type>
+			<splash type="bool">true</splash>
 			<path>Previews/payload.png</path>
 		</preview>
 		<preview>
