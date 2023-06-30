@@ -1,10 +1,10 @@
 # L-39ZA
 
+<img src=https://github.com/Sky4Viper/L-39ZA/blob/main/Previews/external3.png  alt=L-39ZA_splashscreen7><br>
+
 <img src=https://github.com/Sky4Viper/L-39ZA/blob/main/Previews/external2.png  alt=L-39ZA_splashscreen1><br>
 
 <img src=https://github.com/Sky4Viper/L-39ZA/blob/main/Previews/external.png  alt=L-39ZA_splashscreen2><br>
-
-<img src=https://github.com/Sky4Viper/L-39ZA/blob/main/Previews/external3.png  alt=L-39ZA_splashscreen7><br>
 
 <img src=https://github.com/Sky4Viper/L-39ZA/blob/main/Previews/external4.png  alt=L-39ZA_splashscreen8><br>
 
