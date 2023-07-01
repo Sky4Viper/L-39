@@ -151,7 +151,7 @@
    <type>rotate</type>
     <object-name>Gunsight_Pipper</object-name>
     <property>/orientation/pitch-deg</property>
-    <factor>-0.05</factor>
+    <factor>-0.03</factor>
     <axis> 
       <x>0</x>
       <y>-1</y>
@@ -210,8 +210,8 @@
    <type>translate</type>
     <object-name>Gunsight_Pipper</object-name>
     <property>accelerations/pilot-g</property>
-    <factor>-0.006</factor>
-    <offset-m>0.006</offset-m>
+    <factor>-0.01</factor>
+    <offset-m>0.01</offset-m>
     <min>0</min>
     <max>0.03</max>
     <axis> 
