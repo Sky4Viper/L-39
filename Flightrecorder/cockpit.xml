@@ -87,7 +87,7 @@
     </signal>
     <signal>
         <type>bool</type>
-        <property>l-39za/switches/adf_lr</property>
+        <property>L-39/switches/adf_lr</property>
     </signal>
 
 

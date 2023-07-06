@@ -26,7 +26,7 @@ var mainVBox = canvas.VBoxLayout.new();
 myCanvas.setLayout(mainVBox);
 
 var bgimage = root.createChild("image")
-     .setFile("Aircraft/L-39ZA/gui/dialogs/L-39ZA-Pylons-BG.png")
+     .setFile("Aircraft/L-39/gui/dialogs/L-39ZA-Pylons-BG.png")
 	 #.setTranslation(100, 10)
      .setSize(1400,500);
 

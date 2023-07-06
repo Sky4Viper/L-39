@@ -1,5 +1,5 @@
 <PropertyList>
-	<name>Aircraft/Su-25/Models/Effects/hud/hud</name>
+	<name>Aircraft/L-39/Models/Effects/hud/hud</name>
 	<inherits-from>Effects/model-default</inherits-from>
 
 <parameters>
@@ -14,9 +14,9 @@
   <surface-mapping-scheme type="int">0</surface-mapping-scheme>
   <fog-level>0</fog-level>
   <use-wipers>0</use-wipers>
-  <use-overlay><use>Su-25/hud/overlay</use></use-overlay>
-  <overlay-alpha type="float"><use>Su-25/hud/overlay-alpha</use></overlay-alpha>
-  <overlay-glare type="float"><use>Su-25/hud/overlay-glare</use></overlay-glare>
+  <use-overlay><use>L-39/hud/overlay</use></use-overlay>
+  <overlay-alpha type="float"><use>L-39/hud/overlay-alpha</use></overlay-alpha>
+  <overlay-glare type="float"><use>L-39/hud/overlay-glare</use></overlay-glare>
   <use-reflection type="int">0</use-reflection>
   <reflection-strength type="float">1.0</reflection-strength>
   <use-mask type="int">0</use-mask>
@@ -32,9 +32,9 @@
   <lightmap-color type="vec3d" n="3"> 1.0 1.0 1.0 </lightmap-color>
   <sample-res>0.0006</sample-res>
   <sample-far>2.5</sample-far>
-  <hud-brightness><use>Su-25/hud/brightness</use></hud-brightness>
+  <hud-brightness><use>L-39/hud/brightness</use></hud-brightness>
 	<texture n="1">
-		<image>Aircraft/Su-25/Models/Effects/frostAndRain/window_frost.png</image>
+		<image>Aircraft/L-39/Models/Effects/frostAndRain/window_frost.png</image>
 		<type>2d</type>
 		<filter>linear-mipmap-linear</filter>
 		<wrap-s>repeat</wrap-s>
@@ -43,7 +43,7 @@
 	</texture>
 	<!-- placeholder for the function texture used for fogging, wiper area,...-->
 	<texture n="2">
-		<image>Aircraft/Su-25/Models/Effects/hud/hud-glass.rgb</image>
+		<image>Aircraft/L-39/Models/Effects/hud/hud-glass.rgb</image>
 		<type>2d</type>
 		<filter>linear-mipmap-linear</filter>
 		<wrap-s>repeat</wrap-s>
@@ -163,10 +163,10 @@
         <use>vertex-program-two-side</use>
       </vertex-program-two-side>
       <program>
-        <vertex-shader>Aircraft/Su-25/Models/Effects/hud/hud-ALS.vert</vertex-shader>
-        <fragment-shader>Aircraft/Su-25/Models/Effects/hud/hud-ALS.frag</fragment-shader>
-        <fragment-shader>Aircraft/Su-25/Models/Effects/frostAndRain/noise.frag</fragment-shader>
-        <fragment-shader>Aircraft/Su-25/Models/Effects/hud/filters-ALS.frag</fragment-shader>
+        <vertex-shader>Aircraft/L-39/Models/Effects/hud/hud-ALS.vert</vertex-shader>
+        <fragment-shader>Aircraft/L-39/Models/Effects/hud/hud-ALS.frag</fragment-shader>
+        <fragment-shader>Aircraft/L-39/Models/Effects/frostAndRain/noise.frag</fragment-shader>
+        <fragment-shader>Aircraft/L-39/Models/Effects/hud/filters-ALS.frag</fragment-shader>
       </program>
 
      <uniform>

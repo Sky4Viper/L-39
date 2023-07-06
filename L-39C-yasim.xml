@@ -1,0 +1,275 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+Aero Vodochody L-39ZA Albatros - YASIM FDM version 16
+Compatible FGFS 2020.3.17
+
+==========================
+= YASim solution results =
+==========================
+Iterations        : 1369
+Drag Coefficient  : 32.357
+Lift Ratio        : 92.022
+Cruise AoA        : 0.64 deg
+Tail Incidence    : -1.68 deg
+Approach Elevator : -0.681
+
+CG                : x:0.077, y:-0.000, z:-0.496
+Wing MAC          : (x:0.57, y:1.96), length:1.8
+hard limit CG-x   : 3.883 m
+soft limit CG-x   : 0.116 m
+CG-x              : 0.077 m
+CG-x rel. MAC     :  27%
+soft limit CG-x   : 0.024 m
+hard limit CG-x   : -0.450 m
+
+wing lever        : 0.039 m
+tail lever        : -4.233 m
+
+max thrust        : 8.01 kN
+thrust/empty      : 0.24
+thrust/mtow       : inf
+
+wing span         : 8.05 m
+sweep lead. edge  : 8.7 .. 8.7 deg
+wing area         : 12.49 m^2
+wing load empty   : 276.65 kg/m^2 (Empty 3455 kg)
+wing load MTOW    : 0.00 kg/m^2 (MTOW  0 kg)
+
+tail span         : 3.950 m
+tail area         : 3.485 m^2
+
+#wing sections: 1
+Section 0 base point: x="-0.424" y="0.413" z="-0.823" chord="2.470" incidence="2.0" (at section root in deg)
+
+Inertia tensor [kg*m^2], origo at CG:
+
+     8155,      -0,    4551
+       -0,   26281,       0
+     4551,       0,   31504
+************************************************************************
+-->
+
+<airplane mass="7617">
+
+  <!-- Approach configuration -->
+  <approach speed="108" aoa="4.5" fuel="0.3">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.7"/>
+    <control-setting axis="/controls/flight/flaps" value="1.0"/>
+    <control-setting axis="/controls/flight/speedbrake" value="0.0"/>
+    <control-setting axis="/controls/gear/gear-down" value="1"/>
+    <solve-weight idx="0" weight="0"/>
+    <solve-weight idx="1" weight="0"/>
+  </approach>
+
+  <!-- Cruise configuration -->
+  <cruise speed="430" alt="39000" fuel="0.8">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
+    <control-setting axis="/controls/flight/flaps" value="0.0"/>
+    <control-setting axis="/controls/gear/gear-down" value="0"/>
+    <solve-weight idx="0" weight="0"/>
+    <solve-weight idx="1" weight="0"/>
+  </cruise>
+
+  <cockpit x="2.6902" y="0.0" z="-0.085"/>
+
+  <!-- nose -->
+  <fuselage ax="6.0156" ay="0" az="-1.13131" bx="3.44297" by="0" bz="-0.656159" width="0.954" taper="0.01" midpoint="1.0" cx="0.2" cy="0.5" cz="0.2"/>
+  <!-- main fuselage -->
+  <fuselage ax="3.49944" ay="0" az="-0.656159" bx="0.756512" by="0" bz="-0.656159" width="1.06" taper="0.9" midpoint="0.23" cx="0.2" cy="0.5" cz="0.2"/>
+  <!-- cockpit -->
+  <fuselage ax="3.91231" ay="0" az="-0.388684" bx="-2.14429" by="0" bz="0.282177" width="1.06" taper="0.1" midpoint="0.23" cx="0.2" cy="0.5" cz="0.2"/>
+  <!-- intakes -->
+  <fuselage ax="0.756512" ay="0.0" az="-0.388553" bx="-5.06789" by="0" bz="-0.087978" width="1.56" taper="0.5" midpoint="0.0" cx="0.2" cy="0.5" cz="0.2"/>
+
+
+  <mstab x="0.587868" y="0.211216" z="-1.12649"
+        taper="1"
+        incidence="0.25"
+        length="0.22"
+        chord="1"
+        sweep="0"
+        dihedral="0">
+    <stall aoa="21" width="8" peak="1.3"/>
+    <flap0 start="0.0" end="0.15" lift="-2" drag="2.8"/>
+    <control-input axis="/controls/flight/speedbrake" control="FLAP0"/>
+    <control-output control="FLAP0" prop="/surface-positions/speedbrake-pos-norm"/>
+    <control-speed control="FLAP0" transition-time="3.0"/>
+  </mstab>
+
+  <!-- NACA 64A012 -->
+  <wing x="-0.423783" y="0.413" z="-0.8227"
+        chord="2.47"
+        incidence="2.0"
+        length="3.62"
+        taper="0.4"
+        sweep="-3"
+        dihedral="2.5"
+        camber="0.02"
+        effectiveness="1.0"
+        idrag="1.4">
+        <stall aoa="13" width="12" peak="1.1"/>
+        <flap0 start="0.08" end="0.628" lift="1.38" drag="2.4"/>
+        <flap1 start="0.629" end="0.99" lift="1.24" drag="1.34"/>
+
+        <control-input axis="/controls/flight/flaps" control="FLAP0"/>
+        <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
+        <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
+
+        <control-output control="FLAP0" side="left" prop="/surface-positions/left-flap-pos-norm"/>
+        <control-output control="FLAP0" side="right" prop="/surface-positions/right-flap-pos-norm"/>
+        <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
+
+        <control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
+        <control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
+        <control-output control="FLAP1" prop="/surface-positions/aileron-pos-norm"/>
+
+        <control-speed control="FLAP0" transition-time="6"/>
+        <control-speed control="FLAP1" transition-time="0.25"/>
+  </wing>
+
+  <hstab x="-4.37881" y="0.329" z="0.219316"
+        chord="1.402"
+        length="1.65"
+        taper="0.51"
+        sweep="4"
+        dihedral="0.0"
+        effectiveness="1.0"
+        idrag="1.2">
+    <stall aoa="20.0" width="10.0" peak="1.05"/>
+    <flap0 start="0.1" end="1" lift="1.51" drag="1.41"/>
+    <flap1 start="0.0" end="0.1" lift="1.1" drag="1.1"/>
+
+    <control-input axis="/controls/flight/elevator" control="FLAP0" square="false" src0="-0.9" src1="0.9" dst0="-1.0" dst1="1.0"/>
+    <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
+    <control-output control="FLAP0" prop="surface-positions/elevator-pos-norm"/>
+    <control-speed control="FLAP0" transition-time="1"/>
+    <control-input  control="FLAP1" axis="/controls/flight/elevator-trim"/>
+    <control-output control="FLAP1" prop="/surface-positions/elevator-trim-pos-norm"/>
+  </hstab>
+
+  <vstab x="-3.25429" y="0" z="0.282177"
+         chord="2.220"
+         length="2.565"
+         taper="0.35"
+         sweep="34"
+         effectiveness="1.0"
+         idrag="1.4">
+    <stall aoa="19.0" width="8.0" peak="1.05"/>
+    <flap0 start="0.2" end="0.86" lift="1.4" drag="1.43"/>
+
+    <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
+    <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+    <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm"/>
+    <control-speed control="FLAP0" transition-time="1"/>
+  </vstab>
+ 
+  <!-- Engine Ivchenko AI-25TL turbofan -->
+  <jet x="-1.15" y="0.0" z="-0.150"
+       mass="770"
+       thrust="3800"
+       exhaust-speed="1520"
+       tsfc="0.575"
+       egt="933"
+       spool-time="4">
+       <actionpt x="-1.93" y="0.0" z="-0.150"/>
+       <!-- <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/> -->
+       <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE" src0="0" src1="1" dst0="0.07" dst1="1"/>
+  </jet>
+
+  <!--guns recoil in 2000 Lbf = 2.5Tf negative angle of the gun : -2'-->
+  <thruster thrust="2000"
+      x="3.2" y="0.0" z="-1.23"
+      vx="-0.999390827" vy="0" vz="0.03489949">
+      <control-input axis="sim/multiplay/generic/int[8]" control="THROTTLE" />
+  </thruster>
+
+  <!-- nose -->
+  <gear x="3.88256" y="0.0" z="-2.115" 
+        retract-time="7"
+        compression="0.3"
+        spring="0.7"
+        sfric="0.6"
+        dfric="0.8"
+        damp="0.44"
+        castering="1">
+        <control-input axis="/controls/gear/brake-parking" control="CASTERING" src0="0" src1="1" dst0="1" dst1="0" />
+        <!-- <control-input axis="/controls/gear/nosewheel-lock" control="CASTERING" src0="0" src1="1" dst0="1" dst1="0" /> -->
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+        <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
+        <control-speed control="EXTEND" transition-time="7"/>
+  </gear>
+
+ <!-- left main -->
+  <gear x="-0.45" y="1.941" z="-2.045"
+        retract-time="7"
+        compression="0.25"
+        spring="0.4"
+        sfric="1.0"
+        dfric="0.8"
+        damp="0.48">
+        <control-input axis="/controls/gear/brake-left" control="BRAKE" split="true"/>
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+        <control-output control="EXTEND" prop="gear/gear[1]/position-norm"/>
+        <control-speed control="EXTEND" transition-time="7"/>
+  </gear>
+ 
+  <!-- right main -->
+  <gear x="-0.45" y="-1.941" z="-2.045"  
+        retract-time="7"  
+        compression="0.25" 
+        spring="0.4"
+        sfric="1.0"
+        dfric="0.8"
+        damp="0.48">
+        <control-input axis="/controls/gear/brake-right" control="BRAKE" split="true"/> 
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+        <control-output control="EXTEND" prop="gear/gear[2]/position-norm"/>
+        <control-speed control="EXTEND" transition-time="7"/>
+  </gear>
+      
+  <!-- Main fuel system: 
+       5 fuselage tanks (total capacity of 1100 liters (825 kg,  290 gal x6.73 (A-1) =)).
+       Wingtip tanks: 2 tanks (capacity of 100 liters each, 26 gal).
+       Max total fuel load: (1200 liters) 975 kg.
+      -Right wingtip 100l
+      -Fuselage tank #1 260l
+      -Fuselage tank #2 365l
+      -Fuselage tank #3 135l
+      -Fuselage tank #4 135l
+      -Fuselage tank #5 205l -feed tank
+      -Left wingtip 100l
+
+   fuel capacity in pounds; 1520kg=3351lb -->
+
+  <tank x="0.6839" y="0.0" z="-0.2471" jet="true" capacity="1954.6"/>
+  <!-- Wing -->
+
+  <tank x="0.0" y="4.12806" z="-0.6650" jet="true" capacity="175.24"/>
+  <tank x="0.0" y="-4.12806" z="-0.6650" jet="true" capacity="175.24"/>
+
+  <!-- Drop tanks -->
+
+  <tank x="-0.016398" y=" 2.3614" z="-1.17747" jet="true" capacity="278.025"/>
+  <tank x="-0.016398" y="-2.3614" z="-1.17747" jet="true" capacity="278.025"/>
+  
+  <ballast x="3.882" y="0.0" z="-1.2081" mass="1620"/>
+
+  <!-- External loads -->
+
+  <weight x="-0.016398"
+      y=" 2.3614"
+      z="-1.17747"
+      size="0.3"
+      mass-prop="sim/weight[0]/weight-lb"/>
+
+
+  <weight x="-0.016398"
+      y="-2.3614"
+      z="-1.17747"
+      size="0.3"
+      mass-prop="sim/weight[1]/weight-lb"/>  
+
+</airplane>

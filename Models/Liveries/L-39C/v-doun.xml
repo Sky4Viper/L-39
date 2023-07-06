@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <sim>
+  <model>
+    <livery>
+      <name type="string">Private-V-DOUN</name>
+      <texture>Liveries/L-39C/v-doun.png</texture>
+      <shininess>
+        <refl_correction type="float">-0.4</refl_correction>
+      </shininess>
+    </livery>
+    <livery-logo>
+      <texture>Liveries/L-39C/v-doun.png</texture>
+    </livery-logo>
+    <pilotsuit>
+      <name type="string">GreenFlightsuit_RedHelmet</name>
+      <texture>Liveries/Pilot/pilot_red.png</texture>
+    </pilotsuit>
+  </model>
+  </sim>
+</PropertyList>

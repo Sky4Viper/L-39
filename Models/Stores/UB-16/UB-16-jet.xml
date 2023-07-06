@@ -3,7 +3,7 @@
 	<path>ub-16.ac</path>
 
     <effect>
-        <inherits-from>Aircraft/L-39ZA/Models/Effects/ArmReflect</inherits-from>
+        <inherits-from>Aircraft/L-39/Models/Effects/ArmReflect</inherits-from>
         <object-name>ub-16-middle</object-name>
         <object-name>ub-16-tipps</object-name>
     </effect>

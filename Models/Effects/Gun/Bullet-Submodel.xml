@@ -4,7 +4,7 @@
 
 	<submodel>
 		<name>bullet-splash</name>
-		<model>Aircraft/L-39ZA/Models/Effects/Gun/Flack.xml</model>
+		<model>Aircraft/L-39/Models/Effects/Gun/Flack.xml</model>
 		<speed>0</speed>
 		<repeat>false</repeat>
 		<delay>0</delay>

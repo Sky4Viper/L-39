@@ -4,12 +4,12 @@
 
   <model>
     <name>WhiteLightFlare</name>
-    <path>Aircraft/L-39ZA/Models/Effects/Lights/Flares/WhiteLight-flare.xml</path>
+    <path>Aircraft/L-39/Models/Effects/Lights/Flares/WhiteLight-flare.xml</path>
   </model>
 
   <model>
     <name>WhiteLightRemb</name>
-    <path>Aircraft/L-39ZA/Models/Effects/Lights/Rembrandt/WhiteLight-remb.xml</path>
+    <path>Aircraft/L-39/Models/Effects/Lights/Rembrandt/WhiteLight-remb.xml</path>
   </model>
   
   <animation>

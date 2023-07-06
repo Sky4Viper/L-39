@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim>
+  <model>
+    <livery>
+      <name type="string">Breitling_1</name>
+      <texture>Liveries/L-39C/Breitling_1.png</texture>
+      <shininess>
+        <refl_correction type="float">-0.3</refl_correction>
+      </shininess>
+    </livery>
+    <livery-logo>
+      <texture>Liveries/L-39C/Breitling_1.png</texture>
+    </livery-logo>
+    <pilotsuit>
+      <name type="string">GreyFlightsuit</name>
+      <texture>Liveries/Pilot/pilot_yellow.png</texture>
+    </pilotsuit>
+  </model>
+  </sim>
+
+</PropertyList>

@@ -105,7 +105,7 @@
 	<!-- Fire -->
 	
 	<model>
-		<path>Aircraft/L-39ZA/Models/Effects/Rocket/Rocket-Explode.xml</path>
+		<path>Aircraft/L-39/Models/Effects/Rocket/Rocket-Explode.xml</path>
 		<offsets>
 			<x-m>2</x-m>
 			<y-m>0</y-m>

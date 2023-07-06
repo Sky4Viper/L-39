@@ -4,7 +4,7 @@
 
   <!-- Alt -->
   <model>
-    <path>Aircraft/L-39ZA/Models/Instruments/alt/alt.xml</path>
+    <path>Aircraft/L-39/Models/Instruments/alt/alt.xml</path>
     <offsets>
       <x-m> -3.36428 </x-m>
       <y-m> -0.0889 </y-m>
@@ -17,7 +17,7 @@
   
   <!-- Air Speed Indicator -->
   <model>
-    <path>Aircraft/L-39ZA/Models/Instruments/asi/asi.xml</path>
+    <path>Aircraft/L-39/Models/Instruments/asi/asi.xml</path>
     <offsets>
       <x-m> -3.36525 </x-m>
       <y-m> -0.089054 </y-m>
@@ -30,7 +30,7 @@
   
   <!-- Radio altitude Indicator -->
   <model>
-    <path>Aircraft/L-39ZA/Models/Instruments/rv-5m/rv-5m.xml</path>
+    <path>Aircraft/L-39/Models/Instruments/rv-5m/rv-5m.xml</path>
     <offsets>
       <x-m> -3.36725 </x-m>
       <y-m> -0.089054 </y-m>
@@ -52,7 +52,7 @@
   
   <!-- Artificial Horizon -->
   <model>
-    <path>Aircraft/L-39ZA/Models/Instruments/kpp/kpp.xml</path>
+    <path>Aircraft/L-39/Models/Instruments/kpp/kpp.xml</path>
     <offsets>
       <x-m> -3.3578 </x-m>
       <y-m>  0.011093 </y-m>
@@ -74,7 +74,7 @@
   
   <!-- NAV VOR -->
   <model>
-    <path>Aircraft/L-39ZA/Models/Instruments/nkp-4/nkp-4.xml</path>
+    <path>Aircraft/L-39/Models/Instruments/nkp-4/nkp-4.xml</path>
     <offsets>
       <x-m> -3.3578 </x-m>
       <y-m>  -0.0015 </y-m>
@@ -96,7 +96,7 @@
 
   <!-- Vertical Speed Indicator -->
   <model>
-    <path>Aircraft/L-39ZA/Models/Instruments/vsi/vsi.xml</path>
+    <path>Aircraft/L-39/Models/Instruments/vsi/vsi.xml</path>
     <offsets>
       <x-m> -3.35621 </x-m>
       <y-m>  0.099044 </y-m>
@@ -109,7 +109,7 @@
 
   <!-- ADF radiocompass -->
   <model>
-    <path>Aircraft/L-39ZA/Models/Instruments/ppda/ppda.xml</path>
+    <path>Aircraft/L-39/Models/Instruments/ppda/ppda.xml</path>
     <offsets>
       <x-m> -3.35661 </x-m>
       <y-m>  0.097544 </y-m>
@@ -131,7 +131,7 @@
   
   <!-- Distance to VOR -->
   <model>
-    <path>Aircraft/L-39ZA/Models/Instruments/ppd-2/ppd-2.xml</path>
+    <path>Aircraft/L-39/Models/Instruments/ppd-2/ppd-2.xml</path>
     <offsets>
       <x-m> -3.36671 </x-m>
       <y-m>  0.0026 </y-m>
@@ -144,7 +144,7 @@
   
   <!-- Compas -->
   <model>
-    <path>Aircraft/L-39ZA/Models/Instruments/compas/compas.xml</path>
+    <path>Aircraft/L-39/Models/Instruments/compas/compas.xml</path>
     <offsets>
       <x-m>  -0.032 </x-m>
       <y-m>  0.000 </y-m>
@@ -157,7 +157,7 @@
   
   <!-- Rivets -->
   <model>
-    <path>Aircraft/L-39ZA/Models/Instruments/rivets/rivets.xml</path>
+    <path>Aircraft/L-39/Models/Instruments/rivets/rivets.xml</path>
     <offsets>
       <!-- <x-m>  -0.020 </x-m>
       <y-m>  0.000 </y-m>
@@ -173,7 +173,7 @@
 
   <!-- Engine RPM -->
   <model>
-    <path>Aircraft/L-39ZA/Models/Instruments/rpm/rpm.xml</path>
+    <path>Aircraft/L-39/Models/Instruments/rpm/rpm.xml</path>
     <offsets>
       <x-m> -3.36525 </x-m>
       <y-m>  0.182989 </y-m>
@@ -186,7 +186,7 @@
 
   <!-- Engine Temp -->
   <model>
-    <path>Aircraft/L-39ZA/Models/Instruments/itg-1/itg-1.xml</path>
+    <path>Aircraft/L-39/Models/Instruments/itg-1/itg-1.xml</path>
     <offsets>
       <x-m> -3.36595 </x-m>
       <y-m>  0.248783 </y-m>
@@ -199,7 +199,7 @@
 
   <!-- Fuel % -->
   <model>
-    <path>Aircraft/L-39ZA/Models/Instruments/fuel/fuel.xml</path>
+    <path>Aircraft/L-39/Models/Instruments/fuel/fuel.xml</path>
     <offsets>
       <x-m> -3.36595 </x-m>
       <y-m>  0.248983 </y-m>
@@ -212,7 +212,7 @@
   
   <!-- Voltammeter -->
   <model>
-    <path>Aircraft/L-39ZA/Models/Instruments/voltammeter/voltammeter.xml</path>
+    <path>Aircraft/L-39/Models/Instruments/voltammeter/voltammeter.xml</path>
     <offsets>
       <x-m> -3.36575 </x-m>
       <y-m>  0.255783 </y-m>
@@ -234,7 +234,7 @@
 
   <!-- Voltammeter 2-->
   <model>
-    <path>Aircraft/L-39ZA/Models/Instruments/voltammeter/voltammeter.xml</path>
+    <path>Aircraft/L-39/Models/Instruments/voltammeter/voltammeter.xml</path>
     <offsets>
       <x-m> -3.37900 </x-m>
       <y-m>  0.043797 </y-m>
@@ -249,7 +249,7 @@
   
   <!-- Exhaust Gaz Temperature -->
   <model>
-    <path>Aircraft/L-39ZA/Models/Instruments/uiz/uiz.xml</path>
+    <path>Aircraft/L-39/Models/Instruments/uiz/uiz.xml</path>
     <offsets>
       <x-m> -3.36795 </x-m>
       <y-m>  0.182298 </y-m>
@@ -271,7 +271,7 @@
 
   <!-- Air pressure indicator -->
   <model>
-    <path>Aircraft/L-39ZA/Models/Instruments/uvpd/uvpd.xml</path>
+    <path>Aircraft/L-39/Models/Instruments/uvpd/uvpd.xml</path>
     <offsets>
       <x-m> -3.36795 </x-m>
       <y-m>  0.142298 </y-m>
@@ -293,7 +293,7 @@
   
   <!-- Temp Manometer -should be engine vibration indicator -->
   <model>
-    <path>Aircraft/L-39ZA/Models/Instruments/manometer/mano.xml</path>
+    <path>Aircraft/L-39/Models/Instruments/manometer/mano.xml</path>
     <offsets>
       <x-m> -3.36795 </x-m>
       <y-m>  0.201983 </y-m>
@@ -315,7 +315,7 @@
   
   <!-- Temp AoA -->
   <model>
-    <path>Aircraft/L-39ZA/Models/Instruments/uap-7/uap-7.xml</path>
+    <path>Aircraft/L-39/Models/Instruments/uap-7/uap-7.xml</path>
     <offsets>
       <x-m> -3.336 </x-m>
       <y-m> 0.079 </y-m>
@@ -337,7 +337,7 @@
   
   <!-- ACHS clock -->
   <model>
-    <path>Aircraft/L-39ZA/Models/Instruments/achs/achs.xml</path>
+    <path>Aircraft/L-39/Models/Instruments/achs/achs.xml</path>
     <offsets>
       <x-m> -3.36771 </x-m>
       <y-m>  0.08 </y-m>

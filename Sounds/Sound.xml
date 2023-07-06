@@ -6,7 +6,7 @@
         <!-- <engine>
             <name>engine-start-inside</name>
             <mode>once</mode>
-            <path>Aircraft/L-39ZA/Sounds/turbine-start-in.wav</path>
+            <path>Aircraft/L-39/Sounds/turbine-start-in.wav</path>
             <condition>
                 <and>
                     <property>/controls/engines/engine[0]/starter</property>
@@ -35,7 +35,7 @@
         <engine>
             <name>engine-start-outside</name>
             <mode>once</mode>
-            <path>Aircraft/L-39ZA/Sounds/samples/alpha/starter.wav</path>
+            <path>Aircraft/L-39/Sounds/samples/alpha/starter.wav</path>
             <condition>
                 <and>
                     <property>/controls/engines/engine[0]/starter</property>
@@ -72,7 +72,7 @@
 
         <engine>
             <name>start</name>
-            <path>Aircraft/L-39ZA/Sounds/samples/alpha/starter.wav</path>
+            <path>Aircraft/L-39/Sounds/samples/alpha/starter.wav</path>
             <mode>once</mode>
             <condition>
                 <property>/controls/engines/engine[0]/starter</property>
@@ -95,7 +95,7 @@
         
         <!-- <engine>
             <name>engine</name>
-            <path>Aircraft/L-39ZA/Sounds/jet-blast.wav</path>
+            <path>Aircraft/L-39/Sounds/jet-blast.wav</path>
             <mode>looped</mode>
             <condition>
                 <property>engines/engine[0]/running</property>
@@ -116,7 +116,7 @@
         
         <engine>
             <name>whine</name>
-            <path>Aircraft/L-39ZA/Sounds/engine-exhaust.wav</path>
+            <path>Aircraft/L-39/Sounds/engine-exhaust.wav</path>
             <mode>looped</mode>
             <condition>
                 <property>/engines/engine[0]/running</property>
@@ -139,7 +139,7 @@
 
         <engine>
             <name>engine</name>
-            <path>Aircraft/L-39ZA/Sounds/samples/alpha/running.wav</path>
+            <path>Aircraft/L-39/Sounds/samples/alpha/running.wav</path>
             <mode>looped</mode>
             <condition>
                 <property>/engines/engine[0]/running</property>
@@ -156,7 +156,7 @@
 
         <!-- <engine>
             <name>whine-int</name>
-            <path>Aircraft/L-39ZA/Sounds/engine-int.wav</path>
+            <path>Aircraft/L-39/Sounds/engine-int.wav</path>
             <mode>looped</mode>
             <condition>
                 <property>/engines/engine[0]/running</property>
@@ -177,7 +177,7 @@
         
         <shutdown>
             <name>shutdown</name>
-            <path>Aircraft/L-39ZA/Sounds/shutdown.wav</path>
+            <path>Aircraft/L-39/Sounds/shutdown.wav</path>
             <condition>
                 <not>
                     <property>/sim/current-view/internal</property>
@@ -213,7 +213,7 @@
         
         <engine>
             <name>shutdown</name>
-            <path>Aircraft/L-39ZA/Sounds/samples/alpha/shutdown.wav</path>
+            <path>Aircraft/L-39/Sounds/samples/alpha/shutdown.wav</path>
             <mode>once</mode>
             <condition>
                 <property>/controls/engines/engine[0]/cutoff</property> 
@@ -456,7 +456,7 @@
         <flap>
             <name>flaps</name>
             <mode>in-transit</mode>
-            <path>Aircraft/L-39ZA/Sounds/flaps.wav</path>
+            <path>Aircraft/L-39/Sounds/flaps.wav</path>
             <property>/surface-positions/left-flap-pos-norm</property>
             <volume>
 				<offset>0.25</offset>
@@ -467,7 +467,7 @@
         <flap>
             <name>flaps</name>
             <mode>in-transit</mode>
-            <path>Aircraft/L-39ZA/Sounds/flaps.wav</path>
+            <path>Aircraft/L-39/Sounds/flaps.wav</path>
             <property>/surface-positions/right-flap-pos-norm</property>
             <volume>
 				<offset>0.25</offset>
@@ -478,7 +478,7 @@
         <speedbrake>
 			<name>speedbrake</name>
 			<mode>in-transit</mode>
-			<path>Aircraft/L-39ZA/Sounds/airbrake.wav</path>
+			<path>Aircraft/L-39/Sounds/airbrake.wav</path>
 			<property>/surface-positions/speedbrake-pos-norm</property>
 			<volume>
 				<offset>0.25</offset>
@@ -499,7 +499,7 @@
         <cockpit>
             <name>Cockpit Atmos</name>
             <mode>looped</mode>
-            <path>Aircraft/L-39ZA/Sounds/cockpit.wav</path>
+            <path>Aircraft/L-39/Sounds/cockpit.wav</path>
             <condition>
                 <property>/sim/current-view/internal</property>
                 <property>/controls/electric/battery-switch</property>
@@ -534,7 +534,7 @@
 		<flyby>
 			<name>fly-by</name>
 			<mode>once</mode>
-			<path>Aircraft/L-39ZA/Sounds/flyby.wav</path>
+			<path>Aircraft/L-39/Sounds/flyby.wav</path>
 			<condition>
                 <and>
                     <greater-than>
@@ -563,7 +563,7 @@
         <sonicboom>
             <name>Sonic Boom</name>
             <mode>once</mode>
-            <path>Aircraft/L-39ZA/Sounds/sonicboom.wav</path>
+            <path>Aircraft/L-39/Sounds/sonicboom.wav</path>
             <condition>
                 <and>
                     <greater-than>
@@ -580,7 +580,7 @@
         
         <voice>
             <name>Geforce-breath-vox</name>
-            <path>Aircraft/L-39ZA/Sounds/geforce.wav</path>
+            <path>Aircraft/L-39/Sounds/geforce.wav</path>
             <condition>
                 <greater-than>
                     <property>/accelerations/pilot/z-accel-fps_sec</property>
@@ -594,7 +594,7 @@
         
         <voice>
             <name>Geforce-vox</name>
-            <path>Aircraft/L-39ZA/Sounds/geforce1.wav</path>
+            <path>Aircraft/L-39/Sounds/geforce1.wav</path>
             <condition>
                 <less-than>
                     <property>/accelerations/pilot/z-accel-fps_sec</property>
@@ -622,7 +622,7 @@
         <stall>
             <name>stall</name>
             <mode>looped</mode>
-            <path>Aircraft/L-39ZA/Sounds/stall.wav</path>
+            <path>Aircraft/L-39/Sounds/stall.wav</path>
             <type>avionics</type>
             <condition>
                 <less-than>
@@ -645,7 +645,7 @@
         <!-- <dangeralt>
             <name>dangeralt</name>
             <mode>looped</mode>
-            <path>Aircraft/L-39ZA/Sounds/n-3hz.wav</path>
+            <path>Aircraft/L-39/Sounds/n-3hz.wav</path>
             <type>avionics</type>
             <condition>
                 <less-than>
@@ -668,7 +668,7 @@
         <ritaaoa>
 			<name>Rita AoA Warning</name>
 			<mode>looped</mode>
-			<path>Aircraft/L-39ZA/Sounds/RitaHighAoA.wav</path>
+			<path>Aircraft/L-39/Sounds/RitaHighAoA.wav</path>
 			<type>avionics</type>
 			<condition>
 				<and>
@@ -710,7 +710,7 @@
         <ritadangeralt>
             <name>Rita danger altitude</name>
             <mode>once</mode>
-            <path>Aircraft/L-39ZA/Sounds/RitaAltitude.wav</path>
+            <path>Aircraft/L-39/Sounds/RitaAltitude.wav</path>
             <type>avionics</type>
             <condition>
                 <property>/controls/electric/ralt-switch</property>
@@ -732,7 +732,7 @@
         <guns>
             <name>gunfire</name>
             <mode>looped</mode>
-            <path>Aircraft/L-39ZA/Sounds/gsh23.wav</path>
+            <path>Aircraft/L-39/Sounds/gsh23.wav</path>
             <condition> 
                 <property>sim/multiplay/generic/int[8]</property>
             </condition>
@@ -749,7 +749,7 @@
         <PK3-guns>
             <name>PK3-gunfire</name>
             <mode>looped</mode>
-            <path>Aircraft/L-39ZA/Sounds/pk-3.wav</path>
+            <path>Aircraft/L-39/Sounds/pk-3.wav</path>
             <condition> 
                  <or>
 					<property>sim/multiplay/generic/int[11]</property>
@@ -771,7 +771,7 @@
         <S-5-Rocket-Single>
 			<name>S-8-Rocket-Single</name>
 			<mode>looped</mode>
-			<path>Aircraft/L-39ZA/Sounds/rockets.wav</path>
+			<path>Aircraft/L-39/Sounds/rockets.wav</path>
 			
 			<condition>
                 <or>
@@ -794,7 +794,7 @@
 		<S-5-Rocket>
 			<name>S-8-Rocket</name>
 			<mode>once</mode>
-			<path>Aircraft/L-39ZA/Sounds/rockets_ripple2.wav</path>
+			<path>Aircraft/L-39/Sounds/rockets_ripple2.wav</path>
 			
 			<condition>
                 <or>
@@ -824,7 +824,7 @@
 					<property>/sim/multiplay/generic/int[13]</property>
 			</condition>
 				
-			<path>Aircraft/L-39ZA/Sounds/bomb.wav</path>
+			<path>Aircraft/L-39/Sounds/bomb.wav</path>
 		</bomb1>
 
         <bomb2>
@@ -835,7 +835,7 @@
 					<property>/sim/multiplay/generic/int[14]</property>
 			</condition>
 				
-			<path>Aircraft/L-39ZA/Sounds/bomb.wav</path>
+			<path>Aircraft/L-39/Sounds/bomb.wav</path>
 		</bomb2>
 
 		<bomb3>
@@ -846,7 +846,7 @@
 					<property>/sim/multiplay/generic/int[18]</property>
 			</condition>
 				
-			<path>Aircraft/L-39ZA/Sounds/bomb.wav</path>
+			<path>Aircraft/L-39/Sounds/bomb.wav</path>
 		</bomb3>
 
         <bomb4>
@@ -857,13 +857,35 @@
 					<property>/sim/multiplay/generic/int[19]</property>
 			</condition>
 				
-			<path>Aircraft/L-39ZA/Sounds/bomb.wav</path>
+			<path>Aircraft/L-39/Sounds/bomb.wav</path>
 		</bomb4>
+
+        <jettison14>
+			<name>Jettison_pylons_14</name>
+			<mode>once</mode>
+			
+			<condition>
+					<property>/sim/multiplay/generic/int[20]</property>
+			</condition>
+				
+			<path>Aircraft/L-39/Sounds/bomb.wav</path>
+		</jettison14>
+
+        <jettison23>
+			<name>Jettison_pylons_23</name>
+			<mode>once</mode>
+			
+			<condition>
+					<property>/sim/multiplay/generic/int[21]</property>
+			</condition>
+				
+			<path>Aircraft/L-39/Sounds/bomb.wav</path>
+		</jettison23>
         
         <low-fuel>
             <name>low-fuel</name>
             <mode>once</mode>
-            <path>Aircraft/L-39ZA/Sounds/fuellow.wav</path>
+            <path>Aircraft/L-39/Sounds/fuellow.wav</path>
             <condition>
                 <less-than>
                     <property>/consumables/fuel/total-fuel-gals</property>
@@ -875,7 +897,7 @@
         <!-- <low-fuel2>
             <name>low-fuel2</name>
             <mode>once</mode>
-            <path>Aircraft/L-39ZA/Sounds/fuellow.wav</path>
+            <path>Aircraft/L-39/Sounds/fuellow.wav</path>
             <condition>
                 <less-than>
                     <property>/consumables/fuel/total-fuel-gals</property>
@@ -888,7 +910,7 @@
         <low-fuel3>
             <name>low-fuel3</name>
             <mode>once</mode>
-            <path>Aircraft/L-39ZA/Sounds/fuellow.wav</path>
+            <path>Aircraft/L-39/Sounds/fuellow.wav</path>
             <condition>
                 <less-than>
                     <property>/consumables/fuel/total-fuel-gals</property>
@@ -901,7 +923,7 @@
         <low-fuel4>
             <name>low-fuel4</name>
             <mode>once</mode>
-            <path>Aircraft/L-39ZA/Sounds/fuellow.wav</path>
+            <path>Aircraft/L-39/Sounds/fuellow.wav</path>
             <condition>
                 <less-than>
                     <property>/consumables/fuel/total-fuel-gals</property>
@@ -914,7 +936,7 @@
         <low-fuel5>
             <name>low-fuel5</name>
             <mode>once</mode>
-            <path>Aircraft/L-39ZA/Sounds/bingofuel.wav</path>
+            <path>Aircraft/L-39/Sounds/bingofuel.wav</path>
             <condition>
                 <less-than>
                     <property>/consumables/fuel/total-fuel-gals</property>
@@ -928,7 +950,7 @@
 		
 		<click>
 			<name>canopy click up</name>
-			<path>Aircraft/L-39ZA/Sounds/canopy_close.wav</path>
+			<path>Aircraft/L-39/Sounds/canopy_close.wav</path>
 			<condition>
 				<less-than>
                     <property>/canopy/position-norm</property>
@@ -943,7 +965,7 @@
         
 		<click>
 			<name>canopy click down</name>
-			<path>Aircraft/L-39ZA/Sounds/canopy_open.wav</path>
+			<path>Aircraft/L-39/Sounds/canopy_open.wav</path>
 			<condition>
 				<greater-than>
                     <property>/canopy/position-norm</property>
@@ -958,7 +980,7 @@
 
         <click>
 			<name>canopy move</name>
-			<path>Aircraft/L-39ZA/Sounds/canopy_slide.wav</path>
+			<path>Aircraft/L-39/Sounds/canopy_slide.wav</path>
 			<condition>
 				<greater-than>
                     <property>/canopy/position-norm</property>
@@ -978,7 +1000,7 @@
         <dial>
             <name>dial-adf</name>
             <mode>once</mode>
-            <path>Aircraft/L-39ZA/Sounds/scroll.wav</path>
+            <path>Aircraft/L-39/Sounds/scroll.wav</path>
             <condition>
                 <property>/controls/sound/click-adf-dial</property>
             </condition>
@@ -997,7 +1019,7 @@
         <switch>
             <name>switch-click</name>
             <mode>once</mode>
-            <path>Aircraft/L-39ZA/Sounds/click.wav</path>
+            <path>Aircraft/L-39/Sounds/click.wav</path>
             <condition>
                 <property>/controls/sound/click-switch</property>
             </condition>
@@ -1013,7 +1035,7 @@
         <switch>
             <name>switch-click2</name>
             <mode>once</mode>
-            <path>Aircraft/L-39ZA/Sounds/click2.wav</path>
+            <path>Aircraft/L-39/Sounds/click2.wav</path>
             <condition>
                 <property>/controls/sound/click-switch2</property>
             </condition>
@@ -1029,7 +1051,7 @@
         <switch>
             <name>switch-click3</name>
             <mode>once</mode>
-            <path>Aircraft/L-39ZA/Sounds/click3.wav</path>
+            <path>Aircraft/L-39/Sounds/click3.wav</path>
             <condition>
                 <property>/controls/sound/click-switch3</property>
             </condition>
@@ -1045,7 +1067,7 @@
         <switch>
             <name>switch-click4</name>
             <mode>once</mode>
-            <path>Aircraft/L-39ZA/Sounds/canopy_open.wav</path>
+            <path>Aircraft/L-39/Sounds/canopy_open.wav</path>
             <condition>
                 <property>/controls/sound/click-switch4</property>
             </condition>

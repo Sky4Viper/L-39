@@ -43,7 +43,7 @@ the shadow seems to disappear into the ground.
     <object-name>shadow</object-name>
   </animation>
 
-<animation>
+    <animation>
     	<type>translate</type>
 		<object-name>shadow</object-name>
     	<property>gear/gear[1]/compression-norm</property>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PropertyList>
-  <name>Aircraft/L-39ZA/Models/Effects/albatros-combined-shader</name>
+  <name>Aircraft/L-39/Models/Effects/albatros-combined-shader</name>
   <inherits-from>Effects/model-combined-deferred</inherits-from>
   <parameters>
 	<rain-enabled type="int">2</rain-enabled>
@@ -39,7 +39,7 @@
       	<dirt-factor type="float" n="0">0.01</dirt-factor>-->
 	
   	<texture n="2">
-      		<image>Aircraft/L-39ZA/Models/Effects/bumpmap.png</image>
+      		<image>Aircraft/L-39/Models/Effects/bumpmap.png</image>
       		<filter>linear</filter><!-- trilinear linear linear-mipmap-linear linear-mipmap-nearest -->
       		<wrap-s>repeat</wrap-s>
       		<wrap-t>repeat</wrap-t>
@@ -47,7 +47,7 @@
   	</texture>
 	
 	<texture n="3">
-		<image>Aircraft/L-39ZA/Models/Effects/lightmap.png</image>
+		<image>Aircraft/L-39/Models/Effects/lightmap.png</image>
 		<filter>linear</filter>
 		<wrap-s>clamp</wrap-s>
 		<wrap-t>clamp</wrap-t>
