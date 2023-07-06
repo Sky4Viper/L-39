@@ -69,7 +69,7 @@
 -->
 
 <PropertyList>
- <name>Aircraft/L-39ZA/Models/Effects/ArmReflect</name>
+ <name>Aircraft/L-39/Models/Effects/ArmReflect</name>
  <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
  <parameters>
   <rain-enabled type="int"> 2 </rain-enabled>

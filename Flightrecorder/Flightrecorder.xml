@@ -23,10 +23,10 @@
     <signals include="/Aircraft/Generic/flightrecorder/components/gear-retractable.xml">
         <count type="int">3</count>
     </signals>
-    <signals include="/Aircraft/L-39ZA/Flightrecorder/pylons.xml">
+    <signals include="/Aircraft/L-39/Flightrecorder/pylons.xml">
         <count type="int">4</count>
     </signals>
-    <signals include="/Aircraft/L-39ZA/Flightrecorder/cockpit.xml">
+    <signals include="/Aircraft/L-39/Flightrecorder/cockpit.xml">
     </signals>
 
 

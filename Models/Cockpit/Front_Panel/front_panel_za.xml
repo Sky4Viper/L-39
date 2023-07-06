@@ -1,0 +1,1523 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <path>f-panel.ac</path>
+
+	<!-- Landing gear lever -->
+
+  <animation>
+    <type>material</type>
+    <object-name>arms_base</object-name>
+    <object-name>gear_base</object-name>
+    <object-name>landing_gear_lever</object-name>
+    <object-name>landing_gear_switch</object-name>
+    <object-name>arm_ctrl_switch.001</object-name>
+    <object-name>arm_ctrl_switch.002</object-name>
+    <object-name>arm_ctrl_switch.003</object-name>
+    <object-name>arm_ctrl_switch.004</object-name>
+    <object-name>arm_ctrl_switch.005</object-name>
+    <object-name>arm_ctrl_switch.006</object-name>
+    <object-name>arm_ctrl_switch.007</object-name>
+    <object-name>arm_jet_switch.001</object-name>
+    <object-name>arm_jet_switch.002</object-name>
+    <object-name>arm_jet_switch.003</object-name>
+    <object-name>arm_jet_switch.001_cover</object-name>
+    <object-name>arm_jet_switch.002_cover</object-name>
+    <object-name>arm_jet_switch.003_cover</object-name>
+    <object-name>landing_gear_support</object-name>
+    <emission>
+      <red>0.2</red>
+      <green>0.2</green>
+      <blue>0.2</blue>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+    <condition>
+        <property>/controls/electric/battery-switch</property>
+     </condition>
+  </animation>
+
+    <animation> 
+        <object-name>gear_down_lamp</object-name>
+        <object-name>gear_airbrake_lamp</object-name>
+        <emission> 
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+            <red>0</red>
+            <green>1.2</green>
+            <blue>0</blue>
+        </emission>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+      </condition>
+    </animation>
+
+    <animation> 
+        <type>material</type>
+        <object-name>gear_up_lamp</object-name>
+        <object-name>gear_flaps_lamp</object-name>
+        <object-name>gear_door_lamp</object-name>
+        <emission> 
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+            <red>1.2</red>
+            <green>0</green>
+            <blue>0</blue>
+        </emission>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+      </condition>
+    </animation>
+
+    <animation> 
+        <type>material</type>
+        <object-name>warning_light.001</object-name>
+        <object-name>warning_light.off.001</object-name>
+        <object-name>warning_light.002</object-name>
+        <object-name>warning_light.off.002</object-name>
+        <object-name>warning_light.003</object-name>
+        <object-name>warning_light.off.003</object-name>
+        <object-name>warning_light.004</object-name>
+        <object-name>warning_light.off.004</object-name>
+        <object-name>warning_light.005</object-name>
+        <object-name>warning_light.off.005</object-name>
+        <object-name>warning_light.006</object-name>
+        <object-name>warning_light.off.006</object-name>
+        <object-name>warning_light.007</object-name>
+        <object-name>warning_light.off.007</object-name>
+        <object-name>warning_light.008</object-name>
+        <object-name>warning_light.off.008</object-name>
+        <object-name>warning_light.009</object-name>
+        <object-name>warning_light.off.009</object-name>
+        <object-name>warning_light.010</object-name>
+        <object-name>warning_light.011</object-name>
+        <object-name>warning_light.off.011</object-name>
+        <object-name>warning_light.012</object-name>
+        <object-name>warning_light.off.012</object-name>
+
+        <object-name>caution_light.004</object-name>
+        <object-name>caution_light.off.004</object-name>
+        <object-name>caution_light.005</object-name>
+        <object-name>caution_light.off.005</object-name>
+        <object-name>caution_light.008</object-name>
+        <object-name>caution_light.off.008</object-name>
+        <object-name>caution_light.010</object-name>
+        <object-name>caution_light.off.010</object-name>
+        <object-name>caution_light.012</object-name>
+        <object-name>caution_light.off.012</object-name>
+        <object-name>caution_light.014</object-name>
+        <object-name>caution_light.off.014</object-name>
+
+        <object-name>arms_light.002</object-name>
+        <object-name>arms_light.off.002</object-name>
+        <emission> 
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+            <red>1.2</red>
+            <green>0</green>
+            <blue>0</blue>
+        </emission>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+      </condition>
+    </animation>
+
+    <animation> 
+        <type>material</type>
+        <object-name>caution_light.002</object-name>
+        <object-name>caution_light.003</object-name>
+        <object-name>caution_light.006</object-name>
+        <object-name>caution_light.007</object-name>
+        <object-name>caution_light.013</object-name>
+        <emission> 
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+            <red>0</red>
+            <green>1.2</green>
+            <blue>0</blue>
+        </emission>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+      </condition>
+    </animation>
+
+    <animation> 
+        <type>material</type>
+        <object-name>btn_pylons_sel_lamp.001</object-name>
+        <object-name>btn_pylons_sel_lamp.002</object-name>
+        <emission> 
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+            <red>0</red>
+            <green>1.2</green>
+            <blue>0</blue>
+        </emission>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+      </condition>
+    </animation>
+
+    <animation> 
+        <type>material</type>
+        <object-name>caution_light.001</object-name>
+        <object-name>caution_light.011</object-name>
+        <object-name>caution_light.015</object-name>
+        <object-name>caution_light.016</object-name>
+        <object-name>arms_light.001</object-name>
+        <object-name>arms_light.003</object-name>
+        <emission> 
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+            <red>1.2</red>
+            <green>0.973</green>
+            <blue>0</blue>
+        </emission>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+      </condition>
+    </animation>
+
+    <animation> 
+        <type>material</type>
+        <object-name>caution_light.009</object-name>
+        <emission> 
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+            <red>1.2</red>
+            <green>1.2</green>
+            <blue>1.2</blue>
+        </emission>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+      </condition>
+    </animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>landing_gear_lever</object-name>
+		<property>gear/gear[0]/position-norm</property>
+    <!-- <property>controls/gear/gear-down</property> -->
+        <object-name>landing_gear_switch</object-name>
+		<interpolation>
+            <entry><ind>0</ind><dep>-29</dep></entry>
+            <entry><ind>1</ind><dep> 29</dep></entry>
+        </interpolation>
+		<center>
+			<x-m>-3.38463</x-m>
+			<y-m>-0.178181</y-m>
+			<z-m>-0.57824</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<!-- <condition>
+			<greater-than>
+				<property>gear/gear[0]/position-norm</property>
+				<value>0.4</value>
+			</greater-than>
+		</condition> -->	
+	</animation>
+
+    <animation>
+    	<type>translate</type>
+    	<object-name>landing_gear_switch</object-name>
+      <!-- <property>controls/gear/gear-down</property> -->
+    	<property>gear/gear[0]/position-norm</property>
+        <!-- <condition>
+            <greater-than>
+				<property>gear/gear[0]/position-norm</property>
+				<value>0.4</value>
+			</greater-than>
+        </condition> -->
+        <interpolation> 
+            <entry><ind>0</ind><dep>0.0</dep></entry>
+            <entry><ind>0.01</ind><dep>0.021</dep></entry>
+            <entry><ind>0.05</ind><dep>0.021</dep></entry>
+            <entry><ind>0.99</ind><dep>0.021</dep></entry>
+            <entry><ind>1</ind><dep>0.0</dep></entry>
+        </interpolation>
+    	<axis>
+      		<x>1</x>
+      		<y>0</y>
+      		<z>0</z>
+    	</axis>
+  	</animation>
+
+    <animation>
+		<type>select</type>
+		<object-name>gear_up_lamp</object-name>
+		<condition>
+        <property>/controls/electric/battery-switch</property>
+				<equals>
+					<property>gear/gear[0]/position-norm</property>
+					<value>0</value>
+				</equals>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>gear_down_lamp</object-name>
+		<condition>
+        <property>/controls/electric/battery-switch</property>
+			<equals>
+				<property>gear/gear[0]/position-norm</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
+
+    <animation>
+		<type>select</type>
+		<object-name>gear_airbrake_lamp</object-name>
+		<condition>
+        <property>/controls/electric/battery-switch</property>
+            <greater-than>
+                <property>surface-positions/speedbrake-pos-norm</property>
+                <value>0</value>
+            </greater-than>
+        </condition>
+	</animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>gear_flaps_lamp</object-name>
+        <condition>
+        <property>/controls/electric/battery-switch</property>
+            <greater-than>
+                <property>surface-positions/flap-pos-norm</property>
+                <value>0.5</value>
+            </greater-than>
+            <not>
+				<equals>
+					<property>gear/gear[0]/position-norm</property>
+					<value>1</value>
+				</equals>
+			</not>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>gear_door_lamp</object-name>
+        <condition>
+        <property>/controls/electric/battery-switch</property>
+            <greater-than>
+                <property>gear/gear[0]/position-norm</property>
+                <value>0</value>
+            </greater-than>
+        </condition>
+    </animation>
+
+    <!-- WARNING LIGHTS -->
+
+    <animation>
+        <type>timed</type>
+        <object-name>arms_light.002</object-name>
+        <object-name>arms_light.off.002</object-name>
+        <use-personality type="bool">true</use-personality>
+        <branch-duration-sec>0.5</branch-duration-sec>
+        <branch-duration-sec>0.5</branch-duration-sec>
+    </animation>
+
+    <!-- Blinking lights left panel -->
+
+    <animation>
+        <type>timed</type>
+        <object-name>warning_light.001</object-name>
+        <object-name>warning_light.off.001</object-name>
+        <use-personality type="bool">true</use-personality>
+        <branch-duration-sec>0.5</branch-duration-sec>
+        <branch-duration-sec>0.5</branch-duration-sec>
+    </animation>
+
+    <animation>
+        <type>timed</type>
+        <object-name>warning_light.002</object-name>
+        <object-name>warning_light.off.002</object-name>
+        <use-personality type="bool">true</use-personality>
+        <branch-duration-sec>0.5</branch-duration-sec>
+        <branch-duration-sec>0.5</branch-duration-sec>
+    </animation>
+
+    <animation>
+        <type>timed</type>
+        <object-name>warning_light.003</object-name>
+        <object-name>warning_light.off.003</object-name>
+        <use-personality type="bool">true</use-personality>
+        <branch-duration-sec>0.5</branch-duration-sec>
+        <branch-duration-sec>0.5</branch-duration-sec>
+    </animation>
+
+    <animation>
+        <type>timed</type>
+        <object-name>warning_light.004</object-name>
+        <object-name>warning_light.off.004</object-name>
+        <use-personality type="bool">true</use-personality>
+        <branch-duration-sec>0.5</branch-duration-sec>
+        <branch-duration-sec>0.5</branch-duration-sec>
+    </animation>
+
+    <animation>
+        <type>timed</type>
+        <object-name>warning_light.005</object-name>
+        <object-name>warning_light.off.005</object-name>
+        <use-personality type="bool">true</use-personality>
+        <branch-duration-sec>0.5</branch-duration-sec>
+        <branch-duration-sec>0.5</branch-duration-sec>
+    </animation>
+
+    <animation>
+        <type>timed</type>
+        <object-name>warning_light.006</object-name>
+        <object-name>warning_light.off.006</object-name>
+        <use-personality type="bool">true</use-personality>
+        <branch-duration-sec>0.5</branch-duration-sec>
+        <branch-duration-sec>0.5</branch-duration-sec>
+    </animation>
+
+    <animation>
+        <type>timed</type>
+        <object-name>warning_light.007</object-name>
+        <object-name>warning_light.off.007</object-name>
+        <use-personality type="bool">true</use-personality>
+        <branch-duration-sec>0.5</branch-duration-sec>
+        <branch-duration-sec>0.5</branch-duration-sec>
+    </animation>
+
+    <animation>
+        <type>timed</type>
+        <object-name>warning_light.008</object-name>
+        <object-name>warning_light.off.008</object-name>
+        <use-personality type="bool">true</use-personality>
+        <branch-duration-sec>0.5</branch-duration-sec>
+        <branch-duration-sec>0.5</branch-duration-sec>
+    </animation>
+
+    <animation>
+        <type>timed</type>
+        <object-name>warning_light.009</object-name>
+        <object-name>warning_light.off.009</object-name>
+        <use-personality type="bool">true</use-personality>
+        <branch-duration-sec>0.5</branch-duration-sec>
+        <branch-duration-sec>0.5</branch-duration-sec>
+    </animation>
+
+    <animation>
+        <type>timed</type>
+        <object-name>warning_light.011</object-name>
+        <object-name>warning_light.off.011</object-name>
+        <use-personality type="bool">true</use-personality>
+        <branch-duration-sec>0.8</branch-duration-sec>
+        <branch-duration-sec>0.2</branch-duration-sec>
+    </animation>
+
+    <animation>
+        <type>timed</type>
+        <object-name>warning_light.012</object-name>
+        <object-name>warning_light.off.012</object-name>
+        <use-personality type="bool">true</use-personality>
+        <branch-duration-sec>0.8</branch-duration-sec>
+        <branch-duration-sec>0.2</branch-duration-sec>
+    </animation>
+
+    <!-- Blinking lights right panel -->
+
+    <animation>
+        <type>timed</type>
+        <object-name>caution_light.004</object-name>
+        <object-name>caution_light.off.004</object-name>
+        <use-personality type="bool">true</use-personality>
+        <branch-duration-sec>0.5</branch-duration-sec>
+        <branch-duration-sec>0.5</branch-duration-sec>
+    </animation>
+
+    <animation>
+        <type>timed</type>
+        <object-name>caution_light.005</object-name>
+        <object-name>caution_light.off.005</object-name>
+        <use-personality type="bool">true</use-personality>
+        <branch-duration-sec>0.5</branch-duration-sec>
+        <branch-duration-sec>0.5</branch-duration-sec>
+    </animation>
+
+    <animation>
+        <type>timed</type>
+        <object-name>caution_light.008</object-name>
+        <object-name>caution_light.off.008</object-name>
+        <use-personality type="bool">true</use-personality>
+        <branch-duration-sec>0.5</branch-duration-sec>
+        <branch-duration-sec>0.5</branch-duration-sec>
+    </animation>
+
+    <animation>
+        <type>timed</type>
+        <object-name>caution_light.010</object-name>
+        <object-name>caution_light.off.010</object-name>
+        <use-personality type="bool">true</use-personality>
+        <branch-duration-sec>0.5</branch-duration-sec>
+        <branch-duration-sec>0.5</branch-duration-sec>
+    </animation>
+
+    <animation>
+        <type>timed</type>
+        <object-name>caution_light.012</object-name>
+        <object-name>caution_light.off.012</object-name>
+        <use-personality type="bool">true</use-personality>
+        <branch-duration-sec>0.5</branch-duration-sec>
+        <branch-duration-sec>0.5</branch-duration-sec>
+    </animation>
+
+    <animation>
+        <type>timed</type>
+        <object-name>caution_light.014</object-name>
+        <object-name>caution_light.off.014</object-name>
+        <use-personality type="bool">true</use-personality>
+        <branch-duration-sec>0.5</branch-duration-sec>
+        <branch-duration-sec>0.5</branch-duration-sec>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>warning_light.001</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <property>sim/crashed</property>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>warning_light.002</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <property>/controls/electric/ralt-switch</property>
+        <less-than>
+          <property>/position/altitude-agl-ft</property>
+          <property>controls/instrumentation/danger-altitude-ft</property>
+        </less-than>
+        <less-than>
+          <property>/gear/gear[0]/position-norm</property>
+          <value>1</value>
+        </less-than>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>warning_light.003</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <greater-than>
+            <property>velocities/mach</property>
+            <value>0.78</value>
+        </greater-than>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>warning_light.004</object-name>
+      <condition>
+        <less-than>
+            <property>/consumables/fuel/total-fuel-gals</property>
+            <value>49.00</value>
+        </less-than>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>warning_light.005</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <not>
+          <property>/controls/hydraulic/system/engine-pump</property>
+        </not>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>warning_light.006</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <not>
+          <property>/controls/electric/engine/generator</property>
+        </not>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>warning_light.007</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <not>
+          <property>/engines/engine[0]/running</property>
+        </not>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>warning_light.008</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <greater-than>
+            <property>/engines/engine[0]/rpm</property>
+            <value>100</value>
+        </greater-than>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>warning_light.009</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <not>
+          <property>/controls/electric/generator-switch-aux</property>
+        </not>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>warning_light.010</object-name>
+      <object-name>warning_light.off.010</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <greater-than>
+          <property>/canopy/position-norm</property>
+          <value>0</value>
+        </greater-than>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>warning_light.011</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <greater-than>
+          <property>/environment/pressure-ingh</property>
+          <value>60</value>
+        </greater-than>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>warning_light.012</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <not>
+          <property>/controls/electric/inverter-ac1-switch</property>
+        </not>
+        <not>
+          <property>/controls/electric/inverter-ac2-switch</property>
+        </not>
+      </condition>
+    </animation>
+
+    <!-- CAUTION LIGHTS -->
+
+    <animation>
+      <type>select</type>
+      <object-name>caution_light.001</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <or>
+          <and>
+            <equals>
+			        <property>controls/armament/pylon-outer-sel</property>
+			        <value>1</value>
+		        </equals>
+            <equals>
+			        <property>/controls/armament/rocketsLeft1</property>
+			        <value>0</value>
+		        </equals>
+          </and>
+          <and>
+            <equals>
+			        <property>controls/armament/pylon-inner-sel</property>
+			        <value>1</value>
+		        </equals>
+            <equals>
+			        <property>/controls/armament/rocketsLeft2</property>
+			        <value>0</value>
+		        </equals>
+          </and>
+          <and>
+            <equals>
+			        <property>controls/armament/pylon-outer-sel</property>
+			        <value>1</value>
+		        </equals>
+            <equals>
+			        <property>sim/weight[0]/payload-int</property>
+			        <value>0</value>
+		        </equals>
+            <equals>
+			        <property>sim/weight[3]/payload-int</property>
+			        <value>0</value>
+		        </equals>
+          </and>
+          <and>
+            <equals>
+			        <property>controls/armament/pylon-inner-sel</property>
+			        <value>1</value>
+		        </equals>
+            <equals>
+			        <property>sim/weight[1]/payload-int</property>
+			        <value>0</value>
+		        </equals>
+            <equals>
+			        <property>sim/weight[2]/payload-int</property>
+			        <value>0</value>
+		        </equals>
+          </and>
+        </or>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>caution_light.002</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <property>consumables/fuel/tank[1]/selected</property>
+        <property>consumables/fuel/tank[2]/selected</property>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>caution_light.003</object-name>
+      <condition>
+        <and>
+          <property>/controls/electric/battery-switch</property>
+          <property>instrumentation/nav/dme-in-range</property>
+          <property>/controls/electric/ralt-switch</property>
+          <less-than>
+            <property>instrumentation/dme/indicated-distance-nm</property>
+            <value>11.34</value>
+          </less-than>
+          <less-than>
+            <property>/position/altitude-agl-ft</property>
+            <value>2625</value>
+          </less-than>
+          <greater-than-equals>
+            <property>/position/altitude-agl-ft</property>
+            <value>1968</value>
+          </greater-than-equals>
+        </and>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>caution_light.004</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <less-than>
+          <property>/systems/electrical/suppliers/alternator</property>
+          <value>0.02</value>
+        </less-than>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>caution_light.005</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <not>
+          <property>/controls/ventilation/airconditioning-enabled</property>
+        </not>
+      </condition>
+    </animation>
+
+    <!-- MARKER LIGHT -->
+    <animation>
+      <type>select</type>
+      <object-name>caution_light.006</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <property>/controls/electric/ralt-switch</property>
+        <or>
+            <property>instrumentation/marker-beacon/outer</property>
+            <property>instrumentation/marker-beacon/middle</property>
+            <property>instrumentation/marker-beacon/inner</property>
+        </or>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>caution_light.007</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <!-- <less-than>
+          <property>instrumentation/nav/heading-needle-deflection</property>
+          <value>0.02</value>
+        </less-than>
+        <greater-than>
+          <property>instrumentation/nav/heading-needle-deflection</property>
+          <value>-0.02</value>
+        </greater-than> -->
+        <equals>
+          <property>instrumentation/nav/radials/selected-deg</property>
+          <property>autopilot/settings/heading-bug-deg</property>
+        </equals>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>caution_light.008</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <less-than>
+          <property>/engines/engine[0]/oilp-norm</property>
+          <value>0.075</value>
+        </less-than>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>caution_light.009</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <less-than>
+          <property>/environment/aircraft-effects/temperature-glass-degC</property>
+          <value>-0.1</value>
+        </less-than>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>caution_light.010</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <not>
+          <property>/controls/ventilation/airconditioning-enabled</property>
+        </not>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>caution_light.011</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <property>/controls/engines/engine[0]/starter</property>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>caution_light.012</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <greater-than>
+            <property>/engines/engine[0]/egt-degf</property>
+            <value>1180</value>
+        </greater-than>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>caution_light.013</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <property>/controls/anti-ice/wing-heat</property>
+        <property>/controls/anti-ice/window-heat</property>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>caution_light.014</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <less-than>
+          <property>/engines/engine[0]/fuel-flow-gph</property>
+          <value>20.0</value>
+        </less-than>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>caution_light.015</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <not>
+          <property>/controls/power/fuelpump0</property>
+          <property>/controls/power/fuelpump1</property>
+        </not>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>caution_light.016</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <greater-than>
+            <property>/engines/engine[0]/egt-degf</property>
+            <value>1074</value>
+        </greater-than>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>arms_light.001</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <property>/controls/armament/master-arm</property>
+        <greater-than>
+            <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+            <value>170</value>
+        </greater-than>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>arms_light.002</object-name>
+			<condition>
+				<and>
+                    <property>/controls/electric/battery-switch</property>
+					<or>
+					<greater-than>
+						<property>/orientation/alpha-deg</property>
+						<value>14.8</value>
+					</greater-than>
+					<less-than>
+            	<!-- G load > 3.0 = -93.52215-->
+              <!-- G load > 3.5 = -109.109175-->
+              <!-- G load > 4.0 = -124.6962-->
+						  <!-- G load > 5.0 = -155.87025-->
+              <property>/accelerations/pilot/z-accel-fps_sec</property>
+              <value>-101.3156625</value>
+          </less-than>
+          <greater-than>
+            	<!-- G load < -1.0 = 31.17405-->
+              <property>/accelerations/pilot/z-accel-fps_sec</property>
+            	<value>30.17405</value>
+          		</greater-than>
+					</or>
+					<not>
+					    <property>/gear/gear[0]/wow</property>
+					    <property>/gear/gear[1]/wow</property>
+					    <property>/gear/gear[2]/wow</property>
+					</not>
+				</and>
+			</condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>arms_light.003</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <or>
+        <equals>
+					<property>sim/weight[0]/payload-int</property>
+					<value>1</value>
+				</equals>
+        <equals>
+					<property>sim/weight[1]/payload-int</property>
+					<value>1</value>
+				</equals>
+        <equals>
+					<property>sim/weight[2]/payload-int</property>
+					<value>1</value>
+				</equals>
+        <equals>
+					<property>sim/weight[3]/payload-int</property>
+					<value>1</value>
+				</equals>
+        </or>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>translate</type>
+      <object-name>btn_pylons_sel.001</object-name>
+      <property>/controls/armament/pylon-outer-sel</property>
+      <interpolation>
+        <entry><ind>0</ind><dep>0</dep></entry>
+        <entry><ind>1</ind><dep>0.019</dep></entry>
+      </interpolation>
+      <axis>
+        <x>-1</x>
+        <y>0</y>
+        <z>0</z>
+      </axis>
+    </animation>
+
+    <animation>
+      <type>translate</type>
+      <object-name>btn_pylons_sel.002</object-name>
+      <property>/controls/armament/pylon-inner-sel</property>
+      <interpolation>
+        <entry><ind>0</ind><dep>0</dep></entry>
+        <entry><ind>1</ind><dep>0.019</dep></entry>
+      </interpolation>
+      <axis>
+        <x>-1</x>
+        <y>0</y>
+        <z>0</z>
+      </axis>
+    </animation>
+
+    <animation>
+      <type>rotate</type>
+      <object-name>arm_ctrl_switch.006</object-name>
+      <property>/controls/armament/salvo-ripple</property>
+      <interpolation>
+        <entry><ind>0</ind><dep>25</dep></entry>
+        <entry><ind>1</ind><dep>-20</dep></entry>
+        <entry><ind>2</ind><dep>-20</dep></entry>
+      </interpolation>
+      <center>
+        <x-m>-3.34297</x-m>
+        <y-m>-0.163714</y-m>
+        <z-m>-0.418794</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+    </animation>
+
+    <animation>
+      <type>rotate</type>
+      <object-name>arm_ctrl_switch.006</object-name>
+      <property>/controls/armament/salvo-ripple</property>
+      <interpolation>
+        <entry><ind>0</ind><dep>0</dep></entry>
+        <entry><ind>1</ind><dep> 20</dep></entry>
+        <entry><ind>2</ind><dep>-20</dep></entry>
+      </interpolation>
+      <center>
+        <x-m>-3.34297</x-m>
+        <y-m>-0.163714</y-m>
+        <z-m>-0.418794</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>0</y>
+        <z>-1</z>
+      </axis>
+    </animation>
+
+    <animation>
+      <type>rotate</type>
+      <object-name>arm_ctrl_switch.007</object-name>
+      <property>/controls/armament/bomb-mode</property>
+      <interpolation>
+        <entry><ind>0</ind><dep>-25</dep></entry>
+        <entry><ind>1</ind><dep>0</dep></entry>
+        <entry><ind>2</ind><dep>25</dep></entry>
+      </interpolation>
+      <center>
+        <x-m>-3.34297</x-m>
+        <y-m>-0.245356</y-m>
+        <z-m>-0.442816</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>btn_pylons_sel_lamp.001</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <property>/controls/armament/pylon-outer-sel</property>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>btn_pylons_sel_lamp.002</object-name>
+      <condition>
+        <property>/controls/electric/battery-switch</property>
+        <property>/controls/armament/pylon-inner-sel</property>
+      </condition>
+    </animation>
+
+    <!-- Select guns button -->
+
+	<animation>
+		<type>rotate</type>
+		<object-name>arm_ctrl_switch.004_cover</object-name>
+		<property>l-39za/controls/gunsswcover</property>
+		<interpolation>
+            <entry><ind> 0</ind><dep>0.0</dep></entry>
+            <entry><ind> 1</ind><dep>106.0</dep></entry>
+    </interpolation>
+		<center>
+			<x-m>-3.34296</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.38208</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>arm_ctrl_switch.004</object-name>
+      <property>/controls/armament/guns-sel</property>
+      <factor>90</factor>
+      <center>
+        <x-m>-3.34264</x-m>
+        <y-m>0</y-m>
+        <z-m>-0.40037</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+    <!-- Pylons jettison buttons -->
+
+	<animation>
+		<type>rotate</type>
+		<object-name>arm_jet_switch.001_cover</object-name>
+		<property>l-39za/controls/jett1swcover</property>
+		<interpolation>
+            <entry><ind> 0</ind><dep>0.0</dep></entry>
+            <entry><ind> 1</ind><dep>106.0</dep></entry>
+    </interpolation>
+		<center>
+			<x-m>-3.34296</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.48307</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+  <animation>
+		<type>rotate</type>
+		<object-name>arm_jet_switch.002_cover</object-name>
+		<property>l-39za/controls/jett2swcover</property>
+		<interpolation>
+            <entry><ind> 0</ind><dep>0.0</dep></entry>
+            <entry><ind> 1</ind><dep>106.0</dep></entry>
+    </interpolation>
+		<center>
+			<x-m>-3.34296</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.48307</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+  <animation>
+		<type>rotate</type>
+		<object-name>arm_jet_switch.003_cover</object-name>
+		<property>l-39za/controls/jett3swcover</property>
+		<interpolation>
+            <entry><ind> 0</ind><dep>0.0</dep></entry>
+            <entry><ind> 1</ind><dep>106.0</dep></entry>
+    </interpolation>
+		<center>
+			<x-m>-3.34296</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.48307</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>arm_jet_switch.002</object-name>
+      <property>/sim/multiplay/generic/int[20]</property>
+      <factor>90</factor>
+      <center>
+        <x-m>-3.34264</x-m>
+        <y-m>0</y-m>
+        <z-m>-0.50137</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>arm_jet_switch.003</object-name>
+      <property>/sim/multiplay/generic/int[21]</property>
+      <factor>90</factor>
+      <center>
+        <x-m>-3.34264</x-m>
+        <y-m>0</y-m>
+        <z-m>-0.50137</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>btn_pylons_sel.001</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/armament/pylon-outer-sel</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>pylon-outer-sw-lbl</tooltip-id>
+                <label>Pylons Outer %s</label>
+                <property>/controls/armament/pylon-outer-sel</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'ON'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>btn_pylons_sel.002</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/armament/pylon-inner-sel</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>pylon-inner-sw-lbl</tooltip-id>
+                <label>Pylons Inner %s</label>
+                <property>/controls/armament/pylon-inner-sel</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'ON'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+   <type>pick</type>
+   <object-name>arm_ctrl_switch.006</object-name>
+   <visible>true</visible>
+   <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+         <property>/controls/armament/salvo-ripple</property>
+        <step>1.0</step>
+        <min>0</min>
+        <max>3</max>
+        <wrap>true</wrap>
+      </binding>
+      <binding>
+          <command>nasal</command>
+          <script>switchclicksound.click("switch")</script>
+        </binding>
+    </action>
+    <action>
+      <button>1</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+         <property>/controls/armament/salvo-ripple</property>
+        <step>-1.0</step>
+        <min>0</min>
+        <max>3</max>
+        <wrap>true</wrap>
+      </binding>
+      <binding>
+          <command>nasal</command>
+          <script>switchclicksound.click("switch")</script>
+        </binding>
+    </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>sw-salvo-ripple</tooltip-id>
+                <label>Ripple: %s</label>
+                <property>/controls/armament/salvo-ripple</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['SALVO', '2', '4'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
+ </animation>
+
+ <animation>
+   <type>pick</type>
+   <object-name>arm_ctrl_switch.007</object-name>
+   <visible>true</visible>
+   <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+         <property>/controls/armament/bomb-mode</property>
+        <step>1.0</step>
+        <min>0</min>
+        <max>3</max>
+        <wrap>true</wrap>
+      </binding>
+      <binding>
+          <command>nasal</command>
+          <script>switchclicksound.click("switch")</script>
+        </binding>
+    </action>
+    <action>
+      <button>1</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+         <property>/controls/armament/bomb-mode</property>
+        <step>-1.0</step>
+        <min>0</min>
+        <max>3</max>
+        <wrap>true</wrap>
+      </binding>
+      <binding>
+          <command>nasal</command>
+          <script>switchclicksound.click("switch")</script>
+        </binding>
+    </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>sw-bomb-mode</tooltip-id>
+                <label>Bomb Mode: %s</label>
+                <property>/controls/armament/bomb-mode</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['SALVO', '1', 'TRAIN'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
+ </animation>
+
+ <animation>
+    <type>pick</type>
+    <object-name>arm_ctrl_switch.004_cover</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>l-39za/controls/gunsswcover</property>
+        <condition>
+          <not>
+            <property>/controls/armament/guns-sel</property>
+          </not>
+        </condition>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>arm_ctrl_switch.004</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/armament/guns-sel</property>
+        <condition>
+          <property>l-39za/controls/gunsswcover</property>
+        </condition>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>guns-sel-sw-lbl</tooltip-id>
+          <label>Guns: %s</label>
+          <property>/controls/armament/guns-sel</property>
+          <mapping>nasal</mapping>
+          <script>
+              var modes = ['OFF', 'ON'];
+              return modes[arg[0]];
+          </script>
+      </binding>
+    </hovered>
+  </animation>
+
+ <animation>
+    <type>pick</type>
+    <object-name>arm_jet_switch.001_cover</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>l-39za/controls/jett1swcover</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>arm_jet_switch.002_cover</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>l-39za/controls/jett2swcover</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>arm_jet_switch.003_cover</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>l-39za/controls/jett3swcover</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>arm_jet_switch.002</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+      				<command>nasal</command>
+      				<script>weapons.jettison_outer()</script>
+              <condition>
+                <property>l-39za/controls/jett2swcover</property>
+              </condition>
+			</binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>jett-outer-sw-lbl</tooltip-id>
+                <label>Jettison Pylons 1-4</label>
+            </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>arm_jet_switch.003</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+      				<command>nasal</command>
+      				<script>weapons.jettison_inner()</script>
+              <condition>
+                <property>l-39za/controls/jett3swcover</property>
+              </condition>
+			</binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>jett-inner-sw-lbl</tooltip-id>
+                <label>Jettison Pylons 2-3</label>
+            </binding>
+    </hovered>
+  </animation>
+
+</PropertyList>
+

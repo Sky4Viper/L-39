@@ -6,7 +6,7 @@
 
 	<submodel>
 		<name>gun-left</name>
-		<model>Aircraft/L-39ZA/Models/Stores/Gun/Tracer.xml</model>
+		<model>Aircraft/L-39/Models/Stores/Gun/Tracer.xml</model>
 		<trigger>sim/multiplay/generic/int[8]</trigger>
 		<speed>3380</speed>
 		<repeat>true</repeat>
@@ -26,12 +26,12 @@
 		<collision-report>sim/ai/aircraft/collision/gun</collision-report>
 		<impact>true</impact>
 		<impact-report>sim/ai/aircraft/impact/bullet</impact-report>
-		<submodel-path>Aircraft/L-39ZA/Models/Stores/Gun/Bullet-Submodel.xml</submodel-path>
+		<submodel-path>Aircraft/L-39/Models/Stores/Gun/Bullet-Submodel.xml</submodel-path>
 	</submodel>
 	
 	<submodel>
 		<name>gun-right</name>
-		<model>Aircraft/L-39ZA/Models/Stores/Gun/Tracer.xml</model>
+		<model>Aircraft/L-39/Models/Stores/Gun/Tracer.xml</model>
 		<trigger>sim/multiplay/generic/int[8]</trigger>
 		<speed>3380</speed>
 		<repeat>true</repeat>
@@ -51,7 +51,7 @@
 		<collision-report>sim/ai/aircraft/collision/gun</collision-report>
 		<impact>true</impact>
 		<impact-report>sim/ai/aircraft/impact/bullet</impact-report>
-		<submodel-path>Aircraft/L-39ZA/Models/Stores/Gun/Bullet-Submodel.xml</submodel-path>
+		<submodel-path>Aircraft/L-39/Models/Stores/Gun/Bullet-Submodel.xml</submodel-path>
 	</submodel>
 	
 	<!-- UB-32-rocket-pod -->
@@ -60,7 +60,7 @@
 	
 	<submodel>
 		<name>pylon-one-rockets</name>
-		<model>Aircraft/L-39ZA/Models/Stores/UB-16/Rocket.xml</model>
+		<model>Aircraft/L-39/Models/Stores/UB-16/Rocket.xml</model>
 		<trigger>sim/multiplay/generic/int[10]</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
@@ -81,12 +81,12 @@
 		<collision-report>sim/ai/aircraft/collision/gun</collision-report>
 		<impact>true</impact>
 		<impact-report>sim/ai/aircraft/impact/bullet</impact-report>
-		<submodel-path>Aircraft/L-39ZA/Models/Effects/Rocket/Rocket-Submodel.xml</submodel-path>
+		<submodel-path>Aircraft/L-39/Models/Effects/Rocket/Rocket-Submodel.xml</submodel-path>
 	</submodel>
 
 	<submodel>
 		<name>pylon-one-rockets-blank</name>
-		<model>Aircraft/L-39ZA/Models/Stores/UB-16/rocket_blank.xml</model>
+		<model>Aircraft/L-39/Models/Stores/UB-16/rocket_blank.xml</model>
 		<trigger>sim/multiplay/generic/int[10]</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
@@ -109,7 +109,7 @@
 
 	<submodel>
 		<name>gunpod-right-1</name>
-		<model>Aircraft/L-39ZA/Models/Stores/Gun/Tracer.xml</model>
+		<model>Aircraft/L-39/Models/Stores/Gun/Tracer.xml</model>
 		<trigger>sim/multiplay/generic/int[11]</trigger>
 		<speed>3380</speed>
 		<repeat>true</repeat>
@@ -129,12 +129,12 @@
 		<collision-report>sim/ai/aircraft/collision/gun</collision-report>
 		<impact>true</impact>
 		<impact-report>sim/ai/aircraft/impact/bullet</impact-report>
-		<submodel-path>Aircraft/L-39ZA/Models/Stores/Gun/Bullet-Submodel.xml</submodel-path>
+		<submodel-path>Aircraft/L-39/Models/Stores/Gun/Bullet-Submodel.xml</submodel-path>
 	</submodel>
 
 	<submodel>
     	<name>PK-3-case-1</name>
-    	<model>Aircraft/L-39ZA/Models/Effects/Gun/PK-3-case.xml</model>
+    	<model>Aircraft/L-39/Models/Effects/Gun/PK-3-case.xml</model>
     	<trigger>sim/multiplay/generic/int[11]</trigger>
     	<speed>20</speed>
     	<repeat>true</repeat>
@@ -155,7 +155,7 @@
 
 	<submodel>
 		<name>pylon-one-bomb</name>
-		<model>Aircraft/L-39ZA/Models/Stores/FAB-250/FAB-250.xml</model>
+		<model>Aircraft/L-39/Models/Stores/FAB-250/FAB-250.xml</model>
 		<trigger>sim/multiplay/generic/int[13]</trigger>
 		<!-- <trigger-once>false</trigger-once>
 		<repeat>true</repeat> -->
@@ -174,14 +174,14 @@
 		<collision-report>sim/ai/aircraft/collision/cannon</collision-report>
 		<impact>true</impact>
 		<impact-report>sim/ai/aircraft/impact/bomb</impact-report>
-		<submodel-path>Aircraft/L-39ZA/Models/Effects/Bomb/Bomb-Submodel.xml</submodel-path>
+		<submodel-path>Aircraft/L-39/Models/Effects/Bomb/Bomb-Submodel.xml</submodel-path>
 	</submodel>
 
 	<!-- Jettison Rockets from Pylon 1 -->
 
 	<submodel>
     	<name>Jettison-1-R</name>
-    	<model>Aircraft/L-39ZA/Models/Stores/UB-16/UB-16-jet.xml</model>
+    	<model>Aircraft/L-39/Models/Stores/UB-16/UB-16-jet.xml</model>
     	<trigger>/controls/armament/jett-1-r</trigger>
     	<speed>0</speed>
     	<repeat>false</repeat>
@@ -203,7 +203,7 @@
 
 	<submodel>
     	<name>Jettison-1-P</name>
-    	<model>Aircraft/L-39ZA/Models/Stores/PK-3/PK-3-jet.xml</model>
+    	<model>Aircraft/L-39/Models/Stores/PK-3/PK-3-jet.xml</model>
     	<trigger>/controls/armament/jett-1-p</trigger>
     	<speed>0</speed>
     	<repeat>false</repeat>
@@ -225,7 +225,7 @@
 
 	<submodel>
     	<name>Jettison-1-T</name>
-    	<model>Aircraft/L-39ZA/Models/Stores/DropTank150/DropTank150.xml</model>
+    	<model>Aircraft/L-39/Models/Stores/DropTank150/DropTank150.xml</model>
     	<trigger>/controls/armament/jett-1-t</trigger>
     	<speed>0</speed>
     	<repeat>false</repeat>
@@ -247,7 +247,7 @@
 	
 	<submodel>
 		<name>pylon-two-rockets</name>
-		<model>Aircraft/L-39ZA/Models/Stores/UB-16/Rocket.xml</model>
+		<model>Aircraft/L-39/Models/Stores/UB-16/Rocket.xml</model>
 		<trigger>sim/multiplay/generic/int[9]</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
@@ -268,12 +268,12 @@
 		<collision-report>sim/ai/aircraft/collision/gun</collision-report>
 		<impact>true</impact>
 		<impact-report>sim/ai/aircraft/impact/bullet</impact-report>
-		<submodel-path>Aircraft/L-39ZA/Models/Effects/Rocket/Rocket-Submodel.xml</submodel-path>
+		<submodel-path>Aircraft/L-39/Models/Effects/Rocket/Rocket-Submodel.xml</submodel-path>
 	</submodel>
 
 	<submodel>
 		<name>pylon-two-rockets-blank</name>
-		<model>Aircraft/L-39ZA/Models/Stores/UB-16/rocket_blank.xml</model>
+		<model>Aircraft/L-39/Models/Stores/UB-16/rocket_blank.xml</model>
 		<trigger>sim/multiplay/generic/int[9]</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
@@ -296,7 +296,7 @@
 
 	<submodel>
 		<name>gunpod-right-2</name>
-		<model>Aircraft/L-39ZA/Models/Stores/Gun/Tracer.xml</model>
+		<model>Aircraft/L-39/Models/Stores/Gun/Tracer.xml</model>
 		<trigger>sim/multiplay/generic/int[12]</trigger>
 		<speed>3380</speed>
 		<repeat>true</repeat>
@@ -316,12 +316,12 @@
 		<collision-report>sim/ai/aircraft/collision/gun</collision-report>
 		<impact>true</impact>
 		<impact-report>sim/ai/aircraft/impact/bullet</impact-report>
-		<submodel-path>Aircraft/L-39ZA/Models/Stores/Gun/Bullet-Submodel.xml</submodel-path>
+		<submodel-path>Aircraft/L-39/Models/Stores/Gun/Bullet-Submodel.xml</submodel-path>
 	</submodel>
 
 	<submodel>
     	<name>PK-3-case-2</name>
-    	<model>Aircraft/L-39ZA/Models/Effects/Gun/PK-3-case.xml</model>
+    	<model>Aircraft/L-39/Models/Effects/Gun/PK-3-case.xml</model>
     	<trigger>sim/multiplay/generic/int[12]</trigger>
     	<speed>20</speed>
     	<repeat>true</repeat>
@@ -342,7 +342,7 @@
 
 	<submodel>
 		<name>pylon-2-bomb</name>
-		<model>Aircraft/L-39ZA/Models/Stores/FAB-250/FAB-250.xml</model>
+		<model>Aircraft/L-39/Models/Stores/FAB-250/FAB-250.xml</model>
 		<trigger>sim/multiplay/generic/int[14]</trigger>
 		<!-- <trigger-once>false</trigger-once>
 		<repeat>true</repeat> -->
@@ -361,14 +361,14 @@
 		<collision-report>sim/ai/aircraft/collision/cannon</collision-report>
 		<impact>true</impact>
 		<impact-report>sim/ai/aircraft/impact/bomb</impact-report>
-		<submodel-path>Aircraft/L-39ZA/Models/Effects/Bomb/Bomb-Submodel.xml</submodel-path>
+		<submodel-path>Aircraft/L-39/Models/Effects/Bomb/Bomb-Submodel.xml</submodel-path>
 	</submodel>
 
 	<!-- Jettison Rockets from Pylon 2 -->
 
 	<submodel>
     	<name>Jettison-2-R</name>
-    	<model>Aircraft/L-39ZA/Models/Stores/UB-16/UB-16-jet.xml</model>
+    	<model>Aircraft/L-39/Models/Stores/UB-16/UB-16-jet.xml</model>
     	<trigger>/controls/armament/jett-2-r</trigger>
     	<speed>0</speed>
     	<repeat>false</repeat>
@@ -390,7 +390,7 @@
 
 	<submodel>
     	<name>Jettison-2-P</name>
-    	<model>Aircraft/L-39ZA/Models/Stores/PK-3/PK-3-jet.xml</model>
+    	<model>Aircraft/L-39/Models/Stores/PK-3/PK-3-jet.xml</model>
     	<trigger>/controls/armament/jett-2-p</trigger>
     	<speed>0</speed>
     	<repeat>false</repeat>
@@ -412,7 +412,7 @@
 
 	<submodel>
     	<name>Jettison-2-T</name>
-    	<model>Aircraft/L-39ZA/Models/Stores/DropTank150/DropTank150.xml</model>
+    	<model>Aircraft/L-39/Models/Stores/DropTank150/DropTank150.xml</model>
     	<trigger>/controls/armament/jett-2-t</trigger>
     	<speed>0</speed>
     	<repeat>false</repeat>
@@ -434,7 +434,7 @@
 	
 	<submodel>
 		<name>pylon-one-rockets</name>
-		<model>Aircraft/L-39ZA/Models/Stores/UB-16/Rocket.xml</model>
+		<model>Aircraft/L-39/Models/Stores/UB-16/Rocket.xml</model>
 		<trigger>sim/multiplay/generic/int[9]</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
@@ -455,12 +455,12 @@
 		<collision-report>sim/ai/aircraft/collision/gun</collision-report>
 		<impact>true</impact>
 		<impact-report>sim/ai/aircraft/impact/bullet</impact-report>
-		<submodel-path>Aircraft/L-39ZA/Models/Effects/Rocket/Rocket-Submodel.xml</submodel-path>
+		<submodel-path>Aircraft/L-39/Models/Effects/Rocket/Rocket-Submodel.xml</submodel-path>
 	</submodel>
 
 	<submodel>
 		<name>pylon-three-rockets-blank</name>
-		<model>Aircraft/L-39ZA/Models/Stores/UB-16/rocket_blank.xml</model>
+		<model>Aircraft/L-39/Models/Stores/UB-16/rocket_blank.xml</model>
 		<trigger>sim/multiplay/generic/int[9]</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
@@ -483,7 +483,7 @@
 
 	<submodel>
 		<name>gunpod-left-3</name>
-		<model>Aircraft/L-39ZA/Models/Stores/Gun/Tracer.xml</model>
+		<model>Aircraft/L-39/Models/Stores/Gun/Tracer.xml</model>
 		<trigger>sim/multiplay/generic/int[12]</trigger>
 		<speed>3380</speed>
 		<repeat>true</repeat>
@@ -503,12 +503,12 @@
 		<collision-report>sim/ai/aircraft/collision/gun</collision-report>
 		<impact>true</impact>
 		<impact-report>sim/ai/aircraft/impact/bullet</impact-report>
-		<submodel-path>Aircraft/L-39ZA/Models/Stores/Gun/Bullet-Submodel.xml</submodel-path>
+		<submodel-path>Aircraft/L-39/Models/Stores/Gun/Bullet-Submodel.xml</submodel-path>
 	</submodel>
 
 	<submodel>
     	<name>PK-3-case-3</name>
-    	<model>Aircraft/L-39ZA/Models/Effects/Gun/PK-3-case.xml</model>
+    	<model>Aircraft/L-39/Models/Effects/Gun/PK-3-case.xml</model>
     	<trigger>sim/multiplay/generic/int[12]</trigger>
     	<speed>20</speed>
     	<repeat>true</repeat>
@@ -529,7 +529,7 @@
 
 	<submodel>
 		<name>pylon-3-bomb</name>
-		<model>Aircraft/L-39ZA/Models/Stores/FAB-250/FAB-250.xml</model>
+		<model>Aircraft/L-39/Models/Stores/FAB-250/FAB-250.xml</model>
 		<trigger>sim/multiplay/generic/int[18]</trigger>
 		<!-- <trigger-once>false</trigger-once>
 		<repeat>true</repeat> -->
@@ -548,14 +548,14 @@
 		<collision-report>sim/ai/aircraft/collision/cannon</collision-report>
 		<impact>true</impact>
 		<impact-report>sim/ai/aircraft/impact/bomb</impact-report>
-		<submodel-path>Aircraft/L-39ZA/Models/Effects/Bomb/Bomb-Submodel.xml</submodel-path>
+		<submodel-path>Aircraft/L-39/Models/Effects/Bomb/Bomb-Submodel.xml</submodel-path>
 	</submodel>
 
 	<!-- Jettison Rockets from Pylon 3 -->
 
 	<submodel>
     	<name>Jettison-3-R</name>
-    	<model>Aircraft/L-39ZA/Models/Stores/UB-16/UB-16-jet.xml</model>
+    	<model>Aircraft/L-39/Models/Stores/UB-16/UB-16-jet.xml</model>
     	<trigger>/controls/armament/jett-3-r</trigger>
     	<speed>0</speed>
     	<repeat>false</repeat>
@@ -577,7 +577,7 @@
 
 	<submodel>
     	<name>Jettison-3-P</name>
-    	<model>Aircraft/L-39ZA/Models/Stores/PK-3/PK-3-jet.xml</model>
+    	<model>Aircraft/L-39/Models/Stores/PK-3/PK-3-jet.xml</model>
     	<trigger>/controls/armament/jett-3-p</trigger>
     	<speed>0</speed>
     	<repeat>false</repeat>
@@ -599,7 +599,7 @@
 
 	<submodel>
     	<name>Jettison-3-T</name>
-    	<model>Aircraft/L-39ZA/Models/Stores/DropTank150/DropTank150.xml</model>
+    	<model>Aircraft/L-39/Models/Stores/DropTank150/DropTank150.xml</model>
     	<trigger>/controls/armament/jett-3-t</trigger>
     	<speed>0</speed>
     	<repeat>false</repeat>
@@ -623,7 +623,7 @@
 	
 	<submodel>
 		<name>pylon-two-rockets</name>
-		<model>Aircraft/L-39ZA/Models/Stores/UB-16/Rocket.xml</model>
+		<model>Aircraft/L-39/Models/Stores/UB-16/Rocket.xml</model>
 		<trigger>sim/multiplay/generic/int[10]</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
@@ -644,12 +644,12 @@
 		<collision-report>sim/ai/aircraft/collision/gun</collision-report>
 		<impact>true</impact>
 		<impact-report>sim/ai/aircraft/impact/bullet</impact-report>
-		<submodel-path>Aircraft/L-39ZA/Models/Effects/Rocket/Rocket-Submodel.xml</submodel-path>
+		<submodel-path>Aircraft/L-39/Models/Effects/Rocket/Rocket-Submodel.xml</submodel-path>
 	</submodel>	
 
 	<submodel>
 		<name>pylon-four-rockets-blank</name>
-		<model>Aircraft/L-39ZA/Models/Stores/UB-16/rocket_blank.xml</model>
+		<model>Aircraft/L-39/Models/Stores/UB-16/rocket_blank.xml</model>
 		<trigger>sim/multiplay/generic/int[10]</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
@@ -672,7 +672,7 @@
 
 	<submodel>
 		<name>gunpod-left-4</name>
-		<model>Aircraft/L-39ZA/Models/Stores/Gun/Tracer.xml</model>
+		<model>Aircraft/L-39/Models/Stores/Gun/Tracer.xml</model>
 		<trigger>sim/multiplay/generic/int[11]</trigger>
 		<speed>3380</speed>
 		<repeat>true</repeat>
@@ -692,12 +692,12 @@
 		<collision-report>sim/ai/aircraft/collision/gun</collision-report>
 		<impact>true</impact>
 		<impact-report>sim/ai/aircraft/impact/bullet</impact-report>
-		<submodel-path>Aircraft/L-39ZA/Models/Stores/Gun/Bullet-Submodel.xml</submodel-path>
+		<submodel-path>Aircraft/L-39/Models/Stores/Gun/Bullet-Submodel.xml</submodel-path>
 	</submodel>
 
 	<submodel>
     	<name>PK-3-case-4</name>
-    	<model>Aircraft/L-39ZA/Models/Effects/Gun/PK-3-case.xml</model>
+    	<model>Aircraft/L-39/Models/Effects/Gun/PK-3-case.xml</model>
     	<trigger>sim/multiplay/generic/int[11]</trigger>
     	<speed>20</speed>
     	<repeat>true</repeat>
@@ -718,7 +718,7 @@
 
 	<submodel>
 		<name>pylon-four-bomb</name>
-		<model>Aircraft/L-39ZA/Models/Stores/FAB-250/FAB-250.xml</model>
+		<model>Aircraft/L-39/Models/Stores/FAB-250/FAB-250.xml</model>
 		<trigger>sim/multiplay/generic/int[19]</trigger>
 		<!-- <trigger-once>false</trigger-once>
 		<repeat>true</repeat> -->
@@ -737,14 +737,14 @@
 		<collision-report>sim/ai/aircraft/collision/cannon</collision-report>
 		<impact>true</impact>
 		<impact-report>sim/ai/aircraft/impact/bomb</impact-report>
-		<submodel-path>Aircraft/L-39ZA/Models/Effects/Bomb/Bomb-Submodel.xml</submodel-path>
+		<submodel-path>Aircraft/L-39/Models/Effects/Bomb/Bomb-Submodel.xml</submodel-path>
 	</submodel>
 
 	<!-- Jettison Rockets from Pylon 4 -->
 
 	<submodel>
     	<name>Jettison-4-R</name>
-    	<model>Aircraft/L-39ZA/Models/Stores/UB-16/UB-16-jet.xml</model>
+    	<model>Aircraft/L-39/Models/Stores/UB-16/UB-16-jet.xml</model>
     	<trigger>/controls/armament/jett-4-r</trigger>
     	<speed>0</speed>
     	<repeat>false</repeat>
@@ -766,7 +766,7 @@
 
 	<submodel>
     	<name>Jettison-4-P</name>
-    	<model>Aircraft/L-39ZA/Models/Stores/PK-3/PK-3-jet.xml</model>
+    	<model>Aircraft/L-39/Models/Stores/PK-3/PK-3-jet.xml</model>
     	<trigger>/controls/armament/jett-4-p</trigger>
     	<speed>0</speed>
     	<repeat>false</repeat>
@@ -788,7 +788,7 @@
 
 	<submodel>
     	<name>Jettison-4-T</name>
-    	<model>Aircraft/L-39ZA/Models/Stores/DropTank150/DropTank150.xml</model>
+    	<model>Aircraft/L-39/Models/Stores/DropTank150/DropTank150.xml</model>
     	<trigger>/controls/armament/jett-4-t</trigger>
     	<speed>0</speed>
     	<repeat>false</repeat>

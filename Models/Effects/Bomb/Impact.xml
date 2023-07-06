@@ -94,7 +94,7 @@
 	</animation>
 
 	<model>
-		<path>Aircraft/L-39ZA/Models/Effects/Bomb/Fire.xml</path>
+		<path>Aircraft/L-39/Models/Effects/Bomb/Fire.xml</path>
 		<offsets>
 		  <x-m> 2.00</x-m>
 		  <y-m> 0.00</y-m>
@@ -103,7 +103,7 @@
 	</model>
 	
 	<model>
-		<path>Aircraft/L-39ZA/Models/Effects/Bomb/Fire.xml</path>
+		<path>Aircraft/L-39/Models/Effects/Bomb/Fire.xml</path>
 		<offsets> 
 		  <x-m>-0.88</x-m>
 		  <y-m> 0.00</y-m>
@@ -112,7 +112,7 @@
 	</model>
 	
 	<model>
-		<path>Aircraft/L-39ZA/Models/Effects/Bomb/Fire.xml</path>
+		<path>Aircraft/L-39/Models/Effects/Bomb/Fire.xml</path>
 		<offsets>
 		  <x-m>-0.82</x-m>
 		  <y-m> 0.00</y-m>
@@ -121,7 +121,7 @@
 	</model>
 	
 	<model>
-		<path>Aircraft/L-39ZA/Models/Effects/Crater/crater.xml</path>
+		<path>Aircraft/L-39/Models/Effects/Crater/crater.xml</path>
 		<offsets>
 		  <x-m>0.0</x-m>
 		  <y-m>0.0</y-m>

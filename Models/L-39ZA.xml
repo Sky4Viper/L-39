@@ -5,7 +5,7 @@
 
 	<nasal>
         <load>
-            var livery_update = aircraft.livery_update.new("Aircraft/L-39ZA/Models/Liveries", 10);
+            var livery_update = aircraft.livery_update.new("Aircraft/L-39/Models/Liveries", 10);
         </load>
 
         <unload>
@@ -76,7 +76,7 @@
 
     	<property-base>sim/model/livery</property-base>
     	<texture-prop>texture</texture-prop>
-    	<texture>Aircraft/L-39ZA/Models/Liveries/default.png</texture>
+    	<texture>Aircraft/L-39/Models/Liveries/L-39ZA/222nd-Tactical-Squadron-1.png</texture>
 	</animation>
 
 	<animation>
@@ -90,8 +90,16 @@
             <object-name>pilot_vest</object-name>
          	<property-base>sim/model/pilotsuit</property-base>
          	<texture-prop>texture</texture-prop>
-      		<texture>Liveries/pilot_blue.png</texture>
+      		<texture>Liveries/Pilot/pilot_green.png</texture>
     </animation>
+
+	<!-- <animation>
+        <type>material</type>
+        	<object-name>150L-droptank</object-name>
+         	<property-base>sim/model/droptank</property-base>
+         	<texture-prop>texture</texture-prop>
+      		<texture>Liveries/DropTank150.png</texture>
+    </animation> -->
 
     <effect>
         <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
@@ -107,7 +115,7 @@
     </effect>
 
     <effect>
-        <inherits-from>Aircraft/L-39ZA/Models/Effects/albatros-combined-shader</inherits-from>
+        <inherits-from>Aircraft/L-39/Models/Effects/albatros-combined-shader</inherits-from>
 		<object-name>fuselage</object-name>
 		<object-name>tail</object-name>
 		<object-name>rudder</object-name>
@@ -147,7 +155,7 @@
     </effect>
 
 	<effect>
-    	<inherits-from>Aircraft/L-39ZA/Models/Effects/Fx/FrostAndRain/glass</inherits-from>
+    	<inherits-from>Aircraft/L-39/Models/Effects/Fx/FrostAndRain/glass</inherits-from>
 			<!-- normals face in -->
     		<!-- material GlassMat-->
     	<object-name>canopy-in</object-name>
@@ -160,7 +168,7 @@
 	<!-- a powerful front facing spotlight -->
   	<model>
     	<name>LandingLight1</name>
-    	<path>Aircraft/L-39ZA/Models/Effects/Lights/LandingLight.xml</path>
+    	<path>Aircraft/L-39/Models/Effects/Lights/LandingLight.xml</path>
     	<offsets>
       		<x-m>-1.14329 </x-m>
 			<y-m>4.12569</y-m>
@@ -171,7 +179,7 @@
 
   	<model>
     	<name>LandingLight2</name>
-    	<path>Aircraft/L-39ZA/Models/Effects/Lights/LandingLight.xml</path>
+    	<path>Aircraft/L-39/Models/Effects/Lights/LandingLight.xml</path>
     	<offsets>
       		<x-m>-1.14329 </x-m>
 			<y-m>-4.12569</y-m>
@@ -185,7 +193,7 @@
   	<!-- note: default orientation is up -->
   	<model>
     	<name>GreenLight</name>
-    	<path>Aircraft/L-39ZA/Models/Effects/Lights/GreenLight.xml</path>
+    	<path>Aircraft/L-39/Models/Effects/Lights/GreenLight.xml</path>
     	<offsets>
      		<x-m>-0.58001</x-m>
 			<y-m>4.29239</y-m>
@@ -196,7 +204,7 @@
   	</model>
   	<model>
     	<name>RedLight</name>
-    	<path>Aircraft/L-39ZA/Models/Effects/Lights/RedLight.xml</path>
+    	<path>Aircraft/L-39/Models/Effects/Lights/RedLight.xml</path>
     	<offsets>
       		<x-m>-0.58001</x-m>
 			<y-m>-4.29239</y-m>
@@ -210,7 +218,7 @@
   	
   	<model>
     	<name>WhiteLight</name>
-    	<path>Aircraft/L-39ZA/Models/Effects/Lights/WhiteLight.xml</path>
+    	<path>Aircraft/L-39/Models/Effects/Lights/WhiteLight.xml</path>
     	<offsets>
       		<x-m>5.0672</x-m>
 			<y-m>0.0</y-m>
@@ -224,7 +232,7 @@
 
 	<model>
     	<name>TailWhiteStrobe</name>
-    	<path>Aircraft/L-39ZA/Models/Effects/Lights/StrobeWhite.xml</path>
+    	<path>Aircraft/L-39/Models/Effects/Lights/StrobeWhite.xml</path>
     	<offsets>
       		<x-m>5.0672</x-m>
 			<y-m>0.0</y-m>
@@ -235,7 +243,7 @@
 
 	<model>
     	<name>LeftGreenStrobe</name>
-    	<path>Aircraft/L-39ZA/Models/Effects/Lights/StrobeGreen.xml</path>
+    	<path>Aircraft/L-39/Models/Effects/Lights/StrobeGreen.xml</path>
     	<offsets>
      		<x-m>-0.58001</x-m>
 			<y-m>4.29239</y-m>
@@ -247,7 +255,7 @@
 
   	<model>
     	<name>RightRedStrobe</name>
-    	<path>Aircraft/L-39ZA/Models/Effects/Lights/StrobeRed.xml</path>
+    	<path>Aircraft/L-39/Models/Effects/Lights/StrobeRed.xml</path>
     	<offsets>
       		<x-m>-0.58001</x-m>
 			<y-m>-4.29239</y-m>
@@ -259,7 +267,7 @@
 
   	<model>
     	<name>TopRedBeacon</name>
-    	<path>Aircraft/L-39ZA/Models/Effects/Lights/StrobeRed.xml</path>
+    	<path>Aircraft/L-39/Models/Effects/Lights/StrobeRed.xml</path>
     	<offsets>
       		<x-m>1.4</x-m>
 			<y-m>0.0</y-m>
@@ -271,7 +279,7 @@
 
   	<model>
     	<name>BottomRedBeacon</name>
-    	<path>Aircraft/L-39ZA/Models/Effects/Lights/StrobeRed.xml</path>
+    	<path>Aircraft/L-39/Models/Effects/Lights/StrobeRed.xml</path>
     	<offsets>
       		<x-m>2.601</x-m>
 			<y-m>0.0</y-m>
@@ -284,17 +292,17 @@
 	<!-- Effects -->
 	
 	<model>
-		<path>Aircraft/L-39ZA/Models/Effects/Effects.xml</path>
+		<path>Aircraft/L-39/Models/Effects/Effects.xml</path>
 	</model>
 
 	<model>
-		<path>Aircraft/L-39ZA/Models/Effects/Shadow/shadow.xml</path>
+		<path>Aircraft/L-39/Models/Effects/Shadow/shadow.xml</path>
 	</model>
 
 <!-- Turbo starter -->
 
   <model>
-    <path>Aircraft/L-39ZA/Models/Effects/Cranking/cranking.xml</path>
+    <path>Aircraft/L-39/Models/Effects/Cranking/cranking.xml</path>
     <offsets>
       <x-m> 2.19271 </x-m>
       <y-m> -0.200294 </y-m>
@@ -371,7 +379,7 @@
     <!-- Stores -->
 
     <model>
-		<path>Aircraft/L-39ZA/Models/Payload.xml</path>
+		<path>Aircraft/L-39/Models/Payload.xml</path>
             <offsets>
 			    <x-m>0.0</x-m>
 			    <y-m>0.0</y-m>
@@ -385,7 +393,7 @@
 	
 	<!-- Virtual Cockpit -->
 	<model>
-		<path>Aircraft/L-39ZA/Models/Cockpit/cockpit_main.xml</path>
+		<path>Aircraft/L-39/Models/Cockpit/cockpit_main_za.xml</path>
 		<offsets>
 			<x-m>0.0</x-m>
 			<y-m>0.0</y-m>

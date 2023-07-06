@@ -193,7 +193,7 @@
 		<condition>
       <property>/controls/electric/battery-switch</property>
 			<equals>
-			  <property>/controls/armament/rocketsLeft</property>
+			  <property>/controls/armament/rocketsLeft1</property>
 			  <value>0</value>
 		  </equals>
 		</condition>
@@ -205,7 +205,7 @@
 		<condition>
       <property>/controls/electric/battery-switch</property>
 			<equals>
-			  <property>/controls/armament/rocketsLeft</property>
+			  <property>/controls/armament/rocketsLeft2</property>
 			  <value>0</value>
 		  </equals>
 		</condition>

@@ -6,7 +6,7 @@
         
         <engine>
             <name>start</name>
-            <path>Aircraft/L-39ZA/Sounds/samples/alpha/starter.wav</path>
+            <path>Aircraft/L-39/Sounds/samples/alpha/starter.wav</path>
             <mode>once</mode>
             <condition>
                 <property>/controls/engines/engine[0]/starter</property>
@@ -29,7 +29,7 @@
 
         <engine>
             <name>engine</name>
-            <path>Aircraft/L-39ZA/Sounds/samples/alpha/running.wav</path>
+            <path>Aircraft/L-39/Sounds/samples/alpha/running.wav</path>
             <mode>looped</mode>
             <condition>
                 <property>/engines/engine[0]/running</property>
@@ -64,7 +64,7 @@
         
         <engine>
             <name>shutdown</name>
-            <path>Aircraft/L-39ZA/Sounds/samples/alpha/shutdown.wav</path>
+            <path>Aircraft/L-39/Sounds/samples/alpha/shutdown.wav</path>
             <mode>once</mode>
             <condition>
                 <property>/controls/engines/engine[0]/cutoff</property> 
@@ -84,7 +84,7 @@
 		<flyby>
 			<name>fly-by</name>
 			<mode>once</mode>
-			<path>Aircraft/L-39ZA/Sounds/flyby.wav</path>
+			<path>Aircraft/L-39/Sounds/flyby.wav</path>
 			<condition>
                 <and>
                     <greater-than>
@@ -111,7 +111,7 @@
         <sonicboom>
             <name>Sonic Boom</name>
             <mode>once</mode>
-            <path>Aircraft/L-39ZA/Sounds/sonicboom.wav</path>
+            <path>Aircraft/L-39/Sounds/sonicboom.wav</path>
             <condition>
                 <and>
                     <greater-than>

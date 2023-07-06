@@ -4,7 +4,7 @@
 
 	<submodel>
 		<name>impact</name>
-		<model>Aircraft/L-39ZA/Models/Effects/Rocket/Impact.xml</model>
+		<model>Aircraft/L-39/Models/Effects/Rocket/Impact.xml</model>
 		<speed>0</speed>
 		<repeat>false</repeat>
 		<delay>0</delay>

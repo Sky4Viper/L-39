@@ -8,7 +8,7 @@
 	
 	<model>
 		<name>flameL</name>
-		<path>Aircraft/L-39ZA/Models/Effects/Gun/Flame.xml</path>
+		<path>Aircraft/L-39/Models/Effects/Gun/Flame.xml</path>
 		<condition>
 			<equals>
 				<property>sim/multiplay/generic/int[8]</property>
@@ -27,7 +27,7 @@
 
 	<model>
 		<name>flameR</name>
-		<path>Aircraft/L-39ZA/Models/Effects/Gun/Flame.xml</path>
+		<path>Aircraft/L-39/Models/Effects/Gun/Flame.xml</path>
 		<condition>
 			<equals>
 				<property>sim/multiplay/generic/int[8]</property>
@@ -48,7 +48,7 @@
 
 	<model>
 		<name>fire</name>
-		<path>Aircraft/L-39ZA/Models/Effects/Engine/Fire.xml</path>
+		<path>Aircraft/L-39/Models/Effects/Engine/Fire.xml</path>
 		<condition>
 			<equals>
 				<property>sim/crashed</property>
@@ -69,7 +69,7 @@
 	
 	<model>
 		<name>blur</name>
-    	<path>Aircraft/L-39ZA/Models/Effects/Engine/L-39ZA-blur.xml</path>
+    	<path>Aircraft/L-39/Models/Effects/Engine/L-39ZA-blur.xml</path>
     	<offsets>
     		<x-m>4.17343</x-m>
     		<y-m>0.0</y-m>
@@ -88,7 +88,7 @@
 	
 	<model>
 		<name>contrail-main</name>
-		<path>Aircraft/L-39ZA/Models/Effects/Engine/Contrail.xml</path>
+		<path>Aircraft/L-39/Models/Effects/Engine/Contrail.xml</path>
 		<offsets>
 			<x-m>4.60794</x-m>
     		<y-m>0.0</y-m>
@@ -101,7 +101,7 @@
 	
 	<!-- <model>
 		<name>contrail-right</name>
-		<path>Aircraft/L-39ZA/Models/Effects/Wing/Contrail.xml</path>
+		<path>Aircraft/L-39/Models/Effects/Wing/Contrail.xml</path>
 		<offsets>
 			<x-m> 1.24582 </x-m>
 			<y-m> 4.12633 </y-m>
@@ -114,7 +114,7 @@
 
 	<model>
 		<name>tiptrail-left</name>
-		<path>Aircraft/L-39ZA/Models/Effects/Wing/Tiptrail.xml</path>
+		<path>Aircraft/L-39/Models/Effects/Wing/Tiptrail.xml</path>
 		<offsets>
 			<x-m> 1.24582 </x-m>
 			<y-m>-4.12633 </y-m>
@@ -127,7 +127,7 @@
 	
 	<model>
 		<name>tiptrail-right</name>
-		<path>Aircraft/L-39ZA/Models/Effects/Wing/Tiptrail.xml</path>
+		<path>Aircraft/L-39/Models/Effects/Wing/Tiptrail.xml</path>
 		<offsets>
 			<x-m> 1.24582 </x-m>
 			<y-m> 4.12633 </y-m>
@@ -140,7 +140,7 @@
 	
 	<model>
 		<name>wash-left</name>
-		<path>Aircraft/L-39ZA/Models/Effects/Wing/Wash.xml</path>
+		<path>Aircraft/L-39/Models/Effects/Wing/Wash.xml</path>
 		<offsets>
 			<x-m>-0.74736 </x-m>
 			<y-m>-1.74225 </y-m>
@@ -153,7 +153,7 @@
 	
 	<model>
 		<name>wash-right</name>
-		<path>Aircraft/L-39ZA/Models/Effects/Wing/Wash.xml</path>
+		<path>Aircraft/L-39/Models/Effects/Wing/Wash.xml</path>
 		<offsets>
 			<x-m>-0.74736 </x-m>
 			<y-m> 1.74225 </y-m>
@@ -198,7 +198,7 @@
 
 	  <!-- Aerobtic Smoke -->
   <model>
-    <path>Aircraft/L-39ZA/Models/Effects/Smoke/smokeW.xml</path>
+    <path>Aircraft/L-39/Models/Effects/Smoke/smokeW.xml</path>
     <offsets>
       <x-m>  3.025 </x-m>
       <y-m> -0.641 </y-m>
@@ -210,7 +210,7 @@
   </model>
 
   <model>
-    <path>Aircraft/L-39ZA/Models/Effects/Smoke/smokeR.xml</path>
+    <path>Aircraft/L-39/Models/Effects/Smoke/smokeR.xml</path>
     <offsets>
       <x-m>  3.025 </x-m>
       <y-m> -0.641 </y-m>
@@ -222,7 +222,7 @@
   </model>
 
   <model>
-    <path>Aircraft/L-39ZA/Models/Effects/Smoke/smokeG.xml</path>
+    <path>Aircraft/L-39/Models/Effects/Smoke/smokeG.xml</path>
     <offsets>
       <x-m>  3.025 </x-m>
       <y-m> -0.641 </y-m>
@@ -234,7 +234,7 @@
   </model>
 
   <!-- <model>
-    <path>Aircraft/L-39ZA/Models/Effects/Smoke/smokeB.xml</path>
+    <path>Aircraft/L-39/Models/Effects/Smoke/smokeB.xml</path>
     <offsets>
       <x-m>  3.025 </x-m>
       <y-m> -0.641 </y-m>
@@ -246,7 +246,7 @@
   </model> -->
 
   <model>
-    <path>Aircraft/L-39ZA/Models/Effects/Smoke/smokeY.xml</path>
+    <path>Aircraft/L-39/Models/Effects/Smoke/smokeY.xml</path>
     <offsets>
       <x-m>  3.025 </x-m>
       <y-m> -0.641 </y-m>

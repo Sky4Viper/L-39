@@ -4,12 +4,12 @@
 
   <model>
     <name>GreenLightFlare</name>
-    <path>Aircraft/L-39ZA/Models/Effects/Lights/Flares/GreenLight-flare.xml</path>
+    <path>Aircraft/L-39/Models/Effects/Lights/Flares/GreenLight-flare.xml</path>
   </model>
 
   <model>
     <name>GreenLightRemb</name>
-    <path>Aircraft/L-39ZA/Models/Effects/Lights/Rembrandt/GreenLight-remb.xml</path>
+    <path>Aircraft/L-39/Models/Effects/Lights/Rembrandt/GreenLight-remb.xml</path>
   </model>
 
   <animation>

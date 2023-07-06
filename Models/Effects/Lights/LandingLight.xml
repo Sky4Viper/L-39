@@ -4,17 +4,17 @@
 
   <model>
     <name>LandingLightFlash</name>
-    <path>Aircraft/L-39ZA/Models/Effects/Lights/Flares/LandingLight-flash.xml</path>
+    <path>Aircraft/L-39/Models/Effects/Lights/Flares/LandingLight-flash.xml</path>
   </model>
 
   <model>
     <name>LandingLightRemb</name>
-    <path>Aircraft/L-39ZA/Models/Effects/Lights/Rembrandt/LandingLight-remb.xml</path>
+    <path>Aircraft/L-39/Models/Effects/Lights/Rembrandt/LandingLight-remb.xml</path>
   </model>
   
   <model>
     <name>LandingLightCone</name>
-    <path>Aircraft/L-39ZA/Models/Effects/Lights/LightCone/LandingLight-cone.xml</path>
+    <path>Aircraft/L-39/Models/Effects/Lights/LightCone/LandingLight-cone.xml</path>
   </model> <!-- uncomment for fake non-rembrandt cones -->
 
   <animation>

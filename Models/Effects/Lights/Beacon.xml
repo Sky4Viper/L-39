@@ -4,12 +4,12 @@
 
   <model>
     <name>BeaconFlare</name>
-    <path>Aircraft/L-39ZA/Models/Effects/Lights/Flares/Beacon-flare.xml</path>
+    <path>Aircraft/L-39/Models/Effects/Lights/Flares/Beacon-flare.xml</path>
   </model>
 
   <model>
     <name>BeaconRemb</name>
-    <path>Aircraft/L-39ZA/Models/Effects/Lights/Rembrandt/Beacon-remb.xml</path>
+    <path>Aircraft/L-39/Models/Effects/Lights/Rembrandt/Beacon-remb.xml</path>
   </model>
   
   <animation>

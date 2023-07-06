@@ -9,7 +9,10 @@ History:
 -->
 <PropertyList>
 <sim>
+	<expected-aircraft-dir-name>L-39</expected-aircraft-dir-name>
 	<description>Aero Vodochody L-39ZA Albatros</description>
+	<variant-of>L-39C</variant-of>
+	<variant-id type="int">2</variant-id>
 	<long-description>The L-39ZA Albatros is an upgraded variant of Czech high performance jet trainer aircraft used for armed training and light attack missions, 
     employing sturdier landing gear, a higher payload (total 1,290 kg (2,844 lb)) on 4 hardpoints.
 	First flight of ZA model on 29 September 1976. 208 aircraft delivered. 
@@ -58,7 +61,7 @@ History:
 	</tags>
 
 	<startup>
-		<splash-texture>Aircraft/L-39ZA/l39-splash.png</splash-texture>
+		<splash-texture>Aircraft/L-39/l39-splash.png</splash-texture>
 	</startup>
 	
 	<previews>
@@ -75,7 +78,7 @@ History:
 		<preview>
 			<type>exterior</type>
 			<splash type="bool">true</splash>
-			<path>Previews/external3.png</path>
+			<path>Previews/external3-za.png</path>
 		</preview>
 		<preview>
 			<type>exterior</type>
@@ -100,7 +103,7 @@ History:
 	</previews>
 
 	<model>
-		<path>Aircraft/L-39ZA/Models/L-39ZA.xml</path>
+		<path>Aircraft/L-39/Models/L-39ZA.xml</path>
 		<hide-lights type="int">1</hide-lights>
         <show_gunsight type="int">1</show_gunsight>
 		<livery>
@@ -111,7 +114,7 @@ History:
 
 	<submodels>
 		<serviceable type="bool">true</serviceable>
-		<path>Aircraft/L-39ZA/Models/Submodels.xml</path>
+		<path>Aircraft/L-39/Models/Submodels.xml</path>
 	</submodels>
 
   	<flaps>
@@ -125,7 +128,7 @@ History:
 	<flight-recorder>
     		<replay-config type="int">0</replay-config>
     		<config n="0" 
-        		include="Aircraft/L-39ZA/Flightrecorder/Flightrecorder.xml">
+        		include="Aircraft/L-39/Flightrecorder/Flightrecorder.xml">
       			<name type="string">L-39ZA Flight Recorder</name>
       	<!-- Custom properties examples-->
 
@@ -152,7 +155,7 @@ History:
 	
 	<sound>
 		<audible>true</audible>
-		<path>Aircraft/L-39ZA/Sounds/Sound.xml</path>
+		<path>Aircraft/L-39/Sounds/Sound.xml</path>
 	</sound>
 	
 	<hud>
@@ -413,7 +416,7 @@ History:
 			</key>
 			
 			<key>
-				<name>f</name>
+				<name>d</name>
 				<desc>Weapons trigger</desc>
 			</key>
 			
@@ -775,47 +778,22 @@ History:
 				</binding>
 			</key>
 
-			<!-- <key n="100">
+			<key n="100">
 				<name>d</name>
-				<desc>Drop bomb</desc>
+				<desc>Fire selected weapons</desc>
 				<binding>
-					<condition>
-						<or>
-							<equals>
-								<property>sim/weight[0]/selected</property>
-								<value>FAB-250 bomb</value>
-							</equals>
-							<equals>
-								<property>sim/weight[1]/selected</property>
-								<value>FAB-250 bomb</value>
-							</equals>
-						</or>
-					</condition>
-      				<command>nasal</command>
-      				<script>weapons.drop_Bomb()</script>
+					<command>property-assign</command>
+					<property>controls/armament/trigger</property>
+					<value>true</value>
 				</binding>
 				<mod-up>
 					<binding>
-        				<command>nasal</command>
-        				<script>weapons.stop_Bomb()</script>
-      				</binding>
-				</mod-up>				
-			</key> -->
-
-			<!-- <key n="100">
-				<name>d</name>
-				<desc>Weapon Release</desc>
-				<binding>
-      				<command>nasal</command>
-      				<script>weapons.Pickle()</script>
-				</binding>
-				<mod-up>
-					<binding>
-        				<command>nasal</command>
-        				<script>weapons.stop_Pickle()</script>
-      				</binding>
-				</mod-up>				
-			</key> -->
+						<command>property-assign</command>
+						<property>controls/armament/trigger</property>
+						<value>false</value>
+					</binding>
+				</mod-up>
+			</key>
        
 			<key n="101">
 				<name>e</name>
@@ -836,16 +814,13 @@ History:
 				</binding>
 			</key>
        
-			<key n="102">
+			<!-- <key n="102">
 				<name>f</name>
 				<desc>Fire selected weapons</desc>
 				<binding>
 					<command>property-assign</command>
 					<property>controls/armament/trigger</property>
 					<value>true</value>
-					<!-- <condition>
-            			<property>/controls/armament/guns-sel</property>
-        			</condition> -->
 				</binding>
 				<mod-up>
 					<binding>
@@ -854,7 +829,7 @@ History:
 						<value>false</value>
 					</binding>
 				</mod-up>
-			</key>
+			</key> -->
 
 			<key n="109">
         		<name>m</name>
@@ -1006,57 +981,57 @@ History:
 
  <nasal>
 	<L-39ZA>
-		<file>Aircraft/L-39ZA/Nasal/strobe.nas</file>
-		<file>Aircraft/L-39ZA/Nasal/metric.nas</file>
-		<file>Aircraft/L-39ZA/Nasal/liveries.nas</file>
+		<file>Aircraft/L-39/Nasal/strobe.nas</file>
+		<file>Aircraft/L-39/Nasal/metric.nas</file>
+		<file>Aircraft/L-39/Nasal/liveries.nas</file>
 	</L-39ZA>
 	<lights>
-	    	<file>Aircraft/L-39ZA/Nasal/lights.nas</file>
+	    	<file>Aircraft/L-39/Nasal/lights.nas</file>
 	</lights>
 	<canopy>
-			<file>Aircraft/L-39ZA/Nasal/canopy.nas</file>
+			<file>Aircraft/L-39/Nasal/canopy.nas</file>
 	</canopy>
 	<fuel>
-      <file>Aircraft/L-39ZA/Nasal/fuel.nas</file>
+      <file>Aircraft/L-39/Nasal/fuel.nas</file>
     </fuel>
 	<radiocfg>
-      <file>Aircraft/L-39ZA/Nasal/radiocfg.nas</file>
+      <file>Aircraft/L-39/Nasal/radiocfg.nas</file>
     </radiocfg>
 	<switchclicksound>
-      <file>Aircraft/L-39ZA/Nasal/switchclicksound.nas</file>
+      <file>Aircraft/L-39/Nasal/switchclicksound.nas</file>
     </switchclicksound>
     <gunsight>
-		<file>Aircraft/L-39ZA/Nasal/gunsight.nas</file>
+		<file>Aircraft/L-39/Nasal/gunsight.nas</file>
 	</gunsight>
 	<environment>
-      		<file>Aircraft/L-39ZA/Nasal/environment.nas</file>
+      		<file>Aircraft/L-39/Nasal/environment.nas</file>
     </environment>
 	<payload>
-			<file>Aircraft/L-39ZA/Nasal/payload.nas</file>
+			<file>Aircraft/L-39/Nasal/payload.nas</file>
 	</payload>
 	<weapons>
-			<file>Aircraft/L-39ZA/Nasal/weapons.nas</file>
+			<file>Aircraft/L-39/Nasal/weapons.nas</file>
 	</weapons>
 	<cannon>
-		<file>Aircraft/L-39ZA/Nasal/cannon.nas</file>
+		<file>Aircraft/L-39/Nasal/cannon.nas</file>
 	</cannon>
 	<rockets>
-		<file>Aircraft/L-39ZA/Nasal/rockets.nas</file>
+		<file>Aircraft/L-39/Nasal/rockets.nas</file>
 	</rockets>
 	<pk3pods>
-		<file>Aircraft/L-39ZA/Nasal/pk3pods.nas</file>
+		<file>Aircraft/L-39/Nasal/pk3pods.nas</file>
 	</pk3pods>
 	<low>
-		<file>Aircraft/L-39ZA/Nasal/low.nas</file>
+		<file>Aircraft/L-39/Nasal/low.nas</file>
 	</low>
 	<tyresmoke>
-		<file>Aircraft/L-39ZA/Nasal/tyresmoke.nas</file>
+		<file>Aircraft/L-39/Nasal/tyresmoke.nas</file>
 	</tyresmoke>
   	<!-- <emu>
-   		<file>Aircraft/L-39ZA/Nasal/emu.nas</file>
+   		<file>Aircraft/L-39/Nasal/emu.nas</file>
   	</emu> -->
 	<engines>
-   		<file>Aircraft/L-39ZA/Nasal/generic-yasim-engine.nas</file>
+   		<file>Aircraft/L-39/Nasal/generic-yasim-engine.nas</file>
 		<script>
         var engine1 = engines.Jet.new(0, 0, 0.01, 5.21, 3, 5, 1, 23);
         setlistener("sim/signals/fdm-initialized", func
@@ -1066,13 +1041,13 @@ History:
       </script>
   	</engines>
 	<CanvasPylonsDlg>
-			<file>Aircraft/L-39ZA/Nasal/canvas-pylons-cfg.nas</file>
+			<file>Aircraft/L-39/Nasal/canvas-pylons-cfg.nas</file>
 	</CanvasPylonsDlg>
 	<CanvasKneepadDlg>
-			<file>Aircraft/L-39ZA/Nasal/kneepad.nas</file>
+			<file>Aircraft/L-39/Nasal/kneepad.nas</file>
 	</CanvasKneepadDlg>
 	<automation>
-		<file>Aircraft/L-39ZA/Nasal/automation.nas</file>
+		<file>Aircraft/L-39/Nasal/automation.nas</file>
 	</automation>
 </nasal>
 

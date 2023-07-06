@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <!-- Pilot models -->
+	
+	<model>
+    <name>Pilot</name>
+		<path>Aircraft/L-39/Models/Pilot/pilot.xml</path>
+		<offsets>
+			<x-m>-2.68314</x-m>
+			<y-m> 0.00</y-m>
+			<z-m>-0.813295</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model> 
+	
+	<model>
+    <name>Instructor</name>
+		<path>Aircraft/L-39/Models/Pilot/pilot.xml</path>
+		<offsets>
+			<x-m>-1.36095</x-m>
+			<y-m> 0.00</y-m>
+			<z-m>-0.590803</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+  <!-- Front panel -->
+  <model>
+    <path>Aircraft/L-39/Models/Cockpit/Front_Panel/front_panel_za.xml</path>
+    <offsets>
+      <x-m> 0.0 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0.0 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Front panel 2-->
+  <model>
+    <path>Aircraft/L-39/Models/Cockpit/Front_Panel/front_panel_2.xml</path>
+    <offsets>
+      <x-m> 0.0 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0.0 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Canopy Lock-->
+  <model>
+    <path>Aircraft/L-39/Models/Cockpit/Canopy_lock/canopy_lock.xml</path>
+    <offsets>
+      <x-m> -2.97024 </x-m>
+      <y-m> -0.328515 </y-m>
+      <z-m> -0.498471 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   -8.25163 </pitch-deg>
+      <heading-deg> -1.800 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Temp Rear cockpit panel -->
+  <model>
+    <path>Aircraft/L-39/Models/Cockpit/Front_Panel/front_panel_rear.xml</path>
+    <offsets>
+      <x-m> 0.0 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0.0 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Front instruments -->
+
+  <model>
+    <path>Aircraft/L-39/Models/Instruments/front_instruments.xml</path>
+    <offsets>
+      <x-m> 0.0 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0.0 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+    <condition>
+				<property>/sim/current-view/internal</property>
+		</condition>
+  </model>
+
+  <!-- Rear instruments -->
+
+  <model>
+    <path>Aircraft/L-39/Models/Instruments/rear_instruments.xml</path>
+    <offsets>
+      <x-m> 0.0</x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0.0 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+    <condition>
+		  <equals>
+          <property>sim/current-view/view-number</property>
+          <value>8</value>
+		  </equals>
+	  </condition>
+  </model>
+
+  <!-- Gunsight -->
+
+  <model>
+		<path>Aircraft/L-39/Models/Instruments/gunsight/Gunsight.xml</path>
+		<offsets>
+			<x-m>-3.44671</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-0.350787</z-m>
+			<roll-deg>0.0</roll-deg>
+			<pitch-deg>0.0</pitch-deg>
+			<heading-deg>0.0</heading-deg>
+		</offsets>
+	</model>
+
+  <!-- LH Panel-->
+  <model>
+    <path>Aircraft/L-39/Models/Cockpit/LH_Panel/lh_panel.xml</path>
+    <offsets>
+      <x-m> -3.01423 </x-m>
+      <y-m> -0.318296 </y-m>
+      <z-m> -0.654409 </z-m>
+      <roll-deg>    -17.3 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+    <overlay>
+			<animation n="100">
+			<type>scale</type>
+			  <property>constants/zero</property>
+			  <x-offset>0.79</x-offset>
+			  <y-offset>0.79</y-offset>
+			  <z-offset>1.0</z-offset>
+			</animation>
+    </overlay>
+    <condition>
+				<property>/sim/current-view/internal</property>
+		</condition>
+  </model>
+
+  <!-- RH Panel-->
+  <model>
+    <path>Aircraft/L-39/Models/Cockpit/RH_Panel/rh_panel.xml</path>
+    <offsets>
+      <x-m> -3.01423 </x-m>
+      <y-m> 0.287196 </y-m>
+      <z-m> -0.658809 </z-m>
+      <roll-deg>    17.3 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+    <overlay>
+			<animation n="100">
+			<type>scale</type>
+			<property>constants/zero</property>
+			<x-offset>0.79</x-offset>
+			<y-offset>0.79</y-offset>
+			<z-offset>0.79</z-offset>
+			</animation>
+    </overlay>
+    <condition>
+				<property>/sim/current-view/internal</property>
+		</condition>
+  </model>
+   
+</PropertyList>
+

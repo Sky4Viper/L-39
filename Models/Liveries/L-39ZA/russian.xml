@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+<sim>
+  <model>
+    <livery>
+      <name type="string">Russia-White-76</name>
+      <texture>Liveries/L-39C/default.png</texture>
+      <shininess>
+        <refl_correction type="float">-0.48</refl_correction>
+      </shininess>
+    </livery>
+    <livery-logo>
+      <texture>Livries/L-39C/Default.png</texture>
+    </livery-logo>
+    <pilotsuit>
+      <name type="string">CamoFlightsuit_WhiteHelmet</name>
+      <texture>Liveries/Pilot/pilot_camo.png</texture>
+    </pilotsuit>
+  </model>
+</sim>
+</PropertyList>
