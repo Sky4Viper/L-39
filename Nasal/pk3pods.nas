@@ -85,7 +85,7 @@ var triggerControl = func {
 		outOfAmmo.stop();
 		#ammo count report on trigger release
 		if(getprop("/controls/armament/report-ammo"))
-			screen.log.write("PK-3 rounds left: " ~ getprop("/controls/armament/PK3Left") ~ ((getprop("/sim/weight[2]/payload-int") == 2 and  getprop("/sim/weight[6]/payload-int") == 2)?" x2":""), 1, 0.6, 0.1);
+			screen.log.write("PK-3 rounds left: " ~ getprop("/controls/armament/PK3Left") ~ ((getprop("/sim/weight[0]/payload-int") == 2 and  getprop("/sim/weight[1]/payload-int") == 2)?" x2":""), 1, 0.6, 0.1);
 	}
 }
 

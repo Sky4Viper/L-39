@@ -129,11 +129,6 @@ jettison_outer = func {
 			jettison_1_4.start(); 
 		   }
 
-jettison_inner = func {
-			jettison_2_3.singleShot = 1; # timer will only be run once
-			jettison_2_3.start(); 
-		   }
-
 var flash_trigger_Rockets = props.globals.getNode("controls/armament/fire_rockets", 0);
 var flash_trigger_GSh23 = props.globals.getNode("controls/armament/fire_gsh", 0);
 var flash_trigger_PK3 = props.globals.getNode("controls/armament/fire_pk3", 0);

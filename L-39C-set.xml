@@ -819,9 +819,6 @@ History:
 	<weapons>
 			<file>Aircraft/L-39/Nasal/weapons_c.nas</file>
 	</weapons>
-	<!-- <cannon>
-		<file>Aircraft/L-39/Nasal/cannon.nas</file>
-	</cannon> -->
 	<rockets>
 		<file>Aircraft/L-39/Nasal/rockets.nas</file>
 	</rockets>
@@ -834,9 +831,6 @@ History:
 	<tyresmoke>
 		<file>Aircraft/L-39/Nasal/tyresmoke.nas</file>
 	</tyresmoke>
-  	<!-- <emu>
-   		<file>Aircraft/L-39/Nasal/emu.nas</file>
-  	</emu> -->
 	<engines>
    		<file>Aircraft/L-39/Nasal/generic-yasim-engine.nas</file>
 		<script>
