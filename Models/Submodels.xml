@@ -61,7 +61,7 @@
 	<submodel>
 		<name>pylon-one-rockets</name>
 		<model>Aircraft/L-39/Models/Stores/UB-16/Rocket.xml</model>
-		<trigger>sim/multiplay/generic/int[10]</trigger>
+		<trigger>sim/multiplay/generic/int[9]</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
 		<delay>0.1</delay>
@@ -87,7 +87,7 @@
 	<submodel>
 		<name>pylon-one-rockets-blank</name>
 		<model>Aircraft/L-39/Models/Stores/UB-16/rocket_blank.xml</model>
-		<trigger>sim/multiplay/generic/int[10]</trigger>
+		<trigger>sim/multiplay/generic/int[9]</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
 		<delay>0.1</delay>
@@ -248,7 +248,7 @@
 	<submodel>
 		<name>pylon-two-rockets</name>
 		<model>Aircraft/L-39/Models/Stores/UB-16/Rocket.xml</model>
-		<trigger>sim/multiplay/generic/int[9]</trigger>
+		<trigger>sim/multiplay/generic/int[10]</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
 		<delay>0.1</delay>
@@ -274,7 +274,7 @@
 	<submodel>
 		<name>pylon-two-rockets-blank</name>
 		<model>Aircraft/L-39/Models/Stores/UB-16/rocket_blank.xml</model>
-		<trigger>sim/multiplay/generic/int[9]</trigger>
+		<trigger>sim/multiplay/generic/int[10]</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
 		<delay>0.1</delay>
@@ -435,7 +435,7 @@
 	<submodel>
 		<name>pylon-one-rockets</name>
 		<model>Aircraft/L-39/Models/Stores/UB-16/Rocket.xml</model>
-		<trigger>sim/multiplay/generic/int[9]</trigger>
+		<trigger>sim/multiplay/generic/int[10]</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
 		<delay>0.1</delay>
@@ -461,7 +461,7 @@
 	<submodel>
 		<name>pylon-three-rockets-blank</name>
 		<model>Aircraft/L-39/Models/Stores/UB-16/rocket_blank.xml</model>
-		<trigger>sim/multiplay/generic/int[9]</trigger>
+		<trigger>sim/multiplay/generic/int[10]</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
 		<delay>0.1</delay>
@@ -624,7 +624,7 @@
 	<submodel>
 		<name>pylon-two-rockets</name>
 		<model>Aircraft/L-39/Models/Stores/UB-16/Rocket.xml</model>
-		<trigger>sim/multiplay/generic/int[10]</trigger>
+		<trigger>sim/multiplay/generic/int[9]</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
 		<delay>0.1</delay>
@@ -650,7 +650,7 @@
 	<submodel>
 		<name>pylon-four-rockets-blank</name>
 		<model>Aircraft/L-39/Models/Stores/UB-16/rocket_blank.xml</model>
-		<trigger>sim/multiplay/generic/int[10]</trigger>
+		<trigger>sim/multiplay/generic/int[9]</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
 		<delay>0.1</delay>

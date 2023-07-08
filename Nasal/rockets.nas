@@ -111,7 +111,7 @@ var triggerControl = func {
 
 	if(triggerState and MasterArm and RocketsON) {
 		var mounted1L = (getprop("sim/weight[0]/selected") == "UB-16 rockets pod");
-		var mounted2L = (getprop("sim/weight[1]/selected") == "UB-16 rockets pod");
+		var mounted2L = (getprop("sim/weight[2]/selected") == "UB-16 rockets pod");
 		var PylonsOuter_ON = (getprop("controls/armament/pylon-outer-sel") == 1);
 		var PylonsInner_ON = (getprop("controls/armament/pylon-inner-sel") == 1);
 		

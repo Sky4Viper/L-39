@@ -149,9 +149,7 @@
 		<object-name>nose_wheel_door_left</object-name>
 		<object-name>nose_wheel_door_right</object-name>
 		<object-name>external_tank_left_1</object-name>
-		<object-name>external_tank_left_2</object-name>
 		<object-name>external_tank_right_1</object-name>
-		<object-name>external_tank_right_2</object-name>
     </effect>
 
 	<effect>

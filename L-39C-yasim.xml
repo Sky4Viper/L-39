@@ -178,10 +178,10 @@ Inertia tensor [kg*m^2], origo at CG:
   </jet>
 
   <!--guns recoil in 2000 Lbf = 2.5Tf negative angle of the gun : -2'-->
-  <thruster thrust="2000"
+  <thruster thrust="1000"
       x="3.2" y="0.0" z="-1.23"
       vx="-0.999390827" vy="0" vz="0.03489949">
-      <control-input axis="sim/multiplay/generic/int[8]" control="THROTTLE" />
+      <control-input axis="sim/multiplay/generic/int[11]" control="THROTTLE" />
   </thruster>
 
   <!-- nose -->

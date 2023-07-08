@@ -5,7 +5,7 @@
 	<path>PK-3.ac</path>
 
     <effect>
-        <inherits-from>Aircraft/L-39ZA/Models/Effects/ArmReflect</inherits-from>
+        <inherits-from>Aircraft/L-39/Models/Effects/ArmReflect</inherits-from>
         <object-name>PK-3-Container</object-name>
     </effect>
 

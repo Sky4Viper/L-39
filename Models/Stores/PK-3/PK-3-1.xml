@@ -5,13 +5,13 @@
 	<path>PK-3.ac</path>
 
     <effect>
-        <inherits-from>Aircraft/L-39ZA/Models/Effects/ArmReflect</inherits-from>
+        <inherits-from>Aircraft/L-39/Models/Effects/ArmReflect</inherits-from>
         <object-name>PK-3-Container</object-name>
     </effect>
 
 	<model>
 		<name>flame1</name>
-		<path>Aircraft/L-39ZA/Models/Effects/Gun/Flame.xml</path>
+		<path>Aircraft/L-39/Models/Effects/Gun/Flame.xml</path>
 		<condition>
 			<equals>
 				<property>sim/multiplay/generic/int[11]</property>
@@ -30,7 +30,7 @@
 
 	<model>
 		<name>flame2</name>
-		<path>Aircraft/L-39ZA/Models/Effects/Gun/Flame.xml</path>
+		<path>Aircraft/L-39/Models/Effects/Gun/Flame.xml</path>
 		<condition>
 			<equals>
 				<property>sim/multiplay/generic/int[11]</property>
@@ -68,7 +68,7 @@
 
 	<model>
 		<name>PK-3-smoke</name>
-    	<path>Aircraft/L-39ZA/Models/Effects/Gun/Flack.xml</path>
+    	<path>Aircraft/L-39/Models/Effects/Gun/Flack.xml</path>
 		<condition>
 			<equals>
 				<property>sim/multiplay/generic/int[11]</property>
@@ -84,7 +84,7 @@
   	
   	<model>
   		<name>PK-3-smoke2</name>
-    		<path>Aircraft/L-39ZA/Models/Effects/Engine/L-39ZA-blur.xml</path>
+    		<path>Aircraft/L-39/Models/Effects/Engine/L-39ZA-blur.xml</path>
     		<offsets>
     			<x-m>-0.438929</x-m>
       			<y-m>0.0</y-m>

@@ -112,7 +112,7 @@ History:
 
 	<submodels>
 		<serviceable type="bool">true</serviceable>
-		<path>Aircraft/L-39/Models/Submodels.xml</path>
+		<path>Aircraft/L-39/Models/Submodels_c.xml</path>
 	</submodels>
 
   	<flaps>
@@ -126,28 +126,8 @@ History:
 	<flight-recorder>
     		<replay-config type="int">0</replay-config>
     		<config n="0" 
-        		include="Aircraft/L-39/Flightrecorder/Flightrecorder.xml">
-      			<name type="string">L-39ZA Flight Recorder</name>
-      	<!-- Custom properties examples-->
-
-      			<!-- <signal>
-        			<type>float</type>
-        			<property type="string">/controls/gear/nosegear-steering-cmd-norm</property>
-        			<interpolation>linear</interpolation>
-      			</signal>
-        		<signal>
-          			<type>float</type>
-          			<property type="string">/controls/gear/nosegear-steering-cmd-norm</property>
-        		</signal>
-        		<signal>
-          			<type>double</type>
-          			<interpolation>rotational-deg</interpolation>
-          			<property type="string">/ai/model/carrier/alpha-angle-deg</property>
-        		</signal>
-				<signal>
-          			<type>bool</type>
-          			<property type="string">/controls/panel/custom-switch</property>
-        		</signal> -->
+        		include="Aircraft/L-39/Flightrecorder/flightrecorder_c.xml">
+      			<name type="string">L-39C Flight Recorder</name>
     		</config>
   	</flight-recorder>
 	
