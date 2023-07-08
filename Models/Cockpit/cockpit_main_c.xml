@@ -41,7 +41,7 @@
 
   <!-- Front panel 2-->
   <model>
-    <path>Aircraft/L-39/Models/Cockpit/Front_Panel/front_panel_2.xml</path>
+    <path>Aircraft/L-39/Models/Cockpit/Front_Panel/front_panel_2_c.xml</path>
     <offsets>
       <x-m> 0.0 </x-m>
       <y-m> 0.0 </y-m>

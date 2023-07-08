@@ -1,0 +1,892 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <path>f-panel-2_c.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>arm_panel_02.002</object-name>
+    <object-name>arm_panel_02.003</object-name>
+    <!-- <object-name>arm_panel_02.005</object-name> -->
+    <object-name>arm_panel_02.006</object-name>
+    <object-name>arm_panel_02.007</object-name>
+    <object-name>arm_panel_02.008</object-name>
+    <object-name>arm_panel_02.009</object-name>
+    <object-name>arm_panel_02.010</object-name>
+    <object-name>jet_switch_cover.001</object-name>
+    <object-name>jet_switch_cover.002</object-name>
+    <object-name>inst_panel_screws</object-name>
+    <object-name>inst_panel_screws.001</object-name>
+    <object-name>arm_switch.001</object-name>
+    <object-name>arm_switch.002</object-name>
+    <object-name>arm_switch.003</object-name>
+    <object-name>arm_switch.004</object-name>
+    <object-name>arm_switch.005</object-name>
+    <object-name>arm_switch.006</object-name>
+    <object-name>arm_switch.007</object-name>
+    <object-name>arm_switch.008</object-name>
+    <object-name>arm_switch.009</object-name>
+    <object-name>jet_switch.001</object-name>
+    <object-name>jet_switch.002</object-name>
+    <object-name>trim_pitch_index</object-name>
+    <emission>
+      <red>0.2</red>
+      <green>0.2</green>
+      <blue>0.2</blue>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+    <condition>
+        <property>/controls/electric/battery-switch</property>
+     </condition>
+  </animation>
+
+  <animation> 
+    <object-name>arm_light.001</object-name>
+    <object-name>arm_light.002</object-name>
+    <object-name>arm_light.003</object-name>
+    <object-name>arm_light.004</object-name>
+    <object-name>arm_light.005</object-name>
+    <object-name>arm_light.006</object-name>
+    <object-name>arm_light.007</object-name>
+    <object-name>arm_light.008</object-name>
+    <object-name>arm_light.009</object-name>
+    <object-name>arm_light.010</object-name>
+    <object-name>arm_light.011</object-name>
+    <object-name>arm_light.012</object-name>
+    <emission> 
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>0</red>
+      <green>1.2</green>
+      <blue>0</blue>
+    </emission>
+    <condition>
+      <property>/controls/electric/battery-switch</property>
+    </condition>
+  </animation>
+
+
+
+  <animation>
+		<type>select</type>
+		<object-name>arm_light.005</object-name>
+		<condition>
+      <property>/controls/electric/battery-switch</property>
+        <equals>
+				  <property>sim/weight[0]/payload-int</property>
+				  <value>4</value>
+			  </equals>
+      </condition>
+	</animation>
+
+  <animation>
+		<type>select</type>
+		<object-name>arm_light.006</object-name>
+		<condition>
+      <property>/controls/electric/battery-switch</property>
+        <equals>
+				  <property>sim/weight[1]/payload-int</property>
+				  <value>4</value>
+			  </equals>
+    </condition>
+	</animation>
+
+  <animation>
+		<type>select</type>
+		<object-name>arm_light.007</object-name>
+		<condition>
+      <property>/controls/electric/battery-switch</property>
+      <property>/controls/armament/bombs-sel</property>
+      <or>
+        <equals>
+				  <property>sim/weight[0]/payload-int</property>
+				  <value>4</value>
+			  </equals>
+        <equals>
+				  <property>sim/weight[1]/payload-int</property>
+				  <value>4</value>
+			  </equals>
+      </or>
+    </condition>
+	</animation>
+
+  <animation>
+		<type>select</type>
+		<object-name>arm_light.008</object-name>
+		<condition>
+      <property>/controls/electric/battery-switch</property>
+      <equals>
+				  <property>sim/weight[0]/payload-int</property>
+				  <value>2</value>
+			</equals>
+    </condition>
+	</animation>
+
+  <animation>
+		<type>select</type>
+		<object-name>arm_light.009</object-name>
+		<condition>
+      <property>/controls/electric/battery-switch</property>
+      <equals>
+				  <property>sim/weight[1]/payload-int</property>
+				  <value>2</value>
+			</equals>
+    </condition>
+	</animation>
+
+  <animation>
+		<type>select</type>
+		<object-name>arm_light.010</object-name>
+		<condition>
+      <property>/controls/electric/battery-switch</property>
+			<equals>
+			  <property>/controls/armament/rocketsLeft1</property>
+			  <value>0</value>
+		  </equals>
+		</condition>
+	</animation>
+
+  <animation>
+		<type>select</type>
+		<object-name>arm_light.012</object-name>
+		<condition>
+      <property>/controls/electric/battery-switch</property>
+			<equals>
+				<property>/controls/flight/aileron-trim</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+
+  <!-- Armament control switches animation -->
+
+  <animation>
+      <type>rotate</type>
+      <object-name>arm_switch.001</object-name>
+      <property>/controls/armament/master-arm</property>
+      <offset-deg>-25</offset-deg>
+      <factor>50</factor>
+      <center>
+        <x-m>-3.37627</x-m>
+        <y-m>0.0</y-m>
+        <z-m>-0.707836</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>arm_switch.002</object-name>
+      <property>/controls/armament/gun-sight</property>
+      <offset-deg>-25</offset-deg>
+      <factor>50</factor>
+      <center>
+        <x-m>-3.37627</x-m>
+        <y-m>0.0</y-m>
+        <z-m>-0.707836</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>arm_switch.003</object-name>
+      <property>/controls/armament/rockets-sel</property>
+      <offset-deg>-25</offset-deg>
+      <factor>50</factor>
+      <center>
+        <x-m>-3.37627</x-m>
+        <y-m>0.0</y-m>
+        <z-m>-0.707836</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>arm_switch.004</object-name>
+      <property>/controls/armament/bombs-sel</property>
+      <offset-deg>-25</offset-deg>
+      <factor>50</factor>
+      <center>
+        <x-m>-3.37627</x-m>
+        <y-m>0.0</y-m>
+        <z-m>-0.707836</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>arm_switch.005</object-name>
+      <property>/controls/armament/pk3-outer-sel</property>
+      <offset-deg>-25</offset-deg>
+      <factor>50</factor>
+      <center>
+        <x-m>-3.37627</x-m>
+        <y-m>0.0</y-m>
+        <z-m>-0.707836</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <!-- Signal Flares and smoke buttons -->
+
+  <animation>
+    <type>translate</type>
+    <object-name>signal_flare_btns_w</object-name>
+    <property>sim/multiplay/generic/int[17]</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0.000 </dep></entry>
+      <entry><ind> 1 </ind><dep> -0.0045 </dep></entry>
+      <entry><ind> 2 </ind><dep>  0.000 </dep></entry>
+      <entry><ind> 3 </ind><dep>  0.000 </dep></entry>
+      <entry><ind> 4 </ind><dep>  0.000 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>signal_flare_btns_r</object-name>
+    <property>sim/multiplay/generic/int[17]</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0.000 </dep></entry>
+      <entry><ind> 1 </ind><dep>  0.000 </dep></entry>
+      <entry><ind> 2 </ind><dep> -0.0045 </dep></entry>
+      <entry><ind> 3 </ind><dep>  0.000 </dep></entry>
+      <entry><ind> 4 </ind><dep>  0.000 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  <animation>
+    <type>translate</type>
+    <object-name>signal_flare_btns_g</object-name>
+    <property>sim/multiplay/generic/int[17]</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0.000 </dep></entry>
+      <entry><ind> 1 </ind><dep>  0.000 </dep></entry>
+      <entry><ind> 2 </ind><dep>  0.000 </dep></entry>
+      <entry><ind> 3 </ind><dep> -0.0045 </dep></entry>
+      <entry><ind> 4 </ind><dep>  0.000 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  <animation>
+    <type>translate</type>
+    <object-name>signal_flare_btns_y</object-name>
+    <property>sim/multiplay/generic/int[17]</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0.000 </dep></entry>
+      <entry><ind> 1 </ind><dep>  0.000 </dep></entry>
+      <entry><ind> 2 </ind><dep>  0.000 </dep></entry>
+      <entry><ind> 3 </ind><dep>  0.000 </dep></entry>
+      <entry><ind> 4 </ind><dep> -0.0045 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>signal_flare_btns_w</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>
+          var p = props.globals.getNode("sim/multiplay/generic/int[17]", 1);
+          p.setIntValue(1);
+        </script>
+      </binding>
+    </action>
+    <hovered>
+        <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>signal_flare_btns_w-lbl</tooltip-id>
+                <label>Signal White</label>
+        </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>signal_flare_btns_r</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>
+          var p = props.globals.getNode("sim/multiplay/generic/int[17]", 1);
+          p.setIntValue(2);
+        </script>
+      </binding>
+    </action>
+    <hovered>
+        <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>signal_flare_btns_r-lbl</tooltip-id>
+                <label>Signal Red</label>
+        </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>signal_flare_btns_g</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>
+          var p = props.globals.getNode("sim/multiplay/generic/int[17]", 1);
+          p.setIntValue(3);
+        </script>
+      </binding>
+    </action>
+    <hovered>
+        <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>signal_flare_btns_g-lbl</tooltip-id>
+                <label>Signal Green</label>
+        </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>signal_flare_btns_y</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>
+          var p = props.globals.getNode("sim/multiplay/generic/int[17]", 1);
+          p.setIntValue(4);
+        </script>
+      </binding>
+    </action>
+    <hovered>
+        <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>signal_flare_btns_y-lbl</tooltip-id>
+                <label>Signal Yellow</label>
+        </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>arm_switch.007</object-name>
+    <property>sim/multiplay/generic/int[16]</property>
+   <interpolation>
+    <entry><ind>0</ind><dep>-25</dep></entry>
+    <entry><ind>1</ind><dep> 0</dep></entry>
+    <entry><ind>2</ind><dep> 25</dep></entry>
+   </interpolation>
+    <center>
+      <x-m> -3.37503 </x-m>
+      <y-m> -0.064666 </y-m>
+      <z-m> -0.789186 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+   <type>pick</type>
+   <object-name>arm_switch.007</object-name>
+   <visible>true</visible>
+   <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>sim/multiplay/generic/int[16]</property>
+        <step>1.0</step>
+        <min>0</min>
+        <max>3</max>
+        <wrap>true</wrap>
+      </binding>
+      <binding>
+          <command>nasal</command>
+          <script>switchclicksound.click("switch")</script>
+        </binding>
+    </action>
+    <action>
+      <button>1</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>sim/multiplay/generic/int[16]</property>
+        <step>-1.0</step>
+        <min>0</min>
+        <max>3</max>
+        <wrap>true</wrap>
+      </binding>
+      <binding>
+          <command>nasal</command>
+          <script>switchclicksound.click("switch")</script>
+        </binding>
+    </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>signal_flare_smoke-lbl</tooltip-id>
+                <label>Signal %s</label>
+                <property>sim/multiplay/generic/int[16]</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'FLARE', 'SMOKE'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
+ </animation>
+
+ <animation>
+		<type>rotate</type>
+		<object-name>arm_jet_switch.001_cover</object-name>
+		<property>l-39za/controls/jett1swcover</property>
+		<interpolation>
+            <entry><ind> 0</ind><dep>0.0</dep></entry>
+            <entry><ind> 1</ind><dep>106.0</dep></entry>
+    </interpolation>
+		<center>
+			<x-m>-3.37604</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.765004</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+  <animation>
+		<type>rotate</type>
+		<object-name>arm_jet_switch.002_cover</object-name>
+		<property>l-39za/controls/jett2swcover</property>
+		<interpolation>
+            <entry><ind> 0</ind><dep>0.0</dep></entry>
+            <entry><ind> 1</ind><dep>106.0</dep></entry>
+    </interpolation>
+		<center>
+			<x-m>-3.37604</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.765004</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>arm_jet_switch.002</object-name>
+      <property>/sim/multiplay/generic/int[20]</property>
+      <factor>90</factor>
+      <center>
+        <x-m>-3.37681</x-m>
+        <y-m>0</y-m>
+        <z-m>-0.783563</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>arm_switch.009</object-name>
+      <property>/controls/armament/salvo-ripple</property>
+      <interpolation>
+        <entry><ind>0</ind><dep>25</dep></entry>
+        <entry><ind>1</ind><dep>-20</dep></entry>
+        <entry><ind>2</ind><dep>-20</dep></entry>
+      </interpolation>
+      <center>
+        <x-m>-3.37627</x-m>
+        <y-m>0.062576</y-m>
+        <z-m>-0.792492</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+    </animation>
+
+    <animation>
+      <type>rotate</type>
+      <object-name>arm_switch.009</object-name>
+      <property>/controls/armament/salvo-ripple</property>
+      <interpolation>
+        <entry><ind>0</ind><dep>0</dep></entry>
+        <entry><ind>1</ind><dep> 20</dep></entry>
+        <entry><ind>2</ind><dep>-20</dep></entry>
+      </interpolation>
+      <center>
+        <x-m>-3.37627</x-m>
+        <y-m>0.062576</y-m>
+        <z-m>-0.792492</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>0</y>
+        <z>-1</z>
+      </axis>
+    </animation>
+
+
+  <!-- Armament control switches -->
+
+  <animation>
+    <type>pick</type>
+    <object-name>arm_switch.001</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/armament/master-arm</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>master-arm-sw-lbl</tooltip-id>
+                <label>Master Arm %s</label>
+                <property>/controls/armament/master-arm</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'ON'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>arm_switch.002</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/armament/gun-sight</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>gun-sight-sw-lbl</tooltip-id>
+                <label>ASP Sight %s</label>
+                <property>/controls/armament/gun-sight</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'ON'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>arm_switch.003</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/armament/rockets-sel</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>rockets-sel-sw-lbl</tooltip-id>
+                <label>Rockets %s</label>
+                <property>/controls/armament/rockets-sel</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'ON'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>arm_switch.004</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/armament/bombs-sel</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>bombs-sel-sw-lbl</tooltip-id>
+                <label>Bombs %s</label>
+                <property>/controls/armament/bombs-sel</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'ON'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>arm_switch.005</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/armament/pk3-outer-sel</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/armament/guns-sel</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>pk3-outer-sw-lbl</tooltip-id>
+                <label>PK3 Guns Outer %s</label>
+                <property>/controls/armament/pk3-outer-sel</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'ON'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+   <type>pick</type>
+   <object-name>arm_switch.006</object-name>
+   <visible>true</visible>
+   <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+         <property>/controls/armament/bomb-mode</property>
+        <step>1.0</step>
+        <min>0</min>
+        <max>3</max>
+        <wrap>true</wrap>
+      </binding>
+      <binding>
+          <command>nasal</command>
+          <script>switchclicksound.click("switch")</script>
+        </binding>
+    </action>
+    <action>
+      <button>1</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+         <property>/controls/armament/bomb-mode</property>
+        <step>-1.0</step>
+        <min>0</min>
+        <max>3</max>
+        <wrap>true</wrap>
+      </binding>
+      <binding>
+          <command>nasal</command>
+          <script>switchclicksound.click("switch")</script>
+        </binding>
+    </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>sw-bomb-mode</tooltip-id>
+                <label>Bomb Mode: %s</label>
+                <property>/controls/armament/bomb-mode</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['SALVO', '1', 'TRAIN'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
+ </animation>
+
+  <animation>
+   <type>pick</type>
+   <object-name>arm_switch.009</object-name>
+   <visible>true</visible>
+   <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+         <property>/controls/armament/salvo-ripple</property>
+        <step>1.0</step>
+        <min>0</min>
+        <max>3</max>
+        <wrap>true</wrap>
+      </binding>
+      <binding>
+          <command>nasal</command>
+          <script>switchclicksound.click("switch")</script>
+        </binding>
+    </action>
+    <action>
+      <button>1</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+         <property>/controls/armament/salvo-ripple</property>
+        <step>-1.0</step>
+        <min>0</min>
+        <max>3</max>
+        <wrap>true</wrap>
+      </binding>
+      <binding>
+          <command>nasal</command>
+          <script>switchclicksound.click("switch")</script>
+        </binding>
+    </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>sw-salvo-ripple</tooltip-id>
+                <label>Ripple: %s</label>
+                <property>/controls/armament/salvo-ripple</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['SALVO', '2', '4'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
+ </animation>
+
+ <animation>
+    <type>pick</type>
+    <object-name>arm_jet_switch.001_cover</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>l-39za/controls/jett1swcover</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>arm_jet_switch.002_cover</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>l-39za/controls/jett2swcover</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+</PropertyList>
+

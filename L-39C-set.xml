@@ -13,7 +13,7 @@ History:
 	<description>Aero Vodochody L-39C Albatros</description>
 	<variant-id type="int">1</variant-id>
 	<long-description>The L-39C Albatros is a Czech high performance jet trainer aircraft used for armed training.
-	First flight of ZA model on 29 September 1969. 2260 aircraft built. 
+	First flight on 29 September 1969. 2260 aircraft built. 
     Armament includes: UB-16 rocket pods with S-5 unguided rockets, FAB-250 bombs.
 	</long-description>
 	
@@ -30,7 +30,7 @@ History:
 	<urls>
 		<support>http://forum.flightgear.org</support>
 		<wikipedia>https://en.wikipedia.org/wiki/Aero_L-39_Albatros</wikipedia>
-		<code-repository>https://github.com/Sky4Viper/L-39ZA</code-repository>
+		<code-repository>https://github.com/Sky4Viper/L-39</code-repository>
 	</urls>
 	
 	<status>alpha</status>
@@ -42,7 +42,7 @@ History:
 	</rating>
 	
 	<flight-model>yasim</flight-model>
-	<aero>L-39C-yasim</aero>	
+	<aero>L-39C-yasim</aero>
 	
 	<tags>
 		<tag>trainer</tag>
@@ -285,6 +285,13 @@ History:
 					</binding>
 				</item>
 				<item>
+					<label>Reload PK-3 mg pods</label>
+					<binding>
+						<command>nasal</command>
+						<script>pk3pods.reload()</script>
+					</binding>
+				</item>
+				<item>
             		<label>ARK-19 setup</label>
             		<name>config</name>
             		<binding>
@@ -339,16 +346,6 @@ History:
 				<name>d</name>
 				<desc>Weapons trigger</desc>
 			</key>
-			
-			<!-- <key>
-				<name>d</name>
-				<desc>Weapon Release</desc>
-			</key> -->
-
-			<key>
-				<name>&lt;</name>
-				<desc>Select Outer Pylons</desc>
-			</key>
 
 			<key>
 				<name>e</name>
@@ -359,7 +356,6 @@ History:
 				<name>q</name>
 				<desc>Deploy Signal Flare/ Aerobatic Smoke</desc>
 			</key>
-
 			
 			<line>Parking brake is on</line>
 		</help>
@@ -369,39 +365,37 @@ History:
 	<multiplay>
 		<chat_display>1</chat_display>
 		<generic> 
-				<int n="0" alias="/sim/crashed" />
-				<!-- Beacon on -->
-				<int n="1" alias="/controls/lighting/beacon-switch" />
-				<!-- Landing lights on -->
-				<int n="2" alias="/controls/lighting/landing-lights-switch" />
-				<!-- Taxi light on -->
-				<int n="3" alias="/controls/lighting/taxi-light" />
-				<!-- Nav lights on -->
-				<int n="4" alias="/controls/lighting/nav-lights-switch" />
-				<!-- Engine status -->
-				<int n="5" alias="/engines/engine[0]/state" />
-				<!-- <int n="6" alias="/engines/engine[1]/state" /> -->
-				<int n="7" alias="/sim/crashed" />
-				<int n="8" alias="/controls/armament/fire_gsh" />
-				<int n="9" alias="/controls/armament/trigger-S-5-L" />
-				<int n="10" alias="/controls/armament/trigger-S-5-R" />
-				<int n="11" alias="/controls/armament/trigger-PK3-out" />
-				<int n="12" alias="/controls/armament/trigger-PK3-in" />
-				<int n="13" alias="/controls/armament/trigger-FAB250-1" />
-				<int n="14" alias="/controls/armament/trigger-FAB250-2" />
-				<int n="16" type="int">0</int>
-        		<int n="17" type="int">0</int>
-				<int n="18" alias="/controls/armament/trigger-FAB250-3" />
-				<int n="19" alias="/controls/armament/trigger-FAB250-4" />
-				<int n="20" alias="/controls/armament/jettison-outer" />
-				<int n="21" alias="/controls/armament/jettison-inner" />
-				<float n="0" alias="/surface-positions/left-taileron-pos-norm"/>
-				<float n="1" alias="/surface-positions/right-taileron-pos-norm"/>
-				<float n="2" alias="/surface-positions/left-flap-pos-norm"/>
-				<float n="3" alias="/surface-positions/right-flap-pos-norm"/>
-				<float n="4" alias="/position/gear-agl-m">0</float>
-				<!-- <float n="8" alias="/engines/engine[0]/afterburner" /> Reheat left engine -->
-				<!-- <float n="9" alias="/engines/engine[1]/afterburner" />  Reheat right engine -->
+			<int n="0" alias="/sim/crashed" />
+			<!-- Beacon on -->
+			<int n="1" alias="/controls/lighting/beacon-switch" />
+			<!-- Landing lights on -->
+			<int n="2" alias="/controls/lighting/landing-lights-switch" />
+			<!-- Taxi light on -->
+			<int n="3" alias="/controls/lighting/taxi-light" />
+			<!-- Nav lights on -->
+			<int n="4" alias="/controls/lighting/nav-lights-switch" />
+			<!-- Engine status -->
+			<int n="5" alias="/engines/engine[0]/state" />
+			<!-- <int n="6" alias="/engines/engine[1]/state" /> -->
+			<int n="7" alias="/sim/crashed" />
+			<int n="8" alias="/controls/armament/fire_gsh" />
+			<int n="9" alias="/controls/armament/trigger-S-5-L" />
+			<int n="10" alias="/controls/armament/trigger-S-5-R" />
+			<int n="11" alias="/controls/armament/trigger-PK3-out" />
+			<int n="12" alias="/controls/armament/trigger-PK3-in" />
+			<int n="13" alias="/controls/armament/trigger-FAB250-1" />
+			<int n="14" alias="/controls/armament/trigger-FAB250-2" />
+			<int n="16" type="int">0</int>
+        	<int n="17" type="int">0</int>
+			<int n="18" alias="/controls/armament/trigger-FAB250-3" />
+			<int n="19" alias="/controls/armament/trigger-FAB250-4" />
+			<int n="20" alias="/controls/armament/jettison-outer" />
+			<int n="21" alias="/controls/armament/jettison-inner" />
+			<float n="0" alias="/surface-positions/left-taileron-pos-norm"/>
+			<float n="1" alias="/surface-positions/right-taileron-pos-norm"/>
+			<float n="2" alias="/surface-positions/left-flap-pos-norm"/>
+			<float n="3" alias="/surface-positions/right-flap-pos-norm"/>
+			<float n="4" alias="/position/gear-agl-m">0</float>
 		</generic>
 	</multiplay>
     
@@ -420,33 +414,33 @@ History:
 		</config>
 	</view>
 
-		<view n="100">
-			<name>Co Pilot view</name>
-			<internal archive="y">true</internal>
-			<type>lookfrom</type>
-			<config>
-				<from-model type="bool">true</from-model>
-				<from-model-idx type="int">0</from-model-idx>
-				<x-offset-m archive="y">0.00</x-offset-m>
-				<y-offset-m archive="y">0.036572</y-offset-m>
-				<z-offset-m archive="y">-1.44</z-offset-m> 
-				<pitch-offset-deg>-15</pitch-offset-deg>
-				<default-field-of-view-deg>90</default-field-of-view-deg>
-				<limits>
-					<left>
-						<heading-max-deg>-100</heading-max-deg>
-						<x-offset-threshold-deg>0</x-offset-threshold-deg>
-						<x-offset-max-m>0</x-offset-max-m>
-					</left>
-					<right>
-						<heading-max-deg>100</heading-max-deg>
-						<x-offset-threshold-deg>0</x-offset-threshold-deg>
-						<x-offset-max-m>0</x-offset-max-m>
-					</right>
-					<enabled>1</enabled>
-				</limits>
-			</config>
-		</view>
+	<view n="100">
+		<name>Co Pilot view</name>
+		<internal archive="y">true</internal>
+		<type>lookfrom</type>
+		<config>
+			<from-model type="bool">true</from-model>
+			<from-model-idx type="int">0</from-model-idx>
+			<x-offset-m archive="y">0.00</x-offset-m>
+			<y-offset-m archive="y">0.036572</y-offset-m>
+			<z-offset-m archive="y">-1.44</z-offset-m> 
+			<pitch-offset-deg>-15</pitch-offset-deg>
+			<default-field-of-view-deg>90</default-field-of-view-deg>
+			<limits>
+				<left>
+					<heading-max-deg>-100</heading-max-deg>
+					<x-offset-threshold-deg>0</x-offset-threshold-deg>
+					<x-offset-max-m>0</x-offset-max-m>
+				</left>
+				<right>
+					<heading-max-deg>100</heading-max-deg>
+					<x-offset-threshold-deg>0</x-offset-threshold-deg>
+					<x-offset-max-m>0</x-offset-max-m>
+				</right>
+				<enabled>1</enabled>
+			</limits>
+		</config>
+	</view>
 </sim>
 
 <aircraft>
@@ -508,30 +502,30 @@ History:
 	</gunsight>  
 
 	<armament>
-			<trigger type="bool">false</trigger>
-			<trigger1 type="bool">false</trigger1>
-			<trigger2 type="bool">false</trigger2>
-			<pylon-outer-sel type="bool">false</pylon-outer-sel>
-			<pylon-inner-sel type="bool">false</pylon-inner-sel>
-			<guns-sel type="bool">false</guns-sel>
-			<master-arm type="bool">false</master-arm>
-			<salvo-ripple type="double">0</salvo-ripple>
-			<bomb-mode type="double">0</bomb-mode>
-			<station n="0">
-				<release type="bool">false</release>
-			</station>
-			<station n="1">
-				<release type="bool">false</release>
-			</station>
-			<station n="2">
-				<release type="bool">false</release>
-			</station>
-			<station n="3">
-				<release type="bool">false</release>
-			</station>
-			<station n="4">
-				<release type="bool">false</release>
-			</station>
+		<trigger type="bool">false</trigger>
+		<trigger1 type="bool">false</trigger1>
+		<trigger2 type="bool">false</trigger2>
+		<pylon-outer-sel type="bool">true</pylon-outer-sel>
+		<pylon-inner-sel type="bool">false</pylon-inner-sel>
+		<guns-sel type="bool">false</guns-sel>
+		<master-arm type="bool">false</master-arm>
+		<salvo-ripple type="double">0</salvo-ripple>
+		<bomb-mode type="double">0</bomb-mode>
+		<station n="0">
+			<release type="bool">false</release>
+		</station>
+		<station n="1">
+			<release type="bool">false</release>
+		</station>
+		<station n="2">
+			<release type="bool">false</release>
+		</station>
+		<station n="3">
+			<release type="bool">false</release>
+		</station>
+		<station n="4">
+			<release type="bool">false</release>
+		</station>
 	</armament>
 
 	<instrumentation>
@@ -578,31 +572,21 @@ History:
 		</tank>
 
 		<tank n="3">
-			<name>Left Outer Tank</name>
+			<name>Left Drop Tank</name>
 			<selected type="bool">false</selected>
 		</tank>
 			
 		<tank n="4">
-			<name>Left Inner Tank</name>
-			<selected type="bool">false</selected>
-		</tank>
-			
-		<tank n="5">
-			<name>Right Inner Tank</name>
-			<selected type="bool">false</selected>
-		</tank>
-			
-		<tank n="6">
-			<name>Right Outer Tank</name>
+			<name>Right Drop Tank</name>
 			<selected type="bool">false</selected>
 		</tank>
 	</fuel>
 </consumables>
 
 <engines>
-  <engine n="0">
-    <running>false</running>
-  </engine>
+	<engine n="0">
+		<running>false</running>
+	</engine>
 </engines>
 
 <canopy>
@@ -610,78 +594,56 @@ History:
 </canopy>
 
 <input>
-		<keyboard>
-  
-			<!-- <key n="125">
-				<name>}</name>
-				<desc>Engine autostart</desc>
-				<binding>
-					<command>nasal</command>
-					<script>
-						#Yak-130.engines.engine1.autostart();
-						#settimer( func { Yak-130.engines.engine2.autostart(); }, 12 );
-						yasimengines.autostart();		 
-					</script>
-               
-				</binding>
-			</key> -->
+	<keyboard>
 
-			<key n="60">
-        		<name>&lt;</name>
-        		<desc>Select Outer Pylons</desc>
-        		<binding>
-					<command>property-toggle</command>
-					<property>controls/armament/pylon-outer-sel</property>
-				</binding>
-    		</key>
-    		<!-- <key n="62">
-        		<name>&gt;</name>
-        		<desc>Select Inner Pylons</desc>
-        		<binding>
-					<command>property-toggle</command>
-					<property>controls/armament/pylon-inner-sel</property>
-				</binding>
-    		</key> -->
+		<key n="60">
+        	<name>&lt;</name>
+        	<desc>Select Outer Pylons</desc>
+        	<binding>
+				<command>property-toggle</command>
+				<property>controls/armament/pylon-outer-sel</property>
+			</binding>
+    	</key>
        
-			<key n="78">
-				<name>N</name>
-				<desc>Extend speedbrake</desc>
-				<binding>
-					<command>property-adjust</command>
-					<property>/controls/flight/speedbrake</property>
-					<step type="double">0.2</step>
-					<min type="double">0</min>
-					<max type="double">1</max>
-				</binding>
-			</key>
+		<key n="78">
+			<name>N</name>
+			<desc>Extend speedbrake</desc>
+			<binding>
+				<command>property-adjust</command>
+				<property>/controls/flight/speedbrake</property>
+				<step type="double">0.2</step>
+				<min type="double">0</min>
+				<max type="double">1</max>
+			</binding>
+		</key>
 
-			<key n="81">
-				<name>Shift-Q</name>
-				<desc>Fuel Cutoff Switch or Lever.</desc>
-				<binding>
-					<condition>
-						<property>/sim/input/selected/engine[0]</property>
-					</condition>
-					<command>property-toggle</command>
-					<property>/controls/engines/engine[0]/cutoff</property>
-				</binding>
-			</key>
+		<key n="81">
+			<name>Shift-Q</name>
+			<desc>Fuel Cutoff Switch or Lever.</desc>
+			<binding>
+				<condition>
+					<property>/sim/input/selected/engine[0]</property>
+				</condition>
+				<command>property-toggle</command>
+				<property>/controls/engines/engine[0]/cutoff</property>
+			</binding>
+		</key>
        
-			<key n="99">
-				<name>c</name>
-				<desc>Toggle canopy</desc>
-				<binding>
-					<command>nasal</command>
-					<script>canopy.canopy_switch(2)</script>
-                    <condition>
-                        <not>
-                            <property>/controls/canopy/lock</property>
-                        </not>
-                    </condition>
-				</binding>
-			</key>
+		<key n="99">
+			<name>c</name>
+			<desc>Toggle canopy</desc>
+			<binding>
+				<command>nasal</command>
+				<script>canopy.canopy_switch(2)</script>
+                <condition>
+                    <not>
+                        <property>/controls/canopy/lock</property>
+                    </not>
+                </condition>
+			</binding>
+		</key>
 
-			<key n="100">
+		<key n="100">
 				<name>d</name>
 				<desc>Fire selected weapons</desc>
 				<binding>
@@ -689,137 +651,97 @@ History:
 					<property>controls/armament/trigger</property>
 					<value>true</value>
 				</binding>
-				<mod-up>
-					<binding>
-						<command>property-assign</command>
-						<property>controls/armament/trigger</property>
-						<value>false</value>
-					</binding>
-				</mod-up>
-			</key>
-       
-			<key n="101">
-				<name>e</name>
-				<desc>Jettison Pylons</desc>
-				<binding>
-      				<command>nasal</command>
-      				<script>weapons.jettison_outer()</script>
-              		<condition>
-                		<property>l-39za/controls/jett2swcover</property>
-              		</condition>
-				</binding>
-				<binding>
-      				<command>nasal</command>
-      				<script>weapons.jettison_inner()</script>
-              		<condition>
-                		<property>l-39za/controls/jett3swcover</property>
-              		</condition>
-				</binding>
-			</key>
-       
-			<!-- <key n="102">
-				<name>f</name>
-				<desc>Fire selected weapons</desc>
+			<mod-up>
 				<binding>
 					<command>property-assign</command>
 					<property>controls/armament/trigger</property>
-					<value>true</value>
+					<value>false</value>
 				</binding>
-				<mod-up>
-					<binding>
-						<command>property-assign</command>
-						<property>controls/armament/trigger</property>
-						<value>false</value>
-					</binding>
-				</mod-up>
-			</key> -->
+			</mod-up>
+		</key>
+       
+		<key n="101">
+			<name>e</name>
+			<desc>Jettison Pylons</desc>
+			<binding>
+      			<command>nasal</command>
+      			<script>weapons.jettison_outer()</script>
+              	<condition>
+                	<property>l-39za/controls/jett2swcover</property>
+              	</condition>
+			</binding>
+			<binding>
+      			<command>nasal</command>
+      			<script>weapons.jettison_inner()</script>
+              	<condition>
+                	<property>l-39za/controls/jett3swcover</property>
+              	</condition>
+			</binding>
+		</key>
 
-			<key n="109">
-        		<name>m</name>
-        		<desc>Masterarm</desc>
-        		<binding>
-            		<command>nasal</command>
-            		<script><![CDATA[
-                	setprop("controls/armament/master-arm",!getprop("controls/armament/master-arm"));
-                	screen.log.write("Master-arm "~(getprop("controls/armament/master-arm")==0?"OFF":"ON"), 0.5, 0.5, 1);
-                	]]></script>
-        		</binding>
-				<binding>
+		<key n="109">
+        	<name>m</name>
+        	<desc>Masterarm</desc>
+        	<binding>
+            	<command>nasal</command>
+            	<script><![CDATA[
+                		setprop("controls/armament/master-arm",!getprop("controls/armament/master-arm"));
+                		screen.log.write("Master-arm "~(getprop("controls/armament/master-arm")==0?"OFF":"ON"), 0.5, 0.5, 1);
+                		]]>
+				</script>
+        	</binding>
+			<binding>
           			<command>nasal</command>
           			<script>switchclicksound.click("switch")</script>
-        		</binding>
-    		</key>
+        	</binding>
+    	</key>
        
-			<key n="110">
-				<name>n</name>
-				<desc>Retract speedbrake</desc>
-				<binding>
-					<command>property-adjust</command>
-					<property>/controls/flight/speedbrake</property>
-					<step type="double">-0.2</step>
-					<min type="double">0</min>
-					<max type="double">1</max>
-				</binding>
-			</key>
+		<key n="110">
+			<name>n</name>
+			<desc>Retract speedbrake</desc>
+			<binding>
+				<command>property-adjust</command>
+				<property>/controls/flight/speedbrake</property>
+				<step type="double">-0.2</step>
+				<min type="double">0</min>
+				<max type="double">1</max>
+			</binding>
+		</key>
 
-			<key n="113">
-        		<name>q</name>
-        		<desc>Signal Off/Flare/Smoke </desc>
-				<binding>
-        			<command>property-adjust</command>
-        			<property>sim/multiplay/generic/int[16]</property>
-        			<step>1.0</step>
-        			<min>0</min>
-        			<max>3</max>
-        			<wrap>true</wrap>
-      			</binding>
-				<binding>
-          			<command>nasal</command>
-          			<script>switchclicksound.click("switch")</script>
-        		</binding>
-				<binding>
-            		<command>nasal</command>
-            		<script><![CDATA[
-							screen.log.write("Signal: "~getprop("sim/multiplay/generic/int[16]"), 0.5, 0.5, 1);
-							]]>
-					</script>
-        		</binding>
-    		</key>
-  
-   			<!-- <key n="125">
-     			<name>}</name>
-     			<desc>Engine Autostart</desc>
-    			<binding>
-        			<command>nasal</command>
-        			<script>emu.autostart();</script>
-    			</binding>
-  			</key> -->
+		<key n="113">
+        	<name>q</name>
+        	<desc>Signal Off/Flare/Smoke </desc>
+			<binding>
+        		<command>property-adjust</command>
+        		<property>sim/multiplay/generic/int[16]</property>
+        		<step>1.0</step>
+        		<min>0</min>
+        		<max>3</max>
+        		<wrap>true</wrap>
+      		</binding>
+			<binding>
+          		<command>nasal</command>
+          		<script>switchclicksound.click("switch")</script>
+        	</binding>
+			<binding>
+            	<command>nasal</command>
+            	<script><![CDATA[
+						screen.log.write("Signal: "~getprop("sim/multiplay/generic/int[16]"), 0.5, 0.5, 1);
+						]]>
+				</script>
+        	</binding>
+    	</key>
 
-			<key n="125">
-        		<name>}</name>
-        		<desc>Engine Autostart</desc>
-        		<binding>
-          			<command>nasal</command>
-          			<script>engines.engine1.autostart();</script>
-        		</binding>
-      		</key>
-       
-			<!-- <key n="113">
-				<name>q</name>
-				<desc>Deploy countermeasures</desc>
-				<binding>
-					<command>nasal</command>
-					<script>guns.fire_FL()</script>
-				</binding>
-				<mod-up>
-					<binding>
-						<command>nasal</command>
-						<script>guns.stop_FL()</script>
-					</binding>
-				</mod-up>
-			</key> -->
+		<key n="125">
+        	<name>}</name>
+        	<desc>Engine Autostart</desc>
+        	<binding>
+          		<command>nasal</command>
+          		<script>engines.engine1.autostart();</script>
+        	</binding>
+      	</key>
 
-		</keyboard>
+	</keyboard>
 </input>
 
 <environment>
@@ -853,7 +775,9 @@ History:
     	<precipitation-control>
       		<clip-distance type="double">1.75</clip-distance>
     	</precipitation-control>
+
     	<pressure-inhg type="double">30</pressure-inhg>
+
     	<weather-scenarios>
       	<scenario n="17">
         	<description type="string">
@@ -880,14 +804,14 @@ History:
         	<name type="string">ISA -15</name>
       		</scenario>
     	</weather-scenarios>
-  	</environment>
+</environment>
 
- <nasal>
-	<L-39ZA>
+<nasal>
+	<L-39C>
 		<file>Aircraft/L-39/Nasal/strobe.nas</file>
 		<file>Aircraft/L-39/Nasal/metric.nas</file>
 		<file>Aircraft/L-39/Nasal/liveries.nas</file>
-	</L-39ZA>
+	</L-39C>
 	<lights>
 	    	<file>Aircraft/L-39/Nasal/lights.nas</file>
 	</lights>
@@ -895,7 +819,7 @@ History:
 			<file>Aircraft/L-39/Nasal/canopy.nas</file>
 	</canopy>
 	<fuel>
-      <file>Aircraft/L-39/Nasal/fuel.nas</file>
+      <file>Aircraft/L-39/Nasal/fuel_c.nas</file>
     </fuel>
 	<radiocfg>
       <file>Aircraft/L-39/Nasal/radiocfg.nas</file>
@@ -913,7 +837,7 @@ History:
 			<file>Aircraft/L-39/Nasal/payload_c.nas</file>
 	</payload>
 	<weapons>
-			<file>Aircraft/L-39/Nasal/weapons.nas</file>
+			<file>Aircraft/L-39/Nasal/weapons_c.nas</file>
 	</weapons>
 	<!-- <cannon>
 		<file>Aircraft/L-39/Nasal/cannon.nas</file>

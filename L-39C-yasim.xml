@@ -50,7 +50,7 @@ Inertia tensor [kg*m^2], origo at CG:
 ************************************************************************
 -->
 
-<airplane mass="7617">
+<airplane mass="7341">
 
   <!-- Approach configuration -->
   <approach speed="108" aoa="4.5" fuel="0.3">

@@ -370,9 +370,9 @@ btn_P4_empty.listen("clicked", func {
 		print("P2: none");
 		setprop("sim/weight[1]/selected","none");
 		setprop("sim/weight[1]/weight-lb", 0.0);
-		setprop("/consumables/fuel/tank[6]/selected", 0);
-		setprop("/consumables/fuel/tank[6]/capacity-gal_us", 0.0);
-		setprop("/consumables/fuel/tank[6]/level-gal_us", 0.0);
+		setprop("/consumables/fuel/tank[4]/selected", 0);
+		setprop("/consumables/fuel/tank[4]/capacity-gal_us", 0.0);
+		setprop("/consumables/fuel/tank[4]/level-gal_us", 0.0);
 		pylons_update();
         }
         else {
