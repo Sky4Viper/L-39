@@ -8,7 +8,7 @@
 		<name>P1-R60</name>
 		<path>Aircraft/L-39/Models/Stores/R-60M/R-60M-1.xml</path>
 		<offsets>
-			<x-m> 0.005191</x-m>
+			<x-m>-0.151749</x-m>
 			<y-m>-2.36161</y-m>
 			<z-m>-1.08422</z-m>
 			<roll-deg>0</roll-deg>
@@ -32,7 +32,7 @@
 		<name>P1-UB16</name>
 		<path>Aircraft/L-39/Models/Stores/UB-16/UB-16-1.xml</path>
 		<offsets>
-			<x-m> 0.005191</x-m>
+			<x-m>-0.151749</x-m>
 			<y-m>-2.36161</y-m>
 			<z-m>-1.18422</z-m>
 			<roll-deg>0</roll-deg>
@@ -56,7 +56,7 @@
 		<name>P1-FAB-250</name>
 		<path>Aircraft/L-39/Models/Stores/FAB-250/FAB-250-1.xml</path>
 		<offsets>
-			<x-m> 0.005191</x-m>
+			<x-m>-0.151749</x-m>
 			<y-m>-2.36161</y-m>
 			<z-m>-1.18422</z-m>
 			<roll-deg>0</roll-deg>
@@ -80,7 +80,7 @@
 		<name>P1-PK-3</name>
 		<path>Aircraft/L-39/Models/Stores/PK-3/PK-3-1.xml</path>
 		<offsets>
-			<x-m> 0.005191</x-m>
+			<x-m>-0.151749</x-m>
 			<y-m>-2.36161</y-m>
 			<z-m>-1.2167</z-m>
 			<roll-deg>0</roll-deg>
@@ -108,7 +108,7 @@
 		<name>P4-R60</name>
 		<path>Aircraft/L-39/Models/Stores/R-60M/R-60M-4.xml</path>
 		<offsets>
-			<x-m> 0.005191</x-m>
+			<x-m>-0.151749</x-m>
 			<y-m> 2.36161</y-m>
 			<z-m>-1.08422</z-m>
 			<roll-deg>0</roll-deg>
@@ -132,7 +132,7 @@
 		<name>P4-UB16</name>
 		<path>Aircraft/L-39/Models/Stores/UB-16/UB-16-4.xml</path>
 		<offsets>
-			<x-m> 0.005191</x-m>
+			<x-m>-0.151749</x-m>
 			<y-m> 2.36161</y-m>
 			<z-m>-1.18422</z-m>
 			<roll-deg>0</roll-deg>
@@ -156,7 +156,7 @@
 		<name>P4-FAB-250</name>
 		<path>Aircraft/L-39/Models/Stores/FAB-250/FAB-250-4.xml</path>
 		<offsets>
-			<x-m> 0.005191</x-m>
+			<x-m>-0.151749</x-m>
 			<y-m> 2.36161</y-m>
 			<z-m>-1.18422</z-m>
 			<roll-deg>0</roll-deg>
@@ -180,7 +180,7 @@
 		<name>P4-PK-3</name>
 		<path>Aircraft/L-39/Models/Stores/PK-3/PK-3-4.xml</path>
 		<offsets>
-			<x-m> 0.005191</x-m>
+			<x-m>-0.151749</x-m>
 			<y-m> 2.36161</y-m>
 			<z-m>-1.2167</z-m>
 			<roll-deg>0</roll-deg>

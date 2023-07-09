@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <PropertyList>
-	<path>L-39ZA.ac</path>
+	<path>L-39.ac</path>
 
 	<nasal>
         <load>
@@ -27,18 +27,20 @@
 		<object-name>aileron_right</object-name>
 		<object-name>flap_left</object-name>
 		<object-name>flap_right</object-name>
-		<object-name>pylon_left</object-name>
-		<object-name>pylon_right</object-name>
+		<object-name>pylon.001</object-name>
+		<object-name>pylon.002</object-name>
+		<object-name>pylon.003</object-name>
+		<object-name>pylon.004</object-name>
 		<object-name>left_wheel_door</object-name>
 		<object-name>right_wheel_door</object-name>
 		<object-name>left_gear_inner_door</object-name>
 		<object-name>right_gear_inner_door</object-name>
 		<object-name>nose_wheel_door_left</object-name>
 		<object-name>nose_wheel_door_right</object-name>
-		<object-name>external_tank_left_1</object-name>
-		<object-name>external_tank_left_2</object-name>
-		<object-name>external_tank_right_1</object-name>
-		<object-name>external_tank_right_2</object-name>
+		<object-name>external_droptank.001</object-name>
+		<object-name>external_droptank.002</object-name>
+		<object-name>external_droptank.003</object-name>
+		<object-name>external_droptank.004</object-name>
 		<object-name>nav_light.001</object-name>
 		<object-name>nav_light.002</object-name>
 
@@ -140,18 +142,20 @@
 		<object-name>aileron_right</object-name>
 		<object-name>flap_left</object-name>
 		<object-name>flap_right</object-name>
-		<object-name>pylon_left</object-name>
-		<object-name>pylon_right</object-name>
+		<object-name>pylon.001</object-name>
+		<object-name>pylon.002</object-name>
+		<object-name>pylon.003</object-name>
+		<object-name>pylon.004</object-name>
 		<object-name>left_wheel_door</object-name>
 		<object-name>right_wheel_door</object-name>
 		<object-name>left_gear_inner_door</object-name>
 		<object-name>right_gear_inner_door</object-name>
 		<object-name>nose_wheel_door_left</object-name>
 		<object-name>nose_wheel_door_right</object-name>
-		<object-name>external_tank_left_1</object-name>
-		<object-name>external_tank_left_2</object-name>
-		<object-name>external_tank_right_1</object-name>
-		<object-name>external_tank_right_2</object-name>
+		<object-name>external_droptank.001</object-name>
+		<object-name>external_droptank.002</object-name>
+		<object-name>external_droptank.003</object-name>
+		<object-name>external_droptank.004</object-name>
     </effect>
 
 	<effect>
@@ -1061,10 +1065,25 @@
 		</condition>
 	</animation>
 
+	<!-- Show/Hide pylons -->
+	<animation>
+		<type>select</type>
+		<object-name>pylon.001</object-name>
+		<object-name>pylon.002</object-name>
+		<object-name>pylon.003</object-name>
+		<object-name>pylon.004</object-name>
+		<condition>
+			<equals>
+				<property>/sim/variant-id</property>
+				<value>2</value>
+			</equals>
+		</condition>
+	</animation>
+
 	<!-- Show/Hide external tanks -->
 	<animation>
 		<type>select</type>
-		<object-name>external_tank_left_1</object-name>
+		<object-name>external_droptank.001</object-name>
 		<condition>
 			<!-- <equals>
 				<property>sim/model/hide-tanks-outer</property>
@@ -1083,7 +1102,7 @@
 
 	<animation>
 		<type>select</type>
-		<object-name>external_tank_left_2</object-name>
+		<object-name>external_droptank.002</object-name>
 		<condition>
 			<equals>
 				<property>sim/weight[1]/selected</property>
@@ -1098,7 +1117,7 @@
 
 	<animation>
 		<type>select</type>
-		<object-name>external_tank_right_2</object-name>
+		<object-name>external_droptank.003</object-name>
 		<condition>
 			<!-- <equals>
 				<property>sim/weight[2]/selected</property>
@@ -1113,7 +1132,7 @@
 
 	<animation>
 		<type>select</type>
-		<object-name>external_tank_right_1</object-name>
+		<object-name>external_droptank.004</object-name>
 		<condition>
 			<!-- <equals>
 				<property>sim/weight[3]/selected</property>

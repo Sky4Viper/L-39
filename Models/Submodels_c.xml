@@ -88,7 +88,7 @@
     	<repeat>true</repeat>
     	<delay>0.061</delay>
     	<count>-1</count>
-    	<x-offset>1.2895</x-offset>
+    	<x-offset>1.6895</x-offset>
 		<y-offset>-7.7480</y-offset>
 		<z-offset>-4.1852</z-offset>
     	<yaw-offset>-90.0</yaw-offset>
@@ -110,7 +110,7 @@
 		<trigger-once>true</trigger-once>
 		<speed>0</speed>
 		<count>-1</count>
-		<x-offset>1.2895</x-offset>
+		<x-offset>1.6895</x-offset>
 		<y-offset>-7.7480</y-offset>
 		<z-offset>-4.1852</z-offset>
 		<yaw-offset>0.0</yaw-offset>
@@ -134,7 +134,7 @@
     	<speed>0</speed>
     	<repeat>false</repeat>
     	<count>-1</count>
-    	<x-offset>1.2895</x-offset>
+    	<x-offset>1.6895</x-offset>
 		<y-offset>-7.7480</y-offset>
 		<z-offset>-4.1852</z-offset>
     	<yaw-offset>0.0</yaw-offset>
@@ -156,7 +156,7 @@
     	<speed>0</speed>
     	<repeat>false</repeat>
     	<count>-1</count>
-    	<x-offset>1.2895</x-offset>
+    	<x-offset>1.6895</x-offset>
 		<y-offset>-7.7480</y-offset>
 		<z-offset>-4.1852</z-offset>
     	<yaw-offset>0.0</yaw-offset>
@@ -178,7 +178,7 @@
     	<speed>0</speed>
     	<repeat>false</repeat>
     	<count>-1</count>
-    	<x-offset>1.2895</x-offset>
+    	<x-offset>1.6895</x-offset>
 		<y-offset>-7.7480</y-offset>
 		<z-offset>-4.1852</z-offset>
     	<yaw-offset>0.0</yaw-offset>
@@ -275,7 +275,7 @@
     	<repeat>true</repeat>
     	<delay>0.063</delay>
     	<count>-1</count>
-    	<x-offset>1.2895</x-offset>
+    	<x-offset>1.6895</x-offset>
 		<y-offset>7.7480</y-offset>
 		<z-offset>-4.1852</z-offset>
     	<yaw-offset>-90.0</yaw-offset>
@@ -297,7 +297,7 @@
 		<trigger-once>true</trigger-once>
 		<speed>0</speed>
 		<count>-1</count>
-		<x-offset>1.2895</x-offset>
+		<x-offset>1.6895</x-offset>
 		<y-offset>7.7480</y-offset>
 		<z-offset>-4.1852</z-offset>
 		<yaw-offset>0.0</yaw-offset>
@@ -321,7 +321,7 @@
     	<speed>0</speed>
     	<repeat>false</repeat>
     	<count>-1</count>
-    	<x-offset>1.2895</x-offset>
+    	<x-offset>1.6895</x-offset>
 		<y-offset>7.7480</y-offset>
 		<z-offset>-4.1852</z-offset>
     	<yaw-offset>0.0</yaw-offset>
@@ -343,7 +343,7 @@
     	<speed>0</speed>
     	<repeat>false</repeat>
     	<count>-1</count>
-    	<x-offset>1.2895</x-offset>
+    	<x-offset>1.6895</x-offset>
 		<y-offset>7.7480</y-offset>
 		<z-offset>-4.1852</z-offset>
     	<yaw-offset>0.0</yaw-offset>
@@ -365,7 +365,7 @@
     	<speed>0</speed>
     	<repeat>false</repeat>
     	<count>-1</count>
-    	<x-offset>1.2895</x-offset>
+    	<x-offset>1.6895</x-offset>
 		<y-offset>7.7480</y-offset>
 		<z-offset>-4.1852</z-offset>
     	<yaw-offset>0.0</yaw-offset>
