@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+<sim>
+  <model>
+    <livery>
+      <name type="string">Private-Marines-33</name>
+      <texture>Liveries/L-39C/marines.png</texture>
+      <shininess>
+        <refl_correction type="float">-0.4</refl_correction>
+      </shininess>
+    </livery>
+    <livery-logo>
+      <texture>Liveries/L-39C/marines.png</texture>
+    </livery-logo>
+    <pilotsuit>
+      <name type="string">CamoFlightsuit_WhiteHelmet</name>
+      <texture>Liveries/Pilot/pilot_camo.png</texture>
+    </pilotsuit>
+  </model>
+</sim>
+</PropertyList>
