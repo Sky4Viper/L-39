@@ -16,9 +16,9 @@
 			</equals>
 		</condition>
 		<offsets>
-			<x-m>-3.58277 </x-m>
-			<y-m>-0.0561 </y-m>
-			<z-m>-1.28454 </z-m>
+			<x-m>-3.55277 </x-m>
+			<y-m>-0.049425 </y-m>
+			<z-m>-1.26477 </z-m>
 			<heading-deg>0</heading-deg>
 			<roll-deg>0</roll-deg>
 			<pitch-deg>0</pitch-deg>
@@ -35,9 +35,9 @@
 			</equals>
 		</condition>
 		<offsets>
-			<x-m>-3.58277 </x-m>
-			<y-m> 0.0561 </y-m>
-			<z-m>-1.28454 </z-m>
+			<x-m>-3.55277 </x-m>
+			<y-m> 0.049425 </y-m>
+			<z-m>-1.26477 </z-m>
 			<heading-deg>0</heading-deg>
 			<roll-deg>0</roll-deg>
 			<pitch-deg>0</pitch-deg>

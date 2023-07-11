@@ -70,6 +70,7 @@
         <object-name>pitots.001</object-name>
 		<object-name>antennas</object-name>
 		<object-name>gun</object-name>
+		<object-name>gun_tip</object-name>
 		<object-name>airbrakes</object-name>
 		<object-name>doors_closed</object-name>
 		<object-name>vortex_generators</object-name>
@@ -114,6 +115,8 @@
 		<object-name>nose_wheel.001</object-name>
 		<object-name>left_wheel.001</object-name>
 		<object-name>right_wheel.001</object-name>
+
+		<object-name>gun_tip</object-name>
     </effect>
 
     <effect>
@@ -1073,6 +1076,7 @@
 		<object-name>external_droptank.002</object-name>
 		<object-name>external_droptank.003</object-name>
 		<object-name>gun</object-name>
+		<object-name>gun_tip</object-name>
 		<condition>
 			<equals>
 				<property>/sim/variant-id</property>
