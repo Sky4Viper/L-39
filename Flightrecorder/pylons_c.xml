@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- flight recorder configuration -->
+<!-- pylons  -->
+
+<PropertyList>
+
+    <signal>
+        <type>float</type>
+        <property type="string">sim/weight[%i]/payload-int</property>
+    </signal>
+
+    <signal>
+		<type>float</type>
+		<property>/sim/weight[%i]/weight-lb</property>
+	</signal>
+
+    <signal>
+		<type>float</type>
+		<property>/controls/armament/rocketsLeft1</property>
+	</signal>
+    <signal>
+		<type>float</type>
+		<property>/controls/armament/rocketsCount1</property>
+	</signal>
+    <signal>
+		<type>float</type>
+		<property>/controls/armament/rocketsLeft2</property>
+	</signal>
+    <signal>
+		<type>float</type>
+		<property>/controls/armament/rocketsCount2</property>
+	</signal>
+    <signal>
+		<type>float</type>
+		<property>/controls/armament/PK3Left</property>
+	</signal>
+    <signal>
+		<type>float</type>
+		<property>/controls/armament/PK3Count</property>
+	</signal>
+
+</PropertyList>

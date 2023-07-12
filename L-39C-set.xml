@@ -831,6 +831,9 @@ History:
 	<tyresmoke>
 		<file>Aircraft/L-39/Nasal/tyresmoke.nas</file>
 	</tyresmoke>
+  	<!-- <emu>
+   		<file>Aircraft/L-39/Nasal/emu.nas</file>
+  	</emu> -->
 	<engines>
    		<file>Aircraft/L-39/Nasal/generic-yasim-engine.nas</file>
 		<script>
