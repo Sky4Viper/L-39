@@ -3,14 +3,14 @@
 	<path>ub-16.ac</path>
 
     <effect>
-        <inherits-from>Aircraft/L-39ZA/Models/Effects/ArmReflect</inherits-from>
+        <inherits-from>Aircraft/L-39/Models/Effects/ArmReflect</inherits-from>
         <object-name>ub-16-middle</object-name>
         <object-name>ub-16-tipps</object-name>
     </effect>
 
 	<model>
 		<name>UB-16-smoke</name>
-    	<path>Aircraft/L-39ZA/Models/Effects/Gun/Flack.xml</path>
+    	<path>Aircraft/L-39/Models/Effects/Gun/Flack.xml</path>
 		<condition>
 			<equals>
 				<property>sim/multiplay/generic/int[10]</property>
@@ -26,7 +26,7 @@
   	
   	<model>
   		<name>UB-16-smoke2</name>
-    		<path>Aircraft/L-39ZA/Models/Effects/Engine/L-39ZA-blur.xml</path>
+    		<path>Aircraft/L-39/Models/Effects/Engine/L-39ZA-blur.xml</path>
     		<offsets>
     			<x-m>0.29</x-m>
       			<y-m>0.0</y-m>
@@ -42,7 +42,7 @@
 
 	<model>
     	<name>S5flameL1</name>
-    	<path>Aircraft/L-39ZA/Models/Effects/S-5/Flame2.xml</path>
+    	<path>Aircraft/L-39/Models/Effects/S-5/Flame2.xml</path>
     	<condition>
 			<equals>
 				<property>sim/multiplay/generic/int[10]</property>
