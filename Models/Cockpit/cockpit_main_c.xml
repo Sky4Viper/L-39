@@ -67,7 +67,7 @@
 
   <!-- Temp Rear cockpit panel -->
   <model>
-    <path>Aircraft/L-39/Models/Cockpit/Front_Panel/front_panel_rear.xml</path>
+    <path>Aircraft/L-39/Models/Cockpit/Front_Panel/front_panel_rear_c.xml</path>
     <offsets>
       <x-m> 0.0 </x-m>
       <y-m> 0.0 </y-m>
