@@ -4,18 +4,18 @@ var title = 'L-39ZA Kneepad:';
 setprop("/sim/menubar/visibility",0);
 
 # path is relative to $FG_ROOT (base package)
-var path0 = "Aircraft/L-39ZA/gui/dialogs/kneepad/L-39-Kneepad-0.png";
-var path1 = "Aircraft/L-39ZA/gui/dialogs/kneepad/L-39-Kneepad-1.png";
-var path2 = "Aircraft/L-39ZA/gui/dialogs/kneepad/L-39-Kneepad-2.png";
-var path3 = "Aircraft/L-39ZA/gui/dialogs/kneepad/L-39-Kneepad-3.png";
-var path4 = "Aircraft/L-39ZA/gui/dialogs/kneepad/L-39-Kneepad-4.png";
-var path5 = "Aircraft/L-39ZA/gui/dialogs/kneepad/L-39-Kneepad-5.png";
-var path6 = "Aircraft/L-39ZA/gui/dialogs/kneepad/L-39-Kneepad-6.png";
-var path7 = "Aircraft/L-39ZA/gui/dialogs/kneepad/L-39-Kneepad-7.png";
-var path8 = "Aircraft/L-39ZA/gui/dialogs/kneepad/L-39-Kneepad-8.png";
-var path9 = "Aircraft/L-39ZA/gui/dialogs/kneepad/L-39-Kneepad-9.png";
-var pathM = "Aircraft/L-39ZA/gui/dialogs/kneepad/L-39-Kneepad-M.png";
-var pathM1 = "Aircraft/L-39ZA/gui/dialogs/kneepad/L-39-Kneepad-M1.png";
+var path0 = "Aircraft/L-39/gui/dialogs/kneepad/L-39-Kneepad-0.png";
+var path1 = "Aircraft/L-39/gui/dialogs/kneepad/L-39-Kneepad-1.png";
+var path2 = "Aircraft/L-39/gui/dialogs/kneepad/L-39-Kneepad-2.png";
+var path3 = "Aircraft/L-39/gui/dialogs/kneepad/L-39-Kneepad-3.png";
+var path4 = "Aircraft/L-39/gui/dialogs/kneepad/L-39-Kneepad-4.png";
+var path5 = "Aircraft/L-39/gui/dialogs/kneepad/L-39-Kneepad-5.png";
+var path6 = "Aircraft/L-39/gui/dialogs/kneepad/L-39-Kneepad-6.png";
+var path7 = "Aircraft/L-39/gui/dialogs/kneepad/L-39-Kneepad-7.png";
+var path8 = "Aircraft/L-39/gui/dialogs/kneepad/L-39-Kneepad-8.png";
+var path9 = "Aircraft/L-39/gui/dialogs/kneepad/L-39-Kneepad-9.png";
+var pathM = "Aircraft/L-39/gui/dialogs/kneepad/L-39-Kneepad-M.png";
+var pathM1 = "Aircraft/L-39/gui/dialogs/kneepad/L-39-Kneepad-M1.png";
 
  
 # create a new window, dimensions are WIDTH x HEIGHT, using the dialog decoration (i.e. titlebar)
