@@ -442,7 +442,12 @@ History:
 
 			<key>
 				<name>q</name>
-				<desc>Deploy Signal Flare/ Aerobatic Smoke</desc>
+				<desc>Toggle signal mode Flare / Aerobatic Smoke / OFF</desc>
+			</key>
+
+			<key>
+				<name>f</name>
+				<desc>Launch signal flare</desc>
 			</key>
 
 			
@@ -475,7 +480,7 @@ History:
 				<int n="13" alias="/controls/armament/trigger-FAB250-1" />
 				<int n="14" alias="/controls/armament/trigger-FAB250-2" />
 				<int n="16" type="int">0</int>
-        		<int n="17" type="int">0</int>
+        		<int n="17" alias="/controls/armament/flare-colour">0</int>
 				<int n="18" alias="/controls/armament/trigger-FAB250-3" />
 				<int n="19" alias="/controls/armament/trigger-FAB250-4" />
 				<int n="20" alias="/controls/armament/jettison-outer" />
@@ -814,22 +819,26 @@ History:
 				</binding>
 			</key>
        
-			<!-- <key n="102">
+			<key n="102">
 				<name>f</name>
-				<desc>Fire selected weapons</desc>
+				<desc>Launch sygnal flare</desc>
 				<binding>
-					<command>property-assign</command>
-					<property>controls/armament/trigger</property>
-					<value>true</value>
+					<command>nasal</command>
+      				<script>weapons.fire_FL()</script>
+					<condition>
+						<equals>
+          					<property>sim/multiplay/generic/int[16]</property>
+          					<value>1</value>
+        				</equals>
+					</condition>
 				</binding>
 				<mod-up>
 					<binding>
-						<command>property-assign</command>
-						<property>controls/armament/trigger</property>
-						<value>false</value>
+						<command>nasal</command>
+      					<script>weapons.stop_FL()</script>
 					</binding>
 				</mod-up>
-			</key> -->
+			</key>
 
 			<key n="109">
         		<name>m</name>

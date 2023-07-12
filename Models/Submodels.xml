@@ -806,5 +806,26 @@
     	<impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
   	</submodel>
 
+	<submodel>
+		<name>flares</name>
+		<model>Aircraft/L-39/Models/Effects/Flare/Flare.xml</model>
+		<trigger>controls/armament/trigger2</trigger>
+		<speed>400</speed>
+		<repeat>true</repeat>
+		<delay>0.2</delay>
+		<count>-1</count>
+		<x-offset>-8.5281</x-offset>
+		<y-offset>1.77438</y-offset>
+		<z-offset>-2.1679</z-offset>
+		<yaw-offset>60</yaw-offset>
+		<pitch-offset>-78</pitch-offset>
+		<life>5</life>
+		<buoyancy>25</buoyancy>
+		<eda>1</eda>
+		<cd>0.2</cd>
+		<random>true</random>
+		<no-roll>true</no-roll>
+	</submodel>
+
 	
 </PropertyList>

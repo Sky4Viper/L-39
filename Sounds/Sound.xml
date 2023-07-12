@@ -893,6 +893,23 @@
                 </less-than>
             </condition>
         </low-fuel>
+
+        <!-- Flare/Chaff release -->
+
+        <flare>
+            <name>Flares</name>
+            <condition>
+                <property>controls/armament/trigger2</property>
+            </condition>
+            <path>Aircraft/L-39/Sounds/flare.wav</path>
+            <position>
+                <x>-3.50</x>
+                <y>-0.7</y>
+                <z>-0.7</z>
+            </position>
+            <reference-dist>1</reference-dist>
+            <max-dist>200</max-dist>
+        </flare>
         
         <!-- <low-fuel2>
             <name>low-fuel2</name>
