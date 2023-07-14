@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <particlesystem>
+    <name>tiptrail-p</name>
+    <type>trail</type>
+    <texture>continous_smoke.png</texture>
+    <emissive>false</emissive>
+    <lighting>true</lighting>
+    <pass>true</pass>
+
+    <!-- <condition>
+        <property>/sim/multiplay/generic/int[17]</property>
+        <value>2</value>
+    </condition> -->
+
+    <attach>world</attach>
+
+    <placer>
+      <type>point</type>
+    </placer>
+
+    <shooter>
+      <speed-mps>
+        <value>0</value>
+        <spread>0</spread>
+      </speed-mps>
+    </shooter>
+
+    <!-- <counter>
+      <particles-per-sec>
+        <property>velocities/airspeed-kt</property>
+        <factor>1</factor>
+        <offset>75</offset>
+      </particles-per-sec>
+    </counter> -->
+
+    <counter>
+			<particles-per-sec>
+			<value>30</value>
+			</particles-per-sec>
+		</counter>
+
+    <!-- <align>fixed</align> -->
+    <align>billboard</align>
+
+    <particle>
+      <start>
+        <color>
+          <red><value>   2.0 </value></red>
+          <green><value> 1.8 </value></green>
+          <blue><value>  0.0 </value></blue>
+          <alpha><value> 0.1 </value></alpha>
+        </color>
+        <size>
+          <value>0.10</value>
+        </size>
+      </start>
+
+      <end>
+       <color>
+         <red><value>   1.00 </value></red>
+         <green><value> 0.80 </value></green>
+         <blue><value>  0.00 </value></blue>
+         <alpha><value> 0.08 </value></alpha>
+       </color>
+       <size>
+         <value>1.0</value>
+       </size>
+      </end>
+
+      <life-sec>
+        <value>0.3</value>
+      </life-sec>
+
+      <mass-kg>0.01</mass-kg>
+      <radius-m>0.1</radius-m>
+    </particle>
+
+    <program>
+      <fluid>   air  </fluid>
+      <gravity> true </gravity>
+      <wind>    true </wind>
+    </program>
+
+  </particlesystem>
+
+</PropertyList>

@@ -16,7 +16,7 @@
 			</equals>
 		</condition>
 		<offsets>
-			<x-m>-3.55277 </x-m>
+			<x-m>-3.52101 </x-m>
 			<y-m>-0.049425 </y-m>
 			<z-m>-1.26477 </z-m>
 			<heading-deg>0</heading-deg>
@@ -35,7 +35,7 @@
 			</equals>
 		</condition>
 		<offsets>
-			<x-m>-3.55277 </x-m>
+			<x-m>-3.52101 </x-m>
 			<y-m> 0.049425 </y-m>
 			<z-m>-1.26477 </z-m>
 			<heading-deg>0</heading-deg>

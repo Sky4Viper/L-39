@@ -102,8 +102,46 @@
 	</animation>
 	
 	<model>
-		<name>flare-trail</name>
-		<path>Aircraft/L-39/Models/Effects/Flare/Flare-Trail.xml</path>
+		<name>flare-trail-r</name>
+		<path>Aircraft/L-39/Models/Effects/Flare/flare-trail-red.xml</path>
+		<condition>
+			<equals>
+        		<property>/sim/multiplay/generic/int[17]</property>
+        		<value>2</value>
+			</equals>
+    	</condition>
+		<offsets>
+			<x-m>0.0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>flare-trail-g</name>
+		<path>Aircraft/L-39/Models/Effects/Flare/flare-trail-green.xml</path>
+		<condition>
+			<equals>
+        		<property>/sim/multiplay/generic/int[17]</property>
+        		<value>3</value>
+			</equals>
+    	</condition>
+		<offsets>
+			<x-m>0.0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>flare-trail-y</name>
+		<path>Aircraft/L-39/Models/Effects/Flare/flare-trail-yellow.xml</path>
+		<condition>
+			<equals>
+        		<property>/sim/multiplay/generic/int[17]</property>
+        		<value>4</value>
+			</equals>
+    	</condition>
 		<offsets>
 			<x-m>0.0</x-m>
 			<y-m>0.0</y-m>
