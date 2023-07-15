@@ -388,6 +388,14 @@ History:
               			<dialog-name>PRMG</dialog-name>
             		</binding>
           		</item>
+				<item>
+            		<label>Maintenance</label>
+            		<name>config</name>
+            		<binding>
+              			<command>nasal</command>
+						<script>maintenance.service()</script>
+            		</binding>
+          		</item>
 			</menu>
 		</default>
 	</menubar>
@@ -993,6 +1001,7 @@ History:
 		<file>Aircraft/L-39/Nasal/strobe.nas</file>
 		<file>Aircraft/L-39/Nasal/metric.nas</file>
 		<file>Aircraft/L-39/Nasal/liveries.nas</file>
+		<file>Aircraft/L-39/Nasal/albatros.nas</file>
 	</L-39ZA>
 	<lights>
 	    	<file>Aircraft/L-39/Nasal/lights.nas</file>
@@ -1058,6 +1067,9 @@ History:
 	<automation>
 		<file>Aircraft/L-39/Nasal/automation.nas</file>
 	</automation>
+	<maintenance>
+			<file>Aircraft/L-39/Nasal/maintenance.nas</file>
+	</maintenance>
 </nasal>
 
 </PropertyList>
