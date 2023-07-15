@@ -91,6 +91,8 @@
             <object-name>pilot_boots</object-name>
             <object-name>pilot_belts</object-name>
             <object-name>pilot_vest</object-name>
+			<object-name>pilot_patch.001</object-name>
+    		<object-name>pilot_patch.002</object-name>
          	<property-base>sim/model/pilotsuit</property-base>
          	<texture-prop>texture</texture-prop>
       		<texture>Liveries/Pilot/pilot_camo.png</texture>
@@ -893,6 +895,11 @@
       		<y>-1.0</y>
       		<z>0.0</z>
     	</axis>
+		<condition>
+			<not>
+      			<property>/sim/rendering/rembrandt/enabled</property>
+			</not>
+    	</condition>
   	</animation>
 
 	<animation>
@@ -911,6 +918,11 @@
       		<y>-1.0</y>
       		<z>0.0</z>
     	</axis>
+		<condition>
+			<not>
+      			<property>/sim/rendering/rembrandt/enabled</property>
+			</not>
+    	</condition>
   	</animation>
 
 	<animation>
@@ -929,6 +941,11 @@
       		<y>-1.0</y>
       		<z>0.0</z>
     	</axis>
+		<condition>
+			<not>
+      			<property>/sim/rendering/rembrandt/enabled</property>
+			</not>
+    	</condition>
   	</animation>
 
 	<!-- Canopy -->
@@ -1137,6 +1154,7 @@
   <animation>
     <type>pick</type>
     <object-name>canopy_handle.001</object-name>
+	<object-name>canopy_handle.002</object-name>
     <visible>true</visible>
     <action>
       <button>0</button>

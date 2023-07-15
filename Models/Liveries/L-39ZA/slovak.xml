@@ -15,7 +15,7 @@
     </livery-logo>
     <pilotsuit>
       <name type="string">GreenFlightsuit</name>
-      <texture>Liveries/Pilot/pilot_green.png</texture>
+      <texture>Liveries/Pilot/pilot_green_sl.png</texture>
     </pilotsuit>
   </model>
 </sim>

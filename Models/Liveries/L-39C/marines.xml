@@ -14,8 +14,8 @@
       <texture>Liveries/L-39C/marines.png</texture>
     </livery-logo>
     <pilotsuit>
-      <name type="string">CamoFlightsuit_WhiteHelmet</name>
-      <texture>Liveries/Pilot/pilot_camo.png</texture>
+      <name type="string">GrenFlightsuit_WhiteHelmet</name>
+      <texture>Liveries/Pilot/pilot_green_us.png</texture>
     </pilotsuit>
   </model>
 </sim>

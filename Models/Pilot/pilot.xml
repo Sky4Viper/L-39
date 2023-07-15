@@ -26,6 +26,8 @@
     <object-name>pilot_hands</object-name>
     <object-name>pilot_vest</object-name>
     <object-name>pilot_belts</object-name>
+    <object-name>pilot_patch.001</object-name>
+    <object-name>pilot_patch.002</object-name>
 
     <!-- Objets transparents -->
     <object-name>pilot_visor</object-name>
