@@ -45,7 +45,7 @@
 		<object-name>FlareA</object-name>
 		<emission>
 			<factor-prop>sim/time/elapsed-sec</factor-prop>
-			<offset>1.0</offset>
+			<offset>2.0</offset>
 			<red>-0.2</red>
 			<green>-0.2</green>
 			<blue>-0.2</blue>
