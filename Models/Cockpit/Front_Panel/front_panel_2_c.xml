@@ -611,7 +611,7 @@
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>master-arm-sw-lbl</tooltip-id>
-                <label>Master Arm %s</label>
+                <label>Master Arm: %s</label>
                 <property>/controls/armament/master-arm</property>
                 <mapping>nasal</mapping>
                 <script>
@@ -642,7 +642,7 @@
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>gun-sight-sw-lbl</tooltip-id>
-                <label>ASP Sight %s</label>
+                <label>ASP Sight: %s</label>
                 <property>/controls/armament/gun-sight</property>
                 <mapping>nasal</mapping>
                 <script>
@@ -673,7 +673,7 @@
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>rockets-sel-sw-lbl</tooltip-id>
-                <label>Rockets %s</label>
+                <label>Rockets: %s</label>
                 <property>/controls/armament/rockets-sel</property>
                 <mapping>nasal</mapping>
                 <script>
@@ -704,7 +704,7 @@
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>bombs-sel-sw-lbl</tooltip-id>
-                <label>Bombs %s</label>
+                <label>Bombs: %s</label>
                 <property>/controls/armament/bombs-sel</property>
                 <mapping>nasal</mapping>
                 <script>
@@ -739,7 +739,7 @@
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>pk3-outer-sw-lbl</tooltip-id>
-                <label>PK3 Guns Outer %s</label>
+                <label>PK3 Gun Pods: %s</label>
                 <property>/controls/armament/pk3-outer-sel</property>
                 <mapping>nasal</mapping>
                 <script>

@@ -670,19 +670,25 @@ History:
 			<desc>Launch sygnal flare</desc>
 			<binding>
 				<command>nasal</command>
-      			<script>weapons.fire_FL()</script>
+      			<script>weapons.fire_FL()</script>/controls/armament/flare-colour
 				<condition>
-					<equals>
-         				<property>sim/multiplay/generic/int[16]</property>
-    					<value>1</value>
-        			</equals>
+					<and>
+						<equals>
+          					<property>sim/multiplay/generic/int[16]</property>
+          					<value>1</value>
+        					</equals>
+						<greater-than>
+          					<property>/controls/armament/flare-colour</property>
+          					<value>0</value>
+        				</greater-than>
+					</and>
 				</condition>
 			</binding>
 			<mod-up>
-				<binding>
-					<command>nasal</command>
-      				<script>weapons.stop_FL()</script>
-				</binding>
+			<binding>
+				<command>nasal</command>
+      			<script>weapons.stop_FL()</script>
+			</binding>
 			</mod-up>
 		</key>
 
