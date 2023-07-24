@@ -4,6 +4,15 @@
 
   <path>rivets.ac</path>
 
+  <animation>
+    <type>noshadow</type>
+    <object-name>rivets.001</object-name>
+    <object-name>rivets.002</object-name>
+    <object-name>rivets.003</object-name>
+    <object-name>rivets.004</object-name>
+    <object-name>comms_cable</object-name>
+  </animation>
+
   </PropertyList>
 
 
