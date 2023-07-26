@@ -191,5 +191,13 @@
                 <wrap>true</wrap>
             </binding>
         </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>alt-hpa</tooltip-id>
+                <label>Adjust hPa %4.1f</label>
+                <property>instrumentation/altimeter/setting-hpa</property>
+            </binding>
+        </hovered>
     </animation>
 </PropertyList>

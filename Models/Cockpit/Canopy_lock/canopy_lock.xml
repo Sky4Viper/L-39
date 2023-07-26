@@ -49,7 +49,7 @@
     	</axis>
   	</animation>
 
-	<animation>
+	<!-- <animation>
 		<type>rotate</type>
     	<object-name>canopy_lock_lever</object-name>
     	<property>/controls/canopy/lock</property>
@@ -62,7 +62,7 @@
 			<y>0</y>
 			<z>0</z>
 		</axis>	
-	</animation>
+	</animation> -->
 
 </PropertyList>
 

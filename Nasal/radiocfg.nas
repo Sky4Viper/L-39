@@ -131,6 +131,7 @@ var ARK_init = func{
   setlistener("/l-39za/instrumentation/ARK-19/channel-9", ARK_channel_handler,0,0 );
 #  setlistener("/l-39za/instrumentation/ARK-19/volume", ARK_volume_handler,0,0 );
 #  setlistener("/l-39za/instrumentation/electrical/v27", ARK_volume_handler,0,0 );
+setprop("/instrumentation/comm/frequencies/selected-mhz", getprop("/l-39za/instrumentation/ARK-19/channel-1"));
 }
 
 var PRMG_init = func{
@@ -154,6 +155,7 @@ var PRMG_init = func{
   setlistener("/l-39za/instrumentation/PRMG/channel-7", PRMG_channel_handler,0,0 );
   setlistener("/l-39za/instrumentation/PRMG/channel-8", PRMG_channel_handler,0,0 );
 #  screen.log.write("PRMG set", 1, 0.6, 0.1);
+setprop("/instrumentation/nav[1]/frequencies/selected-mhz", getprop("/l-39za/instrumentation/PRMG/channel-1"));
 }
 
 var RSBN_init = func{
@@ -185,4 +187,5 @@ var RSBN_init = func{
   setlistener("/l-39za/instrumentation/RSBN/channel-7", RSBN_channel_handler,0,0 );
   setlistener("/l-39za/instrumentation/RSBN/channel-8", RSBN_channel_handler,0,0 );
 #  screen.log.write("RSBN set", 1, 0.6, 0.1);
+setprop("/instrumentation/nav/frequencies/selected-mhz", getprop("/l-39za/instrumentation/RSBN/channel-1"));
 }

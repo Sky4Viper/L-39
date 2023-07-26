@@ -224,7 +224,8 @@
       <binding>
         <command>set-tooltip</command>
         <tooltip-id>nkp-4-ca</tooltip-id>
-        <label>Adjust course</label>
+        <label>Adjust course %4.0f</label>
+        <property>instrumentation/nav/radials/selected-deg</property>
       </binding>
     </hovered>
   </animation>

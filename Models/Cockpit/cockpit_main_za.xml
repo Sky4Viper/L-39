@@ -57,7 +57,7 @@
     <path>Aircraft/L-39/Models/Cockpit/Canopy_lock/canopy_lock.xml</path>
     <offsets>
       <x-m> -2.97024 </x-m>
-      <y-m> -0.328515 </y-m>
+      <y-m> -0.322515 </y-m>
       <z-m> -0.498471 </z-m>
       <roll-deg>    0.000 </roll-deg>
       <pitch-deg>   -8.25163 </pitch-deg>
