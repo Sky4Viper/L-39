@@ -65,6 +65,19 @@
     </offsets>
   </model>
 
+  <!-- Canopy Lock Rear-->
+  <model>
+    <path>Aircraft/L-39/Models/Cockpit/Canopy_lock/canopy_lock.xml</path>
+    <offsets>
+      <x-m> -1.68764 </x-m>
+      <y-m> -0.348905 </y-m>
+      <z-m> -0.306187 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   -8.25163 </pitch-deg>
+      <heading-deg> -1.096 </heading-deg>
+    </offsets>
+  </model>
+
   <!-- Temp Rear cockpit panel -->
   <model>
     <path>Aircraft/L-39/Models/Cockpit/Front_Panel/front_panel_rear.xml</path>
