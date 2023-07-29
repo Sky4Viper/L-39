@@ -699,11 +699,13 @@
           </less-than>
           <less-than>
             <property>/position/altitude-agl-ft</property>
-            <value>2625</value>
+            <property>/environment/metar/clouds/layer/elevation-ft</property>
+            <!-- <value>2625</value> -->
           </less-than>
           <greater-than-equals>
             <property>/position/altitude-agl-ft</property>
-            <value>1968</value>
+            <!-- <value>1968</value> -->
+            <property>controls/instrumentation/danger-altitude-ft</property>
           </greater-than-equals>
         </and>
       </condition>
