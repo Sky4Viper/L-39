@@ -1209,6 +1209,54 @@
            </condition>
 	</binding>
     </action>
-  </animation>	
+  </animation>
+
+  <!-- Pilot crashed animation -->
+
+  <animation>
+		<type>rotate</type>
+        <object-name>Pilot</object-name>
+		<property>sim/crashed</property>
+		<factor>-45</factor>
+		<center>
+			<x-m>-2.89842</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-0.668496</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+		<condition>
+			<equals>
+				<property>sim/crashed</property>
+				<value type="bool">true</value>
+			</equals>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+        <object-name>Instructor</object-name>
+		<property>sim/crashed</property>
+		<factor>-60</factor>
+		<center>
+			<x-m>-1.58506</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-0.553297</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+		<condition>
+			<equals>
+				<property>sim/crashed</property>
+				<value type="bool">true</value>
+			</equals>
+		</condition>
+	</animation>	
 	
 </PropertyList>

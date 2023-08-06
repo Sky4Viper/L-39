@@ -39,6 +39,17 @@
   </animation>
 
   <animation>
+    <type>select</type>
+    <object-name>pilot_belts</object-name>
+    <condition>
+			<equals>
+				<property>sim/crashed</property>
+				<value type="bool">false</value>
+			</equals>
+		</condition>
+  </animation>
+
+  <animation>
     <name>AnimeHead</name>
     <object-name>pilot_visor</object-name>
     <object-name>pilot_head</object-name>
