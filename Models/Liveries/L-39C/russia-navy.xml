@@ -4,7 +4,7 @@
 <sim>
   <model>
     <livery>
-      <name type="string">Russia-Navy-10</name>
+      <name type="string">Russia-MA-VMF-Blue-78</name>
       <texture>Liveries/L-39C/russia-navy.png</texture>
       <shininess>
         <refl_correction type="float">-0.45</refl_correction>
@@ -14,8 +14,8 @@
       <texture>Liveries/L-39C/russia-navy.png</texture>
     </livery-logo>
     <pilotsuit>
-      <name type="string">OrangeFlightsuit_WhiteHelmet</name>
-      <texture>Liveries/Pilot/pilot_orange_ru.png</texture>
+      <name type="string">CamoFlightsuit_WhiteHelmet</name>
+      <texture>Liveries/Pilot/pilot_desert_ru.png</texture>
     </pilotsuit>
   </model>
 </sim>

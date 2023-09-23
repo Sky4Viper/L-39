@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+<sim>
+  <model>
+    <livery>
+      <name type="string">USSR-VMF-Yellow-10</name>
+      <texture>Liveries/L-39C/ussr-navy.png</texture>
+      <shininess>
+        <refl_correction type="float">-0.45</refl_correction>
+      </shininess>
+    </livery>
+    <livery-logo>
+      <texture>Liveries/L-39C/ussr-navy.png</texture>
+    </livery-logo>
+    <pilotsuit>
+      <name type="string">OrangeFlightsuit_WhiteHelmet</name>
+      <texture>Liveries/Pilot/pilot_orange_ru.png</texture>
+    </pilotsuit>
+  </model>
+</sim>
+</PropertyList>
