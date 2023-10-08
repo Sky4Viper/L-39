@@ -5,11 +5,17 @@
 
 	<nasal>
         <load>
-            var livery_update = aircraft.livery_update.new("Aircraft/L-39/Models/Liveries", 10);
+			<![CDATA[
+      			var livery_update = aircraft.livery_update.new("Aircraft/L-39/Models/Liveries", 10);
+        		cmdarg().getNode("sim/model/ac-type", 1).setValue("L-39C-pilot");
+    		]]>
         </load>
 
         <unload>
-            livery_update.stop();
+			<![CDATA[
+    			livery_update.stop();
+        		cmdarg().getNode("sim/model/ac-type", 1).setValue("");
+  			]]> 
         </unload>
   	</nasal>
 

@@ -242,14 +242,14 @@ History:
 						<command>property-toggle</command>
 						<property>/controls/gear/nosewheel-lock</property>
 					</binding>
-				</item> -->
+				</item> 
 				<item>
 					<label>Payload</label>
 					<binding>
 						<command>nasal</command>
 				 		<script>CanvasPylonsDlg.showPylonsDlg()</script>
 					</binding>
-				</item>
+				</item> -->
 				<item>
 					<label>Kneepad</label>
 					<binding>
@@ -878,11 +878,11 @@ History:
         }, 0, 0);
       </script>
   	</engines>
-	<CanvasPylonsDlg>
+	<!-- <CanvasPylonsDlg>
 			<file>Aircraft/L-39/Nasal/canvas-pylons-c-cfg.nas</file>
-	</CanvasPylonsDlg>
+	</CanvasPylonsDlg> -->
 	<CanvasKneepadDlg>
-			<file>Aircraft/L-39/Nasal/kneepad.nas</file>
+			<file>Aircraft/L-39/Nasal/kneepad-c.nas</file>
 	</CanvasKneepadDlg>
 	<automation>
 		<file>Aircraft/L-39/Nasal/automation.nas</file>
