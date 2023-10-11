@@ -45,16 +45,6 @@ mainHBox.addItem(VboxRight);
 
 #########################################
 
-var P1_PTB = canvas.gui.widgets.Label.new(root, canvas.style, {wordWrap: 1})
-	.setText(sprintf("Fuel (kg): %3d", getprop("consumables/fuel/tank[3]/level-kg")))
-	.setFixedSize(95, 25);
-var P2_PTB = canvas.gui.widgets.Label.new(root, canvas.style, {wordWrap: 1} )
-	.setText(sprintf("Fuel (kg): %3d", getprop("consumables/fuel/tank[4]/level-kg")))
-	.setFixedSize(95, 25);
-var TotalFuelKg = canvas.gui.widgets.Label.new(root, canvas.style, {} )
-	.setText(sprintf("Total Fuel (kg): %4d", getprop("consumables/fuel/total-fuel-kg")))
-	.setFixedSize(100, 25);
-
 var OnGround = getprop("/gear/gear[0]/wow");
 
 var pylons_update = func{
@@ -259,6 +249,16 @@ p.hide();
 var payload_root = p.getCanvas().createGroup()
 .set("z-index", 5);
 
+var P1_PTB = canvas.gui.widgets.Label.new(payload_root, canvas.style, {wordWrap: 1})
+	.setText(sprintf("Fuel (kg): %3d", getprop("consumables/fuel/tank[3]/level-kg")))
+	.setFixedSize(95, 25);
+var P2_PTB = canvas.gui.widgets.Label.new(payload_root, canvas.style, {wordWrap: 1} )
+	.setText(sprintf("Fuel (kg): %3d", getprop("consumables/fuel/tank[4]/level-kg")))
+	.setFixedSize(95, 25);
+var TotalFuelKg = canvas.gui.widgets.Label.new(payload_root, canvas.style, {} )
+	.setText(sprintf("Total Fuel (kg): %4d", getprop("consumables/fuel/total-fuel-kg")))
+	.setFixedSize(100, 25);
+
 var Lbl_pyln2 = canvas.gui.widgets.Label.new(payload_root, canvas.style, {} )
 	.setText("P2:"~getprop("sim/weight[1]/selected"))
 	.setFixedSize(100, 25);
@@ -278,13 +278,20 @@ pylons_hbox.addSpacing(30);
 var payload_vbox = canvas.VBoxLayout.new();
 window.setLayout(payload_vbox);
 
+var statusbar = canvas.HBoxLayout.new();
+statusbar.addItem(P2_PTB);
+statusbar.addItem(TotalFuelKg);
+statusbar.addItem(P1_PTB);
+
 var payload_hbox = canvas.HBoxLayout.new();
 payload_vbox.addSpacing(320);
 payload_vbox.addItem(pylons_hbox);
 payload_vbox.addItem(payload_hbox);
+payload_vbox.addItem(statusbar);
+payload_vbox.addSpacing(420);
 
 var button_none = canvas.gui.widgets.Button.new(payload_root, canvas.style, {}).setText("none").listen("clicked", func Load_NONE(1));
-var button_R60 = canvas.gui.widgets.Button.new(payload_root, canvas.style, {}).setText("R60").listen("clicked", func Load_R60());
+var button_R60 = canvas.gui.widgets.Button.new(payload_root, canvas.style, {}).setText("R-60M").listen("clicked", func Load_R60());
 var button_S5 = canvas.gui.widgets.Button.new(payload_root, canvas.style, {}).setText("UB-16").listen("clicked", func Load_UB16());
 var button_PK3 = canvas.gui.widgets.Button.new(payload_root, canvas.style, {}).setText("PK-3").listen("clicked", func Load_PK3());
 var button_FAB250 = canvas.gui.widgets.Button.new(payload_root, canvas.style, {}).setText("FAB-250").listen("clicked", func Load_FAB250());
@@ -305,7 +312,7 @@ payload_button_box.addItem(button_S5);
 payload_button_box.addItem(button_PK3);
 payload_button_box.addItem(button_FAB250);
 payload_button_box.addItem(button_FT);
-payload_button_box.addSpacing(470);
+payload_button_box.addSpacing(20);
 
 payload_hbox.addSpacing(400);
 payload_hbox.addItem(payload_button_box);
