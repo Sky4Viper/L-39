@@ -349,6 +349,11 @@ History:
 				<name>f</name>
 				<desc>Launch signal flare</desc>
 			</key>
+
+			<key>
+				<name>k</name>
+				<desc>Open kneepad</desc>
+			</key>
 			
 			<line>Parking brake is on</line>
 		</help>
@@ -690,6 +695,15 @@ History:
       			<script>weapons.stop_FL()</script>
 			</binding>
 			</mod-up>
+		</key>
+
+		<key n="107">
+			<name>k</name>
+			<desc>Open kneepad</desc>
+			<binding>
+				<command>nasal</command>
+				<script>CanvasKneepadDlg.showKneepadDlg()</script>
+			</binding>			
 		</key>
 
 		<key n="109">
