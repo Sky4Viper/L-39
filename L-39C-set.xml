@@ -71,12 +71,12 @@ History:
 		<preview>
 			<type>exterior</type>
 			<splash type="bool">true</splash>
-			<path>Previews/external2.png</path>
+			<path>Previews/external2-c.png</path>
 		</preview>
 		<preview>
 			<type>exterior</type>
 			<splash type="bool">true</splash>
-			<path>Previews/external3.png</path>
+			<path>Previews/external3-c.png</path>
 		</preview>
 		<preview>
 			<type>exterior</type>
