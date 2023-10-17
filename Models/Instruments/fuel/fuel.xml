@@ -37,8 +37,16 @@
     <type>rotate</type>
     <object-name>Needle1</object-name>
     <property>consumables/fuel/total-fuel-lbs</property>
-    <offset-deg>-189</offset-deg>
-	<factor>0.019</factor>	
+    <!-- <offset-deg>-189</offset-deg>
+    <max>1960</max>
+	<factor>0.13</factor> -->
+  <interpolation>
+	  <entry><ind>0.0</ind><dep>-189</dep></entry>
+    <entry><ind>442.0</ind><dep>-124</dep></entry>
+    <entry><ind>662.0</ind><dep>-97</dep></entry>
+    <entry><ind>1545</ind><dep>14</dep></entry>
+	  <entry><ind>1820</ind><dep>65</dep></entry>
+  </interpolation>
     <axis>
       <x> -1 </x>
       <y>  0 </y>
