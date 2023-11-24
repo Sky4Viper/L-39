@@ -7,14 +7,87 @@
         <load>
 			<![CDATA[
       			var livery_update = aircraft.livery_update.new("Aircraft/L-39/Models/Liveries/L-39C", 10);
-        		cmdarg().getNode("sim/model/ac-type", 1).setValue("L-39C-pilot");
+        		#cmdarg().getNode("sim/model/ac-type", 1).setValue("L-39C-pilot");
+
+				var root = cmdarg();
+				var rootindex = root.getIndex();
+				var mpPath = "/ai/models/multiplayer["~ rootindex ~"]/";
+
+				props.globals.initNode(mpPath~"sim/is-MP-Aircraft", 1, "BOOL");
+
+				#I need to set listener on some MP transferred properties; this doesn't seem to work well sometimes, so I mirror them to the original location on any change
+				#This also simplifies work as I can use almost the same code for MP as is the local Nasal. Furthermore, I can use meaningful property names in the model XML files instead of referencing the MP properties. 
+				
+				var mpVar = {
+							new: func(propIn, propOut) {
+							var m = { parents: [mpVar] };
+							m.propIn = propIn;
+							m.propOut = propOut;
+							if(propIn==nil) return m;
+							m.value = getprop(propIn);
+							setprop(propOut, m.value);
+							return m;
+							},
+				check: func {
+							if(me.propIn==nil) return;
+				
+				var newValue = getprop(me.propIn);
+							if(newValue != me.value) {
+							setprop(me.propOut, newValue);
+							me.value = newValue;
+							#print("value of "~me.propOut~" changed: "~newValue);
+							}
+							},
+				};
+
+				#init any property copy object needed in this array (anything you need to transfer over MP, but you are using the original paths in your xmls)
+				#also used for properties you are using a listener on, or properties which you maybe want to manipulate during the <unload> 
+				#if you're just using the pack, change the values according to the MP bindings in the -set.xml file
+				#you don't need to delete the entries if the path is nil - it gets skipped automatically and the MP path is just ignored
+
+				var mirrorValues = [
+									mpVar.new(mpPath~"sim/multiplay/generic/int[0]", mpPath~"sim/crashed"),
+									mpVar.new(mpPath~"sim/multiplay/generic/int[1]", beacon-switch),
+									mpVar.new(mpPath~"sim/multiplay/generic/int[2]", landing-lights-switch),
+									mpVar.new(mpPath~"sim/multiplay/generic/int[3]", taxi-light),
+									mpVar.new(mpPath~"sim/multiplay/generic/int[4]", nav-lights-switch),
+									mpVar.new(mpPath~"sim/multiplay/generic/int[8]", fire_gsh),
+									mpVar.new(mpPath~"sim/multiplay/generic/int[9]", trigger-S-5-L),
+									mpVar.new(mpPath~"sim/multiplay/generic/int[10]", trigger-S-5-R),
+									mpVar.new(mpPath~"sim/multiplay/generic/int[11]", trigger-PK3-out),
+									mpVar.new(mpPath~"sim/multiplay/generic/int[12]", trigger-PK3-in),
+									mpVar.new(mpPath~"sim/multiplay/generic/int[13]", trigger-FAB250-1),
+									mpVar.new(mpPath~"sim/multiplay/generic/int[14", trigger-FAB250-2),
+									mpVar.new(mpPath~"sim/multiplay/generic/int[17]", flare-colour),
+									mpVar.new(mpPath~"sim/multiplay/generic/int[18]", trigger-FAB250-3),
+									mpVar.new(mpPath~"sim/multiplay/generic/int[19]", trigger-FAB250-4),
+									mpVar.new(mpPath~"sim/multiplay/generic/int[20]", jettison-outer),
+									mpVar.new(mpPath~"sim/multiplay/generic/int[21]", jettison-inner),
+									];
+
+				#loop at the default MP transfer frequency (10Hz)
+
+				var mirrorTimer = maketimer(0.1, func {
+				foreach(var mir; mirrorValues) {
+				mir.check();
+				}
+				});
+				mirrorTimer.start();
+
     		]]>
         </load>
 
         <unload>
 			<![CDATA[
     			livery_update.stop();
-        		cmdarg().getNode("sim/model/ac-type", 1).setValue("");
+        		#cmdarg().getNode("sim/model/ac-type", 1).setValue("");
+
+				#prevent multiple timers and listeners from running and fighting on next connect
+      			#cleanly destroy MP property mirroring
+      			mirrorTimer.stop();
+      			mirrorTimer = nil;
+      			mirrorValues = nil;
+
   			]]> 
         </unload>
   	</nasal>
@@ -125,6 +198,9 @@
 		<object-name>right_wheel.001</object-name>
 
 		<object-name>gun_tip</object-name>
+
+		<object-name>nav_light.001</object-name>
+		<object-name>nav_light.002</object-name>
     </effect>
 
     <effect>

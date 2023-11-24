@@ -125,6 +125,9 @@
 		<object-name>right_wheel.001</object-name>
 
 		<object-name>gun_tip</object-name>
+
+		<object-name>nav_light.001</object-name>
+		<object-name>nav_light.002</object-name>
     </effect>
 
     <effect>
