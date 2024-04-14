@@ -359,7 +359,7 @@
 		<object-name>nav_light_glass.001</object-name>
 		<object-name>nav_light_glass.002</object-name>
 		<object-name>nav_light_glass.003</object-name>
-	</animation>	
+	</animation>
 	
 	<!-- Hide the canopy in view 0 -->
 	<animation>
@@ -800,7 +800,7 @@
     	</axis>
   	</animation>
 
-	<animation>
+	<!-- <animation>
 		<type>translate</type>
 		<object-name>nav_light_red</object-name>
 		<offset-m>4.45</offset-m>
@@ -809,7 +809,7 @@
 			<y>-4.268</y>
 			<z>-0.666</z>
 		</axis>
-	</animation>
+	</animation> -->
 
 	<animation>
     	<type>translate</type>
@@ -1071,7 +1071,7 @@
 		</axis>
 	</animation>
 	
-	<animation>
+	<!-- <animation>
 		<type>select</type>
 		<object-name>landing_gear_up</object-name>
 		<condition>
@@ -1092,7 +1092,7 @@
 				<value>1</value>
 			</equals>
 		</condition>
-	</animation>
+	</animation> -->
 
 	<!-- Show/Hide pylons -->
 	<animation>
