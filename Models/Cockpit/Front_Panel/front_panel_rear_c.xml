@@ -92,8 +92,8 @@
         <object-name>caution_light.014</object-name>
         <object-name>caution_light.off.014</object-name>
 
-        <object-name>arms_light.002</object-name>
-        <object-name>arms_light.off.002</object-name>
+        <!-- <object-name>arms_light.002</object-name>
+        <object-name>arms_light.off.002</object-name> -->
         <emission> 
             <factor-prop>controls/lighting/instruments-norm</factor-prop>
             <red>1.2</red>
@@ -129,8 +129,8 @@
         <object-name>caution_light.011</object-name>
         <object-name>caution_light.015</object-name>
         <object-name>caution_light.016</object-name>
-        <object-name>arms_light.001</object-name>
-        <object-name>arms_light.003</object-name>
+        <!-- <object-name>arms_light.001</object-name>
+        <object-name>arms_light.003</object-name> -->
         <emission> 
             <factor-prop>controls/lighting/instruments-norm</factor-prop>
             <red>1.2</red>
@@ -224,14 +224,14 @@
 
     <!-- WARNING LIGHTS -->
 
-    <animation>
+    <!-- <animation>
         <type>timed</type>
         <object-name>arms_light.002</object-name>
         <object-name>arms_light.off.002</object-name>
         <use-personality type="bool">true</use-personality>
         <branch-duration-sec>0.5</branch-duration-sec>
         <branch-duration-sec>0.5</branch-duration-sec>
-    </animation>
+    </animation> -->
 
     <!-- Blinking lights left panel -->
 
@@ -766,7 +766,7 @@
       </condition>
     </animation>
 
-    <animation>
+    <!-- <animation>
       <type>select</type>
       <object-name>arms_light.001</object-name>
       <condition>
@@ -776,43 +776,9 @@
             <value>170</value>
         </greater-than>
       </condition>
-    </animation>
+    </animation> -->
 
-    <animation>
-      <type>select</type>
-      <object-name>arms_light.002</object-name>
-			<condition>
-				<and>
-                    <property>/controls/electric/battery-switch</property>
-					<or>
-					<greater-than>
-						<property>/orientation/alpha-deg</property>
-						<value>14.8</value>
-					</greater-than>
-					<less-than>
-            			<!-- G load > 3.0 = -93.52215-->
-                        <!-- G load > 3.5 = -109.109175-->
-                        <!-- G load > 4.0 = -124.6962-->
-						<!-- G load > 5.0 = -155.87025-->
-            			<property>/accelerations/pilot/z-accel-fps_sec</property>
-            			<value>-101.3156625</value>
-          			</less-than>
-          			<greater-than>
-            			<!-- G load < -1.0 = 31.17405-->
-            			<property>/accelerations/pilot/z-accel-fps_sec</property>
-            			<value>30.17405</value>
-          			</greater-than>
-					</or>
-					<not>
-					    <property>/gear/gear[0]/wow</property>
-					    <property>/gear/gear[1]/wow</property>
-					    <property>/gear/gear[2]/wow</property>
-					</not>
-				</and>
-			</condition>
-    </animation>
-
-    <animation>
+    <!-- <animation>
       <type>select</type>
       <object-name>arms_light.003</object-name>
       <condition>
@@ -828,7 +794,7 @@
 				</equals>
         </or>
       </condition>
-    </animation>
+    </animation> -->
 
 </PropertyList>
 

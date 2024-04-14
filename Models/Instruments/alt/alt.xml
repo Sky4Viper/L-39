@@ -1,10 +1,11 @@
 <?xml version="1.0"?>
 <PropertyList>
     <path>alt.ac</path>
-  <animation>
+
+  <!-- <animation>
     <type>noshadow</type>
     <object-name>glass</object-name>
-  </animation>
+  </animation> -->
   
   <!--<animation>
     <type>shader</type>
@@ -13,12 +14,12 @@
     <object-name>glass</object-name>
   </animation>-->
   
- <animation>
+ <!-- <animation>
  <type>shader</type>
  <shader>chrome</shader>
  <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
  <object-name>glass</object-name>
-</animation>
+</animation> -->
 
     <animation>
         <type>material</type>

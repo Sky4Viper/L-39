@@ -302,7 +302,7 @@
     <object-name>HS_CylUp</object-name>
     <object-name>HS_CylDown</object-name>
     <object-name>HS_DCyl</object-name>
-    <object-name>HS_Switch</object-name>
+    <!-- <object-name>HS_Switch</object-name> -->
     <object-name>HS_Vern</object-name>
     <object-name>HS_SRing</object-name>
     <object-name>HS_Sphere</object-name>
@@ -462,7 +462,7 @@
         </hovered>
     </animation>
 
-  <animation>
+  <!-- <animation>
     <type>rotate</type>
     <object-name>HS_Switch</object-name>
     <property>fdm/jsbsim/systems/headsight/gyro-pos</property>
@@ -480,7 +480,7 @@
       <y>1</y>
       <z>0</z>
     </axis>
-  </animation>
+  </animation> -->
 
   <!-- <animation>
     <type>pick</type>
@@ -1281,7 +1281,7 @@
     <object-name>HS_Sphere</object-name>
     <object-name>HS_SUp</object-name>
     <object-name>HS_SDown</object-name>
-    <object-name>HS_Switch</object-name>
+    <!-- <object-name>HS_Switch</object-name> -->
     <object-name>HS_Vern</object-name>
     <object-name>HS_Frame</object-name>
     <object-name>HS_Backplate</object-name>

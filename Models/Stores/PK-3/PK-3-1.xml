@@ -49,7 +49,7 @@
 
 	<model>
 		<name>flame3</name>
-		<path>Aircraft/L-39ZA/Models/Effects/Gun/Flame.xml</path>
+		<path>Aircraft/L-39/Models/Effects/Gun/Flame.xml</path>
 		<condition>
 			<equals>
 				<property>sim/multiplay/generic/int[11]</property>
