@@ -249,6 +249,24 @@
       </axis>
   </animation>
 
+  <animation>
+      <type>rotate</type>
+      <object-name>arm_switch.008</object-name>
+      <property>/controls/armament/guns-load[1]</property>
+      <offset-deg>-30</offset-deg>
+      <factor>60</factor>
+      <center>
+        <x-m>-3.37627</x-m>
+        <y-m>0</y-m>
+        <z-m>-0.789186</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
   <!-- Signal Flares and smoke buttons -->
 
   <animation>
@@ -800,6 +818,43 @@
             </binding>
     </hovered>
  </animation>
+
+ <animation>
+    <type>pick</type>
+    <object-name>arm_switch.008</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch5")</script>
+        <condition>
+          <not>
+            <property>/controls/armament/guns-load[1]</property>
+          </not>
+        </condition>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/controls/armament/guns-load[1]</property>
+        <value>true</value>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>guns-load-sw2-lbl</tooltip-id>
+          <label>PK-3: %s</label>
+          <property>/controls/armament/guns-load[1]</property>
+          <mapping>nasal</mapping>
+          <script>
+              var modes = ['NOT CHARGED', 'CHARGED'];
+              return modes[arg[0]];
+          </script>
+      </binding>
+    </hovered>
+  </animation>
 
   <animation>
    <type>pick</type>

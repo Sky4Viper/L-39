@@ -1057,6 +1057,60 @@
 
     <!-- Select guns button -->
 
+  <animation>
+      <type>rotate</type>
+      <object-name>arm_ctrl_switch.001</object-name>
+      <property>/controls/armament/guns-load[0]</property>
+      <offset-deg>-20</offset-deg>
+      <factor>40</factor>
+      <center>
+        <x-m>-3.34297</x-m>
+        <y-m>0</y-m>
+        <z-m>-0.341446</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>arm_ctrl_switch.002</object-name>
+      <property>/controls/armament/guns-load[1]</property>
+      <offset-deg>-30</offset-deg>
+      <factor>60</factor>
+      <center>
+        <x-m>-3.34297</x-m>
+        <y-m>0</y-m>
+        <z-m>-0.382126</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>arm_ctrl_switch.003</object-name>
+      <property>/controls/armament/guns-load[2]</property>
+      <offset-deg>-30</offset-deg>
+      <factor>60</factor>
+      <center>
+        <x-m>-3.34297</x-m>
+        <y-m>0</y-m>
+        <z-m>-0.382126</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
 	<animation>
 		<type>rotate</type>
 		<object-name>arm_ctrl_switch.004_cover</object-name>
@@ -1405,6 +1459,118 @@
           <mapping>nasal</mapping>
           <script>
               var modes = ['OFF', 'ON'];
+              return modes[arg[0]];
+          </script>
+      </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>arm_ctrl_switch.001</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch5")</script>
+        <condition>
+            <equals>
+              <property>/controls/armament/guns-load[0]</property>
+              <value>false</value>
+            </equals>
+        </condition>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/controls/armament/guns-load[0]</property>
+        <value>true</value>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>guns-load-sw1-lbl</tooltip-id>
+          <label>GSH-23: %s</label>
+          <property>/controls/armament/guns-load[0]</property>
+          <mapping>nasal</mapping>
+          <script>
+              var modes = ['NOT CHARGED', 'CHARGED'];
+              return modes[arg[0]];
+          </script>
+      </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>arm_ctrl_switch.002</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch5")</script>
+        <condition>
+          <not>
+            <property>/controls/armament/guns-load[1]</property>
+          </not>
+        </condition>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/controls/armament/guns-load[1]</property>
+        <value>true</value>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>guns-load-sw2-lbl</tooltip-id>
+          <label>PK-3 OUTER: %s</label>
+          <property>/controls/armament/guns-load[1]</property>
+          <mapping>nasal</mapping>
+          <script>
+              var modes = ['NOT CHARGED', 'CHARGED'];
+              return modes[arg[0]];
+          </script>
+      </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>arm_ctrl_switch.003</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch5")</script>
+        <condition>
+          <not>
+            <property>/controls/armament/guns-load[2]</property>
+          </not>
+        </condition>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/controls/armament/guns-load[2]</property>
+        <value>true</value>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>guns-load-sw3-lbl</tooltip-id>
+          <label>PK-3 INNER: %s</label>
+          <property>/controls/armament/guns-load[2]</property>
+          <mapping>nasal</mapping>
+          <script>
+              var modes = ['NOT CHARGED', 'CHARGED'];
               return modes[arg[0]];
           </script>
       </binding>

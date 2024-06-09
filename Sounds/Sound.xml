@@ -881,18 +881,6 @@
 				
 			<path>Aircraft/L-39/Sounds/bomb.wav</path>
 		</jettison23>
-        
-        <low-fuel>
-            <name>low-fuel</name>
-            <mode>once</mode>
-            <path>Aircraft/L-39/Sounds/fuellow.wav</path>
-            <condition>
-                <less-than>
-                    <property>/consumables/fuel/total-fuel-gals</property>
-                    <value>49.00</value>
-                </less-than>
-            </condition>
-        </low-fuel>
 
         <!-- Flare/Chaff release -->
 
@@ -949,17 +937,28 @@
                 
             </condition>
         </low-fuel4> -->
+
+        <low-fuel>
+            <name>low-fuel</name>
+            <mode>once</mode>
+            <path>Aircraft/L-39/Sounds/bingofuel_ru.wav</path>
+            <condition>
+                <less-than>
+                    <property>/consumables/fuel/total-fuel-gals</property>
+                    <value>65.00</value>
+                </less-than>
+            </condition>
+        </low-fuel> 
         
         <low-fuel5>
             <name>low-fuel5</name>
             <mode>once</mode>
-            <path>Aircraft/L-39/Sounds/bingofuel.wav</path>
+            <path>Aircraft/L-39/Sounds/fuel_500_ru.wav</path>
             <condition>
                 <less-than>
                     <property>/consumables/fuel/total-fuel-gals</property>
-                    <value>65.0</value>
+                    <value>164.0</value>
                 </less-than>
-                
             </condition>
         </low-fuel5>
         
@@ -1095,6 +1094,25 @@
             </position>
             <reference-dist>0.2</reference-dist>
             <max-dist>5.0</max-dist>
+        </switch>
+
+        <switch>
+            <name>switch-click5</name>
+            <mode>once</mode>
+            <path>Aircraft/L-39/Sounds/gun_pyro.wav</path>
+            <condition>
+                <property>/controls/sound/click-switch5</property>
+            </condition>
+            <position>
+                <x>-3.06522</x>
+                <y>-0.290071</y>
+                <z>-0.651572</z>
+            </position>
+            <reference-dist>0.2</reference-dist>
+            <max-dist>5.0</max-dist>
+            <volume>
+                <factor>2.0</factor>
+            </volume>
         </switch>
         
     </fx>

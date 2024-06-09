@@ -10,6 +10,7 @@ setprop("/controls/armament/fire_gsh", 0);
 
 props.globals.initNode("/controls/armament/trigger-GSh-23", 0, "BOOL");
 props.globals.initNode("/sim/multiplay/generic/int[8]", 0, "INT");
+props.globals.initNode("/controls/armament/guns-load[0]", 0, "BOOL");
 
 #ammo counter
 props.globals.initNode("/controls/armament/roundsLeft", 150, "INT");
@@ -45,7 +46,8 @@ outOfAmmo.singleShot = 1;
 var triggerControl = func {
 	triggerState = getprop("controls/armament/fire_gsh");
     MasterArm = getprop("controls/armament/master-arm");
-	if(triggerState and MasterArm and getprop("/controls/armament/roundsLeft") > 0) {
+	GSh23_Charged = getprop("/controls/armament/guns-load[0]");
+	if(triggerState and MasterArm and GSh23_Charged and getprop("/controls/armament/roundsLeft") > 0) {
 			var fireTime = 2.05714; #continuous fire for 3500 r/min 
 			setprop("/controls/armament/trigger-GSh-23", 1);
 			setprop("/sim/multiplay/generic/int[8]", 1);
